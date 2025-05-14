@@ -45,7 +45,7 @@ Understand the fundamentals of investment management, portfolio construction, an
 ---
 
 ## 📘 Course 3: BMC Bloomberg Market Concepts  
-![Bloomberg](https://img.shields.io/badge/Bloomberg-BMC-darkgreen)  
+![Bloomberg](https://img.shields.io/badge/Bloomberg-BMC-blue)  
 **Platform:** Bloomberg  
 **Institution:** Bloomberg  
 **Link:** [Go to course](https://www.bloomberg.com/professional/product/bloomberg-market-concepts/)
@@ -65,7 +65,7 @@ Learn the fundamentals of financial markets, economics, and financial instrument
 ---
 
 ## 📘 Course 4: Python for Everybody  
-![University of Michigan](https://img.shields.io/badge/University_of_Michigan-Python_for_Everybody-lightgrey)  
+![University of Michigan](https://img.shields.io/badge/University_of_Michigan-Python_for_Everybody-blue)  
 **Platform:** Coursera  
 **Institution:** University of Michigan  
 **Link:** [Go to course](https://www.coursera.org/specializations/python)
@@ -85,7 +85,7 @@ Learn the fundamentals of financial markets, economics, and financial instrument
 ---
 
 ## 📘 Course 5: Introduction to Data Science  
-![IBM](https://img.shields.io/badge/IBM-Intro_to_Data_Science-lightblue)  
+![IBM](https://img.shields.io/badge/IBM-Intro_to_Data_Science-blue)  
 **Platform:** Coursera  
 **Institution:** IBM  
 **Link:** [Go to course](https://www.coursera.org/learn/what-is-datascience)
@@ -105,7 +105,7 @@ Learn the fundamentals of financial markets, economics, and financial instrument
 ---
 
 ## 📘 Course 6: Machine Learning  
-![Stanford University](https://img.shields.io/badge/Stanford_University-Machine_Learning-red)  
+![Stanford University](https://img.shields.io/badge/Stanford_University-Machine_Learning-blue)  
 **Platform:** Coursera  
 **Institution:** Stanford University (Andrew Ng)  
 **Link:** [Go to course](https://www.coursera.org/learn/machine-learning)
@@ -125,7 +125,7 @@ Learn the fundamentals of financial markets, economics, and financial instrument
 ---
 
 ## 📘 Course 7: Python for Finance  
-![DataCamp](https://img.shields.io/badge/DataCamp-Python_for_Finance-darkgreen)  
+![DataCamp](https://img.shields.io/badge/DataCamp-Python_for_Finance-blue)  
 **Platform:** DataCamp  
 **Institution:** DataCamp  
 **Link:** [Go to course](https://www.datacamp.com/courses/python-for-finance)
@@ -165,7 +165,7 @@ Gain knowledge in investment management, financial reporting, and ethics, as per
 ---
 
 ## 📘 Course 9: Trading in the Zone – Psychology of Trading  
-![Udemy](https://img.shields.io/badge/Udemy-Trading_in_the_Zone-orange)  
+![Udemy](https://img.shields.io/badge/Udemy-Trading_in_the_Zone-blue)  
 **Platform:** Udemy  
 **Instructor:** Based on the work of Mark Douglas  
 **Link:** [Go to course](https://www.udemy.com/course/trading-in-the-zone-trading-psychology-based-on-mark-douglas/)
