@@ -125,7 +125,7 @@ Learn the fundamentals of financial markets, economics, and financial instrument
 ---
 
 ## 📘 Course 7: Python for Finance  
-![Python for Finance Badge](https://img.shields.io/badge/Python_for_Finance-blue)  
+![DataCamp Badge](https://img.shields.io/badge/Python_for_Finance-blue)  
 **Platform:** DataCamp
 **Institution:** DataCamp  
 **Link:** [Go to course](insert_link_here)
@@ -163,8 +163,8 @@ Gain knowledge in investment management, financial reporting, and ethics, as per
 [📄 View certificate](certificates/cfa_level_1.pdf)
 
 ---
-## 📘 Course 10: Trading in the Zone – Psychology of Trading  
-![Trading in the Zone Badge](https://img.shields.io/badge/Trading_in_the_Zone-Udemy-blue)
+## 📘 Course 9: Trading in the Zone – Psychology of Trading  
+![Udemy Badge](https://img.shields.io/badge/Trading_in_the_Zone-Udemy-blue)
 
 **Platform:** Udemy  
 **Instructor:** Based on the work of Mark Douglas  
