@@ -163,8 +163,8 @@ Gain knowledge in investment management, financial reporting, and ethics, as per
 [📄 View certificate](certificates/cfa_level_1.pdf)
 
 ---
-## 📘 Course 9: Trading in the Zone – Psychology of Trading  
-![Udemy Badge](https://img.shields.io/badge/Trading_in_the_Zone-Udemy-blue)
+## 📘 Course 10: Trading in the Zone – Psychology of Trading  
+![Trading in the Zone](https://img.shields.io/badge/Trading_in_the_Zone-Udemy-orange)
 
 **Platform:** Udemy  
 **Instructor:** Based on the work of Mark Douglas  
@@ -181,3 +181,4 @@ Learn trading psychology and emotional management techniques based on the princi
 
 ### Certificate  
 [📄 View certificate](certificates/trading_in_the_zone_udemy.pdf)
+
