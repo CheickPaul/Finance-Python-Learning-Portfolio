@@ -125,10 +125,11 @@ Learn the fundamentals of financial markets, economics, and financial instrument
 ---
 
 ## 📘 Course 7: Python for Finance  
-![DataCamp Badge](https://img.shields.io/badge/Python_for_Finance-blue)  
-**Platform:** DataCamp
+![Python for Finance](https://img.shields.io/badge/Python_for_Finance-DataCamp-darkgreen)
+
+**Platform:** DataCamp  
 **Institution:** DataCamp  
-**Link:** [Go to course](insert_link_here)
+**Link:** [Go to course](https://www.datacamp.com/courses/python-for-finance)
 
 ### Objective  
 Learn how to use Python for financial analysis and algorithmic trading.
@@ -141,6 +142,7 @@ Learn how to use Python for financial analysis and algorithmic trading.
 
 ### Certificate  
 [📄 View certificate](certificates/python_for_finance.pdf)
+
 
 ---
 
