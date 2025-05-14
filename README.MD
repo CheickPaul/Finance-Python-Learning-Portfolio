@@ -4,7 +4,7 @@ This repository documents my progress through various certificates in finance, q
 
 ---
 
-## Course 1: Financial Markets  
+## 📘 Course 1: Financial Markets  
 ![Coursera Badge](https://img.shields.io/badge/Coursera-Financial_Markets-blue)  
 **Platform:** Coursera  
 **Institution:** Yale University  
@@ -16,10 +16,10 @@ Gain a broad understanding of financial markets and institutions, including the 
 ### Summary  
 <!-- Add summary here -->
 
-### 📝 Personal Notes  
+### Personal Notes  
 <!-- Add notes here -->
 
-### 📄 Certificate  
+###  Certificate  
 [📄 View certificate](certificates/financial_markets.pdf)
 
 ---
@@ -36,7 +36,7 @@ Understand the fundamentals of investment management, portfolio construction, an
 ### Summary  
 <!-- Add summary here -->
 
-### 📝 Personal Notes  
+###  Personal Notes  
 <!-- Add notes here -->
 
 ### Certificate  
@@ -55,7 +55,7 @@ Understand the fundamentals of investment management, portfolio construction, an
 ### Summary  
 <!-- Add summary here -->
 
-### 📝 Personal Notes  
+###  Personal Notes  
 <!-- Add notes here -->
 
 ### Certificate  
@@ -74,7 +74,7 @@ Understand the fundamentals of investment management, portfolio construction, an
 ### Summary  
 <!-- Add summary here -->
 
-### 📝 Personal Notes  
+###  Personal Notes  
 <!-- Add notes here -->
 
 ### Certificate  
@@ -93,7 +93,7 @@ Understand the fundamentals of investment management, portfolio construction, an
 ### Summary  
 <!-- Add summary here -->
 
-### 📝 Personal Notes  
+###  Personal Notes  
 <!-- Add notes here -->
 
 ### Certificate  
@@ -112,7 +112,7 @@ Understand the fundamentals of investment management, portfolio construction, an
 ###  Summary  
 <!-- Add summary here -->
 
-### 📝 Personal Notes  
+###  Personal Notes  
 <!-- Add notes here -->
 
 ###  Certificate  
