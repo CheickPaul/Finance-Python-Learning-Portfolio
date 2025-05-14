@@ -5,7 +5,7 @@ This repository documents my progress through various certificates in finance, q
 ---
 
 ## 📘 Course 1: Financial Markets  
-![Coursera Badge](https://img.shields.io/badge/Coursera-Financial_Markets-blue)  
+![Yale University](https://img.shields.io/badge/Yale_University-Financial_Markets-blue)  
 **Platform:** Coursera  
 **Institution:** Yale University  
 **Link:** [Go to course](https://www.coursera.org/learn/financial-markets-global)
@@ -25,7 +25,7 @@ Gain a broad understanding of financial markets and institutions, including the 
 ---
 
 ## 📘 Course 2: Investment Management  
-![Coursera Badge](https://img.shields.io/badge/Coursera-Investment_Management-blue)  
+![University of Geneva](https://img.shields.io/badge/University_of_Geneva-Investment_Management-blue)  
 **Platform:** Coursera  
 **Institution:** University of Geneva  
 **Link:** [Go to course](https://www.coursera.org/learn/investment-management)
@@ -45,7 +45,7 @@ Understand the fundamentals of investment management, portfolio construction, an
 ---
 
 ## 📘 Course 3: BMC Bloomberg Market Concepts  
-![BMC Badge](https://img.shields.io/badge/Bloomberg-Market_Concepts-blue)  
+![Bloomberg](https://img.shields.io/badge/Bloomberg-BMC-darkgreen)  
 **Platform:** Bloomberg  
 **Institution:** Bloomberg  
 **Link:** [Go to course](https://www.bloomberg.com/professional/product/bloomberg-market-concepts/)
@@ -65,7 +65,7 @@ Learn the fundamentals of financial markets, economics, and financial instrument
 ---
 
 ## 📘 Course 4: Python for Everybody  
-![Coursera Badge](https://img.shields.io/badge/Coursera-Python_for_Everybody-blue)  
+![University of Michigan](https://img.shields.io/badge/University_of_Michigan-Python_for_Everybody-lightgrey)  
 **Platform:** Coursera  
 **Institution:** University of Michigan  
 **Link:** [Go to course](https://www.coursera.org/specializations/python)
@@ -85,7 +85,7 @@ Learn the fundamentals of financial markets, economics, and financial instrument
 ---
 
 ## 📘 Course 5: Introduction to Data Science  
-![Coursera Badge](https://img.shields.io/badge/Coursera-Intro_to_Data_Science-blue)  
+![IBM](https://img.shields.io/badge/IBM-Intro_to_Data_Science-lightblue)  
 **Platform:** Coursera  
 **Institution:** IBM  
 **Link:** [Go to course](https://www.coursera.org/learn/what-is-datascience)
@@ -105,7 +105,7 @@ Learn the fundamentals of financial markets, economics, and financial instrument
 ---
 
 ## 📘 Course 6: Machine Learning  
-![Coursera Badge](https://img.shields.io/badge/Coursera-Machine_Learning-blue)  
+![Stanford University](https://img.shields.io/badge/Stanford_University-Machine_Learning-red)  
 **Platform:** Coursera  
 **Institution:** Stanford University (Andrew Ng)  
 **Link:** [Go to course](https://www.coursera.org/learn/machine-learning)
@@ -125,8 +125,7 @@ Learn the fundamentals of financial markets, economics, and financial instrument
 ---
 
 ## 📘 Course 7: Python for Finance  
-![Python for Finance](https://img.shields.io/badge/Python_for_Finance-DataCamp-darkgreen)
-
+![DataCamp](https://img.shields.io/badge/DataCamp-Python_for_Finance-darkgreen)  
 **Platform:** DataCamp  
 **Institution:** DataCamp  
 **Link:** [Go to course](https://www.datacamp.com/courses/python-for-finance)
@@ -143,11 +142,10 @@ Learn how to use Python for financial analysis and algorithmic trading.
 ### Certificate  
 [📄 View certificate](certificates/python_for_finance.pdf)
 
-
 ---
 
 ## 📘 Course 8: CFA Level 1  
-![CFA Badge](https://img.shields.io/badge/CFA-Level_1-blue)  
+![CFA Institute](https://img.shields.io/badge/CFA_Institute-Level_1-blue)  
 **Platform:** CFA Institute  
 **Institution:** CFA Institute  
 **Link:** [Go to course](https://www.cfainstitute.org/programs/cfa/exam)
@@ -165,9 +163,9 @@ Gain knowledge in investment management, financial reporting, and ethics, as per
 [📄 View certificate](certificates/cfa_level_1.pdf)
 
 ---
-## 📘 Course 10: Trading in the Zone – Psychology of Trading  
-![Trading in the Zone](https://img.shields.io/badge/Trading_in_the_Zone-Udemy-orange)
 
+## 📘 Course 9: Trading in the Zone – Psychology of Trading  
+![Udemy](https://img.shields.io/badge/Udemy-Trading_in_the_Zone-orange)  
 **Platform:** Udemy  
 **Instructor:** Based on the work of Mark Douglas  
 **Link:** [Go to course](https://www.udemy.com/course/trading-in-the-zone-trading-psychology-based-on-mark-douglas/)
@@ -179,8 +177,7 @@ Learn trading psychology and emotional management techniques based on the princi
 <!-- Add summary here -->
 
 ### Personal Notes  
-<!-- Add personal notes here -->
+<!-- Add notes here -->
 
 ### Certificate  
 [📄 View certificate](certificates/trading_in_the_zone_udemy.pdf)
-
