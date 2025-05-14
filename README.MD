@@ -126,8 +126,8 @@ Learn the fundamentals of financial markets, economics, and financial instrument
 
 ## 📘 Course 7: Python for Finance  
 ![Python for Finance Badge](https://img.shields.io/badge/Python_for_Finance-blue)  
-**Platform:** [Platform Name]  
-**Institution:** [Institution Name]  
+**Platform:** DataCamp
+**Institution:** DataCamp  
 **Link:** [Go to course](insert_link_here)
 
 ### Objective  
