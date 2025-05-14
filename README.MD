@@ -177,7 +177,7 @@ Learn trading psychology and emotional management techniques based on the princi
 <!-- Add summary here -->
 
 ### Personal Notes  
-<!-- Add notes here -->
+<!-- Add personal notes here -->
 
 ### Certificate  
 [📄 View certificate](certificates/trading_in_the_zone_udemy.pdf)
