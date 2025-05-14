@@ -19,7 +19,7 @@ Gain a broad understanding of financial markets and institutions, including the 
 ### Personal Notes  
 <!-- Add notes here -->
 
-###  Certificate  
+### Certificate  
 [📄 View certificate](certificates/financial_markets.pdf)
 
 ---
@@ -36,7 +36,7 @@ Understand the fundamentals of investment management, portfolio construction, an
 ### Summary  
 <!-- Add summary here -->
 
-###  Personal Notes  
+### Personal Notes  
 <!-- Add notes here -->
 
 ### Certificate  
@@ -44,41 +44,43 @@ Understand the fundamentals of investment management, portfolio construction, an
 
 ---
 
-## 📘 Course 3: Python for Everybody  
+## 📘 Course 3: BMC Bloomberg Market Concepts  
+![BMC Badge](https://img.shields.io/badge/Bloomberg-Market_Concepts-blue)  
+**Platform:** Bloomberg  
+**Institution:** Bloomberg  
+**Link:** [Go to course](https://www.bloomberg.com/professional/product/bloomberg-market-concepts/)
+
+### Objective  
+Learn the fundamentals of financial markets, economics, and financial instruments.
+
+### Summary  
+<!-- Add summary here -->
+
+### Personal Notes  
+<!-- Add notes here -->
+
+### Certificate  
+[📄 View certificate](certificates/bmc_bloomberg_market_concepts.pdf)
+
+---
+
+## 📘 Course 4: Python for Everybody  
 ![Coursera Badge](https://img.shields.io/badge/Coursera-Python_for_Everybody-blue)  
 **Platform:** Coursera  
 **Institution:** University of Michigan  
 **Link:** [Go to course](https://www.coursera.org/specializations/python)
 
-### Objective
+### Objective  
+<!-- Add objective here -->
 
 ### Summary  
 <!-- Add summary here -->
 
-###  Personal Notes  
+### Personal Notes  
 <!-- Add notes here -->
 
 ### Certificate  
 [📄 View certificate](certificates/python_for_everybody.pdf)
-
----
-
-## 📘 Course 4: Machine Learning  
-![Coursera Badge](https://img.shields.io/badge/Coursera-Machine_Learning-blue)  
-**Platform:** Coursera  
-**Institution:** Stanford University (Andrew Ng)  
-**Link:** [Go to course](https://www.coursera.org/learn/machine-learning)
-
-### Objective
-
-### Summary  
-<!-- Add summary here -->
-
-###  Personal Notes  
-<!-- Add notes here -->
-
-### Certificate  
-[📄 View certificate](certificates/machine_learning.pdf)
 
 ---
 
@@ -88,12 +90,13 @@ Understand the fundamentals of investment management, portfolio construction, an
 **Institution:** IBM  
 **Link:** [Go to course](https://www.coursera.org/learn/what-is-datascience)
 
-### Objective
+### Objective  
+<!-- Add objective here -->
 
 ### Summary  
 <!-- Add summary here -->
 
-###  Personal Notes  
+### Personal Notes  
 <!-- Add notes here -->
 
 ### Certificate  
@@ -101,19 +104,60 @@ Understand the fundamentals of investment management, portfolio construction, an
 
 ---
 
-## 📘 Course 6: Excel Skills for Business  
-![Coursera Badge](https://img.shields.io/badge/Coursera-Excel_Skills_for_Business-blue)  
+## 📘 Course 6: Machine Learning  
+![Coursera Badge](https://img.shields.io/badge/Coursera-Machine_Learning-blue)  
 **Platform:** Coursera  
-**Institution:** Macquarie University  
-**Link:** [Go to course](https://www.coursera.org/specializations/excel)
+**Institution:** Stanford University (Andrew Ng)  
+**Link:** [Go to course](https://www.coursera.org/learn/machine-learning)
 
-###  Objective
+### Objective  
+<!-- Add objective here -->
 
-###  Summary  
+### Summary  
 <!-- Add summary here -->
 
-###  Personal Notes  
+### Personal Notes  
 <!-- Add notes here -->
 
-###  Certificate  
-[📄 View certificate](certificates/excel_skills.pdf)
+### Certificate  
+[📄 View certificate](certificates/machine_learning.pdf)
+
+---
+
+## 📘 Course 7: Python for Finance  
+![Python for Finance Badge](https://img.shields.io/badge/Python_for_Finance-blue)  
+**Platform:** [Platform Name]  
+**Institution:** [Institution Name]  
+**Link:** [Go to course](insert_link_here)
+
+### Objective  
+Learn how to use Python for financial analysis and algorithmic trading.
+
+### Summary  
+<!-- Add summary here -->
+
+### Personal Notes  
+<!-- Add notes here -->
+
+### Certificate  
+[📄 View certificate](certificates/python_for_finance.pdf)
+
+---
+
+## 📘 Course 8: CFA Level 1  
+![CFA Badge](https://img.shields.io/badge/CFA-Level_1-blue)  
+**Platform:** CFA Institute  
+**Institution:** CFA Institute  
+**Link:** [Go to course](https://www.cfainstitute.org/programs/cfa/exam)
+
+### Objective  
+Gain knowledge in investment management, financial reporting, and ethics, as per the CFA Level 1 curriculum.
+
+### Summary  
+<!-- Add summary here -->
+
+### Personal Notes  
+<!-- Add notes here -->
+
+### Certificate  
+[📄 View certificate](certificates/cfa_level_1.pdf)
