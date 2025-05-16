@@ -18,7 +18,7 @@ Gain a broad understanding of financial markets and institutions, including the 
 
 ### Personal Notes  
 
-- [Module 1: Introduction & CAPM](notes/module1.md)  
+- [Module 1: Introduction & CAPM](notes/module1-FM-YALE.md)  
   _Basics of financial markets, insurance, and the Capital Asset Pricing Model (CAPM). This module lays the foundation for the rest of the course._
 
 - [Module 2: Behavioral Finance, Forecasting, Pricing, Debt & Inflation](notes/module2.md)  
