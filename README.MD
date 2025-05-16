@@ -17,7 +17,28 @@ Gain a broad understanding of financial markets and institutions, including the 
 <!-- Add summary here -->
 
 ### Personal Notes  
-<!-- Add notes here -->
+
+- [Module 1: Introduction & CAPM](notes/module1.md)  
+  _Basics of financial markets, insurance, and the Capital Asset Pricing Model (CAPM). This module lays the foundation for the rest of the course._
+
+- [Module 2: Behavioral Finance, Forecasting, Pricing, Debt & Inflation](notes/module2.md)  
+  _Behavioral finance, economic forecasting, asset pricing, debt, and inflation._
+
+- [Module 3: Stocks, Bonds, Dividends, Capitalization & Financial History](notes/module3.md)  
+  _Stocks, bonds, dividends, shares, market capitalizations, and their role in business. This module also covers some history of financial markets._
+
+- [Module 4: Recessions, Bubbles, Credit Crisis & Regulation](notes/module4.md)  
+  _Recent economic history, including recessions, speculative bubbles, the mortgage credit crisis, and financial regulation._
+
+- [Module 5: Options & Bond Markets](notes/module5.md)  
+  _An introduction to the functioning of options and bond markets, their role in risk management, and pricing mechanisms._
+
+- [Module 6: Investment Banking & Financial Innovation](notes/module6.md)  
+  _Professor Shiller presents investment banking, underwriting processes, brokers, dealers, exchanges, and financial innovations._
+
+- [Module 7: Nonprofit Organizations & Career in Finance](notes/module7.md)  
+  _The final module covers nonprofit organizations, for-profit enterprises, and career advice in the financial sector._
+
 
 ### Certificate  
 [📄 View certificate](certificates/financial_markets.pdf)
