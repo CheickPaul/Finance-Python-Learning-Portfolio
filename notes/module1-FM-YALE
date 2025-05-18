@@ -1,1 +1,4 @@
-
+**Almost every human activity that's useful and important needs financing**
+VAR : Variance
+[VaR]: Value at Risk, a **risk management metric** used to estimate how much you could potentially lose on investment or portfolio, over a specific time period with a given level of confidence.
+We can calculate VaR by using historical simulation, variance-covariance, Monte Carlo
