@@ -49,4 +49,4 @@ Original data	           →   The individual values you observe	( Daily returns
 Identically distributed	 →   All data come from the same “source” or pattern	(Each daily return follows the same statistical rule (same mean, volatility) )
 Independence	           → Data points don’t influence each other	(Today’s return doesn’t directly affect tomorrow’s return)
 Finite variance	         → No uncontrollable extreme values	Returns don’t have “crazy” infinite jumps too often
-Large sample             → size	Lots of data points	Many days of returns observed, e.g., 1000 trading days
+Large sample             → size	Lots of data points	 (Many days of returns observed, e.g., 1000 trading days )
