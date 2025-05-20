@@ -50,3 +50,12 @@ Identically distributed	 →   All data come from the same “source” or patte
 Independence	           → Data points don’t influence each other	(Today’s return doesn’t directly affect tomorrow’s return)
 Finite variance	         → No uncontrollable extreme values	Returns don’t have “crazy” infinite jumps too often
 Large sample             → size	Lots of data points	 (Many days of returns observed, e.g., 1000 trading days )
+
+[COVARIANCE] : A statistical measure that indicates the direction of the linear relationship between two variables. It shows whether the variables tend to increase or decrease together (positive covariance), move in opposite directions (negative covariance), or have no consistent pattern (covariance close to zero).
+> 0 (positive)	→ 𝑋 and Y move in the same direction
+< 0 (negative)	→ X and Y move in opposite directions
+= 0	            → No visible linear relationship
+close to 0	    → Weak or almost no relationship
+Generally, a portfolio should have assets with low or negative covariances between them in order to diversify the risk
+An investor should consider a lot the COV.
+Gold acts as a hedge against systemic risk thanks to its low or negative covariance with other assets during crises, reducing overall volatility and improving portfolio resilience.
