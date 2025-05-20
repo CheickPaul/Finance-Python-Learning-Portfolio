@@ -1,4 +1,52 @@
-**Almost every human activity that's useful and important needs financing**
-VAR : Variance
+                  **Almost every human activity that's useful and important needs financing**
+
 [VaR]: Value at Risk, a **risk management metric** used to estimate how much you could potentially lose on investment or portfolio, over a specific time period with a given level of confidence.
-We can calculate VaR by using historical simulation, variance-covariance, Monte Carlo
+We can calculate VaR by using 3 main a.historical simulation, b.variance-covariance ( Parametric VaR), c.Monte Carlo
+a.historical simulation : Uses actual historical returns to simulate potential future losses.
+b.Parametric VaR : Assumes returns follow a normal distribution. Fast, but less flexible.
+VaR=Zα×σ×V
+Zα : z-score for the confidence level (1.65 for 95%, 2.33 for 99%) / σ: σ = standard deviation (volatility) of returns/ V = portfolio value
+c.Monte Carlo : Generates thousands of random scenarios. Powerful but computationally heavy.
+
+[Stress Tests] (a faire plus tard sur algo trading 30 ) : originally it was refered to the medical procedure of cardiovascular activity after effort, to see how the cardiovascular system reacts, now it's turned on finance to identify vulnerabilities, resiliency and anticipate the impact of worst case scenarios.
+[VAR] : Variance is the standard deviation of an asset's return. Variance measures the dispersion of an asset’s returns around its mean. It quantifies the degree of risk or volatility associated with the asset. The higher the variance, the more volatile (unstable) the returns are which means the investment is riskier.
+![Variance formula](./images/variance_formula.png)
+
+[SP500]
+" voir scatter with regression line"
+[Beta of a stock]: Beta measures how sensitive a stock is to movements in the overall market. 
+β = 1: same volatility, β > 1: more volatile, β < 1: less volatile).
+Beta represents the systematic risk (market related risk) of an asset.
+[CAPM] : Capital Asset Pricing Model, The CAPM is a model used to calculate the **expected return** of a stock based on its risk.
+It uses beta to link this risk to the expected return.
+**Expected Return** =Rf+β×(Rm−Rf)
+Rf:risk-free rate
+Rm: market return
+
+[Systematic Risk (Market Risk)] : unavoidable risk, related to the market
+[Idiosyncratic Risk] :Specific or Unsystematic Risk, specific to a single company or industry. we can reduce this risk by diversifying the portfolio
+
+[Regression line ] : statistical tool that models the relationship between two variables.
+in finance, it's commonly used to: Estimate the beta of a stock (relationship between a stock’s return and the market’s return).
+Y=α+βX+ε
+Y = Dependent variable (e.g., stock return)
+X = Independent variable (e.g., market return)
+α = Intercept (also called Jensen’s alpha in finance), it's te stock return if the market doesnt move, if the the X is 0. It shows the added value of a stock independant of the market.
+β = Slope of the line → measures sensitivity (beta)
+ε = Random error (what the model doesn’t explain)
+
+
+[normal Distribution] : Calm market, most price movements are small, extreme risks are rare
+[valeurs aberrantes, valeur extreme, outlier]: a single extreme value, an isolated point far from the rest.
+[Cauchy distribution] Heavy tail :Turbulent market, extreme price movements are frequent and significant events are more likely.
+[Heavy tail] : a global phenomenon meaning there are more outliers in the tails of the distribution than expected under a normal distribution
+[Central limit theorem (CLT)]: The average of a large number of independent, identically distributed variables with finite variance follows a normal distribution, even if the original data are not normal.
+Key points:
+Works when: independence + identical distribution + finite variance + large sample size
+Usefulness: allows using the normal distribution to analyze averages
+Fails if: infinite variance (e.g., Cauchy distribution), dependence, or too small sample size
+Original data	           →   The individual values you observe	( Daily returns of a stock (e.g., +1%, -0.5%) )
+Identically distributed	 →   All data come from the same “source” or pattern	(Each daily return follows the same statistical rule (same mean, volatility) )
+Independence	           → Data points don’t influence each other	(Today’s return doesn’t directly affect tomorrow’s return)
+Finite variance	         → No uncontrollable extreme values	Returns don’t have “crazy” infinite jumps too often
+Large sample             → size	Lots of data points	Many days of returns observed, e.g., 1000 trading days
