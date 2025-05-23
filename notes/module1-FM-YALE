@@ -47,7 +47,7 @@ Usefulness: allows using the normal distribution to analyze averages
 Fails if: infinite variance (e.g., Cauchy distribution), dependence, or too small sample size
 Original data	           →   The individual values you observe	( Daily returns of a stock (e.g., +1%, -0.5%) )
 Identically distributed	 →   All data come from the same “source” or pattern	(Each daily return follows the same statistical rule (same mean, volatility) )
-Independence	           → Data points don’t influence each other	(Today’s return doesn’t directly affect tomorrow’s return)
+Independence	           → Data points don’t influence each other	(Today’s return doesn’t directly affect tomorrow’s return) 
 Finite variance	         → No uncontrollable extreme values	Returns don’t have “crazy” infinite jumps too often
 Large sample             → size	Lots of data points	 (Many days of returns observed, e.g., 1000 trading days )
 
@@ -59,3 +59,9 @@ close to 0	    → Weak or almost no relationship
 Generally, a portfolio should have assets with low or negative covariances between them in order to diversify the risk
 An investor should consider a lot the COV.
 Gold acts as a hedge against systemic risk thanks to its low or negative covariance with other assets during crises, reducing overall volatility and improving portfolio resilience.
+
+L3
+[INSURANCE FUNDAMENTALS]
+[Risk Pooling], the source of all value in insurance, Insurance companies use the Law of Large Numbers to predict how many losses will occur in a large group. By pooling individual risks together, they make total losses more stable and predictable. This makes the insurance business, overall, not very risky.
+
+
