@@ -1,4 +1,6 @@
-                  **Almost every human activity that's useful and important needs financing**
+Author Quotes : " if you help people manage risks, they will take more risks. That's what we want. We want people, in their decisions about their education, to do some risk-taking. Develop some specialty that is at risk of being obsolete, but who knows, nobody knows. You're taking a chance. Let's encourage people to take chances."
+
+**Almost every human activity that's useful and important needs financing**
 
 [VaR]: Value at Risk, a **risk management metric** used to estimate how much you could potentially lose on investment or portfolio, over a specific time period with a given level of confidence.
 We can calculate VaR by using 3 main a.historical simulation, b.variance-covariance ( Parametric VaR), c.Monte Carlo
@@ -88,4 +90,7 @@ Managing risk through diversification, variety of assets. Mean and variance of p
 [Salon-Risk]
 Hedge funds are not well known; they do not advertise( exept by private conversation) to protect their strategies, but above all because they are not allowed by the regulatory authorities to do so. not approve to retail investor but by accreditated ones.
 Black Swan, Taleb. Model to measure risk are flawed because they do not take into account rare and unlikely (low probability) events. we do not have enough data to properly analyse those rare and events so it's a problem 
+Robert Shiller : “If you help people manage risks, they will take more risks. That's what we want. We want people, in their decisions about their education, to do some risk-taking. Develop some specialty that is at risk of being obsolete, but who knows, nobody knows. You're taking a chance. Let's encourage people to take chances.”
 
+
+[Capital Asset Pricing Model (CAPM)]
