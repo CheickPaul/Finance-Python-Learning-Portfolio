@@ -108,3 +108,179 @@ People need investment companies ( investment trust, mutual fund to diversify on
 [Beta β]
 negative beta stocks helps in the portfolio helps in case of regression. even if the return it's not so good it's a good hedge in case of recession
 a negative beta stocks could be see as an insurance 
+
+[Short Sales]
+vente a decouvert
+
+[Optimal Portfolio]
+start by investing in thr risk free asset and invest the bernefit in the the risky asset
+# 📈 Portfolio Optimization – Key Formulas
+
+##  1. Two-Asset Portfolio
+
+### Expected Return:
+\[
+E(R_p) = w_A \cdot E(R_A) + (1 - w_A) \cdot E(R_B)
+\]
+
+### Portfolio Variance:
+\[
+\sigma_p^2 = w_A^2 \cdot \sigma_A^2 + (1 - w_A)^2 \cdot \sigma_B^2 + 2 \cdot w_A \cdot (1 - w_A) \cdot \text{Cov}(A, B)
+\]
+
+---
+
+## 📊 2. Markowitz Mean-Variance Optimization (n Assets)
+
+### Objective:
+\[
+\min_w \quad w^T \Sigma w
+\]
+
+### Subject to:
+\[
+w^T \mu = r_{\text{target}}, \quad \sum_{i=1}^n w_i = 1
+\]
+
+Where:
+- \( \mu \) = vector of expected returns  
+- \( \Sigma \) = covariance matrix  
+- \( w \) = vector of asset weights  
+- \( r_{\text{target}} \) = target return  
+
+---
+
+## 💡 3. Optimal Risky Asset Allocation (CAPM context)
+
+\[
+w^* = \frac{E(R_M) - R_f}{\sigma_M^2} \cdot \frac{1}{A}
+\]
+
+Where:
+- \( E(R_M) \) = expected return of the market  
+- \( R_f \) = risk-free rate  
+- \( \sigma_M^2 \) = market variance  
+- \( A \) = investor’s risk aversion coefficient  
+
+---
+
+## ⚖️ 4. Sharpe Ratio (to maximize risk-adjusted return)
+
+\[
+\text{Sharpe Ratio} = \frac{E(R_p) - R_f}{\sigma_p}
+\]
+
+Where:
+- \( E(R_p) \) = expected return of the portfolio  
+- \( R_f \) = risk-free rate  
+- \( \sigma_p \) = portfolio standard deviation  
+
+---
+
+
+A negative covariance decreased the portfolio variance
+
+# 📈 Difference Between Risky and Less Risky Stocks
+
+This summary explains the key differences between a **risky stock** and a **less risky stock**, based on financial characteristics.
+
+---
+
+##  1. Volatility (σ)
+- **Risky stock**: High price fluctuations in the short term.
+- **Less risky stock**: More stable prices over time.
+
+> Example: Tesla (TSLA) is more volatile than Coca-Cola (KO).
+
+---
+
+##  2. Earnings Predictability
+- **Risky stock**: Uncertain or negative earnings.
+- **Less risky stock**: Stable and predictable profits.
+
+---
+
+##  3. Industry Sector
+- **High risk**: Tech, Biotech, Startups, Cryptos.
+- **Low risk**: Utilities, Consumer Staples.
+
+---
+
+##  4. Market Sensitivity (Beta, β)
+- **Risky stock**: β > 1 → more sensitive than the market.
+- **Less risky stock**: β < 1 → less sensitive than the market.
+
+> Example: A stock with β = 1.5 is 50% more volatile than the market.
+
+---
+
+##  5. Financial Structure
+- **Risky stock**: High debt, weak cash flows.
+- **Less risky stock**: Healthy balance sheet and solid cash reserves.
+
+---
+
+##  6. Dividends
+- **Less risky stock**: Regular dividend payments.
+- **Risky stock**: Often no dividends (growth focus or instability).
+
+---
+
+##  Summary Table
+
+| **Criterion**             | **Risky Stock**             | **Less Risky Stock**         |
+|---------------------------|-----------------------------|-------------------------------|
+| Volatility                | High                        | Low                           |
+| Earnings                 | Uncertain                   | Stable and predictable        |
+| Sector                    | Cyclical / Innovation       | Defensive                     |
+| Beta (β)                  | > 1                         | < 1                           |
+| Dividends                 | Rare or none                | Regular                       |
+| Debt                      | Often high                  | Well-managed                  |
+
+---
+
+
+[efficient portfolio return]
+long term bonds are risky
+
+[Gordon Growth Model Present Value (PV)]
+
+# Gordon Growth Model (GGM)
+
+La formule pour calculer la valeur actuelle d'une action selon le modèle de croissance constante des dividendes est :
+
+\[
+P_0 = \frac{D_1}{r - g}
+\]
+
+où :
+
+- \(P_0\) = prix actuel de l'action  
+- \(D_1\) = dividende attendu l'année prochaine  
+- \(r\) = taux de rendement exigé (coût du capital)  
+- \(g\) = taux de croissance constant des dividendes
+
+# Gordon Growth Model - Formule générale
+
+\[
+P_0 = \sum_{t=1}^{n} \frac{D_0 (1 + g)^t}{(1 + r)^t} + \frac{P_n}{(1 + r)^n}
+\]
+
+avec
+
+\[
+P_n = \frac{D_0 (1 + g)^{n+1}}{r - g}
+\]
+
+où :
+
+- \(P_0\) = prix actuel de l'action  
+- \(D_0\) = dividende payé à l'année 0 (dividende courant)  
+- \(g\) = taux de croissance constant des dividendes  
+- \(r\) = taux de rendement exigé  
+- \(n\) = nombre d'années avant la valeur terminale  
+- \(P_n\) = valeur terminale estimée à l'année \(n\)
+
+Ne fonctionne pas bien pour les entreprises qui ne versent pas de dividendes.
+Le taux de croissance 𝑔 doit être constant et inférieur à 𝑟
+You can make a fortune investing in businesses that are declining. You can fill up your portfolio with declining industries. It doesn't matter, it's the question, can you buy them for less than the present value.xf
