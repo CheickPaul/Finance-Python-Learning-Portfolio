@@ -1,1 +1,50 @@
+[Limited Liabilitiy]
+Before 1811, shareholder were responsible for the the action manager of companies they were investing in
+Now, owners and managers are legally separate. Because of this, investor tend to overestimate the minimal probability of loss. judt as when they buy lottery tickects
+
+[Inflation Indexed Debt]
+Les obligations indexées sur l'inflation sont une innovation financière majeure qui permet de protéger le pouvoir d'achat du créancier face à la dévaluation monétaire, notamment causée par l’inflation.
+
+[Unitad de Fomento]
+inflation in chile. To create a unit of account indexed to inflation, in order to counteract the impact of hyperinflation.
+
+[Real EstateRisk Management Devices]
+Value of home is a major source of risk, people are not protected against home prices fluctuation ( no assurance, progress is slow)
+We can short home market
+
+[Forecasting]
+Random walk Hypothesis, 
+(1)unforecastable,Random walk, Karl Pearson
+(2) Burton Malkiel, better to diversify portefolio instead of trying to predict
+(3) Random walk & AR-I Models,
+Random Walk: xt= xt-1 +Et
+# Modèle AR(1) — Autoregressive Process of Order 1
+
+Le modèle **AR(1)** est une extension du **random walk** qui introduit une dépendance linéaire sur la valeur précédente, avec une possible stationnarité.
+
+## Formule générale
+
+\[
+x_t = \phi x_{t-1} + \epsilon_t
+\]
+
+- \(x_t\) : valeur à l’instant \(t\)
+- \(\phi\) : coefficient d’autorégression (réel), mesure la dépendance sur la valeur précédente
+- \(\epsilon_t\) : bruit blanc, souvent \( \sim \mathcal{N}(0, \sigma^2) \)
+
+## Interprétation
+
+- Si \(|\phi| < 1\) : la série est **stationnaire** (moyenne et variance constantes dans le temps) et tend à revenir vers sa moyenne.
+- Si \(\phi = 1\) : le modèle est un **random walk** (marche aléatoire), série non stationnaire.
+- Si \(|\phi| > 1\) : la série est instable et diverge.
+
+## Exemple
+
+Avec \(\phi = 0.8\), la valeur actuelle dépend à 80% de la valeur précédente plus un terme aléatoire. La série est autocorrélée mais revient vers une moyenne.
+
+## Différence avec un Random Walk
+
+- Random Walk : \(x_t = x_{t-1} + \epsilon_t\) (\(\phi=1\)), non stationnaire.
+- AR(1) : \(x_t = \phi x_{t-1} + \epsilon_t\) avec \(|\phi|<1\), stationnaire.
+
 
