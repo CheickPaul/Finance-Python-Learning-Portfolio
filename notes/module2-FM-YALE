@@ -47,4 +47,44 @@ Avec \(\phi = 0.8\), la valeur actuelle dépend à 80% de la valeur précédente
 - Random Walk : \(x_t = x_{t-1} + \epsilon_t\) (\(\phi=1\)), non stationnaire.
 - AR(1) : \(x_t = \phi x_{t-1} + \epsilon_t\) avec \(|\phi|<1\), stationnaire.
 
+[Intuition of Efficiency]
+Weak form efficiency : prices incorporate information
+Semi strong form : Incorporate all publicly available
+Strong form : All information including inside information
+
+[Price as PDV OF Expected Dividends]
+## Price as Present Discounted Value (PDV) of Expected Dividends
+
+Le prix actuel d'une action correspond à la somme actualisée de ses dividendes futurs attendus.
+
+###  Formule Générale :
+
+\[
+P_t = \sum_{k=1}^{\infty} \frac{ \mathbb{E}_t [D_{t+k}] }{(1 + r)^k}
+\]
+
+- \(P_t\) : Prix de l’action à la date \(t\)
+- \(\mathbb{E}_t [D_{t+k}]\) : Dividende attendu à la date \(t+k\), anticipé à la date \(t\)
+- \(r\) : Taux d’actualisation ou coût du capital
+
+###  Interprétation :
+
+Le prix d’une action est égal à la valeur présente de tous les flux de dividendes futurs anticipés par les investisseurs, actualisés à un taux d'intérêt qui reflète le risque.
+
+###  Hypothèse (modèle de croissance constante de Gordon) :
+
+Si les dividendes croissent à un taux constant \(g\), la formule devient :
+
+\[
+P_t = \frac{D_{t+1}}{r - g}
+\]
+
+- \(D_{t+1}\) : Dividende attendu l’année prochaine
+- \(g < r\) : Taux de croissance constant des dividendes
+
+price/earning ratio
+
+[Doubting Efficiency]
+
+
 
