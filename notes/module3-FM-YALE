@@ -1,1 +1,142 @@
+[Discount Bonds] : Bonds with no coupon, typically T is 6months 
+[Present Discount Value ( PDV) ]
+PDV of a dollar in one year = 1/(1+r)
+PDV of a dollar in n years = 1/(1+r)^n
+PDV of a stream of payments X1,....Xn
+[Conventional Bonds Carry Coupons] : coupon every 6 months at par 100 usd, Term is time to maturity
+
+[CONSOL (perpetual bond) and Annuity Formulas] : Consol pays constant quantity x forever.
+Growing consol pays x(1+g)^(t-1) in t 
+Annuity pays x from time 1 to T
+
+[Forward Rates and Expectation Theory] : Interest rates that can be taken in advance using the term structure
+
+[Inflation] : Nominal rate quoted in dollar, real rate quoted market baskets, Nominal rate usually greater than real rate
+Index bonds : bonds that pay coupon defined in real terms and a principle.
+
+[Leverage] : Levereging is borrowing money to invest. Leverage increases risk. 
+there in a debt index related to inflation because 
+
+[Market Capitalization by Country] : 
+
+[The corporation] : an organisation that made as it has a body, as it is a person. a corporation is an artificial person
+for-profit company, governed by a board of directors that is elected by the shareholders. One share, on vote and and the board of director votes on who will be the president or the CEO. the CEO is hired as an employee and has to report to the board of director.
+Non-profit corporation are not owned by anyone. This corp promote some cause. The non profit could make profit but do not distribute profit to shareholders.
+
+[Shares and dividend] : 
+
+[Common vs Preferred Stock] : 
+| Feature                 | Common Stock             | Preferred Stock           |
+| ----------------------- | ------------------------ | ------------------------- |
+| Voting rights           | Usually yes              | Usually no                |
+| Dividend                | Variable, not guaranteed | Fixed, paid before common |
+| Priority in liquidation | Last                     | Before common             |
+| Price volatility        | High (equity-like)       | Lower, more bond-like     |
+| Convertibility          | No                       | Sometimes convertible     |
+
+[Corporate Charter]: We call equity the "equality of shareholders" because all shareholders within the same class have the same claim, rights, and treatment
+
+[Corporations Eaise Money] : Borrowing money through bank / issuing debt and sell it through bond / issuying shares.
+The best way to raise money for corporarte actions is retained earning
+-** Impact of Share Price on Equity Financing**
+
+1. **High price** → Company raises more capital with less dilution (e.g., 1M shares at \$30 = \$30M).
+2. **Low price** → Issuing shares causes heavy dilution, so companies are reluctant to do it.
+3. **Effect on investment** → High price = easier financing for projects; low price = tendency to wait or use debt instead.
+
+[Dilution] : **Dilution** in finance means the **reduction of an existing shareholder’s ownership percentage** in a company when new shares are issued.
+
+---
+
+### **How it happens**
+
+* A company issues **additional shares** (to raise capital, pay employees in stock, convert bonds, etc.).
+* The **total number of shares increases**, but your number of shares stays the same.
+* Your **percentage ownership** (and sometimes your share of earnings/dividends) decreases.
+
+---
+
+### **Example**
+
+* Before: Company has **1,000 shares**, you own **100** → you own **10%**.
+* Company issues **500 new shares** → now 1,500 shares total.
+* You still own **100 shares**, but now only **6.67%** of the company.
+
+---
+
+### **Why it matters**
+
+* **Voting power**: Your influence in decisions drops.
+* **Earnings per share (EPS)**: Profits are split among more shares, so EPS usually falls.
+* **Share price**: Can drop if the market sees the issuance as a negative signal.
+
+**💡 Why Companies Accept Dilution**
+
+1. **Raise capital to grow** → Funding new projects, R\&D, acquisitions, or expansion. If these investments create more value than the ownership lost, shareholders benefit.
+2. **Avoid debt** → No interest payments, lower insolvency risk, and greater financial flexibility.
+3. **Bring in strategic partners** → Attract institutional investors, industry partners, or shareholders who add expertise and networks.
+
+**In short:** Dilution can be positive if the capital raised increases the company’s total value faster than the percentage ownership lost.
+
+[SHARE REPURCHASE]: Instead of issuing new shares, the company can repurchase shares outstanding. That's the reverse of delusion because the number of shares goes down.
+Why companies do it
+Increase Earnings per Share (EPS) → Fewer shares mean profits are divided among fewer owners, boosting EPS.
+
+Return value to shareholders → Instead of dividends, buybacks give indirect returns through potential price increases.
+
+Signal confidence → Management may believe the stock is undervalued.
+
+Offset dilution → Counteracts new shares issued via employee stock options or convertible bonds.
+---
+
+| Feature                   | **Dilution**                                                      | **Share Repurchase**                                                              |
+| ------------------------- | ----------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| **What it is**            | Issuing new shares → increases total shares outstanding.          | Company buys back its own shares → reduces total shares outstanding.              |
+| **Effect on ownership %** | Your % ownership **decreases** if you don’t buy new shares.       | Your % ownership **increases** if you don’t sell shares.                          |
+| **Impact on EPS**         | Usually **decreases** Earnings Per Share.                         | Usually **increases** Earnings Per Share.                                         |
+| **Reason for doing it**   | Raise capital, bring in strategic investors, avoid debt.          | Return value to shareholders, tax advantages, signal confidence, offset dilution. |
+| **Market perception**     | Can be seen as negative if overused (shareholder value dilution). | Often seen as positive if funded sustainably.                                     |
+| **Tax effect (US)**       | No direct tax event for existing holders.                         | Potential capital gains tax, often deferred until sale.                           |
+
+---
+
+[PDV of Expected Dividends]
+**💡 PDV of Expected Dividends (Dividend Discount Model)**
+
+* **Core idea** → In efficient markets, the price of a stock equals the **Present Discounted Value** of all its expected future dividends.
+* **Why dividends matter** → Without the prospect of ever receiving dividends (or equivalent cash flows), a stock would be worth nothing.
+* **Simplified case** → If a company pays all earnings as dividends, **P/E ratio** ≈ **1 / (r – g)**
+
+  * $r$ = required rate of return (discount rate)
+  * $g$ = growth rate of earnings/dividends
+* **Implications**:
+
+  1. **Low P/E** → high $r$ (riskier stock) or low $g$ (weak growth prospects).
+  2. **High P/E** → low $r$ (less risky) or high $g$ (strong growth prospects, company with unique technology).
+* **Market behavior** → Real-world P/E also influenced by investor sentiment and fashion (value investing idea of Graham & Dodd), not just $r$ and $g$.
+
+[Why do firms pay dividends? ] : 
+**💡 Why Firms Pay Dividends**
+
+* **Two main payout methods** → Cash dividends or share repurchases (economically similar but taxed differently).
+* **Behavioral reasons**:
+
+  1. **Self-control theory** (Shefrin & Statman) → Some investors follow rules like *“never touch the principal”*, relying on dividends for income (e.g., retirees, institutions).
+  2. **Signaling theory** (Bhattacharya, Hakansson & Ross) → Dividends signal financial strength; firms unlikely to pay them if near bankruptcy.
+* **Lintner’s findings**:
+
+  * Firms target a payout ratio (dividends as a % of EPS) but adjust gradually.
+  * They avoid cutting dividends because it sends a negative signal and angers investors.
+* **Tax considerations**:
+
+  * Dividends taxed immediately as income.
+  * Share repurchases defer taxes until shares are sold (capital gains).
+  * Attempts to replace dividends with buybacks to save taxes often fail due to investor resistance and misunderstanding.
+* **Market reality** → Investor psychology, habits, and sentiment often override pure efficient market logic.
+
+---
+
+
+
+
 
