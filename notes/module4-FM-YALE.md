@@ -291,9 +291,7 @@ Perfect — here’s the same README **in English** for your GitHub:
 
 ---
 
-👉 This lecture highlights how **mortgage insurance (PMI)**, **structured mortgage securities (CMOs)**, and **complex debt products (CDOs)** evolved, and how their misuse and mispricing contributed to the **global financial crisis**.
-
-
+[Post Crisis Regulation ]
 
 
 
