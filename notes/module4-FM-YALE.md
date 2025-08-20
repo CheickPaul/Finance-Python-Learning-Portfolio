@@ -586,4 +586,78 @@ For investors, the key lessons are:
 - **Track housing activity as a macro signal.**  
 - **Maintain diversification and cycle awareness to withstand downturns.**
 
+  [The Bubble, part 3
+
+# The Bubble, Part 3
+
+## 1. Overvaluation Perceptions in 2004
+
+* Shiller’s surveys showed that U.S. households expected **+12% annual home price growth** for the next 10 years.
+* At this pace, prices would **double in \~6 years**, even though they were already at record levels.
+* With 30-year mortgage rates around **6%**, the gap between **borrowing costs** and **expected appreciation** looked highly attractive.
+
+## 2. Leverage and Tax Advantages
+
+* Down payments were often as low as **5% or less**, implying **\~20:1 leverage**.
+* A positive spread of 6 points (12% – 6%).
+* Mortgage interest was **tax deductible**, while appreciation was taxed as capital gains (often deferred or exempt).
+* This created an impression of very high returns → strong incentives to buy.
+
+## 3. Absence of the Word “Bubble”
+
+* Until 2005, the term *housing bubble* was rarely used.
+* Finance courses taught that markets were **efficient**:
+
+  * an efficient market instantly and fully incorporates all available information into prices,
+  * meaning it is impossible to consistently “beat the market” using public information.
+* In practice, bubbles show that **psychological biases** and collective narratives can drive prices far from fundamentals.
+
+## 4. Media Turning Point (2005)
+
+* **The Economist (June 2005)**: cover story warning of house prices “falling like a brick,” before any actual decline had started.
+* **Time Magazine (2005)**: raised the question “Will your house make you rich?” and openly discussed the case for renting.
+* **Barron’s (2005)**: interview with Shiller predicting a possible **50% decline** (the real figure was closer to \~40% inflation-adjusted).
+* Outcome: the psychological climate shifted → home buying was no longer seen as an obvious, risk-free decision.
+
+## 5. Post-Crisis Consequences
+
+* By 2012, the **spread between mortgage costs and expected appreciation had disappeared**.
+
+  * Price growth expectations ≈ 0%, sometimes negative.
+  * Mortgage rates had declined, but expectations had fallen even faster.
+* Conclusion: **buying was no longer a “good deal.”**
+* Many young people increasingly turned to **renting** (urban lifestyles, lower optimism, cultural shift away from ownership).
+
+## 6. International Extension – China
+
+* Signs of overheating:
+
+  * Extremely high **price-to-income** and **price-to-rent ratios**.
+  * **Parents financing purchases** for children.
+  * Social pressures (housing as a prerequisite for marriage).
+  * **Limited ability to invest abroad** → domestic capital concentrated in real estate.
+
+* Chinese specificities:
+
+  * Fear of corruption → preference for tangible assets like housing.
+  * Male-female imbalance → families buy homes to increase marriage prospects for sons.
+  * Rapid economic growth → belief that Beijing or Shanghai could soon rival the world’s most expensive cities.
+
+* Risks: economic slowdown and possible liberalization of foreign investment could trigger corrections.
+
+## 7. About Robert Shiller
+
+* Robert J. **Shiller** is the professor of this Yale course.
+* Nobel Prize in Economics (2013), known for:
+
+  * the **Case-Shiller Home Price Index**,
+  * pioneering work on **speculative bubbles**,
+  * and **behavioral finance**, highlighting the role of narratives and human biases in markets.
+
+---
+
+**Key Insight**: The U.S. housing bubble shows how **unrealistic expectations**, amplified by **leverage and tax incentives**, can become a collective belief until the media narrative flips.
+China demonstrates that the **same psychological dynamics** can emerge elsewhere, shaped by local cultural and institutional factors.
+
+
 
