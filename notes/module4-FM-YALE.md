@@ -294,5 +294,296 @@ Perfect — here’s the same README **in English** for your GitHub:
 [Post Crisis Regulation ]
 
 
+# Post-Crisis Regulation – Yale University (Coursera)
+
+## 1. Background
+
+* After the **2007–2009 financial crisis**, public anger grew over:
+
+  * **Mortgage originators** approving risky loans (“liar’s loans”) knowing they would resell them.
+  * **CMOs/CDOs** repackaging poor-quality mortgages and marketing them as safe investments.
+* Problem: Banks had **no incentive to check quality**, since they did not retain the risk.
+
+---
+
+## 2. European Response
+
+* **Rule:** Mortgage originators must retain **at least 5%** of the loans they issue.
+* Purpose: Align incentives → discourage reckless lending (e.g., liar’s loans).
+
+---
+
+## 3. U.S. Response – Dodd-Frank Act (2010)
+
+* Copied the **5% risk retention rule**, *except* for **Qualified Residential Mortgages (QRM)**.
+* **QRM = “safe” mortgages** that meet strict underwriting standards.
+* Dodd-Frank left regulators to define what counts as QRM.
+
+  * Took 4 years, with thousands of industry comments and lobbying.
+  * Final rule ran **689 pages**.
+
+---
+
+## 4. QRM Standards (simplified)
+
+To be considered a QRM (and exempt from 5% retention), a mortgage must:
+
+* Have **equal or substantially equal payments** (no teaser rates leading to payment shocks).
+* **No negative amortization** (loan balance can’t grow).
+* **No balloon payments** at the end (must be annuity-style).
+* **Max term = 30 years**.
+* **Points and fees ≤ 3%** of loan amount.
+* For adjustable-rate mortgages: use the **max interest rate in the first 5 years** when testing affordability.
+* **Borrower’s income and assets must be verified** (no more “stated income” loans).
+* **Debt-to-Income (DTI) ratio ≤ 43%**.
+* ⚠️ Notably: No explicit **Loan-to-Value (LTV) cap** in the U.S. (other countries often set max LTV, e.g., 90%).
+
+---
+
+## 5. Implications
+
+* Post-crisis, mortgages in the U.S. are far more regulated.
+* A standard QRM mortgage today looks like:
+
+  * **30-year fixed**
+  * Fully documented income/assets
+  * **DTI < 43%**
+  * No exotic features (negative amortization, balloon payments).
+
+---
+
+[Chalk Talks - Excess Reserves ]
+# Excess Reserves & Banking Frictions
+
+## 1. Context: Reserve Requirements
+
+* Historically, banking crises often came from **bank runs**: depositors rushed to withdraw funds at the same time.
+* To prevent this, regulators imposed **reserve requirements**: banks must keep a minimum level of liquid assets.
+* These reserves come from **customer deposits**: a portion of deposits is immobilized and kept either in cash or at the central bank.
+* They do not come directly from the bank’s profits, but represent a fraction of deposits that the bank cannot use for lending or investment.
+
+---
+
+## 2. Definition: Excess Reserves
+
+* **Excess reserves = reserves held above the regulatory minimum.**
+* Historically, banks held very little, since reserves **earned no interest**.
+* Banks preferred to lend these funds instead of keeping them idle.
+
+---
+
+## 3. Why Did Banks Hold More After 2008?
+
+* During the **Great Recession**, central banks cut interest rates down to **zero**.
+* Lending opportunities became unattractive, so banks left more money in reserves.
+* Post-crisis regulations also discouraged risky lending.
+
+---
+
+## 4. Consequence: Idle Money and Secular Stagnation
+
+* Massive amounts of liquidity remained unused, **earning nothing**.
+* This reflects a **structural weakness in the global economy**: lack of safe and profitable investment opportunities.
+* Economists call this **secular stagnation**.
+
+---
+
+## 5. Information Problems: Moral Hazard & Adverse Selection
+
+* **Moral Hazard**:
+  Example: fire insurance → a policyholder might deliberately burn their house to collect compensation.
+  *Solution*: never insure the full value, to maintain aligned incentives.
+
+* **Adverse Selection**:
+  High-yield loans attract riskier borrowers (e.g., junk bonds).
+  For a cautious bank, these are not opportunities but **traps**.
+
+---
+
+## 6. How Banks Manage These Frictions
+
+* Banking is about **investing in information and trust-based relationships**.
+* Tools include:
+
+  * local offices and networks,
+  * personal knowledge of clients,
+  * observation and intuition.
+* A well-run bank combines **data analysis** and **human judgment** to decide whether to lend.
+
+---
+
+## Summary
+
+After the 2008 crisis, banks accumulated large excess reserves due to a lack of profitable and safe lending opportunities. This reflects a structural problem of **weak investment demand** and underlines the importance of managing **moral hazard** and **adverse selection** through information and trusted relationships.
+
+[The Bubble, part 1 ]
+# The Bubble, Part 1 – Early Signs of Irrational Exuberance
+
+## 1. Context: Speculative Price Movements
+
+* Bubbles are characterized by **rapid price increases** disconnected from fundamentals.  
+* In housing, as in stocks, people begin to believe that **past increases will continue indefinitely**.  
+* Robert Shiller highlights that investors often ignore historical evidence and instead rely on **short-term memory**.  
+
+---
+
+## 2. The Psychology of Bubbles
+
+* Bubbles are driven by **social contagion**: people copy the behavior of others.  
+* Narratives spread quickly:  
+  - “Housing is the safest investment.”  
+  - “Prices never fall nationwide.”  
+* This is reinforced by **media coverage**, which tends to celebrate rising prices and success stories.  
+
+---
+
+## 3. Historical Patterns
+
+* In U.S. history, there were several housing booms before the 2000s.  
+* These past episodes show the same pattern:  
+  - Prices increase sharply.  
+  - Optimism spreads.  
+  - Eventually, corrections occur, often severely.  
+* Yet, people in each new cycle tend to **ignore previous crashes**.  
+
+---
+
+## 4. Misperceptions of Risk
+
+* Investors underestimate the possibility of **price declines**.  
+* When prices rise for years, people conclude that risk is minimal.  
+* This leads to **over-leverage**, excessive borrowing, and unsustainable speculation.  
+
+---
+
+## 5. Early Warnings Before the 2000s Bubble
+
+* By the late 1990s and early 2000s, housing prices had already shown unusual growth compared to historical norms.  
+* Long-term ratios such as **price-to-income** and **price-to-rent** were diverging from their averages.  
+* Few analysts or institutions highlighted these risks, reinforcing the bubble’s build-up.  
+
+---
+
+## 6. The Role of Data and Information
+
+* The absence of widely available **long-term housing price series** contributed to the bubble.  
+* Most people only saw short-term trends (5–10 years).  
+* Without a broader historical perspective, they assumed growth was structural and permanent.  
+
+---
+
+## 7. Protecting Against Bubble Misperceptions
+
+1. **Historical Context**  
+   - Always compare current valuations with long-term averages.  
+   - Use at least 50–100 years of data where available.  
+
+2. **Skepticism Toward Narratives**  
+   - Question “new era” stories claiming that fundamentals no longer matter.  
+   - Avoid herd mentality and excessive reliance on media-driven optimism.  
+
+3. **Risk Management**  
+   - Limit leverage during rapid price expansions.  
+   - Diversify across assets to reduce exposure to a single overheated market.  
+
+---
+
+## Summary
+
+The first signs of the 2000s U.S. housing bubble showed how **psychology, narratives, and short-term thinking** can distort perceptions of risk.  
+Despite clear historical evidence of past housing cycles, investors convinced themselves that **“this time is different.”**  
+
+For investors, the lessons are:  
+- Always place market movements in a **long historical context**.  
+- Be cautious of **contagious optimism and media narratives**.  
+- Maintain prudent leverage and diversification during speculative booms.  
+
+
+[The Bubble, part 2 ]
+
+## 1. Context: U.S. Housing Boom and Bust
+
+* Home prices peaked in **2006**, then collapsed dramatically.  
+* Surveys of new homebuyers show a clear pattern:  
+  - When prices rise → buyers strongly believe real estate is the best long-term investment.  
+  - When prices fall → this belief weakens.  
+* This is a form of **wishful thinking bias**: people justify their purchase with optimism.  
+
+## 2. The Problem of Short Data Horizons
+
+* Most investors only see **short-term price series** (5–10 years).  
+* Newspapers and media rarely publish **century-long series**, so people extrapolate recent trends.  
+* Result: many assume **“prices always go up”**, ignoring historical cycles.  
+
+---
+
+## 3. Housing Starts as a Macro Driver
+
+* **Housing starts** = new residential constructions (houses, apartments, improvements).  
+* Highly **volatile** and strongly linked to home prices:  
+  - When prices are high → builders increase construction (profit margins are large).  
+  - When prices fall → construction collapses.  
+* Example: After 2006, housing starts fell by **80%** before recovering.  
+
+---
+
+## 4. Historical Episodes
+
+* **1970s**: Housing boom with strong price increases.  
+* **1990s–2006**: Largest boom in U.S. history.  
+  - Prices rose sharply.  
+  - Construction reached near-record highs.  
+  - Collapse led to dramatic declines in both prices and starts.  
+
+---
+
+## 5. The Role of Animal Spirits
+
+* **Animal spirits** = collective optimism that reinforces bubbles.  
+* Belief that housing “always” appreciates drives speculation and overbuilding.  
+* These collective beliefs are **unstable** and eventually reverse.  
+
+---
+
+## 6. The Challenge of Bubble Prediction
+
+* **Timing** is very difficult:  
+  - Nobody knows exactly when a bubble will burst.  
+  - Collective psychology can keep prices irrationally high for years.  
+* Still, ignoring the possibility of reversal is a major mistake:  
+  - History shows **millions of people can be wrong at the same time**.  
+  - Bubbles repeat across generations.  
+
+---
+
+## 7. Protecting Against Housing Bubbles
+
+1. **Long-Term Data Awareness**  
+   - Use long historical price series (over 50–100 years).  
+   - Compare current valuations to historical averages (price-to-income, price-to-rent).  
+
+2. **Macro Monitoring**  
+   - Track housing starts, construction employment, mortgage lending growth.  
+   - Extreme construction booms are warning signs.  
+
+3. **Diversification**  
+   - Avoid concentrated exposure to overheated housing markets.  
+   - Mix regions, property types, and even asset classes.  
+
+4. **Cycle Discipline**  
+   - Reduce leverage when valuations are stretched.  
+   - Maintain liquidity to seize opportunities after corrections.  
+
+---
+
+## Summary
+
+The U.S. housing boom of the 1990s–2006 illustrates how **optimism, short-sighted data, and animal spirits** fuel bubbles. Housing starts amplify the cycle, as builders respond to temporary profit margins. When the bubble bursts, the economic impact is severe.  
+
+For investors, the key lessons are:  
+- **Do not extrapolate recent growth into the future.**  
+- **Use long-term data to anchor expectations.**  
+- **Track housing activity as a macro signal.**  
+- **Maintain diversification and cycle awareness to withstand downturns.**
 
 
