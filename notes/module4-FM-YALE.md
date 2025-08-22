@@ -659,5 +659,99 @@ For investors, the key lessons are:
 **Key Insight**: The U.S. housing bubble shows how **unrealistic expectations**, amplified by **leverage and tax incentives**, can become a collective belief until the media narrative flips.
 China demonstrates that the **same psychological dynamics** can emerge elsewhere, shaped by local cultural and institutional factors.
 
+[Salon Bubbles]
+# Bubbles
+
+## 1. Why invest in a bubble?
+
+* Even if an investor suspects a bubble, the market can keep rising.
+* Shorting a bubble is difficult:
+
+  * In housing, you cannot short a house.
+  * In stocks, the downturn can take years → short sellers risk bankruptcy.
+* Financial advisors who recommend staying out of the market may lose their clients before the bubble bursts.
+
+---
+
+## 2. Origin and definition of the term
+
+* The word **bubble** was coined in 1720 during a stock market crash in France.
+* A bubble = **speculative rise driven by social contagion**:
+
+  * good news spreads, bad news is ignored,
+  * prices rise, attracting more buyers,
+  * eventually doubters appear, and the fall accelerates.
+* Long rejected by economists, the term became accepted after the 2007–2009 crisis.
+
+---
+
+## 3. Metaphor: bubble or epidemic?
+
+* Unlike a soap bubble, a financial bubble does not vanish completely. Prices can rise again.
+* Shiller suggests the term **“epidemic”** is more accurate:
+
+  * contagious spread of stories and beliefs,
+  * narratives and theories “mutate” like viruses (political statements, economic news).
+
+---
+
+## 4. Why was the 2000s housing bubble so massive?
+
+* Real estate boom was global: United States, China, Spain, Italy, UK, Ireland, Iceland…
+* Key factor: dominance of the **Efficient Market Hypothesis (EMH)**.
+
+  * Previously, leaders sometimes warned against excesses.
+  * Under EMH, criticizing the market seemed “unscientific.”
+  * Result: absence of counter-narratives allowed bubbles to grow unchecked.
+* The so-called “smart money” assumed to stabilize markets was far less visible in practice.
+
+---
+
+## 5. Efficient Market Hypothesis (EMH)
+
+* **Definition**: asset prices fully reflect all available information. It is impossible to consistently beat the market.
+* **Three forms**:
+
+  1. Weak: prices reflect past data.
+  2. Semi-strong: prices reflect all public information.
+  3. Strong: prices reflect even insider information.
+* **Critiques**: bubbles, crashes, and anomalies (momentum, value, etc.) contradict EMH.
+* Behavioral finance (Shiller, Kahneman, Tversky) highlights the role of psychology and social contagion.
+
+---
+
+## 6. Rational bubble?
+
+* Some theorists argue for the possibility of a **rational bubble**: investors ride the rise before the crash.
+* In practice: extremely risky.
+
+  * Very difficult to time the turning point.
+  * Strong hindsight bias makes events seem “obvious” after the fact.
+
+---
+
+## 7. The role of short selling
+
+* Foundational article: Edward Miller (1970s).
+
+  * Without short selling, nothing prevents “fanatics” from pushing prices to absurd levels.
+* Practical limits:
+
+  * not all shares are available for shorting,
+  * regulatory restrictions (e.g. China),
+  * housing cannot be shorted directly.
+* Attempts: futures and options markets on real estate (CME in the U.S., IPD in London).
+
+  * Low liquidity, high risk.
+  * Being a short seller is inherently dangerous.
+
+---
+
+## 8. Conclusion
+
+* Bubbles are **collective and contagious phenomena**, better understood as social epidemics than as simple price anomalies.
+* The lack of effective mechanisms to counter speculative excess (limited short selling) challenges the idea of fully **efficient markets**.
+
+
 
 
