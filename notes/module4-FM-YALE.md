@@ -1096,9 +1096,7 @@ Imagine a fruit market 🍎🍌:
 * **VPIN** is a practical metric to measure imbalance and probability of informed trading.
 * For retail, VPIN works best as a **risk filter and momentum context indicator**, not a standalone alpha signal.
 
----
-
-👉 Next step: VPIN can be coded easily in **Python** (good for backtesting and retail strategies).
+VPIN can be coded easily in **Python** (good for backtesting and retail strategies).
 C++ is only needed for **ultra-low latency HFT**.
 
 
