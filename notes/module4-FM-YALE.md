@@ -1,5 +1,4 @@
 [Salon - Recessions]
-Here’s a clean **README-style draft** for your GitHub:
 
 ### 1. Nature of Recessions
 
@@ -659,8 +658,8 @@ For investors, the key lessons are:
 **Key Insight**: The U.S. housing bubble shows how **unrealistic expectations**, amplified by **leverage and tax incentives**, can become a collective belief until the media narrative flips.
 China demonstrates that the **same psychological dynamics** can emerge elsewhere, shaped by local cultural and institutional factors.
 
-[Salon Bubbles]
-# Bubbles
+# [Salon Bubbles]
+
 
 ## 1. Why invest in a bubble?
 
@@ -752,6 +751,354 @@ China demonstrates that the **same psychological dynamics** can emerge elsewhere
 * Bubbles are **collective and contagious phenomena**, better understood as social epidemics than as simple price anomalies.
 * The lack of effective mechanisms to counter speculative excess (limited short selling) challenges the idea of fully **efficient markets**.
 
+# [ Regulation Overview]
 
+
+
+## 1. Context: Crises, Misbehavior, and Regulation
+
+* Financial regulation aims to deal with **human problems, manipulation, and deception**.
+* In *Phishing for Phools* (Shiller & Akerlof), “phishing” means exploiting people’s psychological biases.
+* Example: **\$9.99 vs \$10 pricing**.
+
+  * Why? Consumers perceive \$9.99 as much cheaper than \$10 because they focus on the first digit.
+  * This is a **psychological trick**.
+* Firms don’t necessarily want to manipulate, but in a **competitive market with thin margins**, they are **forced to adopt these tricks** because:
+
+  1. If they don’t, competitors will.
+  2. Refusing to play the game risks losing customers and going out of business.
+
+→ This creates what Shiller calls a **Phishing Equilibrium**: manipulation becomes the norm, even if no one really wants it.
+
+---
+
+## 2. The Phishing Equilibrium
+
+* In highly competitive markets, companies are trapped into using manipulative strategies.
+* Example: Shiller’s company once debated whether to price at **\$29.99 or \$30**.
+
+  * Since they had no competitors at that time, they chose \$30.
+  * But in a crowded market, refusing to play the “\$9.99 game” would have been unsustainable.
+* Conclusion: **manipulation is not always a choice—it’s imposed by competition**.
+
+---
+
+## 3. Microprudential vs. Macroprudential Regulation
+
+* **Microprudential regulation**: protects individual investors and consumers from abuse.
+* **Macroprudential regulation**: prevents large-scale systemic crises that threaten the entire economy.
+
+  * This shift became central after the 2008 financial crisis.
+* Today, regulation is not only about individual protection but also about **systemic stability**.
+
+---
+
+## 4. Why Businesses Want Regulation
+
+* Businesses may oppose specific rules that hurt their short-term interests.
+* But overall, **firms benefit from regulation** because:
+
+  * It prevents a “race to the bottom” where only the most manipulative survive.
+  * It creates a fairer playing field.
+* Analogy: **sports referees**.
+
+  * Players complain when fouled, but they want referees to ensure fair play and prevent dangerous behavior.
+
+---
+
+## 5. Trade-Off and Balance
+
+* Regulation lowers systemic risks but can also **slow down innovation** and impose compliance costs.
+* Shiller’s view: regulators he met were competent and public-spirited.
+* The key challenge: finding the **right balance** between protecting society and allowing entrepreneurship to thrive.
+
+# [Within Firm Regulation, part 1]
+
+# Within Firm Regulation (Part 1)
+
+## 1. Five Levels of Financial Regulation
+
+* **Within-firm regulation**
+* **Trade groups** (industry associations)
+* **Local government regulation**
+* **National government regulation**
+* **International regulation**
+
+This lecture focuses on the **first level: within-firm regulation**.
+
+---
+
+## 2. Role of the Board of Directors
+
+* Standard practice worldwide.
+* Usually includes **outside directors** from different professional backgrounds.
+* Responsibilities: **hire and fire the president/CEO**.
+* Typically a **part-time role** – directors are active in other areas, bringing perspective.
+* Chosen for their **reputation and credibility**, which helps protect against misconduct.
+
+---
+
+## 3. Safeguards Against Misconduct
+
+* Directors are selected to avoid individuals with **antisocial or untrustworthy traits**.
+* **Reputation matters**: credible directors won’t risk it by allowing devious practices.
+* This reputation-based governance helps prevent fraud and manipulation.
+* Example of misconduct: **tunneling**.
+
+---
+
+## 4. The Concept of “Tunneling”
+
+* Defined in **Johnson, La Porta, Lopez-de-Silanes, and Shleifer (2000)**.
+* Means **expropriation** by minority shareholders, directors, or officers.
+* Comparable to stealing money **through an underground tunnel**.
+* A subtle form of fraud that’s difficult to disentangle.
+
+---
+
+## 5. Common Law vs Civil Law in Preventing Tunneling
+
+* **Common Law** (U.S., U.K.):
+
+  * Courts create precedent-based law in addition to legislation.
+  * Judges decide on **specific disputes**, making them close to real human issues.
+  * More effective in handling tunneling cases.
+* **Civil Law** (continental Europe):
+
+  * Law is entirely legislative, no precedent.
+  * Less flexible → tunneling more frequent.
+* Conclusion (Johnson et al.): **Tunneling is more common in civil law countries.**
+* **Key advantage**: Common law systems (U.S., U.K.) provide stronger protection against tunneling and corporate abuse.
+
+---
+
+**Key Takeaway**: Within-firm regulation relies on **corporate governance** (boards with credible directors) and is reinforced by the **legal system**. Common law systems appear better equipped to prevent subtle corporate fraud like tunneling.
+
+
+#[ Within Firm Regulation, part 2 ]
+
+## 1. The Concept of “Tunneling”
+
+* **Definition**: Extracting value from a company by insiders (controlling shareholders, executives) at the expense of minority shareholders.
+* **Common methods**:
+
+  * Selling assets **below market value** to cronies (e.g., a factory sold at 20% of its real value).
+  * **Overpriced contracts** with friends’ or family businesses (e.g., paying 3× the market price).
+  * **Overly complex contracts** (e.g., 1,000 pages) so shareholders cannot detect overpricing.
+  * **Excessive executive compensation**, justified by artificially inflated reputation.
+  * **Loan guarantees or inter-company loans** that benefit friends’ companies (knowing repayment will never happen).
+  * **Expropriation of corporate opportunities** (CEO diverts new business opportunities to a friend instead of the company).
+  * **Dilutive share issues**, reducing existing shareholders’ value.
+  * **Insider trading**: buying before good news, selling before bad news.
+
+---
+
+## 2. Duties of Directors
+
+* **Duty of care**: act as a prudent, reasonable person would in managing the company.
+* **Duty of loyalty**: avoid conflicts of interest, prevent insiders from benefiting at shareholders’ expense.
+* Loyalty is not just a moral principle — it is a **legal obligation**.
+
+---
+
+## 3. Case Study: France
+
+* **SARL Peronnet case**: Company leased a warehouse from the Peronnet family (owners) at an inflated price.
+* Minority shareholders sued, alleging tunneling.
+* French court dismissed the case, ruling that the contract had a legitimate purpose and that judges cannot decide if the price was “too high.”
+* **Result**: tunneling was successful.
+* **Contrast**: In the U.S. or U.K., courts would be more likely to treat this as tunneling → explains stronger stock market development in Anglo-Saxon countries.
+
+---
+
+## 4. Limits and Risks of Regulation
+
+* **Too much regulation** = high compliance costs, discourages firms from growing beyond certain thresholds.
+* **Corrupt regulators** = risk of regulatory capture (needing bribes).
+* Balance is required: regulate without paralyzing business activity.
+
+---
+
+## 5. Spirit of Regulation
+
+* Regulators should act with a **professional mission to serve society**, not as insensitive bureaucrats.
+* Well-designed regulation is **essential** for a modern economy.
+
+# [Trade Groups / MM / VPIN ]
+
+---
+
+# README – Market Makers, Brokers, Spreads & VPIN
+
+## 1. From Fixed Commissions to Zero Commission
+
+* **Before 1975 (US) / 1986 (UK):**
+  Brokers charged a **fixed commission** (e.g., 0.25% per trade).
+  No competition, investors always paid the same fee.
+
+* **After deregulation:**
+  Brokers competed on price → **discount brokers** appeared.
+  Online brokers drove commissions down.
+
+* **Today:**
+  Many brokers (Robinhood, Trade Republic, etc.) offer **zero commission** on stocks/ETFs.
+
+👉 But **“zero commission” ≠ free trading**. The real cost is hidden in **spreads, PFOF, and execution quality**.
+
+---
+
+## 2. The Broker ↔ Market Maker Relationship
+
+1. **Investor (you):** sends a buy/sell order via a retail broker.
+2. **Broker:** instead of routing directly to the exchange, it sells the order flow to a **Market Maker (MM)** via **Payment for Order Flow (PFOF)**.
+3. **Market Maker:** executes your order at the quoted bid/ask and pays the broker for sending it.
+4. **Result:**
+
+   * Investor sees “zero commission.”
+   * Broker earns from PFOF.
+   * MM profits from the **spread**.
+
+---
+
+## 3. How Market Makers Operate
+
+* **Bid/Ask quotes:**
+  *Bid = price MM buys at; Ask = price MM sells at.*
+  Spread = Ask − Bid.
+
+* **Example:**
+  *Bid = \$100.00, Ask = \$100.05.*
+  Retail buys 100 shares at \$100.05 → MM immediately hedges at \$100.00.
+  Profit = \$0.05 × 100 = **\$5**.
+
+* **Other revenue sources:**
+
+  * Internalization (matching buyers/sellers inside their own book).
+  * Exchange rebates for liquidity provision.
+  * Statistical models from order flow.
+
+---
+
+## 4. Order Flow Toxicity (OFT)
+
+* **Non-toxic flow (retail):**
+
+  * Small orders, market orders, intuitive trading.
+  * No hidden information → predictable, safe for MM.
+  * MM captures spread consistently.
+
+* **Toxic flow (informed traders, HFT, hedge funds):**
+
+  * Large, fast, data-driven orders.
+  * Often arrive just before price moves.
+  * MM loses money if quoting too tight → widens spreads, reduces size, reprices faster.
+
+👉 For MMs, retail flow = gold. Institutional flow = risk.
+
+---
+
+## 5. VPIN – Volume-synchronized Probability of Informed Trading
+
+### 1) Core idea
+
+VPIN measures whether **buyers strongly outweigh sellers** (or vice versa) in a given period.
+
+* Balanced flow → low risk (likely retail).
+* Imbalanced flow → high risk (likely informed).
+
+👉 High VPIN = higher probability of trading against informed flow.
+
+---
+
+### 2) Step-by-step calculation
+
+**Step 1 – Classify volume (Bulk Volume Classification)**
+
+* If price ↑ → classify volume as **buy**.
+* If price ↓ → classify volume as **sell**.
+* If price = unchanged → split 50/50.
+
+**Step 2 – Build “volume buckets”**
+
+* Example: bucket size = 2,000 contracts.
+* Accumulate trades until reaching bucket size → 1 bucket.
+
+**Step 3 – Measure imbalance**
+
+* Example: 1,200 buys vs 800 sells in a 2,000 bucket.
+* Imbalance = |1200 − 800| = 400.
+* Ratio = 400 / 2000 = **0.20 (20%)**.
+
+**Step 4 – Smooth over multiple buckets**
+
+* Take the average of the last *N* bucket ratios (e.g., N=50).
+* That rolling average = **VPIN**.
+
+---
+
+### 3) Simplified example
+
+3 buckets of 1000 contracts each:
+
+| Bucket | Buys | Sells | Imbalance | Ratio |
+| ------ | ---- | ----- | --------- | ----- |
+| 1      | 600  | 400   | 200       | 0.20  |
+| 2      | 800  | 200   | 600       | 0.60  |
+| 3      | 500  | 500   | 0         | 0.00  |
+
+* VPIN = (0.20 + 0.60 + 0.00) / 3 = **0.27**
+  👉 Flow shows elevated toxicity, mainly due to bucket 2.
+
+---
+
+### 4) Intuition (fruit market metaphor)
+
+Imagine a fruit market 🍎🍌:
+
+* Normally, buyers ≈ sellers → stable.
+* Suddenly, way more buyers than sellers → something is going on (hidden info?) → high risk for sellers.
+
+---
+
+### 5) Practical interpretation
+
+* **Low VPIN (e.g., 0.05–0.10):** calm market, balanced flow, tight spreads.
+* **High VPIN (e.g., 0.25–0.40+):** imbalanced flow, likely informed traders, spreads widen.
+
+---
+
+## 6. Retail Strategies with VPIN
+
+* **Risk filter:**
+
+  * Avoid entering against the flow when VPIN is high.
+  * Reduce size or stay flat in toxic flow periods.
+
+* **Momentum follow:**
+
+  * If VPIN spikes → institutions may be buying/selling aggressively.
+  * Retail can follow the imbalance direction (short-term momentum), but must exit quickly.
+
+* **Setup filter:**
+
+  * Combine VPIN with breakouts, SMC zones, or news.
+  * Breakout + high VPIN = stronger conviction.
+
+👉 Realistically: retail cannot beat HFT in speed, but VPIN can be a **context tool** to avoid traps and catch durable moves.
+
+---
+
+## 7. Key Takeaways
+
+* Brokers make money from **PFOF**, not commissions.
+* Market makers profit from **the spread**, but risk losses if flow is toxic.
+* **Order Flow Toxicity** explains why retail flow is valuable and institutional flow is risky.
+* **VPIN** is a practical metric to measure imbalance and probability of informed trading.
+* For retail, VPIN works best as a **risk filter and momentum context indicator**, not a standalone alpha signal.
+
+---
+
+👉 Next step: VPIN can be coded easily in **Python** (good for backtesting and retail strategies).
+C++ is only needed for **ultra-low latency HFT**.
 
 
