@@ -1099,4 +1099,280 @@ Imagine a fruit market 🍎🍌:
 VPIN can be coded easily in **Python** (good for backtesting and retail strategies).
 C++ is only needed for **ultra-low latency HFT**.
 
+Here’s the **structured summary in English** for *National Regulation, Part 1* (Yale – Coursera):
+
+---
+
+# [National Regulation, Part 1]
+
+## 1. Too Much Regulation?
+
+* Example of China:
+
+  * Still an emerging country with significant corruption issues.
+  * Strong need for regulation and anti-corruption campaigns (e.g., Xi Jinping).
+* General idea: corruption is more common in early development stages but tends to decline as resources for proper regulation and enforcement increase.
+
+---
+
+## 2. Creation of the SEC (1934)
+
+* Context: regulation could not remain local, since financial activities cross state borders.
+* Initially opposed as a federal “power grab.”
+* Inspired by **Louis Brandeis** and the principle of **disclosure**.
+
+  * Famous quote: *“Sunshine is the best disinfectant.”*
+  * Public companies must publish balance sheets and profit & loss statements.
+
+---
+
+## 3. How the SEC Works
+
+* **EDGAR database** provides public access to financial statements.
+* Aim: clear, standardized, accessible disclosure (not hidden in fine print).
+* **William O. Douglas** (Yale Law, Legal Realist Movement) pushed for practical, human-centered regulation.
+* Author of *Democracy and Finance* (1940).
+
+---
+
+## 4. Capture and Conflicts
+
+* Example: Arthur Levitt, SEC chair, faced political pushback when targeting wrongdoing.
+* Historical case: brokers’ commissions were fixed until 1975 (legacy of the Buttonwood Agreement).
+
+---
+
+## 5. Public vs Private Securities
+
+* **Public securities**: require SEC approval and registration (IPO, quarterly filings).
+* **Private companies**: avoid disclosure, sometimes to protect secrets (e.g., hedge funds).
+
+---
+
+## 6. Hedge Funds and Accredited Investors
+
+* Exemptions defined in SEC rules:
+
+  * **3c1 funds**: max 99 investors, each must be an *accredited investor* (≥ \$200k annual income or ≥ \$1M in assets excluding main residence).
+  * **3c7 funds**: max 500 investors, each must be a *qualified purchaser* (≥ \$5M net worth; institutions ≥ \$25M).
+* Purpose: protect small investors and small institutions from risky products.
+
+---
+
+## 7. Conclusion
+
+* National regulation emphasizes **disclosure, registration, and investor protection**.
+* SEC does not guarantee that an investment is “good” — it only enforces transparency.
+
+
+---
+
+# [National Regulation (Part 2) ]
+
+## 1. Regulators and Innovation
+
+* Lawmakers and regulators are often criticized for lacking real Wall Street experience.
+* Example (1996): proposal for **inflation-indexed bonds** was initially dismissed as unnecessary – yet today these securities are widely used.
+* Regulators tend to be **rules-based** and cautious toward innovation.
+* Making regulation a **respected long-term career** is essential (not just a revolving door to private sector jobs).
+
+## 2. Insider Trading
+
+* **Definition**: trading on non-public, material information.
+* SEC regulation (e.g., **Regulation FD**, 2000) requires that any material disclosure to analysts must be made **simultaneously available to the public**.
+
+  * **How?** Through press releases, SEC filings (Form 8-K), public earnings calls/webcasts, or open-access postings on the company’s website.
+  * This rule ended the practice of selective disclosure (private tips to analysts or large investors).
+* **Case examples**:
+
+  * *IBM/Lotus (1995)* – leaked takeover information through a secretary → traced via phone records.
+  * *Emulex (1990s)* – ex-employee spread false news to profit from a short position → caught through internet tracing.
+* Debate: some economists argued insider trading accelerates price discovery, but consensus is that it **undermines trust** and discourages investment.
+
+## 3. Front-Running
+
+* **Definition**: when a broker uses advance knowledge of a client’s large order to trade ahead for personal gain.
+* Considered **illegal**.
+* Example: decimalization (2001, prices quoted in pennies instead of sixteenths) created smaller windows that may facilitate front-running.
+
+## 4. Accounting Standards
+
+* SEC has statutory authority over accounting standards but delegated it (1973) to the **Financial Accounting Standards Board (FASB)**.
+* **GAAP concepts**:
+
+  * *Net Income* – the “bottom line.”
+  * *Operating Income* – revenues minus operating costs.
+* **Non-GAAP measures**: *core earnings*, *pro forma earnings*, *EBITDA*, *adjusted earnings*.
+* These alternative metrics can cause confusion, as they are not standardized by FASB.
+
+---
+
+### 📌 Core Idea
+
+National regulation must balance **innovation and caution**, enforce rules against **insider trading and front-running**, and provide **clear accounting standards**. The ultimate goal is maintaining market fairness and investor confidence.
+
+---
+Here’s the updated **README in English**, now with the extra detail on *how* Regulation FD enforces public disclosure:
+
+---
+
+# [ National Regulation (Part 2) ]
+
+## 1. Regulators and Innovation
+
+* Lawmakers and regulators are often criticized for lacking real Wall Street experience.
+* Example (1996): proposal for **inflation-indexed bonds** was initially dismissed as unnecessary – yet today these securities are widely used.
+* Regulators tend to be **rules-based** and cautious toward innovation.
+* Making regulation a **respected long-term career** is essential (not just a revolving door to private sector jobs).
+
+## 2. Insider Trading
+
+* **Definition**: trading on non-public, material information.
+* SEC regulation (e.g., **Regulation FD**, 2000) requires that any material disclosure to analysts must be made **simultaneously available to the public**.
+
+  * **How?** Through press releases, SEC filings (Form 8-K), public earnings calls/webcasts, or open-access postings on the company’s website.
+  * This rule ended the practice of selective disclosure (private tips to analysts or large investors).
+* **Case examples**:
+
+  * *IBM/Lotus (1995)* – leaked takeover information through a secretary → traced via phone records.
+  * *Emulex (1990s)* – ex-employee spread false news to profit from a short position → caught through internet tracing.
+* Debate: some economists argued insider trading accelerates price discovery, but consensus is that it **undermines trust** and discourages investment.
+
+## 3. Front-Running
+
+* **Definition**: when a broker uses advance knowledge of a client’s large order to trade ahead for personal gain.
+* Considered **illegal**.
+* Example: decimalization (2001, prices quoted in pennies instead of sixteenths) created smaller windows that may facilitate front-running.
+
+## 4. Accounting Standards
+
+* SEC has statutory authority over accounting standards but delegated it (1973) to the **Financial Accounting Standards Board (FASB)**.
+* **GAAP concepts**:
+
+  * *Net Income* – the “bottom line.”
+  * *Operating Income* – revenues minus operating costs.
+* **Non-GAAP measures**: *core earnings*, *pro forma earnings*, *EBITDA*, *adjusted earnings*.
+* These alternative metrics can cause confusion, as they are not standardized by FASB.
+
+---
+
+## 5. Detection of Insider Trading vs. Front-Running
+
+### Insider Trading
+
+* **Easier to detect** because it often leaves a **trail of communication** (emails, phone calls, tips).
+* SEC and stock exchanges monitor **suspicious trades around corporate events** (mergers, earnings announcements).
+* Investigations often involve **subpoenaing phone and email records**.
+* Example: IBM/Lotus takeover traced by analyzing **telephone logs**.
+
+### Front-Running
+
+* **Harder to detect** since trades may look like normal market activity.
+* Exchanges (NYSE, NASDAQ, CME) use **surveillance algorithms** to detect unusual patterns:
+
+  * Brokers consistently trading just before large client orders.
+  * Small but repeated profits made from “jumping ahead.”
+* Regulators cross-check **broker personal accounts** with client order flow.
+* Detection is improving with **AI-based market surveillance**.
+
+---
+
+### Core Idea
+
+National regulation must balance **innovation and caution**, enforce rules against **insider trading and front-running**, and provide **clear accounting standards**. The ultimate goal is maintaining market fairness and investor confidence.
+
+---
+
+Voici ton **README complet pour National Regulation – Part 3** en anglais, au même style que les parties précédentes :
+
+---
+
+# National Regulation – Part 3
+
+## 1. Brokerage Failures and Investor Protection
+
+* In **1970**, **Goodbody & Company**, a brokerage firm, went bankrupt.
+* Customers’ shares were often held in **street name**:
+
+  * Shares were officially registered under the broker’s name.
+  * The customer was only the **beneficial owner**.
+  * Advantage: easier trading, no need to move paper certificates.
+  * Risk: if the broker failed, the investor could lose confidence in the system.
+* After Goodbody’s collapse, **Merrill Lynch** and the **New York Stock Exchange** intervened with a \$30 million pledge, so customers did not lose funds.
+* Lesson: the system needed an insurance scheme, similar to bank deposit insurance, to protect investors.
+
+---
+
+## 2. SIPC – Securities Investor Protection Corporation
+
+* Created in response to Goodbody’s failure.
+* Modeled after the **FDIC** (deposit insurance).
+* Provides coverage if a broker fails while holding customer assets.
+* **Coverage limits**:
+
+  * Up to **\$500,000 per account** (for securities).
+  * Up to **\$100,000 for cash deposits**.
+* **Criticisms**:
+
+  * Slow payments.
+  * Excludes claims not filed properly.
+  * Does not cover all forms of fraud or broker misconduct.
+* Still considered a **positive safety net** that maintains investor confidence.
+
+---
+
+## 3. Lessons from the 2008 Financial Crisis
+
+* Crisis caused largely by **mortgage excesses and leverage**.
+* **Off-balance-sheet accounting** concealed bank liabilities.
+* **Appraisal fraud**:
+
+  * Appraisers routinely valued homes just above the sales price.
+  * Banks tolerated this because they wanted mortgage approvals.
+* **Rating shopping**:
+
+  * Issuers approached multiple credit rating agencies.
+  * They only submitted securities to the agency willing to give a good rating.
+
+---
+
+## 4. Post-Crisis Regulatory Response
+
+### United States
+
+* **Dodd-Frank Act (2010)** created:
+
+  * **Financial Stability Oversight Council (FSOC)** → coordinates regulators, monitors systemic risk.
+  * **Consumer Financial Protection Bureau (CFPB)** → protects consumers in financial products (Elizabeth Warren’s initiative).
+
+### Europe
+
+* Created several institutions in response to the crisis:
+
+  * **European Systemic Risk Board (ESRB)**.
+  * **European Banking Authority (EBA)**.
+  * **European Securities Market Authority (ESMA)**.
+  * **European Insurance and Occupational Pension Authority (EIOPA)**.
+* Spread across multiple cities (EU multi-city model).
+
+---
+
+## 5. Regulatory Challenges
+
+* Financial regulation is often **reactive**, created after crises.
+* Agencies risk becoming **bureaucratic**:
+
+  * Complex rulebooks.
+  * Long processes to change or adapt regulations.
+* Nonetheless, many regulators are **well-meaning professionals** genuinely motivated to make the financial system safer and fairer.
+
+---
+
+👉 Key Takeaway:
+Regulation evolves **in response to crises** (e.g., SIPC after Goodbody, Dodd-Frank after 2008). It seeks to restore trust, but must balance **investor protection, bureaucratic inefficiency, and financial innovation**.
+
+---
+
+
+
 
