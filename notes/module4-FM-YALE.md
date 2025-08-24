@@ -1212,9 +1212,6 @@ Here’s the **structured summary in English** for *National Regulation, Part 1*
 National regulation must balance **innovation and caution**, enforce rules against **insider trading and front-running**, and provide **clear accounting standards**. The ultimate goal is maintaining market fairness and investor confidence.
 
 ---
-Here’s the updated **README in English**, now with the extra detail on *how* Regulation FD enforces public disclosure:
-
----
 
 # [ National Regulation (Part 2) ]
 
@@ -1367,8 +1364,60 @@ National regulation must balance **innovation and caution**, enforce rules again
 👉 Key Takeaway:
 Regulation evolves **in response to crises** (e.g., SIPC after Goodbody, Dodd-Frank after 2008). It seeks to restore trust, but must balance **investor protection, bureaucratic inefficiency, and financial innovation**.
 
+
 ---
 
+## International Financial Regulation – Summary
+
+### 1. Bank for International Settlements (BIS)
+
+* Founded in **1930** as a “bank for central banks.”
+* Created as an intermediary so central banks could deal with each other without direct political exposure.
+* Headquarters: **Basel, Switzerland** (neutral ground).
+* Now counts **57 central bank members**.
+
+### 2. Basel Committee on Banking Supervision
+
+* Established in **1974** to coordinate banking regulation.
+* Produced international standards on capital adequacy:
+
+  * **Basel I (1988)**: first regulatory framework.
+  * **Basel II (2004)**: revision with more risk sensitivity.
+  * **Basel III (2009, adopted 2010 after crisis)**: stronger capital and liquidity rules.
+* The Committee has **no formal authority**, but its recommendations are widely adopted.
+
+### 3. G-Groups (Coordination Forums)
+
+* **G7** (formerly G6, G8): US, Canada, Japan, major European countries. Meetings include finance ministers & heads of state.
+* **G20**: broader, includes major emerging economies. More political tensions but still functional.
+
+  * Approved Basel III.
+  * Created the **Financial Stability Board (FSB)** (formerly Financial Stability Forum).
+
+### 4. Financial Stability Board (FSB)
+
+* Proposes regulatory reforms to the G20.
+* Recommendations often become policy across multiple countries.
+
+### 5. Challenge: Lack of Binding International Regulation
+
+* Multinational firms increasingly operate across borders.
+* Employees, operations, and HQs may span different countries → creates gaps in regulation.
+* Need for more **internationally coordinated oversight** will keep growing.
+
+### 6. Historical Lesson: Regulation is Essential
+
+* US reaction to Great Depression (Roosevelt era): regulate capitalism (e.g., SEC).
+* This approach contributed to US economic success.
+* SEC model copied worldwide.
+* **Unregulated free markets are a myth** – historically, markets have *always* been subject to some form of regulation.
+
+### Key Idea
+
+Regulation has always been **“the secret to the success of free markets.”**
+International coordination is imperfect (no supranational regulator), but organizations like BIS, Basel Committee, G20, and FSB act as **de facto standard-setters**.
+
+---
 
 
 
