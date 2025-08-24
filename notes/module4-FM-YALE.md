@@ -1283,10 +1283,6 @@ National regulation must balance **innovation and caution**, enforce rules again
 
 ---
 
-Voici ton **README complet pour National Regulation – Part 3** en anglais, au même style que les parties précédentes :
-
----
-
 # National Regulation – Part 3
 
 ## 1. Brokerage Failures and Investor Protection
