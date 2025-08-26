@@ -1367,7 +1367,7 @@ Regulation evolves **in response to crises** (e.g., SIPC after Goodbody, Dodd-Fr
 
 ---
 
-## International Financial Regulation – Summary
+## [ International Financial Regulation – Summary ]
 
 ### 1. Bank for International Settlements (BIS)
 
@@ -1418,6 +1418,7 @@ Regulation has always been **“the secret to the success of free markets.”**
 International coordination is imperfect (no supranational regulator), but organizations like BIS, Basel Committee, G20, and FSB act as **de facto standard-setters**.
 
 ---
+
 
 
 
