@@ -672,6 +672,66 @@ This was an extreme case of:
 
 ---
 
+## [Oil Futures] 
+
+## 1. Market Structure
+
+* **Light Sweet Crude Oil** is the flagship futures contract, traded at **NYMEX (now part of CME Group)**.
+* **Contract size**: 1,000 barrels.
+* Global benchmarks:
+
+  * **WTI (West Texas Intermediate)** → NYMEX.
+  * **Brent Crude** → ICE (London).
+* Contracts are **physically delivered**, but most traders offset their positions before expiration.
+
+## 2. Futures Curve and Contango
+
+* Example (March 2016): the oil futures curve was in **contango** (upward sloping).
+* The slope reflects:
+
+  * **Interest rates**.
+  * **Storage costs**.
+  * **Market expectations** about future oil prices.
+
+## 3. Oil Market Specificities
+
+* Most oil is kept **in the ground** (natural storage).
+* Limited above-ground storage capacity makes carrying costs special.
+* **Refineries** usually purchase through **long-term contracts**; the spot market is small but serves as a reference for volatility.
+
+## 4. Price History
+
+* In **real terms**, oil is **cheaper today than in 1871**, unlike equities which trended upwards.
+* Prices were **artificially stabilized** by the **Texas Railroad Commission** (1917–1970).
+* After 1973 → end of control, start of high volatility.
+
+## 5. OPEC and Oil Shocks
+
+* **OPEC founded in 1960** to act as a price-fixing cartel.
+* **First oil shock (1973)**: Arab embargo during the Yom-Kippur war.
+* **Second oil shock (1979–80)**: Iranian Revolution + Gulf War.
+* Result: **worldwide recessions** and US stock market crashes.
+
+## 6. Strategic Reserves
+
+* **US Strategic Petroleum Reserve (SPR)**: \~60 days of supply.
+* Purpose: national security in case of war or severe crisis, not to smooth prices.
+* Example: **Heating Oil Reserve** (New York/New England).
+
+## 7. Volatility and Technology
+
+* 2000s: extreme volatility (from \$113/barrel in 2008 down to <\$30 in 2016).
+* **Fracking** boosted supply, putting downward pressure on prices.
+* Oil remains highly sensitive to **political events** (wars, embargoes, OPEC actions).
+
+## 8. Speculation and Manipulation
+
+* **Speculators** provide liquidity and forecasting, but also create **excess volatility**.
+* **Market manipulation** exists, but is limited by **exchange surveillance**.
+* Without speculators, markets would be **less efficient**.
+
+---
+
 
 
 
