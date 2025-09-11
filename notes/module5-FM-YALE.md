@@ -732,6 +732,704 @@ This was an extreme case of:
 
 ---
 
+Parfait 👌 voici un **récapitulatif clair et structuré** que tu peux mettre en **README ou note GitHub**.
+
+---
+
+# 📒 Notes – Arbitrage & Relative Value (Fixed Income & Commodities)
+
+## 1. Arbitrage pur (Cash-and-Carry)
+
+* **Formule de non-arbitrage (commodities)** :
+
+  $$
+  F_t = S_t \cdot e^{(r + c - y)T}
+  $$
+
+  * $S_t$ = prix spot
+  * $F_t$ = prix future
+  * $r$ = taux sans risque
+  * $c$ = coût de stockage
+  * $y$ = convenience yield
+
+* **Détection** :
+
+  * Si $F_t > F_{theo}$ → Cash-and-Carry (long spot, short future).
+  * Si $F_t < F_{theo}$ → Reverse Cash-and-Carry (short spot, long future).
+
+* **PnL** : convergence spot/future → profit risk-free (hors coûts).
+
+👉 En pratique : sur Treasuries et indices, ces écarts disparaissent très vite (HFT, C++).
+👉 Bon pour projets académiques et GitHub (ex. Oil, Gold).
+
+---
+
+## 2. Arbitrage sur Treasuries futures (CTD & Basis)
+
+* **Cheapest To Deliver (CTD)** = obligation la moins chère à livrer sur un future.
+
+* **Basis** :
+
+  $$
+  Basis = P_{CTD} - (F \cdot CF)
+  $$
+
+  où $CF$ = conversion factor.
+
+* **Implied Repo Rate (IRR)** :
+
+  $$
+  IRR = \frac{(Coupons + P_{CTD} - (F \cdot CF))}{F \cdot CF} \cdot \frac{360}{Jours}
+  $$
+
+* Arbitrage : comparer IRR au repo de marché.
+
+* Pas toujours risk-free car : CTD peut changer, repo varie, liquidité CTD limitée.
+
+---
+
+## 3. Relative Value (pas risk-free mais “desk-friendly”)
+
+### 🔹 Bond vs Bond
+
+* **Spread Bund–OAT** :
+
+  $$
+  Spread = YTM_{OAT} - YTM_{Bund}
+  $$
+* **Spread 10Y–30Y US** :
+
+  $$
+  Spread = YTM_{30Y} - YTM_{10Y}
+  $$
+* Stratégie : parier sur convergence/divergence (steepener/flattener).
+
+⚠️ Risques : macro, politique, corrélation imparfaite.
+
+---
+
+### 🔹 Swap vs Bond (Swap Spread)
+
+* **Formule** :
+
+  $$
+  SwapSpread = SwapRate_{T} - YTM_{Gov,T}
+  $$
+* Stratégie : long bond / short swap (ou inverse) si le spread s’écarte trop.
+
+⚠️ Risques : liquidité, différence collateral, risque crédit souverain.
+
+---
+
+## 4. Points clés retenus
+
+* **Arbitrage pur** (commodities, futures) → théorique, très rare en pratique.
+* **Relative Value trades** → quotidien des desks Fixed Income :
+
+  * Bond vs Futures (basis, CTD).
+  * Bond vs Bond (yield spreads, curve trades).
+  * Swap vs Bond (swap spreads).
+* **Mémo** : *“On vend toujours la partie la plus chère et on achète la moins chère.”*
+* **Profit** : garanti à maturité en théorie, mais en pratique on peut sortir plus tôt dès que l’écart se referme.
+* **Tech** : Python = parfait pour recherche/projets GitHub ; C++/Rust = requis pour HFT ultra-low-latency.
+
+---
+
+
+# [ Financial Futures: S\&P 500 Index & Federal Funds Rate ]
+
+## 1. S\&P 500 Futures (Index Futures)
+
+* **Type**: Cash-settled (no physical delivery).
+* **Settlement Formula**:
+
+  $$
+  \text{Settlement Value} = 250 \times (\text{Index Level on Last Day} - \text{Futures Price on Previous Day})
+  $$
+* **Fair Value Formula**:
+
+  $$
+  F = S \times (1 + r - y)
+  $$
+
+  where:
+
+  * $S$ = Spot price of the index.
+  * $r$ = Risk-free rate.
+  * $y$ = Dividend yield (acts like a *negative storage cost*).
+
+👉 Intuition: Holding stocks pays dividends, so the cost of carry is adjusted downward by the dividend yield.
+
+---
+
+## 2. Federal Funds Rate (FFR) Futures
+
+* **Launched**: Chicago Board of Trade (1988).
+* **Underlying**: The overnight **federal funds rate** (interbank lending rate targeted by the Fed).
+* **Settlement**: Cash-settled.
+
+  $$
+  \text{Price} = 100 - \text{Annualized FFR (average over contract month)}
+  $$
+* **Usage**:
+
+  * Barometer of **market expectations** for upcoming **Federal Open Market Committee (FOMC)** decisions.
+  * Example: If FFR futures trade at 97.75 → implied FFR = **2.25%**.
+
+👉 Different from commodities or index futures: no arbitrage pricing model, because an **interest rate cannot be stored**.
+
+---
+
+## 3. Predictive Value of FFR Futures
+
+### Why They Are Predictive
+
+* The Fed’s decision (target rate) is **clear and binary**.
+* FFR futures prices directly encode what the market expects that decision to be.
+
+### Why They Work Well
+
+* **Clear outcome** → Fed announces a target rate.
+* **Near-term horizon** → contracts focus on the next few months.
+* **High attention** → speculators and analysts study the Fed intensively.
+
+### Comparison with Stock Market Predictions
+
+| Aspect                | FFR Futures                        | Stock Market (Equities)                  |
+| --------------------- | ---------------------------------- | ---------------------------------------- |
+| **Prediction target** | Next Fed decision (rate level)     | Long-term dividends/earnings             |
+| **Time horizon**      | Weeks / months                     | Many years / indefinite                  |
+| **Uncertainty**       | Low (binary, well-defined outcome) | High (economic cycles, innovation, etc.) |
+| **Efficiency**        | High – strong short-term predictor | Weaker – noisy long-term predictor       |
+
+---
+
+## 📌 Key Takeaways
+
+* **Index futures** follow a cost-of-carry model adjusted for dividends.
+* **FFR futures** are pure prediction markets for Fed policy.
+* Prediction markets work best when the outcome is:
+
+  * Short-term
+  * Clear
+  * Widely studied
+
+---
+
+
+## [Options Overview ]
+
+## 1. Definition
+
+* **Option = Contract** between two parties:
+
+  * **Buyer (Holder)** → has the right (not the obligation).
+  * **Seller (Writer)** → has the obligation if the buyer exercises.
+* Two types:
+
+  * **Call Option** → right to buy.
+  * **Put Option** → right to sell.
+
+## 2. Difference vs Forward Contract
+
+* **Forward**: binding obligation → both buyer and seller must transact at the future date/price.
+* **Option**: gives the buyer **choice**:
+
+  * Exercise only if it is profitable.
+  * Seller receives a **premium** as compensation for taking on that risk.
+
+## 3. Economic Logic
+
+* Buyer will exercise **only if beneficial**:
+
+  * Call → exercised if *market price > strike price*.
+  * Put → exercised if *market price < strike price*.
+* If not, option expires worthless.
+
+## 4. Contract Terms
+
+* **Expiration (Exercise Date)**: last day option can be used.
+* **Strike Price (Exercise Price)**: fixed price at which transaction occurs.
+* **Underlying Asset**: stock, bond, commodity, land, etc.
+* **Quantity**: specifies how many units (e.g., 100 shares).
+
+## 5. Conceptual View
+
+* **Options are truncated claims**:
+
+  * Call → claim on upside *above strike*.
+  * Put → claim on downside *below strike*.
+* They allow participation in favorable movements while limiting exposure.
+
+---
+
+## 6. Real Estate Options (Applied Example)
+
+Options are not limited to financial markets. In the **U.S. real estate sector**, they are widely used in development projects:
+
+### How it works
+
+* A **developer** identifies land (e.g., farmland near a city) as a potential site for a shopping mall, office complex, or housing project.
+* Instead of committing millions upfront, the developer signs an **option contract** with the landowner:
+
+  * Pays a **premium** today (non-refundable).
+  * Gains the **right (not obligation)** to purchase the land later at an agreed strike price.
+* If the project receives approvals and financing → developer exercises the option.
+* If the project is canceled → the landowner keeps the premium, and the developer loses only this cost.
+
+### Why developers use real estate options
+
+* **Risk management**: limits exposure while awaiting zoning, permits, or financing.
+* **Flexibility**: allows developers to secure strategic land without immediate purchase.
+* **Leverage**: developer can negotiate financing or attract investors while holding the option.
+* **Win-win**: landowner earns immediate premium even if the sale never happens.
+
+### Examples in the U.S.
+
+* **Urban development**: City agencies (e.g., CRA/LA in Los Angeles) use land options to manage long-term property development without binding commitments.
+* **Agriculture**: Farmers grant land options to developers or neighbors for future consolidation or succession planning.
+* **Residential real estate**: Lease-option agreements let tenants rent with the right to purchase later (part of rent sometimes credited to purchase price).
+* **Private projects**: Companies such as Gold Energy, LLC have signed option agreements with community development corporations to acquire land for future expansion.
+
+### Legal considerations
+
+* Courts in states like **Texas and New York** require precise drafting: the property, price, and option terms must be clearly stated.
+* In bankruptcy cases, option rights can sometimes survive, giving the option holder strong legal protection.
+
+---
+
+## 7. Key Takeaways
+
+* Options provide **choice + flexibility** versus forwards (which are obligations).
+* In finance, they allow exposure to upside/downside with limited risk.
+* In real estate, they are powerful tools for **developers, cities, and investors** to secure opportunities while managing uncertainty.
+
+---
+
+## [Reading Options Pricing] 
+
+## 1. Historical Origins
+
+* The **first documented options** come from Holland (1600s – 1730).
+* Example: option on shares of the Dutch East India Company (VOC).
+* Even then: **printed contracts** with handwritten blanks → early standardization → a step toward the information age.
+
+---
+
+## 2. Modern Example: Intel Options (CBOE)
+
+* **Underlying**: Intel stock (INTC), price \~31.63 USD (previous Friday close).
+* **Dividend**: 0.26 USD per share quarterly.
+* **Ticker**: INTC (4 letters → Nasdaq-listed).
+
+### Strike Prices
+
+* 27, 30, 32, 35 USD.
+* Current price = 31 USD → some options are **in the money (ITM)**, others **out of the money (OTM)**.
+
+---
+
+## 3. Why Buy an OTM Option?
+
+* Example: **Call strike 35 USD**, premium = 2.36 USD.
+* Not rational if compared directly to the stock (31 < 35).
+* But it has **speculative value**: if the stock rises above 35, the option gains value.
+* Advantage: **limited loss** (max = premium 2.36) vs potential total loss if buying stock at 31.
+
+---
+
+## 4. Example of ITM Option
+
+* **Call strike 27 USD**, premium = 7 USD.
+* Immediate exercise profit = 31.63 – 27 = 4.63 USD.
+* But since premium paid = 7 > 4.63, **early exercise = loss**.
+* ➝ Usually you **do not exercise early**: keep the **time value** (option value).
+
+---
+
+## 5. Bid-Ask Spread and Market Makers
+
+* Quoted price = **last traded price**.
+* Actual market:
+
+  * **Bid** = price dealers pay to buy.
+  * **Ask** = price dealers charge to sell.
+* Example: bid = 6.05, ask = 6.20 → spread = 0.15.
+* This spread = **market maker’s profit margin**.
+* More liquid strikes (e.g., 35) → **narrower spreads**.
+
+---
+
+## 6. Option Moneyness (ITM / OTM / ATM)
+
+### Call Options (right to buy)
+
+* **In the Money (ITM)**: Stock price **> Strike** → profitable to exercise.
+* **At the Money (ATM)**: Stock price **≈ Strike** → mostly time value.
+* **Out of the Money (OTM)**: Stock price **< Strike** → no intrinsic value, only time value.
+
+### Put Options (right to sell)
+
+* **In the Money (ITM)**: Stock price **< Strike** → profitable to exercise.
+* **At the Money (ATM)**: Stock price **≈ Strike** → mostly time value.
+* **Out of the Money (OTM)**: Stock price **> Strike** → no intrinsic value, only time value.
+
+---
+
+## ✅ Key Takeaways
+
+1. Options combine **intrinsic value** (strike vs spot) and **time value** (future potential).
+2. Do not exercise early: keep the **option value**.
+3. **Bid-ask spreads** compensate market makers.
+4. **Liquidity** reduces spreads (most traded strikes = most competitive).
+5. **Moneyness** (ITM/OTM/ATM) determines intrinsic vs time value.
+
+---
+
+Here’s a clean README-style note in English based on the lecture *Why Options Exist* (Yale, Robert Shiller):
+
+---
+
+##  [Why Options Exist]
+
+## 1. Theoretical Justification
+
+* **Kenneth Arrow**: argued that economic efficiency requires that *all risks are tradable*.
+
+  * A stock is not just “one risk,” but a bundle of risks (different strike levels, maturities).
+  * Options allow the market to **dissect risk** into finer components.
+* **Stephen Ross (1976 – *Options and Efficiency*)**:
+
+  * A complete set of options helps *complete the market*.
+  * By introducing options with different strikes and maturities, investors can trade specific risk slices.
+
+**Conclusion:** Options exist to improve economic efficiency by enabling risk sharing and completing markets.
+
+---
+
+## 2. Behavioral Justification
+
+* People do not always act rationally or consider their portfolio as a whole.
+* **Salience & Overreaction**: After disasters, people suddenly buy insurance (e.g., flood insurance), even though the risk was always there.
+* **Put Options = Insurance**:
+
+  * Example: An investor buys a put option to protect against a stock drop.
+  * Creates a **“floor”** on losses.
+* **Silver Lining Theory (Shefrin & Statman)**:
+
+  * Investors focus on partial outcomes rather than the full portfolio.
+  * Even if overall losses occur, having puts provides a “silver lining” → emotional comfort.
+
+---
+
+## 3. Sales & Misuse of Options
+
+* Options can also be **used by salesmen to manipulate investors**.
+* Example from *The Art of Selling Intangibles*:
+
+  * A stockbroker convinces a client to write (sell) calls on their stock.
+  * Presents it as having **“three sources of profit”**:
+
+    1. Premium from selling the call.
+    2. Dividends from stock ownership.
+    3. Gain up to the strike price.
+  * The downside (loss of unlimited upside) is minimized or hidden.
+* **Key Issue:** Investors should look at the **total expected return**, not be misled by “three separate sources.”
+
+---
+
+## 4. Summary
+
+* **Theory**: Options complete markets by making all risks tradable.
+* **Behavior**: Options cater to psychological biases (insurance, silver lining, emotional comfort).
+* **Sales Practices**: Options can be exploited to mislead uninformed investors.
+
+---
+
+Parfait, voici la traduction en anglais de ton README :
+
+---
+
+## [Ubiquity of Options]
+
+### 1. Options are not limited to stocks
+
+* An **option** is a right (but not an obligation).
+* Example: **mortgages** actually contain an embedded option.
+
+  * In some **“recourse” states** (e.g., Connecticut):
+    → If you stop paying your mortgage, the bank can **sue you**, garnish your wages, or seize other assets.
+    → There is **no real option** here: you must pay no matter what.
+  * In **“non-recourse” states** (e.g., California):
+    → If you default, the bank can only **take back the house**, but cannot touch your salary or other assets.
+    → Therefore, you have an **implicit option**: you can “walk away” if the house value drops below your mortgage.
+    → This is called *“jingle mail”*: people used to mail their house keys to the bank saying “I’m leaving, take the house.”
+
+Here, the **house is like the underlying asset**, the **loan is like the strike**, and the **right to walk away** resembles a put option.
+
+---
+
+### 2. History of options
+
+* Options have existed for centuries (e.g., Dutch options in the 1730s).
+* But they were **not standardized**:
+
+  * Each contract had its own conditions (date, price, etc.).
+  * No organized market, no transparency.
+* In **1973**, the **Chicago Board Options Exchange (CBOE)** was created.
+
+  * For the first time, options became **standardized** (strike, maturity, contract size).
+  * This created **true liquidity** and an **organized market**.
+
+---
+
+### 3. Derivatives in everyday finance
+
+* Many financial products accessible to retail investors (**ETFs, structured funds**) embed **options** or other derivatives.
+* Sometimes, investors **think they are buying a simple product**, but they are actually exposed to **complex derivative instruments**.
+
+---
+
+### 4. Risks of derivatives
+
+* Warren Buffett called derivatives **“weapons of mass destruction.”**
+* Example: **2008 subprime crisis**:
+
+  * Banks used **swaps and CDOs** (derivatives tied to mortgage debt).
+  * When counterparties were close to bankruptcy, the whole system was threatened → domino effect.
+* Regulators’ response:
+
+  * **USA (Dodd-Frank Act)**: created the Office of Financial Research to monitor systemic risks.
+  * **Global (Financial Stability Board, Switzerland)**: monitoring derivative markets worldwide.
+
+---
+
+### 5. Social usefulness of derivatives
+
+* A derivative is like **insurance**.
+
+  * Example: you insure your house against fire → if it burns, you’re protected.
+  * In finance: you can buy a **put** on a real estate index → protection if the market crashes.
+* Insurance and options help **reduce inequality**:
+
+  * Without insurance, a disaster (illness, fire, bankruptcy) can ruin someone.
+  * With insurance/derivatives, shocks are **less catastrophic** → society becomes more stable.
+
+---
+
+✅ In summary:
+
+* Options are **everywhere** (not only in stock markets).
+* They provide **flexibility** (the right to exit an obligation, like walking away from a mortgage).
+* They are **very old**, but modern option markets only started in 1973.
+* They are **useful but dangerous** if poorly regulated.
+* Properly used, they act like **insurance**, reducing risks and even inequalities.
+
+---
+
+Here’s a clean README-style note in English summarizing the key ideas from the Yale lecture on **Put–Call Parity**:
+
+---
+
+## [Put–Call Parity]
+
+## 1. Intrinsic Value at Expiration
+
+* **Call Option (right to buy):**
+  On the last day, its value = `max(S − K, 0)`
+  If stock price (S) < strike price (K), the call is worthless.
+  If S > K, the value = difference between stock price and strike.
+
+* **Put Option (right to sell):**
+  On the last day, its value = `max(K − S, 0)`
+  You exercise only if strike > stock price.
+
+At expiration, options only have **intrinsic value**. Before expiration, they also include **time value**.
+
+---
+
+## 2. Put–Call Parity Relation
+
+For European options with the same strike (K) and expiration (T):
+
+$$
+C + PV(K) + PV(\text{Dividends}) - P = S
+$$
+
+Where:
+
+* **C** = Call price
+* **P** = Put price
+* **S** = Current stock price
+* **PV(K)** = Present value of strike (discounted at risk-free rate)
+* **PV(Dividends)** = Present value of dividends to be paid before expiration
+
+This relation is enforced by **arbitrage**: if violated, traders exploit the price difference until equilibrium is restored.
+
+---
+
+## 3. Market Example (Intel case study)
+
+* Strike = 27
+* Call midpoint price ≈ 6.125
+* Put midpoint price ≈ (value observed)
+* Dividends between now and expiry ≈ 2.08
+* Ignoring interest rates for simplicity, computed parity was **close** to actual stock price (\~31.63).
+* Small differences explained by:
+
+  * Not discounting for interest rates
+  * Market timing mismatches (bid/ask vs last price)
+  * Imperfect synchrony
+
+---
+
+## 4. Why Out-of-the-Money (OTM) Options Still Have Value
+
+* Even if **S < K** (call OTM), the option is not worthless before expiry.
+* Reason: there is still **time** for the stock to move above strike.
+* Investors pay for this potential → that’s the **time value**.
+
+---
+
+## 5. No Arbitrage Principle
+
+* Arbitrage = risk-free profit.
+* Markets quickly eliminate such opportunities:
+
+  * If put–call parity is violated, arbitrageurs exploit it instantly.
+  * Example: if stock is mispriced relative to call + put + PV(K), traders create risk-free positions.
+* Result: **put–call parity holds in practice**.
+
+---
+
+## 6. Takeaway
+
+* **Put–Call Parity** links the prices of calls, puts, and the underlying.
+* You don’t need both puts and calls — knowing one lets you deduce the other.
+* Fundamental principle of option pricing, used by traders to detect mispricings and enforce market efficiency.
+
+---
+
+Parfait 👍 Je vais enrichir ton README **Using Options to Hedge** avec une section dédiée à **VIX vs SKEW** pour compléter l’explication. Voici la version mise à jour :
+
+```markdown
+# Lesson – Using Options to Hedge
+
+## Hedging with Options vs Stop-Loss Orders
+
+- **Put Option**  
+  - Acts as insurance by setting a **floor on losses**.  
+  - If stock price falls below strike, you exercise the put.  
+  - Cost: upfront **premium**.  
+
+- **Stop-Loss Order**  
+  - Instruction to broker: sell if stock falls below a certain level.  
+  - Appears free (only transaction costs).  
+  - Risk: execution at worse prices (slippage), whipsaw trades (sell low, buy high).  
+
+---
+
+## Intel Case Example
+
+- Stock price = **\$31.63**  
+- Investor sets stop-loss at **\$20**  
+- Scenario:  
+  - Price dips to \$19 → broker sells (below target).  
+  - Price rebounds to \$21 → investor may re-enter.  
+  - Next day, falls again → repeated losses (sell low / buy high).  
+
+**Contrast**: a put at strike 20 locks in insurance without repeated trading.  
+
+---
+
+## Why Put Protection May Be Superior
+
+- **Stop-Loss Limitations**  
+  - No guarantee of execution at chosen price.  
+  - Exposes investor to whipsaws in volatile markets.  
+
+- **Put Advantage**  
+  - Certainty of payoff if strike breached.  
+  - Cleaner hedge, though requires premium.  
+
+**Decision** = trade-off between **premium cost** and **potential trading losses**.  
+
+---
+
+## Market Fear & the CBOE SKEW Index
+
+- **Definition**: SKEW measures perceived tail risk using **out-of-the-money put prices**.  
+- High SKEW = crash protection expensive → market is worried.  
+- Historical notes:  
+  - Spikes around events like 1987 crash, 1998 Russian debt crisis.  
+  - Useful for **30-day risk forecasting**, not for multi-year crashes (e.g., 1929).  
+
+---
+
+## VIX vs SKEW: Interpreting Market Sentiment
+
+- **VIX** = “Fear Gauge” → reflects **expected average volatility** (nervousness of daily market).  
+- **SKEW** = “Tail Risk Gauge” → reflects **fear of extreme crashes** (black swans).  
+
+### Combined Interpretation
+- **VIX high + SKEW low** → market panics in short term, but no fear of a crash.  
+- **VIX low + SKEW high** → market looks calm, but investors quietly fear a **big shock**.  
+
+---
+
+## Takeaway
+
+- Hedging can be done with **stop-loss orders (cheap but unreliable)** or **put options (costly but certain)**.  
+- Option markets provide **risk sentiment signals** through indices like VIX and SKEW.  
+- **Insurance in markets is never free** → balance option premium vs. potential stop-loss inefficiencies.  
+- **VIX = volatility fear / SKEW = crash fear** → together they give a fuller picture of market sentiment.  
+```
+
+
+```markdown
+# Personal Reflections on Hedging
+
+### Stop-Loss Inefficiency and Option Hedge
+I have already experienced situations where my stop-loss was ineffective due to **slippage during major economic announcements**.  
+For a long time, I thought the solution was simply **not to trade on days of high-impact releases**.  
+Now I realize that to cancel this risk, the right approach is to **hedge with options on expected announcement days**.  
+This way, even if the market gaps, the option acts as insurance and sets a floor to my loss.  
+
+Sometimes my setups required a **large stop-loss**, and I used to avoid taking these trades.  
+With an option hedge, I can now take them and reduce my risk — it is as if I **lower the theoretical loss** I am willing to accept.  
+
+### Hedging by Volatility
+On days of expected **high volatility**, the main challenge is that we **cannot know the direction** of the market move.  
+Using **straddles or strangles** can be effective in such cases:  
+- They benefit if the market makes a large move in either direction.  
+- They reduce exposure to “directional uncertainty”.  
+- The cost is the option premium, but it buys protection against both tails.  
+
+### Idea of a Scenario-Based Hedging Dashboard
+It is not enough to test a single path when comparing Stop-Loss vs Put.  
+Monte Carlo allows me to simulate thousands of possible scenarios and see the full **PnL distribution**.  
+This makes the analysis more realistic, since it shows how each strategy behaves under many outcomes, not just one.  
+
+It would also be interesting to build a **dashboard** that groups all these PnL simulations:  
+- Inputs: lot sizes, chosen coverage products (puts, calls, straddles, etc.), market scenarios.  
+- Output: simulated PnL distributions and risk metrics.  
+Such a tool would make hedging decisions more objective and systematic.  
+
+### Interest Rate Risk and Vega Risk
+In fixed income trading, **interest rate risk** is central: when rates rise, bond prices fall.  
+Options like swaptions or puts on Treasury futures can be used to hedge this exposure.  
+
+Another important dimension is **Vega risk**: the value of an option depends on implied volatility.  
+If implied volatility decreases, the time value of the option shrinks, and its price can drop even if the underlying does not move.  
+This means that holding a long option is not only a bet on direction, but also a bet on volatility staying high or increasing.  
+```
+
+
+
+
+
+
+
 
 
 
