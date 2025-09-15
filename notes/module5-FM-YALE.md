@@ -184,8 +184,6 @@ Historically, forwards preceded the development of futures markets.
   * $R_{contract}$ = agreed forward rate
   * $B$ = day-count convention (360 or 365)
 
-Ah, je vois le souci : parfois GitHub ne rend pas bien les tableaux si l’alignement ou les espaces ne sont pas corrects.
-Voici une version **Markdown propre et compatible GitHub** :
 
 ```markdown
 # Differences between **Forwards** and **Futures**
@@ -559,8 +557,7 @@ Shiller compares wheat futures to squirrels managing acorn storage:
   * Brokers typically require positions to be closed before delivery deadlines.
   * Industrial participants (refiners, bond dealers) are the ones who actually take/make delivery.
 
-[Fair Value in Futures Contracts]
-Parfait 👌 voici la version complète de ton **README en anglais** intégrant le concept de **Fair Value**, **Contango**, **Backwardation**, le rôle du **Convenience Yield**, et l’exemple du **pétrole pendant le Covid** :
+
 
 ---
 
@@ -732,7 +729,7 @@ This was an extreme case of:
 
 ---
 
-Parfait 👌 voici un **récapitulatif clair et structuré** que tu peux mettre en **README ou note GitHub**.
+
 
 ---
 
@@ -832,6 +829,87 @@ Parfait 👌 voici un **récapitulatif clair et structuré** que tu peux mettre 
 * **Mémo** : *“On vend toujours la partie la plus chère et on achète la moins chère.”*
 * **Profit** : garanti à maturité en théorie, mais en pratique on peut sortir plus tôt dès que l’écart se referme.
 * **Tech** : Python = parfait pour recherche/projets GitHub ; C++/Rust = requis pour HFT ultra-low-latency.
+
+reflection :
+
+---
+
+# Yield Curve Arbitrage – [Reflection]
+
+## 1. Core Idea
+
+* Bond arbitrage does **not** bet on the absolute direction of interest rates, but on the **relative relationship between two maturities**.
+* Classic case: the **10Y–30Y spread**.
+* Goal: neutralize overall rate risk (DV01-neutral) and profit only from curve mispricing.
+
+---
+
+## 2. Forward Rates & Arbitrage
+
+* **Forward rates** are the implied future rates derived from the spot curve.
+* Formula:
+
+  $$
+  (1+R_n)^n = (1+R_m)^m \cdot (1+f_{m,n})^{(n-m)}
+  $$
+* If there is a difference between the **implied forward rate** and the **observed rate**, this creates an arbitrage opportunity.
+
+---
+
+## 3. Z-score of the Spread
+
+* A statistical tool to measure whether the 10Y–30Y spread is “abnormal.”
+* Formula:
+
+  $$
+  Z = \frac{Spread_t - \mu_{Spread}}{\sigma_{Spread}}
+  $$
+* If Z > +2 → spread too wide (flattener opportunity).
+* If Z < –2 → spread too low (steepener opportunity).
+
+---
+
+## 4. Vanilla Arbitrage 10Y–30Y
+
+* Instruments: ZN (10Y futures), UB (30Y futures).
+* **DV01-neutral hedge ratio**:
+
+  $$
+  h = \frac{DV01_{30Y}}{DV01_{10Y}} \approx 2.5
+  $$
+* Example trade:
+
+  * Short 1 UB (30Y)
+  * Long 2.5 ZN (10Y)
+  * → Bet on **flattening** (spread too wide).
+
+---
+
+## 5. Frequency of Opportunities
+
+* Arbitrage setups are less frequent than directional trading:
+
+  * **Daily data**: 1–2 signals per week.
+  * **Intraday (futures)**: more micro-mispricings, but often noisy.
+* Best opportunities usually occur around **macro releases** (CPI, NFP, FOMC) or **UST auctions**.
+
+---
+
+## 6. Risk Management
+
+* Neutralize DV01 to avoid exposure to global rate shifts.
+* Use a **Z-score stop** (e.g. exit if |Z| > 3).
+* Optional: hedge tail risk with **options on futures** (UB/ZN) or **swaptions**.
+
+---
+
+👉 This recap covers the essentials: forward rates, Z-score logic, vanilla DV01-neutral arbitrage, frequency of setups, and risk controls.
+
+---
+
+Do you want me to reformat this recap into your **GitHub certificate-style template** (Key Concepts / My Notes / Reflection) so it’s fully consistent with your other notes?
+
+
 
 ---
 
