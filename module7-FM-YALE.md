@@ -528,11 +528,153 @@ but time and chance happeneth to them all.
 
 ```
 
-```
+``
+[Interview — Roger W. Ferguson Jr.] (TIAA; former Fed Vice Chair)]
+Big Ideas
+
+Finance as a social good: Finance should help people achieve life goals; it’s not only about speculation or quick profits.
+
+Long-term investing + risk management: Managing other people’s retirement savings requires diversification, discipline, and prudent risk control.
+
+Central banks’ stabilizing role: Lender-of-last-resort function and liquidity provision are crucial in crises.
+
+Evolving retirement model: Shift from traditional defined benefit to hybrid DB/DC with lifetime income (annuities) plus diversified portfolios.
+
+Skepticism on “secular stagnation”: Low rates may persist for a while, but economies adapt; technology shifts require time, not fatalism.
+
+Alternatives for diversification: Agriculture, timber, real estate, infrastructure, and private loans can enhance returns in low-rate environments.
+
+Empathy and human capital: Good careers blend continuous learning with serving others.
+
+Career & Motivation
+
+Early interest in finance from family discussions; hands-on financial literacy (balancing the household checkbook).
+
+Drawn to the social side of finance: public service at the Federal Reserve and mission-driven work at TIAA (“serving those who serve others”).
+
+Views on Trading and Markets
+
+HFT/millisecond trading: Can remove tiny inefficiencies but “not investing”; lacks business-fundamental insight.
+
+Investing vs. speculation: Long-term orientation with risk management is central when stewarding retirement assets.
+
+Crisis Management Lessons
+
+9/11 at the Fed: Led initial response in Washington.
+
+Immediate communication: “Fed is open and operating.”
+
+Massive liquidity backstops to banks and payment systems.
+
+Coordinated work with banks to restore smooth operations.
+
+2008 at TIAA: Reduced costs, avoided subprime exposure, managed risk down while selectively deploying cash into attractive opportunities.
+
+Retirement System Architecture
+
+Broad trend: responsibility shifting to individuals as private DB plans fade and public pensions face stress.
+
+TIAA model emphasizes:
+
+Participation and matching (contribute + employer match).
+
+Well-diversified, long-term portfolios.
+
+Lifetime income via annuities (“salary for life”).
+
+Behavioral angle: Educate investors to avoid panic selling; provide advice at scale (web, call centers, on-campus advisors).
+
+Annuities: Frictions and Design
+
+Public skepticism often tied to costs and bequest/early-death concerns.
+
+Product design should address psychological needs (e.g., options for beneficiaries).
+
+Secular Stagnation: Positioning a Portfolio
+
+Historically dubious prognosis (Alvin Hansen’s post-WWII call proved wrong).
+
+Practical response: broaden alternatives to seek incremental returns in a low-rate environment; remain diversified across regimes.
+
+Governance & Technology
+
+On Alphabet’s board to exchange perspectives:
+
+Bring expertise in regulation, capital allocation, accountability.
+
+Learn from Silicon Valley on digitization to better personalize retirement solutions.
+
+Tech–policy intersections: net neutrality, privacy, “right to be forgotten.”
+
+Takeaways for Early-Career/Transitions
+
+Build human capital continuously; stay curious across domains.
+
+Cultivate empathy—understand stakeholders and design solutions that serve them.
+
+Use finance to be good for society and for yourself.
+
+Quotable Lines (paraphrased)
+
+Finance is “much more than quick profits”; it can improve lives.
+
+In crises, the Fed’s job is to keep the system running and provide needed liquidity.
+
+Long-term investors should avoid panic and stay aligned with goals.
+
+Diversification is for everyone, not just senior faculty or high earners.
 
 
+[Interview – Lei Zhang, Hillhouse Capital]
+Background
 
+Started entrepreneurial activities young (selling magazines).
 
+Founded Hillhouse Capital in 2005, now a major investment firm in Asia.
+
+Mentored by David Swensen (Yale Investments Office), translated his book into Chinese.
+
+Investment Philosophy
+
+Markets not fully efficient → opportunities exist, especially in transitional economies like China.
+
+Evolution of value investing:
+
+Initially → discovering value (deep value approach).
+
+Today → creating and adding value, treating it as a dynamic growth process.
+
+Defines himself as an entrepreneur-investor: evaluates businesses from first principles, founder ambition, and business fundamentals.
+
+Concentrated portfolio: 10–20 core positions, often held for a decade+.
+
+Long-term orientation: market volatility creates opportunities for patient investors.
+
+Influences
+
+David Swensen: focus on equities, residual free cash flow, long-term discipline.
+
+Chinese/Taoist philosophy: focus, unconventional thinking, calm mindset in volatile markets.
+
+Philanthropy
+
+Believes education is the best investment with compounding social returns.
+
+Established schools, scholarships, and libraries in China, India, Southeast Asia.
+
+Aspires to shape Chinese philanthropy into a more open, society-focused culture, beyond family or clan traditions.
+
+Education & Technology
+
+MOOCs and online learning can democratize knowledge, especially in emerging markets.
+
+Best investment is in human capital → compounding effect on careers and societies.
+
+Key challenges:
+
+Impact of AI on human labor.
+
+Digital divide across socioeconomic groups → need to use technology as an equalizer, not a divider.
 
 
 
