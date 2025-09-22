@@ -31,4 +31,6 @@ The objective is to document my journey, facilitate future revisions, and quickl
 - [Module 7: Nonprofit Organizations & Career in Finance](module_7/README.md)  
   Nonprofit organizations, for-profit enterprises, and career advice in the financial sector.
   
+  ---
+
 ***I completed this course with structured notes and personal reflections for every lesson, which are available in this repository for reference.***
