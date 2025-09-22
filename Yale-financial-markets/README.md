@@ -9,7 +9,7 @@
 This certificate folder centralises my structured notes by module and lesson.  
 The objective is to document my journey, facilitate future revisions, and quickly retrieve key information that will be useful for my studies, projects, and professional career.
 
-*Note: These notes were originally taken progressively during the course in separate drafts and have now been centralized on GitHub for clarity, organization, and long-term reference.*
+*Note: These notes were originally taken progressively during the course in separate drafts and have now been centralized on GitHub for long term reference.*
 
 
 ## Modules
