@@ -27,4 +27,5 @@
 - [Lesson 24: Chalk Talk – Gordon Growth Model](lesson_24_gordon_growth_model.md)
 
 ## Progress
-[████████████████████] 100%  *(24/24 lessons completed)*
+[■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■] 100%  
+*(24/24 lessons completed)*
