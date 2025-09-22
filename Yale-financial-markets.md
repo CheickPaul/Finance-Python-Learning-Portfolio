@@ -18,4 +18,4 @@ The objective is to document my journey, facilitate future revisions, and quickl
 - [Module 6](module_6/README.md)
 - [Module 7](module_7/README.md)
 
-**I completed this course with structured notes for every lesson.**  
+***I completed this course with structured notes for every lesson.***  
