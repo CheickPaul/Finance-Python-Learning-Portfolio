@@ -42,7 +42,8 @@
 ## Illustration
 Example of **NASDAQ Level II – MSFT** (Order Book Snapshot):
 
-![NASDAQ Level II – MSFT](./img/nasdaq_level2_msft.png)
+<img width="617" height="378" alt="Capture d’écran 2025-09-18 à 22 21 04" src="https://github.com/user-attachments/assets/10b19ac5-727a-4e0f-8a73-3a9fb5cadd04" />
+
 
 The figure shows bid (left) and ask (right) sides, with order quantities and prices.  
 - Best bid = 26.23 (arcx, 100 shares).  
