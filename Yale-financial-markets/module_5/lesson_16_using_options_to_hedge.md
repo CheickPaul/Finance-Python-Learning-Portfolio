@@ -71,7 +71,7 @@
 
 ---
 
-# Personal Reflections on Hedging
+# Reflections on Hedging
 
 ### Stop-Loss Inefficiency and Option Hedge
 I have already experienced situations where my stop-loss was ineffective due to **slippage during major economic announcements**.  
