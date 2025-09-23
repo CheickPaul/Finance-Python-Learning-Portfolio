@@ -45,17 +45,17 @@ Revised formula:
 F = S \times (1 + r + s - y)
 \]
 
-Where:
+Where:  
 
 * **y** = Convenience yield  
 
-If **y > (r + s)** → the futures curve goes into **backwardation**.  
+If \[ y > (r + s) \] → the futures curve goes into **backwardation**.  
 
 ---
 
 ## 4. Example: Wheat Shortage
 
-Imagine a pasta manufacturer:  
+Imagine a pasta manufacturer:
 
 * **Spot wheat price** = €100 / ton  
 * **Interest rate (r)** = 5%  
@@ -84,12 +84,12 @@ F = 100 \times (1 + 0.05 + 0.03 - 0.10) = 98
 * Storage facilities (e.g., Cushing, Oklahoma) were completely full.  
 * Traders holding May 2020 WTI futures could not take delivery.  
 
-**Result:**  
+**Result:**
 
 * The WTI May 2020 contract fell to **-37 USD per barrel**.  
 * Sellers were paying buyers to take oil off their hands because **storage costs exploded** beyond capacity.  
 
-This was an extreme case of:  
+This was an extreme case of:
 
 * **Negative effective storage cost**,  
 * A dramatic example of **backwardation**,  
@@ -110,7 +110,7 @@ This was an extreme case of:
 
 ## 1. Arbitrage pur (Cash-and-Carry)
 
-**Formule de non-arbitrage (commodities)** :
+**Formule de non-arbitrage (commodities):**
 
 \[
 F_t = S_t \cdot e^{(r + c - y)T}
@@ -122,14 +122,14 @@ F_t = S_t \cdot e^{(r + c - y)T}
 * \(c\) = coût de stockage  
 * \(y\) = convenience yield  
 
-**Détection** :  
+**Détection:**  
 * Si \(F_t > F_{theo}\) → Cash-and-Carry (long spot, short future).  
 * Si \(F_t < F_{theo}\) → Reverse Cash-and-Carry (short spot, long future).  
 
-**PnL** : convergence spot/future → profit risk-free (hors coûts).  
+**PnL:** convergence spot/future → profit risk-free (hors coûts).  
 
-En pratique : sur Treasuries et indices, ces écarts disparaissent très vite (HFT, C++).  
-Bon pour projets académiques et GitHub (ex. Oil, Gold).  
+👉 En pratique : sur Treasuries et indices, ces écarts disparaissent très vite (HFT, C++).  
+👉 Bon pour projets académiques et GitHub (ex. Oil, Gold).  
 
 ---
 
@@ -137,7 +137,7 @@ Bon pour projets académiques et GitHub (ex. Oil, Gold).
 
 * **Cheapest To Deliver (CTD)** = obligation la moins chère à livrer sur un future.  
 
-**Basis** :
+**Basis:**
 
 \[
 Basis = P_{CTD} - (F \cdot CF)
@@ -145,7 +145,7 @@ Basis = P_{CTD} - (F \cdot CF)
 
 où \(CF\) = conversion factor.  
 
-**Implied Repo Rate (IRR)** :
+**Implied Repo Rate (IRR):**
 
 \[
 IRR = \frac{(Coupons + P_{CTD} - (F \cdot CF))}{F \cdot CF} \cdot \frac{360}{Jours}
@@ -160,13 +160,13 @@ IRR = \frac{(Coupons + P_{CTD} - (F \cdot CF))}{F \cdot CF} \cdot \frac{360}{Jou
 
 ### Bond vs Bond
 
-**Spread Bund–OAT** :
+* **Spread Bund–OAT:**
 
 \[
 Spread = YTM_{OAT} - YTM_{Bund}
 \]
 
-**Spread 10Y–30Y US** :
+* **Spread 10Y–30Y US:**
 
 \[
 Spread = YTM_{30Y} - YTM_{10Y}
@@ -180,7 +180,7 @@ Stratégie : parier sur convergence/divergence (steepener/flattener).
 
 ### Swap vs Bond (Swap Spread)
 
-**Formule** :
+**Formule:**
 
 \[
 SwapSpread = SwapRate_{T} - YTM_{Gov,T}
@@ -199,9 +199,10 @@ Stratégie : long bond / short swap (ou inverse) si le spread s’écarte trop.
   * Bond vs Futures (basis, CTD).  
   * Bond vs Bond (yield spreads, curve trades).  
   * Swap vs Bond (swap spreads).  
-* Mémo : *“On vend toujours la partie la plus chère et on achète la moins chère.”*  
-* Profit : garanti à maturité en théorie, mais en pratique on peut sortir plus tôt dès que l’écart se referme.  
-* Tech : Python = parfait pour recherche/projets GitHub ; C++/Rust = requis pour HFT ultra-low-latency.  
+
+* **Mémo** : *“On vend toujours la partie la plus chère et on achète la moins chère.”*  
+* **Profit** : garanti à maturité en théorie, mais en pratique on peut sortir plus tôt dès que l’écart se referme.  
+* **Tech** : Python = parfait pour recherche/projets GitHub ; C++/Rust = requis pour HFT ultra-low-latency.  
 
 ---
 
@@ -217,7 +218,8 @@ Stratégie : long bond / short swap (ou inverse) si le spread s’écarte trop.
 
 ## 2. Forward Rates & Arbitrage
 
-**Forward rates** are the implied future rates derived from the spot curve.  
+* **Forward rates** are the implied future rates derived from the spot curve.  
+* Formula:  
 
 \[
 (1+R_n)^n = (1+R_m)^m \cdot (1+f_{m,n})^{(n-m)}
@@ -229,7 +231,8 @@ If there is a difference between the **implied forward rate** and the **observed
 
 ## 3. Z-score of the Spread
 
-A statistical tool to measure whether the 10Y–30Y spread is “abnormal.”  
+* A statistical tool to measure whether the 10Y–30Y spread is “abnormal.”  
+* Formula:  
 
 \[
 Z = \frac{Spread_t - \mu_{Spread}}{\sigma_{Spread}}
@@ -242,26 +245,26 @@ Z = \frac{Spread_t - \mu_{Spread}}{\sigma_{Spread}}
 
 ## 4. Vanilla Arbitrage 10Y–30Y
 
-Instruments: **ZN (10Y futures), UB (30Y futures)**.  
-
-**DV01-neutral hedge ratio** :
+* Instruments: ZN (10Y futures), UB (30Y futures).  
+* **DV01-neutral hedge ratio**:  
 
 \[
 h = \frac{DV01_{30Y}}{DV01_{10Y}} \approx 2.5
 \]
 
-Example trade:  
-* Short 1 UB (30Y)  
-* Long 2.5 ZN (10Y)  
-* → Bet on **flattening** (spread too wide).  
+* Example trade:  
+  * Short 1 UB (30Y)  
+  * Long 2.5 ZN (10Y)  
+  * → Bet on **flattening** (spread too wide).  
 
 ---
 
 ## 5. Frequency of Opportunities
 
 * Arbitrage setups are less frequent than directional trading:  
-  * Daily data: 1–2 signals per week.  
-  * Intraday (futures): more micro-mispricings, but often noisy.  
+  * **Daily data**: 1–2 signals per week.  
+  * **Intraday (futures)**: more micro-mispricings, but often noisy.  
+
 * Best opportunities usually occur around **macro releases** (CPI, NFP, FOMC) or **UST auctions**.  
 
 ---
@@ -269,8 +272,5 @@ Example trade:
 ## 6. Risk Management
 
 * Neutralize DV01 to avoid exposure to global rate shifts.  
-* Use a **Z-score stop** (e.g., exit if \(|Z| > 3\)).  
+* Use a **Z-score stop** (e.g. exit if |Z| > 3).  
 * Optional: hedge tail risk with **options on futures** (UB/ZN) or **swaptions**.  
-
----
-
