@@ -53,8 +53,6 @@ Outcome:
 
 Farmers hedge to **protect against losses**, not to maximize profits.  
 
----
-
 **2. Airline Hedging Against Rising Fuel Costs**  
 Situation: An airline expects to consume **10 million gallons of jet fuel** in the next **6 months**. Current price = **$2.00/gallon**.  
 Risk: If oil rises to **$3.00**, fuel costs explode, hurting profits.  
@@ -65,9 +63,8 @@ Outcome:
 
 Airlines hedge to **stabilize costs** and protect against price shocks.  
 
----
 
-### Hedging with Options
+**3. Hedging with Options
 * **Options = flexible insurance.**  
   * A **put** protects producers (farmers) against price falls.  
   * A **call** protects consumers (airlines) against price rises.  
