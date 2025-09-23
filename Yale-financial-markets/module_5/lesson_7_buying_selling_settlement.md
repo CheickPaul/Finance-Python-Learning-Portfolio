@@ -11,28 +11,26 @@
 
 ## 2. Daily Settlement and Margin Accounts
 
-Futures contracts are **marked-to-market daily**.
+Futures contracts are **marked-to-market daily**.  
 
-- A **margin account** is adjusted each day according to the profit and loss (P&L):  
+A **margin account** is adjusted each day according to the profit and loss (P&L):
 
-**Long position**  
-$$
-\Delta \Pi_t^{\text{long}} = N \cdot M \cdot (F_t - F_{t-1})
-$$
+### Long position
+\[
+\Delta \Pi_t^{\text{long}} = N \cdot M \cdot \left(F_t - F_{t-1}\right)
+\]
 
-**Short position**  
-$$
-\Delta \Pi_t^{\text{short}} = -N \cdot M \cdot (F_t - F_{t-1})
-$$
+### Short position
+\[
+\Delta \Pi_t^{\text{short}} = -N \cdot M \cdot \left(F_t - F_{t-1}\right)
+\]
 
 where:  
+
 - \(N\) = number of contracts  
 - \(M\) = contract multiplier  
 - \(F_t\) = settlement price at time \(t\)  
-
-If the account balance falls below the **maintenance margin**, a **margin call** occurs, requiring funds to be restored to the **initial margin**.
-
-> **Note**: The settlement price \(F_t\) is not always the last trade of the day (to avoid manipulation). It is determined by a settlement committee.
+- \(F_{t-1}\) = settlement price at time \(t-1\)  
 
 ---
 
