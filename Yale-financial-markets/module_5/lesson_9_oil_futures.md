@@ -59,6 +59,6 @@ $$
 y > r + c \;\;\;\Rightarrow\;\;\; F < S
 $$
 
-- Oil’s volatility makes it a great case study for **macro-driven relative value trades**.  
-- For my projects (e.g., UB30 arbitrage, fixed income vs commodities), oil futures provide a template for how **storage constraints and delivery rules** create arbitrage opportunities.  
+
+ 
 
