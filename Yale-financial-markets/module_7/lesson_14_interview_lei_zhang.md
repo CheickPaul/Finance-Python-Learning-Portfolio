@@ -1,35 +1,31 @@
-# Lesson 13 – Interview with Roger W. Ferguson Jr.
+# Lesson 14 – Interview with Lei Zhang (Hillhouse Capital)
 
 ## Key Concepts
-- Finance as a social good: not just speculation or quick profits; finance should help people achieve life goals.  
-- Long-term investing & risk management: diversification, discipline, and prudence essential for retirement savings.  
-- Central banks’ stabilizing role: lender-of-last-resort and liquidity provider during crises.  
-- Retirement model evolution: from defined benefit → hybrid DB/DC with annuities and diversified portfolios.  
-- Skepticism on “secular stagnation”: economies adapt over time, technology shifts need patience.  
-- Alternatives for diversification: agriculture, timber, real estate, infrastructure, private loans.  
-- Empathy and human capital: careers blend continuous learning with service to others.  
+- Entrepreneurial background: started with small ventures, later founded Hillhouse Capital (2005).  
+- Mentorship: worked with David Swensen (Yale Investments Office), translated his book into Chinese.  
+- Philosophy: markets are not fully efficient → opportunities for long-term, disciplined investors.  
+- Investment evolution:  
+  - Early stage → discovering undervalued assets.  
+  - Current stage → creating and adding value as an active, growth-oriented investor.  
+- Approach: concentrated portfolio (10–20 positions), held for a decade or more.  
+- Long-term orientation: patience and volatility tolerance as competitive advantage.  
+- Education and philanthropy: strong belief in education as the best investment with compounding social returns.  
 
 ## My Notes
-- Early financial literacy shaped Ferguson’s career (balancing checkbooks, family discussions).  
-- Public service and mission-driven finance: Federal Reserve, TIAA (“serving those who serve others”).  
-- Views on markets: HFT = not investing, lacks business insight; true investing is long-term and risk-focused.  
-- **Crisis lessons**:  
-  - 9/11 → communication, liquidity backstops, restore smooth ops.  
-  - 2008 → avoided subprime, cut costs, deployed cash strategically.  
-- Retirement system architecture: shift of responsibility to individuals, TIAA model emphasizes participation, matching, diversification, and lifetime income.  
-- Annuities: skepticism tied to costs and early-death concerns; design must address psychological needs.  
-- Portfolio positioning: diversification across regimes, broaden alternatives in low-rate world.  
-- Governance & tech:  
-  - Alphabet board experience → regulation + digitization insights.  
-  - Tech–policy intersections: privacy, net neutrality, right to be forgotten.  
-- Takeaways for careers:  
-  - Build human capital continuously.  
-  - Cultivate empathy to design useful solutions.  
-  - Use finance as a social good.  
+- Defines himself as an **entrepreneur-investor**, not just a value investor.  
+- Evaluates companies from first principles: ambition of founders, fundamentals, business models.  
+- Inspired by Chinese/Taoist philosophy: focus, unconventional thinking, calm in volatility.  
+- Hillhouse Capital emphasizes value creation: working with firms to improve, not just holding assets.  
+- Education focus:  
+  - Built schools, scholarships, libraries in China, India, Southeast Asia.  
+  - Aspires to reshape Chinese philanthropy toward open, society-centered giving (beyond family tradition).  
+- Views on technology: MOOCs and online education can democratize access to knowledge.  
+- Sees human capital as the **best compounding investment** for societies.  
+- Key challenges:  
+  - Impact of AI on jobs.  
+  - Risk of a widening digital divide → technology must be used as an equalizer.  
 
 ## Quotable Lines
-- Finance is “much more than quick profits”; it can improve lives.  
-- In crises, the Fed’s job is to keep the system running and provide liquidity.  
-- Long-term investors should avoid panic and stay aligned with goals.  
-- Diversification is for everyone, not just the wealthy.  
-
+- “Markets are not perfectly efficient — patient, disciplined investors can create real value.”  
+- “The best investment is in education; its returns compound across generations.”  
+- “Calmness and focus are strengths in a volatile market environment.”  
