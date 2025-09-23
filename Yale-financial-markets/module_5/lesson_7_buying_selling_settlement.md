@@ -1,127 +1,102 @@
-# Lesson – Buying, Selling, and Settlement
+# [Buying, Selling, and Settlement]
 
-## Key Concepts
-* Dojima (Japon, XVIIIᵉ) : premiers échanges à terme, « pit trading » et règles de séance.
-* Mark-to-market quotidien : variation margin créditée/débitée sur le compte de marge.
-* Livraison physique : si la position n’est pas close avant l’échéance, le long reçoit et le short livre.
-* Règlement en espèces (cash-settled) : pour des sous-jacents non livrables (indices, immobilier).
-* Arbitrage & convergence : à l’échéance, le future converge vers le spot.
+## 1. Historical Origins – Dojima Exchange
 
----
-
-## My Notes
-* **Maïs** : producteur short futures pour fixer son prix, industriel long pour sécuriser son coût.
-* **Pétrole (WTI)** : livraison physique à Cushing, Oklahoma ; sortie avant FND pour les financiers.
-* **Ultra Bond (UB30)** : panier d’OAT/UST ≥ 25 ans ; choix du **Cheapest-to-Deliver (CTD)** et **conversion factor (CF)**.
-* **S&P 500 futures** : cash-settled ; outil standard de couverture et de spéculation sans risque de livraison.
-* **Housing futures** : uniquement cash-settled (on ne « livre » pas des maisons).
+- The first futures market dates back to **Dojima (Japan, 18th century)**.  
+- Traders used **hand signals** (“pit trading”) to communicate buy/sell orders.  
+- Trading sessions were timed with a **burning fuse**; “water men” stopped late trades with buckets of water.  
+- These practices inspired modern futures markets such as the CME (Chicago Mercantile Exchange).  
 
 ---
 
-## Reflection
+## 2. Daily Settlement and Margin Accounts
 
-### 1) Mark-to-Market, Variation Margin et Appels de Marge
+Futures contracts are **marked-to-market daily**.
 
-Soit un future de prix de clôture (settlement) \(F_t\) au jour \(t\), un prix de veille \(F_{t-1}\), un **multiplier** \(M\) et un nombre de contrats \(N\).
+- A **margin account** is adjusted each day according to the profit and loss (P&L):  
 
-**P&L quotidien (long)** :
-\[
-\Delta \Pi_t^{\text{long}} = N \, M \, (F_t - F_{t-1})
-\]
-**P&L quotidien (short)** :
-\[
-\Delta \Pi_t^{\text{short}} = -\,N \, M \, (F_t - F_{t-1})
-\]
+**Long position**  
+$$
+\Delta \Pi_t^{\text{long}} = N \cdot M \cdot (F_t - F_{t-1})
+$$
 
-Le compte de marge est crédité/débité chaque jour de \(\Delta \Pi_t\).  
-Si le solde < **maintenance margin**, appel de marge pour revenir au **initial margin**.
+**Short position**  
+$$
+\Delta \Pi_t^{\text{short}} = -N \cdot M \cdot (F_t - F_{t-1})
+$$
 
-> Remarque : le **settlement price** \(F_t\) n’est pas forcément le dernier trade (évite les manipulations) ; il est fixé par un comité.
+where:  
+- \(N\) = number of contracts  
+- \(M\) = contract multiplier  
+- \(F_t\) = settlement price at time \(t\)  
 
----
+If the account balance falls below the **maintenance margin**, a **margin call** occurs, requiring funds to be restored to the **initial margin**.
 
-### 2) Basis, Coût de Portage et Convergence
-
-On note le **basis** :
-\[
-\text{Basis}_t = F_t - S_t
-\]
-où \(S_t\) est le prix spot. Sous hypothèses de **coût de portage** (taux \(r\), stockage \(c\), convenience yield \(y\)), la relation théorique (continuous compounding) est :
-\[
-F_t = S_t \, e^{(r + c - y)T}
-\]
-
-À l’échéance \(T \to 0\) :
-\[
-\lim_{T \to 0} (F_T - S_T) = 0
-\]
-donc
-\[
-F_T \to S_T
-\]
-La convergence est renforcée par l’arbitrage (cash-and-carry / reverse cash-and-carry) lorsque le basis s’écarte de la valeur justifiée par \((r,c,y)\).
-
-**Cash-and-Carry (si \(F_t\) trop élevé)** :
-* Acheter spot, financer au taux \(r\), stocker (\(c\)), **vendre** le future.
-* Profit à l’échéance par convergence de \(S_T\) et \(F_T\).
-
-**Reverse Cash-and-Carry (si \(F_t\) trop bas)** :
-* **Vendre** le spot (ou emprunter le sous-jacent), placer au taux \(r\), **acheter** le future.
+> **Note**: The settlement price \(F_t\) is not always the last trade of the day (to avoid manipulation). It is determined by a settlement committee.
 
 ---
 
-### 3) Futures à Livraison Physique : Facturation et CTD (obligataires)
+## 3. Physical Delivery Futures
 
-Pour un future obligataire (ex. **UB30**), le short livre une obligation du panier éligible.  
-La facture payée au short (hors frais) est :
-\[
-\text{Invoice Price} = F_{\text{final}} \times CF \times M + AI
-\]
-où :
-* \(F_{\text{final}}\) = prix du future au règlement,
-* \(CF\) = **conversion factor** de l’obligation livrée,
-* \(M\) = **multiplier** du contrat,
-* \(AI\) = **accrued interest** (intérêt couru) sur l’obligation livrée.
+If a futures contract is **not closed before expiration**:
 
-**Choix du CTD** : le vendeur rationnel livre le titre qui maximise son profit, i.e. celui qui **minimise** son coût effectif de livraison. Deux métriques utiles :
-* **Net Basis** (approche prix) :
-  \[
-  \text{NetBasis} = P_{\text{obligation}} - (F \cdot CF) - AI
-  \]
-  Le CTD tend à minimiser \(\text{NetBasis}\).
-* **Implied Repo Rate (IRR)** (approche rendement) :
-  \[
-  IRR = \frac{ \big( \text{Coupons} + P_{\text{obligation}} - (F \cdot CF) \big) }{ (F \cdot CF) } \times \frac{360}{\text{jours}}
-  \]
-  Le CTD tend à **maximiser** l’\(IRR\) par rapport au repo de marché.
+- **Seller (short)** must deliver the underlying asset.  
+- **Buyer (long)** must receive it.  
+
+Most financial traders avoid delivery by closing positions early.  
+Only **hedgers** (farmers, refiners, bond dealers) typically go to delivery.
+
+**Examples**  
+
+- **Corn Futures**: A farmer short delivers bushels; a food processor long receives them.  
+- **Oil Futures (WTI, Brent)**:  
+  - Standard contract size = 1,000 barrels.  
+  - WTI delivery point = **Cushing, Oklahoma**.  
+  - Traders must exit before **First Notice Day (FND)** to avoid delivery.  
+- **Ultra Bond Futures (UB30)**:  
+  - Physically settled in a basket of U.S. Treasury Bonds with maturity ≥ 25 years.  
+  - The short chooses which bond to deliver (*cheapest-to-deliver*).  
+  - Pricing depends on the **conversion factor (CF)**.  
 
 ---
 
-### 4) Cash-Settled Futures : Payoff et Lecture des Prix
+## 4. Arbitrage and Convergence
 
-Pour un future **cash-settled** (ex. **S&P 500**), il n’y a pas de livraison de l’indice.  
-Le règlement final (au dernier jour) crédite/débite :
-\[
-\text{Cash Settlement} = N \, M \, (I_{\text{final}} - F_{\text{final}})
-\]
-où \(I_{\text{final}}\) est le niveau d’indice de référence au fixing final, \(F_{\text{final}}\) le prix de règlement du future.  
-Dans la pratique, tout cela résulte de la **somme des mark-to-market quotidiens**, déjà matérialisés via \(\Delta \Pi_t\).
+Futures converge to the **spot price** at maturity:
 
----
+$$
+\lim_{T \to 0} (F_T - S_T) = 0 \quad \Rightarrow \quad F_T \to S_T
+$$
 
-### 5) Arbitrage de Date et Convergence à l’Échéance
+- If \(F_T < S_T\): Arbitrageurs buy futures, take delivery, and sell in the spot market.  
+- If \(F_T > S_T\): Arbitrageurs short futures and sell spot.  
 
-À l’approche de l’échéance \(T\), l’écart **basis** se ferme mécaniquement :
-\[
-\text{Basis}_t = F_t - S_t \xrightarrow[t \to T]{} 0
-\]
-Si \(\text{Basis}_t\) est anormal (trop positif ou trop négatif) compte tenu de \((r,c,y)\), les stratégies **cash-and-carry** ou **reverse** deviennent rentables et forcent le réalignement.
+This mechanism enforces **market efficiency**.
 
 ---
 
-### 6) Synthèse Opérationnelle
-* **Mark-to-market** : \(\Delta \Pi_t = N M (F_t - F_{t-1})\), alimente la marge et déclenche les appels de marge.
-* **Convergence** : \(F_T \to S_T\) ; le **basis** tend vers 0 à l’échéance.
-* **Livraison physique** : attention aux dates FND/LTD ; sur UB30, la facture dépend de \(CF\) et \(AI\), choix du **CTD** par max \(IRR\)/min NetBasis.
-* **Cash-settled** : pas de logistique ; le règlement final est purement monétaire et équivaut à la somme des variations quotidiennes.
+## 5. Cash-Settled Futures
 
+Cash settlement was introduced to handle assets that **cannot be delivered physically**.  
+
+**Examples**:  
+- **S&P 500 Futures**: Standard (\$250 × index) and E-mini (\$50 × index).  
+- **Housing Price Futures**: No physical homes can be delivered → cash-only.  
+
+**Advantages**:  
+- Simpler arbitrage (automatic cash adjustment).  
+- Broader scope: indices, housing, volatility, etc.  
+
+---
+
+## 6. Key Takeaways
+
+- Futures markets evolved from **physical delivery** to **cash settlement**.  
+- **Daily settlement** and **margins** mitigate counterparty risk.  
+- **Physical delivery** remains common in commodities (oil, grains) and bonds (Treasuries).  
+- **Cash settlement** enables trading of indices and non-standardized assets.  
+
+For traders:  
+- **Oil Futures and UB30 Futures are physically settled.**  
+- Brokers usually require positions to be closed before delivery deadlines.  
+- Industrial users (refiners, bond dealers) are the real delivery participants.
