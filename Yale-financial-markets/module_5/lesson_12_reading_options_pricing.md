@@ -1,4 +1,4 @@
-# [Reading Options Pricing]
+** [Reading Options Pricing]**
 
 ## 1. Historical Origins
 - The **first documented options** come from Holland (1600s–1730).  
