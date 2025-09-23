@@ -67,4 +67,48 @@
 - Hedging can be done with **stop-loss orders (cheap but unreliable)** or **put options (costly but certain)**.  
 - Option markets provide **risk sentiment signals** through indices like VIX and SKEW.  
 - **Insurance in markets is never free** → balance option premium vs. potential stop-loss inefficiencies.  
+- **VIX = volatility fear / SKEW = crash fear** → together they give a fuller picture of market sentiment.  
 
+---
+
+# Personal Reflections on Hedging
+
+### Stop-Loss Inefficiency and Option Hedge
+I have already experienced situations where my stop-loss was ineffective due to **slippage during major economic announcements**.  
+For a long time, I thought the solution was simply **not to trade on days of high-impact releases**.  
+Now I realize that to cancel this risk, the right approach is to **hedge with options on expected announcement days**.  
+This way, even if the market gaps, the option acts as insurance and sets a floor to my loss.  
+
+Sometimes my setups required a **large stop-loss**, and I used to avoid taking these trades.  
+With an option hedge, I can now take them and reduce my risk — it is as if I **lower the theoretical loss** I am willing to accept.  
+
+---
+
+### Hedging by Volatility
+On days of expected **high volatility**, the main challenge is that we **cannot know the direction** of the market move.  
+Using **straddles or strangles** can be effective in such cases:  
+- They benefit if the market makes a large move in either direction.  
+- They reduce exposure to “directional uncertainty”.  
+- The cost is the option premium, but it buys protection against both tails.  
+
+---
+
+### Idea of a Scenario-Based Hedging Dashboard
+It is not enough to test a single path when comparing Stop-Loss vs Put.  
+Monte Carlo allows me to simulate thousands of possible scenarios and see the full **PnL distribution**.  
+This makes the analysis more realistic, since it shows how each strategy behaves under many outcomes, not just one.  
+
+It would also be interesting to build a **dashboard** that groups all these PnL simulations:  
+- Inputs: lot sizes, chosen coverage products (puts, calls, straddles, etc.), market scenarios.  
+- Output: simulated PnL distributions and risk metrics.  
+Such a tool would make hedging decisions more objective and systematic.  
+
+---
+
+### Interest Rate Risk and Vega Risk
+In fixed income trading, **interest rate risk** is central: when rates rise, bond prices fall.  
+Options like swaptions or puts on Treasury futures can be used to hedge this exposure.  
+
+Another important dimension is **Vega risk**: the value of an option depends on implied volatility.  
+If implied volatility decreases, the time value of the option shrinks, and its price can drop even if the underlying does not move.  
+This means that holding a long option is not only a bet on direction, but also a bet on volatility staying high or increasing.  
