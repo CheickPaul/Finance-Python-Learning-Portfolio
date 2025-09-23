@@ -22,7 +22,7 @@ where:
 - \( r \) = Risk-free rate  
 - \( y \) = Dividend yield (acts like a negative storage cost)  
 
-👉 Intuition: Holding stocks pays dividends, so the cost of carry is adjusted downward by the dividend yield.
+ Intuition: Holding stocks pays dividends, so the cost of carry is adjusted downward by the dividend yield.
 
 ---
 
