@@ -1,4 +1,4 @@
-# Lesson – PMI, CMOs, and CDOs (Yale University – Coursera)
+# Lesson – PMI, CMOs, and CDOs
 
 ## 1. PMI (Private Mortgage Insurance)
 
