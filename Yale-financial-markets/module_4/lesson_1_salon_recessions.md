@@ -32,7 +32,7 @@
 
 ---
 
-## Reflection and Research (Building a Sentiment Score)
+## 5. Reflection and Research (Building a Sentiment Score)
 Sentiment helps desks adjust risk earlier than macro models, but it’s fragile. The best practice is to treat it as an early-warning radar, not as a standalone trigger.
 
 ## Inputs (by family)
