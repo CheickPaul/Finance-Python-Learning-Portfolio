@@ -1,4 +1,4 @@
-# Lesson – Mortgages, Part 2 (Yale University – Coursera)
+# Lesson – Mortgages, Part 2 
 
 ## 1. Mortgage Rates and Treasury Yields
 
