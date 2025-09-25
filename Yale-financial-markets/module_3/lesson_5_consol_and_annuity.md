@@ -1,84 +1,101 @@
 # Lesson 5 – Inflation and Index Bonds
 
 ## Key Concepts
-- **Nominal interest rate (\(r_{nominal}\))**  
-  - Quoted in currency units (e.g., USD, EUR).  
-  - Represents the growth of money, not purchasing power.  
-  - Example: a 5% nominal yield on $100 = $105 after 1 year.  
 
-- **Real interest rate (\(r_{real}\))**  
-  - Adjusted for inflation, measures the growth of purchasing power.  
-  - Tells you how many more goods and services you can buy after 1 year.  
+- **Nominal Interest Rate (\(r_{nominal}\))**  
+  Expressed in currency units. Represents growth of money but not purchasing power.  
 
-- **Inflation rate (\(\pi\))**  
-  - Rate at which prices of goods/services increase.  
-  - Reduces the purchasing power of money.  
+  Exemple :  
+  \[
+  100 \ \text{USD} \times (1 + 0.05) = 105 \ \text{USD après 1 an}
+  \]
 
-- **Fisher Equation (exact relationship)**  
+- **Real Interest Rate (\(r_{real}\))**  
+  Adjusted for inflation. Represents growth of purchasing power.  
 
-  $$
+- **Inflation (\(\pi\))**  
+  Annual rate of increase in prices. Reduces the real value of money.  
+
+- **Fisher Equation (exact)**  
+
+  \[
   1 + r_{nominal} = (1 + r_{real})(1 + \pi)
-  $$  
+  \]
 
-  Approximation (valid if rates are small):  
+  **Approximation (if rates are small):**  
 
-  $$
+  \[
   r_{real} \approx r_{nominal} - \pi
-  $$  
+  \]
 
 - **Index Bonds (Inflation-Protected Securities)**  
-  - Principal and coupons are **indexed to inflation**.  
-  - Protect investors from unexpected inflation.  
-  - Guarantee a **real return** (instead of a nominal one).  
-  - Example: U.S. TIPS (Treasury Inflation-Protected Securities).  
+  Coupon and principal indexed to inflation.  
+  Guarantee a fixed **real return**.  
+  Example: U.S. TIPS.  
 
 - **Breakeven Inflation Rate**  
-  - Market-based measure of expected inflation.  
-  - Defined as:  
 
-  $$
-  \text{Breakeven Inflation} = r_{nominal} - r_{TIPS}
-  $$  
+  \[
+  \pi^{e} = r_{nominal} - r_{TIPS}
+  \]
 
-  - Example: if 10-year Treasury = 4.5% and 10-year TIPS = 2.0%, then expected inflation = 2.5%.  
+  Exemple :  
+  - 10Y Treasury = 4.5%  
+  - 10Y TIPS = 2.0%  
+
+  \[
+  \pi^{e} = 4.5\% - 2.0\% = 2.5\%
+  \]
 
 - **Money Illusion**  
-  - Investors often confuse nominal returns with real returns.  
-  - Example: Earning 5% nominal with 6% inflation = –1% real return (loss in purchasing power).  
+  Confusing nominal vs real returns.  
+
+  Exemple :  
+  \[
+  r_{nominal} = 5\%, \quad \pi = 6\% \quad \Rightarrow \quad r_{real} \approx -1\%
+  \]
 
 ---
 
 ## My Notes
-### 1. Nominal vs Real Rates
-- Example: nominal yield = 6%, inflation = 2%.  
-  - Real yield (approx):  
 
-  $$
-  r_{real} = 6\% - 2\% = 4\%
-  $$  
+### 1. Nominal vs Real
+Exemple : \( r_{nominal} = 6\% \), \( \pi = 2\% \).  
 
-- More precise:  
+Approximation :  
+\[
+r_{real} \approx 6\% - 2\% = 4\%
+\]
 
-  $$
-  r_{real} = \frac{1 + 0.06}{1 + 0.02} - 1 = 3.92\%
-  $$  
+Exact :  
+\[
+r_{real} = \frac{1 + r_{nominal}}{1 + \pi} - 1 = \frac{1.06}{1.02} - 1 = 3.92\%
+\]
 
 ### 2. Why Nominal > Real
-- Investors demand compensation for **inflation risk**.  
-- The difference ≈ expected inflation.  
+Investors require compensation for inflation risk.  
+\[
+r_{nominal} \approx r_{real} + \pi
+\]
 
 ### 3. Index Bonds
-- Example: If CPI rises 3%, both principal and coupon increase by 3%.  
-- Eliminate inflation risk for the investor, transfer it to the issuer (government).  
-- Popular with **pension funds** and **long-term savers**.  
+If CPI = +3%: both coupon and principal rise by 3%.  
+
+Formally:  
+\[
+C_t = C_0 \times (1 + \pi_t), \quad P_t = P_0 \times (1 + \pi_t)
+\]
+
+Where:  
+- \( C_t \) = coupon at time \(t\)  
+- \( P_t \) = principal at time \(t\)  
+- \( \pi_t \) = cumulative inflation since issuance  
 
 ---
 
 ## Reflection
-- Distinguishing between **nominal vs real** returns is crucial — investors often fall into the trap of **money illusion**.  
-- Index bonds like TIPS allow **direct inflation hedging**, giving clarity about real returns.  
-- In trading and quantitative finance:  
-  - **Breakeven inflation** is extracted from the difference between nominal bonds and TIPS.  
-  - It provides a **real-time market expectation of inflation**, which is key for anticipating **central bank policy** and **portfolio allocation**.  
-- My takeaway: monitoring **inflation spreads** is essential for both macro strategies and fixed-income trading.  
 
+- **Key insight**: separating **nominal vs real** returns avoids money illusion.  
+- **TIPS** (and other index bonds) provide direct protection against inflation.  
+- **Breakeven inflation** gives a **market-implied forecast** of inflation and is a major tool for macro/fixed income desks.  
+- As a trader, I see how inflation spreads can signal shifts in **central bank policy** or **asset allocation**.  
