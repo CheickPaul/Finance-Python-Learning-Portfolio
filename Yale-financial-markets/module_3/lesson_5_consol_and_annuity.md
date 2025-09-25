@@ -55,4 +55,3 @@ $$
 - Consol = perpetual cash flows, like preferred shares.  
 - Annuity = finite stream of payments, like mortgages.  
 - Growing versions → connect directly to the Dividend Discount Model (DDM) in equity valuation.  
-- As a trader, mastering these formulas links **cash flow timing** with **market valuation**.  
