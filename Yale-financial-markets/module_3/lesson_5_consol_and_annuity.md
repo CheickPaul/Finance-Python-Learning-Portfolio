@@ -1,101 +1,76 @@
-# Lesson 5 – Inflation and Index Bonds
+# Lesson 5 – Consol and Annuity Formulas
 
 ## Key Concepts
 
-- **Nominal Interest Rate (\(r_{nominal}\))**  
-  Expressed in currency units. Represents growth of money but not purchasing power.  
+### 1. Consol (Perpetual Bond)
+- A **consol** is a perpetual bond: it pays a **fixed coupon \(x\)** every period, forever.  
+- Present value formula:  
 
-  Exemple :  
-  \[
-  100 \ \text{USD} \times (1 + 0.05) = 105 \ \text{USD après 1 an}
-  \]
+\[
+PV_{\text{consol}} = \frac{x}{r}
+\]
 
-- **Real Interest Rate (\(r_{real}\))**  
-  Adjusted for inflation. Represents growth of purchasing power.  
+where:  
+- \(x\) = coupon payment  
+- \(r\) = discount rate  
 
-- **Inflation (\(\pi\))**  
-  Annual rate of increase in prices. Reduces the real value of money.  
+---
 
-- **Fisher Equation (exact)**  
+### 2. Growing Consol
+- A **growing consol** pays coupons that increase at a constant growth rate \(g\).  
+- Formula:  
 
-  \[
-  1 + r_{nominal} = (1 + r_{real})(1 + \pi)
-  \]
+\[
+PV_{\text{growing consol}} = \frac{x}{r - g}
+\]
 
-  **Approximation (if rates are small):**  
+valid if \( r > g \).  
 
-  \[
-  r_{real} \approx r_{nominal} - \pi
-  \]
+where:  
+- \(x\) = first coupon  
+- \(g\) = growth rate of coupon  
 
-- **Index Bonds (Inflation-Protected Securities)**  
-  Coupon and principal indexed to inflation.  
-  Guarantee a fixed **real return**.  
-  Example: U.S. TIPS.  
+---
 
-- **Breakeven Inflation Rate**  
+### 3. Annuity
+- An **annuity** is a series of fixed payments \(x\), starting at \(t=1\), ending at \(t=T\).  
+- Present value formula:  
 
-  \[
-  \pi^{e} = r_{nominal} - r_{TIPS}
-  \]
+\[
+PV_{\text{annuity}} = x \times \frac{1 - (1+r)^{-T}}{r}
+\]
 
-  Exemple :  
-  - 10Y Treasury = 4.5%  
-  - 10Y TIPS = 2.0%  
+where:  
+- \(T\) = number of periods  
+- \(r\) = discount rate  
 
-  \[
-  \pi^{e} = 4.5\% - 2.0\% = 2.5\%
-  \]
+---
 
-- **Money Illusion**  
-  Confusing nominal vs real returns.  
+### 4. Growing Annuity
+- Payments grow at a constant rate \(g\) for \(T\) periods.  
+- Formula:  
 
-  Exemple :  
-  \[
-  r_{nominal} = 5\%, \quad \pi = 6\% \quad \Rightarrow \quad r_{real} \approx -1\%
-  \]
+\[
+PV_{\text{growing annuity}} = x \times \frac{1 - \left(\frac{1+g}{1+r}\right)^T}{r - g}
+\]
+
+valid if \( r > g \).  
 
 ---
 
 ## My Notes
 
-### 1. Nominal vs Real
-Exemple : \( r_{nominal} = 6\% \), \( \pi = 2\% \).  
-
-Approximation :  
-\[
-r_{real} \approx 6\% - 2\% = 4\%
-\]
-
-Exact :  
-\[
-r_{real} = \frac{1 + r_{nominal}}{1 + \pi} - 1 = \frac{1.06}{1.02} - 1 = 3.92\%
-\]
-
-### 2. Why Nominal > Real
-Investors require compensation for inflation risk.  
-\[
-r_{nominal} \approx r_{real} + \pi
-\]
-
-### 3. Index Bonds
-If CPI = +3%: both coupon and principal rise by 3%.  
-
-Formally:  
-\[
-C_t = C_0 \times (1 + \pi_t), \quad P_t = P_0 \times (1 + \pi_t)
-\]
-
-Where:  
-- \( C_t \) = coupon at time \(t\)  
-- \( P_t \) = principal at time \(t\)  
-- \( \pi_t \) = cumulative inflation since issuance  
+- **Consols** were historically used by the British government to finance perpetual debt.  
+- They are rare today but form the **foundation of bond pricing formulas**.  
+- **Annuities** are common in pensions, mortgages, and structured finance.  
+- Growing annuities and consols generalize to assets with **dividend growth**, like equities.  
 
 ---
 
 ## Reflection
 
-- **Key insight**: separating **nominal vs real** returns avoids money illusion.  
-- **TIPS** (and other index bonds) provide direct protection against inflation.  
-- **Breakeven inflation** gives a **market-implied forecast** of inflation and is a major tool for macro/fixed income desks.  
-- As a trader, I see how inflation spreads can signal shifts in **central bank policy** or **asset allocation**.  
+- These formulas are the **building blocks** for fixed income and equity valuation.  
+- Consols resemble **perpetual preferred stock** → infinite life, constant dividends.  
+- Annuities link directly to **mortgage payments**: same math, just different context.  
+- As a trader, understanding these PV formulas is essential to connect **cash flow timing** with **market prices**.  
+- In equity valuation, the **Dividend Discount Model (DDM)** is just a **growing consol** formula applied to dividends.  
