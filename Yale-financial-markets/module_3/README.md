@@ -17,7 +17,7 @@
 - [Lesson 14: Corporations Raise Money](lesson_14_corporations_raise_money.md)
 - [Lesson 15: Dilution](lesson_15_dilution.md)
 - [Lesson 16: Share Repurchase](lesson_16_share_repurchase.md)
-- [Lesson 17: PDV of Expected Dividends](lesson_17_pdv_expected_dividends.md)
+- Lesson 17: PDV of Expected Dividends](lesson_17_pdv_of_expected_dividends.md)
 - [Lesson 18: Why Do Firms Pay Dividends?](lesson_18_why_do_firms_pay_dividends.md)
 
 [■■■■■■■■■■■■■■■■■■■■] 100%  
