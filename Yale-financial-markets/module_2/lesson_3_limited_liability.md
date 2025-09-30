@@ -1,19 +1,22 @@
-# Lesson 3 – Limited Liability
+# [Lesson 3 – Limited Liability]
 
 ## Key Concepts
-- Before 1811, shareholders were **personally responsible** for company debts and managers’ actions.  
-- The 1811 New York law introduced **limited liability**: investors could only lose what they put in.  
-- Separation between **ownership** and **management** changed the scale of modern capitalism.  
-- Limited liability encourages more people to invest but also creates potential **moral hazard**.  
-- Investors often **underestimate risk**, similar to buying lottery tickets—focusing on upside and neglecting small probabilities of large losses.  
+1. Before 1811, shareholders were personally responsible for the actions of company managers.  
+2. After limited liability laws, owners and managers became legally separate.  
+3. Investors tend to **underestimate small probabilities of big losses**, similar to buying lottery tickets.  
+4. Limited liability is a cornerstone of modern finance, enabling large-scale investment and corporate growth.
 
 ## My Notes
-- The legal innovation of limited liability was revolutionary: it unlocked massive growth of corporations.  
-- It made investing accessible to the broader public since risks were capped.  
-- But it also means investors sometimes become **over-optimistic**, ignoring low-probability catastrophic outcomes.  
-- This parallels trading psychology: traders may overweight small chances of big wins while underestimating the tail risks.  
+- Before limited liability: extreme personal risk → discouraged outside investment.  
+- With limited liability: investors only risk what they put in, nothing more.  
+- This structure encourages entrepreneurship and capital formation.  
+- Downside: investors often ignore rare catastrophic risks because their exposure is capped.  
 
 ## Reflection
-- Limited liability is a cornerstone of modern finance, but it also explains why bubbles and crashes keep happening.  
- 
+Limited liability protects investors and allows companies to raise large amounts of capital. Without it, modern corporations and markets could not exist.  
+
+But this protection also creates **systemic fragility**:  
+- Investors become more willing to take risks, since the **worst-case loss is limited**.  
+- This encourages **collective optimism**, fueling bubbles as money pours into risky ventures.  
+- When reality hits, these underestimated risks materialize, leading to **sharp crashes**.  
 
