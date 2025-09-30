@@ -6,7 +6,7 @@
 - [Lesson 3: Limited Liability](lesson_3_limited_liability.md)
 - [Lesson 4: Inflation Indexed Debt](lesson_4_inflation_indexed_debt.md)
 - [Lesson 5: Unidad de Fomento](lesson_5_unidad_de_fomento.md)
-- [Lesson 6: Real Estate – Risk Management Devices](lesson_6_real_estate_risk_management.md)
+- [Lesson 6: Real Estate Risk Management](lesson_6_real_estate_risk_management.md)
 - [Lesson 7: Forecasting](lesson_7_forecasting.md)
 - [Lesson 8: Intuition of Efficiency](lesson_8_intuition_of_efficiency.md)
 - [Lesson 9: Price as PDV](lesson_9_price_as_pdv.md)
