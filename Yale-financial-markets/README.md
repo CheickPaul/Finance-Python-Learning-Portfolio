@@ -6,7 +6,7 @@
 **Status**: Completed ✅
 
 ## Purpose
-This certificate folder centralises my structured notes by module and lesson.  
+I made this folder to centralise my notes by module and lesson.  
 The objective is to document my journey, facilitate future revisions, and quickly retrieve key information that will be useful for my studies, projects, and professional career.
 
 *Note: These notes were originally taken progressively during the course in separate drafts and have been centralized on GitHub for long term reference.*
