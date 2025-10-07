@@ -4,6 +4,7 @@
 **Instructor**: Robert J. Shiller  
 **Platform**: Coursera  
 **Status**: Completed ✅
+
 [📄 View certificate](certificates/financial_markets.pdf)
 
 ## Purpose
