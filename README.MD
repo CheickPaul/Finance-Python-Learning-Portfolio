@@ -20,6 +20,10 @@ Each line links a certificate to a reference text and a concrete outcome.
 | **Alt Data & ML** | **Python and Machine-Learning for Asset Management with Alternative Data Sets — EDHEC** | *Advances in Financial Machine Learning* – M. López de Prado |  |  |
 | **Market Literacy** | **Bloomberg Market Concepts (BMC) — Bloomberg** | — |  |  |
 
+
+## Quick Access
+- [📂 Yale — Financial Markets](./yale--financial-markets/)
+
 ---
 
 This repository is updated regularly as I progress.  
