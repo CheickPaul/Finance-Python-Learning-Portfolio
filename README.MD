@@ -23,7 +23,7 @@ Each line links a certificate to a reference text and a concrete outcome.
 
 
 
-**Quick access:** [ Financial Markets folder](./Yale-financial-markets/) · … [ CBS — Investments: Financial Markets, Options & Derivatives](./cbs-summer--financial-markets-options-derivatives/) ·
+**Quick access:** [ Financial Markets folder](./Yale-financial-markets/) · … [ Copenhagen Business School — Investments: Financial Markets, Options & Derivatives](./cbs-summer--financial-markets-options-derivatives/) ·
 
 
 ---
