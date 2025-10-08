@@ -1,6 +1,6 @@
 # Finance & Python Learning Portfolio
 
-This repository documents my study journey across **finance certificates** to prepare for a master’s program and roles in **quantitative finance, trading, and research**.
+This repository documents my study journey across **finance certificatesand programs ** to prepare for a master’s degree and roles in **quantitative finance, trading, and research**.
 
 ## Objective
 Connect **market theory, portfolio construction, and algorithmic trading** with **hands-on Python**.  
