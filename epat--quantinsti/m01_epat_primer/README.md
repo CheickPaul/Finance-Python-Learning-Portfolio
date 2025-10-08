@@ -1,4 +1,4 @@
-# Primer
+# Primers
 [01 — Macroeconomics Primer](./primers/primer01_macroeconomics/) ·  
 [02 — Stock Market Basics Primer](./primers/primer02_stock_market_basics/) ·  
 [03 — Excel Primer](./primers/primer03_excel/) ·  
