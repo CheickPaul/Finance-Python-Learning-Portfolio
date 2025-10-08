@@ -12,7 +12,11 @@ Each line links a certificate to a reference text and a concrete outcome.
 
 | Theme | Certificate / Program | Reference Book | Objective | Associated Python Project |
 |------|------------------------|----------------|-----------|---------------------------|
-| **Derivatives & Options** | **Investments: Financial Markets, Options and Derivatives — Copenhagen Business School (Summer University)** | *Options, Futures, and Other Derivatives* — **John C. Hull** |  |  |
+| **Derivatives & Options** | **Investments: Financial Markets, Options and Derivatives — Copenhagen Business School (Summer University)** | *Options, Futures, and Other Derivatives* — **John C. Hull** | Apply the aspects of fixed income assets on bond's pricing and its risk sensitivity. Analyze and explain the effect of bankruptcy risk on the yield to maturity of the bond.
+Implement the use of leverage in common financial problems, and analyze the effects of using leverage on risk and return.
+Analyze option pricing (theory and practice) using the same models used in most financial firms.
+Describe the process of financial markets movements and the role derivatives play in stability and instability of financial markets.
+Identify hidden derivatives in real "simple life" agreements and deals | - |
 | **Market Foundations** | **Financial Markets — Yale University (Coursera, Robert J. Shiller)** | *Irrational Exuberance* – **R.J. Shiller** *(or* **Finance and the Good Society***) |  |  |
 | **Algorithmic Trading (Professional)** | **Executive Programme in Algorithmic Trading (EPAT) — QuantInsti** | *Algorithmic Trading* — **E.P. Chan**; *Python for Finance* — **Y. Hilpisch** | *EPAT is a 6-month, instructor-led programme designed by 20 industry experts (250+ years combined) to train end-to-end algorithmic-trading practitioners capable of designing, testing, and deploying professional quantitative strategies through a mentored project and real-market tools.* |  |
 | **Portfolio (Intro)** | **Introduction to Portfolio Construction and Analysis with Python — EDHEC** | *Quantitative Equity Portfolio Management* — **Chincarini & Kim** |  |  |
