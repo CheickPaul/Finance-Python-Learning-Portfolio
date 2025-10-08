@@ -12,14 +12,15 @@ Each line links a certificate to a reference text and a concrete outcome.
 
 | Theme | Certificate / Program | Reference Book | Objective | Associated Python Project |
 |------|------------------------|----------------|-----------|---------------------------|
-| **Market Foundations** | **Financial Markets — Yale University (Coursera, Robert J. Shiller)** | *Irrational Exuberance* – R.J. Shiller *(or* Finance and the Good Society*) |  |  |
-| **Algorithmic Trading (Professional)** | **Executive Programme in Algorithmic Trading (EPAT) — QuantInsti** | *Algorithmic Trading* – E.P. Chan; *Python for Finance* – Y. Hilpisch |*EPAT is a 6-month, instructor-led programme designed by 20 industry experts with 250+ years of combined experience to train end-to-end algorithmic-trading practitioners capable of designing, testing, and deploying professional quantitative strategies through a mentored project and real-market tools (faculty include Dr Ernest P. Chan, Dr Euan Sinclair, Dr Thomas Starke, Dr Robert Kissell, Nitesh Khandelwal, and Rajib Ranjan Borah).*
-  |  |
-| **Portfolio (Intro)** | **Introduction to Portfolio Construction and Analysis with Python — EDHEC** | *Quantitative Equity Portfolio Management* – Chincarini & Kim |  |  |
-| **Portfolio (Advanced)** | **Advanced Portfolio Construction and Analysis with Python — EDHEC** | *Active Portfolio Management* – Grinold & Kahn |  |  |
-| **Python & ML for AM** | **Python and Machine Learning for Asset Management — EDHEC** | *Machine Learning for Asset Managers* – M. López de Prado |  |  |
-| **Alt Data & ML** | **Python and Machine-Learning for Asset Management with Alternative Data Sets — EDHEC** | *Advances in Financial Machine Learning* – M. López de Prado |  |  |
+| **Derivatives & Options** | **Investments: Financial Markets, Options and Derivatives — Copenhagen Business School (Summer University)** | *Options, Futures, and Other Derivatives* — **John C. Hull** |  |  |
+| **Market Foundations** | **Financial Markets — Yale University (Coursera, Robert J. Shiller)** | *Irrational Exuberance* – **R.J. Shiller** *(or* **Finance and the Good Society***) |  |  |
+| **Algorithmic Trading (Professional)** | **Executive Programme in Algorithmic Trading (EPAT) — QuantInsti** | *Algorithmic Trading* — **E.P. Chan**; *Python for Finance* — **Y. Hilpisch** | *EPAT is a 6-month, instructor-led programme designed by 20 industry experts (250+ years combined) to train end-to-end algorithmic-trading practitioners capable of designing, testing, and deploying professional quantitative strategies through a mentored project and real-market tools.* |  |
+| **Portfolio (Intro)** | **Introduction to Portfolio Construction and Analysis with Python — EDHEC** | *Quantitative Equity Portfolio Management* — **Chincarini & Kim** |  |  |
+| **Portfolio (Advanced)** | **Advanced Portfolio Construction and Analysis with Python — EDHEC** | *Active Portfolio Management* — **Grinold & Kahn** |  |  |
+| **Python & ML for AM** | **Python and Machine Learning for Asset Management — EDHEC** | *Machine Learning for Asset Managers* — **M. López de Prado** |  |  |
+| **Alt Data & ML** | **Python and Machine-Learning for Asset Management with Alternative Data Sets — EDHEC** | *Advances in Financial Machine Learning* — **M. López de Prado** |  |  |
 | **Market Literacy** | **Bloomberg Market Concepts (BMC) — Bloomberg** | — |  |  |
+
 
 
 **Quick access:** [ Financial Markets folder](./Yale-financial-markets/) · …
