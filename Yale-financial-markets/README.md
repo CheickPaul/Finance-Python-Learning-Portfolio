@@ -5,7 +5,7 @@
 **Platform**: Coursera  
 **Status**: Completed ✅
 
-[View certificate](./certificates/financial_markets.pdf)
+[ View certificate](./financial_markets.pdf)
 
 ## Purpose
 I made this folder to centralise my notes by module and lesson.  
