@@ -11,7 +11,7 @@
 **Year**: 2025  
 
 
-[View Transcript and Certificate (PDF)](./certificates/transcript.pdf) ·
+[ View Transcript & Certificate (PDF)](./cbs-summer--financial-markets-options-derivatives/certificates/transcript.pdf)
 
 ---
 
