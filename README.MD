@@ -13,12 +13,12 @@ Each line links a certificate to a reference text and a concrete outcome.
 | Theme | Certificate / Program | Reference Book | Objective | Associated Python Project |
 |------|------------------------|----------------|-----------|---------------------------|
 | **Derivatives & Options** | **Investments: Financial Markets, Options and Derivatives — Copenhagen Business School (Summer University)** | *Options, Futures, and Other Derivatives* — **John C. Hull** | Fixed income risk, default spreads, leverage impact, option pricing, derivatives & markets. Bonds: pricing/risk; leverage; options; derivatives’ role in market stability |  - |
-| **Market Foundations** | **Financial Markets — Yale University** |  - | Introduction to risk management and behavioral finance principles to understand the real-world functioning of securities, insurance, and banking industries.  The ultimate goal of this course is using such industries effectively and towards a better society.|-|
+| **Market Foundations** | **Financial Markets — Yale University (Coursera)** |  - | Risk management & behavioral finance for real-world markets (securities, insurance, banking)  toward better societal outcomes|-|
 | **Algorithmic Trading (Professional)** | **Executive Programme in Algorithmic Trading (EPAT) — QuantInsti** | *Algorithmic Trading* — **E.P. Chan**; *Python for Finance* — **Y. Hilpisch** | *EPAT is a 6-month, instructor-led programme designed by 20 industry experts (250+ years combined) to train end-to-end algorithmic-trading practitioners capable of designing, testing, and deploying professional quantitative strategies through a mentored project and real-market tools.* |  |
-| **Portfolio (Intro)** | **Introduction to Portfolio Construction and Analysis with Python — EDHEC** | *Quantitative Equity Portfolio Management* — **Chincarini & Kim** |  |  |
-| **Portfolio (Advanced)** | **Advanced Portfolio Construction and Analysis with Python — EDHEC** | *Active Portfolio Management* — **Grinold & Kahn** |  |  |
-| **Python & ML for AM** | **Python and Machine Learning for Asset Management — EDHEC** | *Machine Learning for Asset Managers* — **M. López de Prado** |  |  |
-| **Alt Data & ML** | **Python and Machine-Learning for Asset Management with Alternative Data Sets — EDHEC** | *Advances in Financial Machine Learning* — **M. López de Prado** |  |  |
+| **Portfolio (Intro)** | **Introduction to Portfolio Construction and Analysis with Python — EDHEC (Coursera)** | *Quantitative Equity Portfolio Management* — **Chincarini & Kim** |  |  |
+| **Portfolio (Advanced)** | **Advanced Portfolio Construction and Analysis with Python — EDHEC (Coursera)** | *Active Portfolio Management* — **Grinold & Kahn** |  |  |
+| **Python & ML for AM** | **Python and Machine Learning for Asset Management — EDHEC (Coursera)** | *Machine Learning for Asset Managers* — **M. López de Prado** |  |  |
+| **Alt Data & ML** | **Python and Machine-Learning for Asset Management with Alternative Data Sets — EDHEC (Coursera)** | *Advances in Financial Machine Learning* — **M. López de Prado** |  |  |
 | **Market Literacy** | **Bloomberg Market Concepts (BMC) — Bloomberg** | — |  |  |
 
 
