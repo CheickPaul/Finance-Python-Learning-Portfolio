@@ -1,9 +1,13 @@
 # Copenhagen Business School,Summer University — Financial Markets, Options and Derivatives
 
 **Institution**: Copenhagen Business School (CBS)  
-**Format**: On-campus (in person), CBS Summer University — Copenhagen
+
+**Format**: On-campus (in person), Copenhagen
+
 **Status**: Completed ✅  
+
 **Course code**: CCMVI2067U · **Grade**: 10 (Danish 7-point scale) · **ECTS**: 7.5
+
 **Year**: 2025  
 
 
