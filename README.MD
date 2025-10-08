@@ -21,7 +21,7 @@ Each line links a certificate to a reference text and a concrete outcome.
 | **Market Literacy** | **Bloomberg Market Concepts (BMC) — Bloomberg** | — |  |  |
 
 
-**Quick access:**   Yale — Financial Markets](./yale--financial-markets/)
+**Quick access:** [ Financial Markets folder](./yale--financial-markets/) · …
 
 ---
 
