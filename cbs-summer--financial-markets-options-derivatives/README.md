@@ -11,7 +11,7 @@
 **Year**: 2025  
 
 
-[CBS Transcript (PDF)](./cbs-summer--financial-markets-options-derivatives/certificates/cbs_summer_2025_transcript.pdf)
+[ CBS Transcript (PDF)](https://github.com/CheickPaul/Finance-Python-Learning-Portfolio/blob/1f65ea56a3a98cdc87d58bfea42f8b4832e14f56/certificates/cbs_summer_2025_transcript.pdf)
 
 ---
 
