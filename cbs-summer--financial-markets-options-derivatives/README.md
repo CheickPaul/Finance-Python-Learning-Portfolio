@@ -1,4 +1,4 @@
-# Copenhagen Business School,Summer University — Financial Markets, Options and Derivatives
+# Copenhagen Business School,Summer University — Investments: Financial Markets, Options and Derivatives
 
 **Institution**: Copenhagen Business School (CBS)  
 
