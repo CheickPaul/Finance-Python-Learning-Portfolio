@@ -1,7 +1,13 @@
 [01 – Macroeconomics](./primer01_macroeconomics/)
+
 [02 – Stock Market Basics](./primer02_stock_market_basics/)
+
 [03 – Excel](./primer03_excel/)
+
 [04 – Statistics](./primer04_statistics/)
+
 [05 – Python for Trading](./primer05_python_for_trading/)
+
 [06 – Options Trading Strategies](./primer06_options_trading_strategies/)
+
 [07 – Machine Learning for Trading](./primer07_machine_learning_for_trading/)
