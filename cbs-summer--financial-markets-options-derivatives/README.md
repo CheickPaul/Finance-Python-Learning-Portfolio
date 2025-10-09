@@ -1,6 +1,8 @@
 # Copenhagen Business School,Summer University — Investments: Financial Markets, Options and Derivatives
 
-**Institution**: Copenhagen Business School (CBS)  
+**Institution**: Copenhagen Business School (CBS) 
+
+https://kursuskatalog.cbs.dk/2024-2025/KAN-CCMVI2067U.aspx
 
 **Format**: On-campus (in person), Copenhagen
 
