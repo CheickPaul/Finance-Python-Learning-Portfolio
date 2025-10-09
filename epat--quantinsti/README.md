@@ -1,4 +1,5 @@
-# EPAT — Executive Programme in Algorithmic Trading (QuantInsti)
+# EPAT — Executive Programme in Algorithmic Trading (QuantInsti)    <img width="264" height="174" alt="image" src="https://github.com/user-attachments/assets/950f7b5c-d751-44dc-805c-631fbfdb5ff7" />
+
 
 **Institution**: QuantInsti  
 
