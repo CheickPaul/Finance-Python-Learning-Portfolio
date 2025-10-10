@@ -399,6 +399,19 @@ $$
 ## Economic Growth metric: The GDP growth rate
 <img width="1164" height="228" alt="image" src="https://github.com/user-attachments/assets/1bbd3ad2-7c79-4363-a20e-7187786b60ec" />
 
+## The determinants and importance of productivity
+<img width="1336" height="1216" alt="image" src="https://github.com/user-attachments/assets/58d36f7d-3385-4a81-bf66-13628d67f239" />
+
+## The government and its importance for the economy’s productivity
+      As a policymaker, you would need to
+<img width="1200" height="240" alt="image" src="https://github.com/user-attachments/assets/4660a7f5-d895-4828-aff9-2ebeb6de33e6" />  
+
+## I want to trade: Which country should I select to invest in?
+<img width="1226" height="536" alt="image" src="https://github.com/user-attachments/assets/b42642db-198f-41c6-ae1c-744299d791b2" />
+
+# 6.The financial system
+
+
 
 
 
