@@ -298,6 +298,49 @@ Factors that shift **supply (S)** and drive calendar spreads / cost of carry (co
 * **Flows / euphoria / sentiment** (not tied to fundamentals) — **[EXOGENOUS]**
 * **Price–value gap (“mispricing”)** — **[ENDOGENOUS]** (produced by the auction given valuation inputs).
 
+3. # Gross domestic product
+   The most used metric in economics. it's defined as the market value of all final goods and services          produced within a country in a given period of time.
+   <img width="1382" height="492" alt="image" src="https://github.com/user-attachments/assets/9d9e88f3-19b5-43c8-b7bd-631ff3ff368b" />
+
+## 3 ways to compute GDP
+      1) The income approach : 𝐺𝐷𝑃 = 𝜋 + 𝜔 + 𝑖 + 𝜏
+      <img width="862" height="226" alt="image" src="https://github.com/user-attachments/assets/48e5343c-1455-4c19-8878-4b0637658c83" />
+
+      2) The value added approach : GDP is the sum of value added created at each stage of production in the economy.
+      Firm-level value added (VA) 
+VA=Value of Output (sales)−Intermediate Inputs
+GDP = sum of VA across all firms.
+We use this approach to avoid double counting.
+
+      3) Expenditure Approach to GDP : GDP is the sum of final spending by households, firms, and government, plus net exports
+      GDP=C+I+G+(X−M)
+<img width="1200" height="468" alt="image" src="https://github.com/user-attachments/assets/cad806a0-426d-4853-aa08-8b683f17012d" />
+whatever method you use, you should obtain the same value as a result.
+
+## Real versus Nominal GDP
+Nominal we use quantity X current prices
+Real we use the price of the base year. ( base year price)
+
+The GDP deflator :
+<img width="466" height="122" alt="image" src="https://github.com/user-attachments/assets/4c8196c9-9e60-4cd5-a7b9-15d705c646e5" />
+The GDP deflator rate of growth from one period to the next one is called the inflation rate
+Inflation of yeart
+<img width="604" height="114" alt="image" src="https://github.com/user-attachments/assets/905c33be-a543-45cd-bc0d-b640905653d3" />
+
+## How to use these concepts in trading?
+## TL;DR Mapping (with descriptions)
+
+| Indicator | What it measures | Frequency | Bullish (typical) | Bearish (typical) |
+|---|---|---|---|---|
+| **GDP (Advance)** | Broad growth of the economy (first estimate of quarterly output) | Quarterly | Beat w/ tame inflation → **Equities ↑**, **Yields ↑**, **USD ↑/↓ (context)** | Miss → **Equities ↓**, **USD ↓**, **Yields ↓** |
+| **Core PCE** | Fed’s preferred **inflation** gauge excluding food & energy | Monthly | **Cooldown** → **Duration & growth stocks ↑**, **Yields ↓**, **USD ↓** | **Hot** ↑ → **Yields ↑**, **USD ↑**, **equities mixed/↓** |
+| **Consumer Confidence** (Conference Board) | Household sentiment about current conditions & expectations | Monthly | Beat → **Discretionary/retail ↑**, broader equities firm | Miss → **Defensives ↑**, risk appetite softens |
+| **ISM Manufacturing** | Factory activity diffusion index (**50 = expansion**) | Monthly | >50 **and** beat → **Cyclicals/commodities/small caps ↑**, **Yields/ USD ↑** | <50 or miss → **Defensives ↑**, **Duration ↑** |
+| **ISM Services** | Services-sector activity (largest share of U.S. GDP) | Monthly | Beat → **Services/cyclicals ↑**, supportive for equities | Miss → Tilt to **defensives**, risk appetite ↓ |
+
+
+
+
 
 
 
