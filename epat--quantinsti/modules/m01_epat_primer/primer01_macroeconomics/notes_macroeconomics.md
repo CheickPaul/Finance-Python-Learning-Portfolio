@@ -304,6 +304,7 @@ Factors that shift **supply (S)** and drive calendar spreads / cost of carry (co
 
 ## 3 ways to compute GDP
       1) The income approach : 𝐺𝐷𝑃 = 𝜋 + 𝜔 + 𝑖 + 𝜏
+      
       <img width="862" height="226" alt="image" src="https://github.com/user-attachments/assets/48e5343c-1455-4c19-8878-4b0637658c83" />
 
       2) The value added approach : GDP is the sum of value added created at each stage of production in the economy.
@@ -338,6 +339,65 @@ Inflation of yeart
 | **ISM Manufacturing** | Factory activity diffusion index (**50 = expansion**) | Monthly | >50 **and** beat → **Cyclicals/commodities/small caps ↑**, **Yields/ USD ↑** | <50 or miss → **Defensives ↑**, **Duration ↑** |
 | **ISM Services** | Services-sector activity (largest share of U.S. GDP) | Monthly | Beat → **Services/cyclicals ↑**, supportive for equities | Miss → Tilt to **defensives**, risk appetite ↓ |
 
+#4. Cost of living
+we know the GDP deflator as the inflation metric. in this section we will discuss another measure.
+
+## The Consumer Price Index (CPI)
+      The GDP deflator uses both nominal and real GDP ( we use the market value of all goods and services)
+
+      CPI uses limited number of goods and services. limited beacuse is a part of goods that we highlight as representative for the household 
+
+<img width="1112" height="526" alt="image" src="https://github.com/user-attachments/assets/9f5ea644-540f-4453-ae22-8a028afce717" />
+
+## Do You Really Have a Decent Annual Return?
+# 4.6 Do You Really Have a Decent Annual Return?
+
+**Nominal return (i):** the headline % your account shows.  
+**Inflation (π):** loss of purchasing power over the period.  
+**Real return (r):** nominal return adjusted for inflation — what actually matters.
+
+## Exact Fisher relation
+$$
+1 + r = \frac{1 + i}{1 + \pi}
+\quad\Rightarrow\quad
+r = \frac{1+i}{1+\pi} - 1
+$$
+
+## Handy approximation
+$$
+r \approx i - \pi
+$$
+
+**Example**
+
+- Nominal return: \(i = 14.1\%\)
+- Inflation: $ \pi = 7.1\% $
+
+**Exact:**
+
+$$
+r = \frac{1.141}{1.071} - 1 \approx 0.065 \; (= 6.5\%)
+$$
+
+**Approx:**
+
+$$
+r \approx 14.1\% - 7.1\% = 7.0\%
+$$
+
+
+
+> Your purchasing-power gain is ~**6.5%**, not 14.1%.
+
+### Takeaways
+- If inflation is **positive**, **real < nominal**.  
+- If inflation is **negative** (deflation), **real > nominal**.  
+- Always consider **fees** and **taxes** — they reduce the real return further.
+
+# 5. Economic growth and production
+
+## Economic Growth metric: The GDP growth rate
+<img width="1164" height="228" alt="image" src="https://github.com/user-attachments/assets/1bbd3ad2-7c79-4363-a20e-7187786b60ec" />
 
 
 
