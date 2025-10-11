@@ -415,12 +415,15 @@ Financial markets can di divided into Bond market and Stock market
 
 ## Financial intermediaries
 2 types of intermediaries :
-Banks / Mutual funds 
+Banks : lend money to people and firms / Mutual funds : received money from the public and invest
 
 ## Saving and Investment
 <img width="1270" height="162" alt="image" src="https://github.com/user-attachments/assets/c7bbf8c8-2119-4a50-b6ab-6b7e4f2e4907" />
 
-<img width="1270" height="162" alt="image" src="https://github.com/user-attachments/assets/330bf94d-3402-49a1-9014-3b66c833ba00" />
+<img width="1350" height="1274" alt="image" src="https://github.com/user-attachments/assets/ffccf1ec-b4dc-497a-8612-7aae942aaa63" />
+
+
+
 
 
 
