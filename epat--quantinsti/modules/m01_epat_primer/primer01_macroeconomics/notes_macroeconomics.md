@@ -410,6 +410,18 @@ $$
 <img width="1226" height="536" alt="image" src="https://github.com/user-attachments/assets/b42642db-198f-41c6-ae1c-744299d791b2" />
 
 # 6.The financial system
+The place where securities are transacted.
+Financial markets can di divided into Bond market and Stock market
+
+## Financial intermediaries
+2 types of intermediaries :
+Banks / Mutual funds 
+
+## Saving and Investment
+<img width="1270" height="162" alt="image" src="https://github.com/user-attachments/assets/c7bbf8c8-2119-4a50-b6ab-6b7e4f2e4907" />
+
+<img width="1270" height="162" alt="image" src="https://github.com/user-attachments/assets/330bf94d-3402-49a1-9014-3b66c833ba00" />
+
 
 
 
