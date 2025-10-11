@@ -422,6 +422,14 @@ Banks : lend money to people and firms / Mutual funds : received money from the 
 
 <img width="1350" height="1274" alt="image" src="https://github.com/user-attachments/assets/ffccf1ec-b4dc-497a-8612-7aae942aaa63" />
 
+# 7. Unemployment
+The unemployment rate is one of the most important variables in macroeconomics
+
+## Unemployment Measurement
+Every single country has its own bureaucracy to get this metric value. 
+<img width="1256" height="682" alt="image" src="https://github.com/user-attachments/assets/cfe62bcd-e8f7-4b75-91bd-e5e7d5825cdb" />
+
+<img width="1378" height="374" alt="image" src="https://github.com/user-attachments/assets/3ed50238-bfd2-4079-93ca-1310a4fd70dc" />
 
 
 
