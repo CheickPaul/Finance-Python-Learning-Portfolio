@@ -511,7 +511,37 @@ When inflation is too high, the central bank **raises rates** to cool demand and
 
       Before the 90s, central banks’ main monetary tool to control inflation was the money supply. After that, they started to use the interest rate as a tool to control inflation. This allowed for a lower variance in the interest rates, and it allowed a better prediction of the interest rates in the economy, which in turn made investments more likely to be realized. The demand curve has a downward slope because, as interest rates increase, people will prefer to save money and spend it less, which reduces the demand for money.
 
-# Macroeconomics of open economy
+# 10. Macroeconomics of open economy
+
+A country in an open economy is a country that trades with other countries. Usually macroeconomics theory is taught with a closed economy-model. In this course, we will be focus on the open economy. 
+
+## Exports and Imports
+A closed economy has a GDP equal to : GDP = C + G + I 
+An open economy has a GDP equal to : GDP = C + G + I + NX 
+
+      Where
+      NX : Net Exports = X-M (Export - Import) 
+      C = Consumption (household spending on goods & services)
+      I = Investment (business fixed investment, residential construction, change in inventories)
+      G = Government purchases (goods & services; excludes transfers like pensions)
+
+## Net Capital Outflow
+Beyond trading goods and services, we can also trade financial assets (stocks, bonds, etc.). This is where Net Capital Outflow (NCO) comes in: it’s the difference between residents’ purchases of foreign assets and foreigners’ purchases of domestic assets.
+
+ NCO = A - B 
+     = domestic purchases of foreign assets − foreign purchases of domestic assets
+
+      This flow can be split into 2 types, 
+           a) Foreign Direct Ivestment (FDI) : a firm builds or acquires productive assets abroad ( e.g Amazon openings facilities abroad and operation in india)
+           b) Foreign Portfolio Investment (FPI) : Investor buy financial assets abroad wihtout control (e.g, traders buying Indian Stocks or bond)
+
+
+
+
+
+
+      
+
 
 
 
