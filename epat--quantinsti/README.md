@@ -9,7 +9,7 @@
 
 **Cohort**: Oct 2025 · **Duration**: ~6 months  
 
-[📄 View Certificate (PDF)](./certificates/epat_certificate.pdf) *(to be added)*  
+[ View Certificate (PDF)](./certificates/epat_certificate.pdf) *(to be added)*  
 
 ---
 
