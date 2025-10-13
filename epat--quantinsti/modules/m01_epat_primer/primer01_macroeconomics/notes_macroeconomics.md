@@ -431,6 +431,16 @@ Every single country has its own bureaucracy to get this metric value.
 
 <img width="1378" height="374" alt="image" src="https://github.com/user-attachments/assets/3ed50238-bfd2-4079-93ca-1310a4fd70dc" />
 
+## Relation between GDP and Unemployement Rate - Boom and Bust cycle
+<img width="1134" height="1250" alt="image" src="https://github.com/user-attachments/assets/08896ad9-b873-439d-bf8b-5665d5a897c9" />
+
+## Trading in The US
+
+We have 2 main metrics related to unemployement rate. 
+**Initial claims** : This one measure the number of jobless claims filed in the USA. releasing every thursday at 8.30 Eastern Time.
+
+**Nonfarm Payrolls** : This one gives the net number of jobs created, unemployement rate and the average hourly earnings.
+
 
 
 
