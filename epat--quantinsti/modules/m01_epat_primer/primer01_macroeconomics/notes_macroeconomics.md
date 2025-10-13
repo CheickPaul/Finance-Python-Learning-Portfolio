@@ -535,8 +535,16 @@ Beyond trading goods and services, we can also trade financial assets (stocks, b
            a) Foreign Direct Ivestment (FDI) : a firm builds or acquires productive assets abroad ( e.g Amazon openings facilities abroad and operation in india)
            b) Foreign Portfolio Investment (FPI) : Investor buy financial assets abroad wihtout control (e.g, traders buying Indian Stocks or bond)
 
+NCO can be positive or negative
+   NCO > 0 (capital outflow): locals buy more foreign stocks/bonds than foreigners buy ours.
+   NCO < 0 (capital inflow): foreigners buy more of our assets than we buy abroad.
 
+In the basic model, NX = NCO:
+   c)  Trade surplus (NX>0) → you sell more than you buy, so you use the extra money to buy foreign assets(stocks, bonds) → NCO>0 (net lender).
 
+   d)  Trade deficit (NX<0) → you buy more than you sell, so you borrow from abroad / sell domestic assets to foreigners → NCO<0 (net borrower)
+
+   ## Saving and Investment in an open economy
 
 
 
