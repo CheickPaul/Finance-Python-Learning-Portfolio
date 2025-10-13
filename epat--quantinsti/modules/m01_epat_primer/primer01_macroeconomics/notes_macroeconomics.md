@@ -441,11 +441,77 @@ We have 2 main metrics related to unemployement rate.
 
 **Nonfarm Payrolls** : This one gives the net number of jobs created, unemployement rate and the average hourly earnings.
 
+# 8. The monetary system 
+
+## the functions of money 
+Money has 3 function. firstly it to serve as **medium of exchange ( in order to buy and sell goods)**, secondly as **unit of account ( in order to give price value to goods and servicesin terms of mathematical units)** and thirstly as a **store value(saving for future consumption, or investment)**
+
+## The central bank 
+Central banks are authorities which take care of money supply and regulation in the economy.
+
+*USA, Federal Reserve Bank
+India, Reserve Bank of India
+Singapore, MAS
+UK, Bank of England*
+
+Depending of the countrie, the central bank has different responsabilities. In USA for instance the Federal Reserve Bank cares about inflation and unemployement rate. 
+
+## Gold
+The dollar is fiat money, money provided by the US government, specifically, the Fed. Fiat money doesn’t have intrinsic value. Its value depends on people’s trust in the dollar. Gold does have intrinsic value because it not only serves as money but also is used for other types of functions, like jewellery, etc.
+
+## The Fed tools to impact its economy
+Fed uses some tools to regulate its economy. Their main tool is the interest rate or FED funds rate, the overnight rate at which banks lend reserves to each other.
 
 
+## The financial Crisis of 2008
+During the US subprime crise, The FED bought government treasury asset. This buying decsion lead to an increase of treasury bond prices, which in turn made the yield rates stay low
+
+# 9. Inflation
+
+Inflation is an increase in the overall price level in the economy. 
+
+## Money supply and demand curves
+<img width="1318" height="990" alt="image" src="https://github.com/user-attachments/assets/a51803ce-50c9-4de6-b2b6-0602ab75354b" />
+
+when interest rates are high, people save more money, thus, reducing the quantity of money demanded. When interest rates are reduced, firms prefer to make investments, thus they demand more mone
+
+The supply curve is different from those seeing previously. The supply curve is given by the central bank and their decision is supposed to not depend on the interest rate of the economy.
+
+The equilibrium between supply and demand is given by the
+pair (i*, M*).
 
 
+## Hyperinflation
 
+When inflation is over 50 % / month
+
+### Common triggers
+
+      Supply shocks (war, production collapse) combined with large fiscal deficits financed by the printing press ;Loss of central-bank independence (fiscal dominance). Price and FX controls that further distort incentives and worsen shortages.
+
+### Investor/ Warning signs 
+    1)Deficits financed by the central bank (direct purchases of government debt) 
+
+    2) let :  M×V=P×Y , Note: P × Y = nominal GDP.
+
+      M : money supply (e.g., M1 or M2)
+         M1 : most liquid money (cash + checking/demand deposits + transferable/checkable deposits)
+         M2 : M1 plus easy-to-withdraw savings (savings deposits + small time deposits + retail money market funds — country-dependent)
+      V : velocity of money (how many times per period each unit of M is spent)
+      P : price level (e.g., CPI/GDP deflator)
+      Y : real output (real GDP)
+
+      When M (the amount of money) rises quickly and V (the speed at which that money is spent due to loss of confidence and inflation expectations) also increases, then M×V surges; if Y (real output) doesn’t keep up, the pressure passes through to prices (P) → high, sometimes unstable inflation.
+
+##  US Inflation in trading 
+
+Since 2020, U.S. inflation (CPI) has risen a lot and become more volatile.
+The Fed closely monitors each monthly CPI release to decide on interest rates.
+When inflation is too high, the central bank **raises rates** to cool demand and prices.
+
+      Before the 90s, central banks’ main monetary tool to control inflation was the money supply. After that, they started to use the interest rate as a tool to control inflation. This allowed for a lower variance in the interest rates, and it allowed a better prediction of the interest rates in the economy, which in turn made investments more likely to be realized. The demand curve has a downward slope because, as interest rates increase, people will prefer to save money and spend it less, which reduces the demand for money.
+
+# Macroeconomics of open economy
 
 
 
