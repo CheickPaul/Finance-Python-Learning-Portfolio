@@ -734,7 +734,7 @@ AD=C+I+G+(X−M)
 
 Anything that raises 𝐶,𝐼,𝐺,𝑋 or reduces 𝑀 (importation) shifts AD → (to the right). The reverse shifts it ←.
 
-## Why Each Shock Shifts AD — Two-Column Summary
+**Why Each Shock Shifts AD — Two-Column Summary**
 
 | Shock | Intuition / Channel |
 |---|---|
@@ -744,16 +744,11 @@ Anything that raises 𝐶,𝐼,𝐺,𝑋 or reduces 𝑀 (importation) shifts AD
 | **X ↑ (exports) → AD →** | Rest of the world buys more domestic products (**external demand**). <br> **X ↓ → AD ←**. |
 | **M ↑ (imports) → AD ←** | More spending goes **abroad** ⇒ **NX = X − M** falls ⇒ **AD falls**. <br> **M ↓ → AD →**: spending shifts to **domestic** production. |
 | **Policy rates ↓ → AD →** | Channels: (1) **C ↑** via consumer credit/wealth effect, (2) **I ↑** via lower cost of capital, (3) **weaker FX** ⇒ **X ↑, M ↓**. <br> **Rates ↑ → AD ←** (opposite effects). |
-
-
-## The aggregate demand curve
-
+Below the short run AD, AS 
+<img width="1238" height="996" alt="image" src="https://github.com/user-attachments/assets/72df7acb-6ca9-44a0-b6f0-ddd5da0bd428" />
 
 ## Equilibrium in the long and short run
-
-
-## Considerations while investing in the long run
-
+<img width="1146" height="998" alt="image" src="https://github.com/user-attachments/assets/e67e841e-524e-4254-8948-861686700254" />
 
 ---
 
