@@ -652,7 +652,7 @@ $$
 **QUOTE inflation dominates :**
 
 $$
-m \uparrow 5\% \,,\quad \pi_{\mathrm{Q}} - \pi_{\mathrm{B}} = +8\%
+ER \uparrow 5\% \,,\quad \pi_{\mathrm{Q}} - \pi_{\mathrm{B}} = +8\%
 \qquad\Rightarrow\qquad
 \Delta \ln \mathrm{RER} \approx +3\%
 $$
@@ -660,7 +660,7 @@ $$
 **BASE inflation dominates :**
 
 $$
-m \downarrow 3\% \,,\quad \pi_{\mathrm{Q}} - \pi_{\mathrm{B}} = -4\%
+ER \downarrow 3\% \,,\quad \pi_{\mathrm{Q}} - \pi_{\mathrm{B}} = -4\%
 \qquad\Rightarrow\qquad
 \Delta \ln \mathrm{RER} \approx -1\%
 $$
