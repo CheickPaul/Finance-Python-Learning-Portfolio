@@ -610,72 +610,82 @@ $$
 
 **Index choices:** CPI or GDP deflator (be consistent across countries).
 
-### How ER and RER Move (Market Convention: BASE/QUOTE)
+### How ER and RER Move (Market Convention: BASE/QUOTE, with ER = 1/m)
 
-Let the market nominal exchange rate be **m = ER = QUOTE per 1 BASE** (e.g., EURUSD).
+Let the market nominal exchange rate be **m = QUOTE per 1 BASE** (e.g., EURUSD).  
+Define the textbook rate **ER = BASE per 1 QUOTE = 1/m**.
 
 **Real exchange rate for the BASE currency** (foreign basket priced in BASE goods):
 
 $$
-\mathrm{RER}_{\mathrm{BASE}} \;=\; \frac{P_{\mathrm{Q}}}{\,m\,P_{\mathrm{B}}}
+\mathrm{RER}_{\mathrm{BASE}} \;=\; \mathrm{ER}\,\frac{P_{\mathrm{Q}}}{P_{\mathrm{B}}}
+\;=\; \frac{P_{\mathrm{Q}}}{\,m\,P_{\mathrm{B}}}.
 $$
 
 where **P<sub>B</sub>** (BASE price index) and **P<sub>Q</sub>** (QUOTE price index) are CPI or GDP deflators.
 
-
+---
 
 **a) Core relationship (no price changes)**
 
-If **P<sub>B</sub>** and **P<sub>Q</sub>** are constant, ER and RER move in **opposite** directions:
+If **P<sub>B</sub>** and **P<sub>Q</sub>** are constant, **RER moves in the same direction as ER**:
 
 $$
-ER \uparrow \;\Rightarrow\; \mathrm{RER} \downarrow
+\mathrm{ER} \uparrow \;\Rightarrow\; \mathrm{RER} \uparrow
 \qquad\text{and}\qquad
-ER \downarrow \;\Rightarrow\; \mathrm{RER} \uparrow
+\mathrm{ER} \downarrow \;\Rightarrow\; \mathrm{RER} \downarrow
 $$
 
-(Here, an increase in **ER** is a **nominal appreciation** of the BASE currency.)
+*(Recall: since \( \mathrm{ER}=1/m \), a rise in **m** implies **ER** falls, and vice versa.)*
 
+---
 
-**b) With inflation differentials (log approximation)** 
+**b) With inflation differentials (log approximation)**
+
+Starting from \( \ln \mathrm{RER} = \ln \mathrm{ER} + \ln P_Q - \ln P_B \), we get:
 
 $$
-\Delta \ln \mathrm{RER} \;\approx\; (\pi_{\mathrm{Q}} - \pi_{\mathrm{B}}) \;-\; \Delta \ln ER
+\Delta \ln \mathrm{RER} \;\approx\; (\pi_{\mathrm{Q}} - \pi_{\mathrm{B}}) \;+\; \Delta \ln \mathrm{ER}.
 $$
 
 - **π<sub>B</sub>**: inflation in the BASE country  
 - **π<sub>Q</sub>**: inflation in the QUOTE country
 
-**Interpretation:** RER rises when QUOTE inflation outpaces BASE and/or when the BASE weakens (ER falls).
+**Interpretation:** RER rises when QUOTE inflation outpaces BASE **and/or** when **ER** rises (i.e., when the market rate **m** falls).
 
 **QUOTE inflation dominates :**
 
 $$
-ER \uparrow 5\% \,,\quad \pi_{\mathrm{Q}} - \pi_{\mathrm{B}} = +8\%
-\qquad\Rightarrow\qquad
-\Delta \ln \mathrm{RER} \approx +3\%
+\mathrm{ER} \uparrow 5\% \,,\quad \pi_{\mathrm{Q}} - \pi_{\mathrm{B}} = +8\%
+\;\;\Rightarrow\;\;
+\Delta \ln \mathrm{RER} \approx +13\%.
 $$
 
 **BASE inflation dominates :**
 
 $$
-ER \downarrow 3\% \,,\quad \pi_{\mathrm{Q}} - \pi_{\mathrm{B}} = -4\%
-\qquad\Rightarrow\qquad
-\Delta \ln \mathrm{RER} \approx -1\%
+\mathrm{ER} \downarrow 3\% \,,\quad \pi_{\mathrm{Q}} - \pi_{\mathrm{B}} = -4\%
+\;\;\Rightarrow\;\;
+\Delta \ln \mathrm{RER} \approx -7\%.
 $$
+
+---
 
 **c) No inflation differential**
 
 $$
 \pi_{\mathrm{Q}} - \pi_{\mathrm{B}} = 0
 \qquad\Rightarrow\qquad
-m \uparrow 10\% \;\Rightarrow\; \mathrm{RER} \downarrow \approx 10\%
+\mathrm{ER} \uparrow 10\% \;\Rightarrow\; \mathrm{RER} \uparrow \approx 10\%.
 $$
 
+*(Équivalent côté marché : si **m ↑ 10%**, alors **ER ↓ ≈ 10%** et **RER ↓ ≈ 10%**.)*
+
+---
 
 **d) Rule of thumb**
 
-Absent inflation gaps, **ER and RER move in opposite directions**.  
+Absent inflation gaps, **RER and ER move together** (same direction).  
 With inflation gaps, compare **(π<sub>Q</sub> − π<sub>B</sub>)** to **Δln ER**:
 
 - If **(π<sub>Q</sub> − π<sub>B</sub>) > Δln ER** → **RER ↑**  
