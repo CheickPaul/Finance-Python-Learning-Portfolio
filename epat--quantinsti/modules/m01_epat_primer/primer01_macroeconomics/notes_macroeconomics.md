@@ -19,7 +19,9 @@
 
 In trading, your opportunity cost isn’t just financial, it also includes the time, energy, and focus you could have allocated to more efficient or higher probability strategies.
 
-2. # ***The demand and supply curves***
+---
+
+# 2. The demand and supply curves
    A market is the interaction between buyers and sellers for a specific good or service. The market demand is set buy the buyers and the market supply is set buy the sellers. We have 2 types of market. Organized market (centralized and regulated) : Stock exchange, futures markets)
 Unorganized market (Decentralized, OTC trading)
 
@@ -188,7 +190,6 @@ In equilibrium, we have the best price P* where buyers and sellers agree on the 
 <img width="806" height="720" alt="image" src="https://github.com/user-attachments/assets/197653a1-d7c6-49d8-b4fe-f1344bc66d39" />
 
 
----
 
 ### Surplus (Excess Supply) at (P'' > P^*)
 
@@ -207,7 +208,7 @@ At price **(P'')** (above the market price (P^*)):
 
 Here’s the matching **README-style Markdown** for **Shortage (Excess Demand)**:
 
----
+
 
 ### Shortage (Excess Demand) at (P' < P^*)
 
@@ -229,7 +230,7 @@ At price **(P')** (below the market price (P^*)):
 > **Legend:** **[ENDOGENOUS]** = determined within the market for the asset (auction/microstructure).
 > **[EXOGENOUS]** = comes from outside the market; shifts supply/demand at every price.
 
----
+
 
 ### 1) Why does a price rise/fall?
 
@@ -246,7 +247,7 @@ Multiple forces can shift demand or supply:
 
 > Curve reading: these are **shifts** (not movements along the curve).
 
----
+
 
 ### 2) Commodity futures: know the underlying
 
@@ -259,7 +260,7 @@ Factors that shift **supply (S)** and drive calendar spreads / cost of carry (co
 * **Logistics / weather** — **[EXOGENOUS]**
 * **Regulation, taxes, quotas, OPEC decisions** — **[EXOGENOUS]**
 
----
+
 
 ### 3) Equity–bond link
 
@@ -268,7 +269,7 @@ Factors that shift **supply (S)** and drive calendar spreads / cost of carry (co
 
 > Equities and bonds “talk” to each other through these **exogenous** variables.
 
----
+
 
 ### 4) More retail traders → buy pressure
 
@@ -276,7 +277,7 @@ Factors that shift **supply (S)** and drive calendar spreads / cost of carry (co
   (shifts **demand** and the **supply of liquidity**).
 * **Higher volatility, bid/ask queues** — **[ENDOGENOUS]** (microstructure outcome).
 
----
+
 
 ### 5) More investors ⇒ more competitive market
 
@@ -284,21 +285,23 @@ Factors that shift **supply (S)** and drive calendar spreads / cost of carry (co
 * **Tighter spreads, compressed alpha** — **[ENDOGENOUS]** (auction result).
 * **Need for stronger processes** (data, execution, risk) — **[ENDOGENOUS]** strategic response.
 
----
+
 
 ### 6) Fundamentals matter
 
 * **Earnings, cash flows, leverage, market share, management quality** — **[EXOGENOUS]** to the secondary market.
 * **Price converging toward value** over time — **[ENDOGENOUS]** (market reaction to exogenous fundamentals).
 
----
+
 
 ### 7) Higher price ≠ better value
 
 * **Flows / euphoria / sentiment** (not tied to fundamentals) — **[EXOGENOUS]**
 * **Price–value gap (“mispricing”)** — **[ENDOGENOUS]** (produced by the auction given valuation inputs).
 
-3. # Gross domestic product
+---
+
+ # 3. Gross domestic product
    The most used metric in economics. it's defined as the market value of all final goods and services          produced within a country in a given period of time.
    <img width="1382" height="492" alt="image" src="https://github.com/user-attachments/assets/9d9e88f3-19b5-43c8-b7bd-631ff3ff368b" />
 
@@ -339,7 +342,9 @@ Inflation of yeart
 | **ISM Manufacturing** | Factory activity diffusion index (**50 = expansion**) | Monthly | >50 **and** beat → **Cyclicals/commodities/small caps ↑**, **Yields/ USD ↑** | <50 or miss → **Defensives ↑**, **Duration ↑** |
 | **ISM Services** | Services-sector activity (largest share of U.S. GDP) | Monthly | Beat → **Services/cyclicals ↑**, supportive for equities | Miss → Tilt to **defensives**, risk appetite ↓ |
 
-#4. Cost of living
+---
+
+# 4. Cost of living
 we know the GDP deflator as the inflation metric. in this section we will discuss another measure.
 
 ## The Consumer Price Index (CPI)
@@ -394,6 +399,8 @@ $$
 - If inflation is **negative** (deflation), **real > nominal**.  
 - Always consider **fees** and **taxes** — they reduce the real return further.
 
+---
+
 # 5. Economic growth and production
 
 ## Economic Growth metric: The GDP growth rate
@@ -407,7 +414,9 @@ $$
 <img width="1200" height="240" alt="image" src="https://github.com/user-attachments/assets/4660a7f5-d895-4828-aff9-2ebeb6de33e6" />  
 
 ## I want to trade: Which country should I select to invest in?
-<img width="1226" height="536" alt="image" src="https://github.com/user-attachments/assets/b42642db-198f-41c6-ae1c-744299d791b2" />
+<img width="1226" height="536" alt="image" src="https://github.com/user-attachments/assets/b42642db-198f-41c6-ae1c-744299d791b2" /> 
+
+---
 
 # 6.The financial system
 The place where securities are transacted.
@@ -421,6 +430,8 @@ Banks : lend money to people and firms / Mutual funds : received money from the 
 <img width="1270" height="162" alt="image" src="https://github.com/user-attachments/assets/c7bbf8c8-2119-4a50-b6ab-6b7e4f2e4907" />
 
 <img width="1350" height="1274" alt="image" src="https://github.com/user-attachments/assets/ffccf1ec-b4dc-497a-8612-7aae942aaa63" />
+
+---
 
 # 7. Unemployment
 The unemployment rate is one of the most important variables in macroeconomics
@@ -440,6 +451,8 @@ We have 2 main metrics related to unemployement rate.
 **Initial claims** : This one measure the number of jobless claims filed in the USA. releasing every thursday at 8.30 Eastern Time.
 
 **Nonfarm Payrolls** : This one gives the net number of jobs created, unemployement rate and the average hourly earnings.
+
+---
 
 # 8. The monetary system 
 
@@ -465,6 +478,8 @@ Fed uses some tools to regulate its economy. Their main tool is the interest rat
 
 ## The financial Crisis of 2008
 During the US subprime crise, The FED bought government treasury asset. This buying decsion lead to an increase of treasury bond prices, which in turn made the yield rates stay low
+
+---
 
 # 9. Inflation
 
@@ -511,6 +526,8 @@ When inflation is too high, the central bank **raises rates** to cool demand and
 
       Before the 90s, central banks’ main monetary tool to control inflation was the money supply. After that, they started to use the interest rate as a tool to control inflation. This allowed for a lower variance in the interest rates, and it allowed a better prediction of the interest rates in the economy, which in turn made investments more likely to be realized. The demand curve has a downward slope because, as interest rates increase, people will prefer to save money and spend it less, which reduces the demand for money.
 
+---
+
 # 10. Macroeconomics of open economy
 
 A country in an open economy is a country that trades with other countries. Usually macroeconomics theory is taught with a closed economy-model. In this course, we will be focus on the open economy. 
@@ -546,6 +563,127 @@ In the basic model, NX = NCO:
 
    ## Saving and Investment in an open economy
 
+   <img width="850" height="330" alt="image" src="https://github.com/user-attachments/assets/8ec6fd99-953b-4bbf-9e1b-b4c43fda4669" />
+
+   ## Exchange rates
+   Exchange rates are an important variable in macroeconomics, it has a strong relationship with the other macroeconomics variables. 
+   let take the EURUSD. it's the price of a single EUR based on units of the USD.
+   when EURUSD increases, we say that EUR has an appreciation in value
+   when EURUSD decreases, we say that EUR has a depreciation in value
+
+   
+## Real vs. Nominal Exchange Rate
+### Definition
+
+**Nominal exchange rate (ER):** the quoted market rate (e.g., *domestic currency per 1 foreign unit*).  
+**Real exchange rate (RER):** ER **adjusted for price levels** the relative price of foreign goods in domestic goods.
+
+$$
+\mathrm{RER} = \mathrm{ER} \times \frac{P_{\mathrm{foreign}}}{P_{\mathrm{domestic}}}
+$$
+
+- **ER** — nominal exchange rate  
+- **P<sub>foreign</sub>** — foreign price index (CPI or GDP deflator)  
+- **P<sub>domestic</sub>** — domestic price index (CPI or GDP deflator)
+
+> If ER is quoted as foreign per 1 domestic, flip the ratio:
+
+$$
+\mathrm{RER} = \mathrm{ER} \times \frac{P_{\mathrm{domestic}}}{P_{\mathrm{foreign}}}
+$$
+
+- **RER ↑** → foreign goods become **relatively more expensive** vs. domestic goods.  
+- **RER ↓** → foreign goods become **relatively cheaper**.
+
+*(Note: $P \times Y$ is nominal GDP; here we only need the price indexes $P_f$ and $P_d$. Be consistent with index choice across countries.)*
+
+---
+
+Mini Example
+
+ER = 1.20 (domestic per 1 foreign),  $P_f = 110$,  $P_d = 100$
+
+$$
+\mathrm{RER} = 1.20 \times \frac{110}{100} = \mathbf{1.32}
+$$
+
+**Interpretation:** the foreign basket costs the equivalent of **1.32 domestic baskets**.
+
+**Index choices:** CPI or GDP deflator (be consistent across countries).
+
+### How ER and RER Move (Market Convention: BASE/QUOTE)
+
+Let the market nominal exchange rate be **m = ER = QUOTE per 1 BASE** (e.g., EURUSD).
+
+**Real exchange rate for the BASE currency** (foreign basket priced in BASE goods):
+
+$$
+\mathrm{RER}_{\mathrm{BASE}} \;=\; \frac{P_{\mathrm{Q}}}{\,m\,P_{\mathrm{B}}}
+$$
+
+where **P<sub>B</sub>** (BASE price index) and **P<sub>Q</sub>** (QUOTE price index) are CPI or GDP deflators.
+
+
+
+**a)Core relationship** (no price changes)
+
+If **P<sub>B</sub>** and **P<sub>Q</sub>** are constant, ER and RER move in **opposite** directions:
+
+$$
+m \uparrow \;\Rightarrow\; \mathrm{RER} \downarrow
+\qquad\text{and}\qquad
+m \downarrow \;\Rightarrow\; \mathrm{RER} \uparrow
+$$
+
+(Here, an increase in **ER** is a **nominal appreciation** of the BASE currency.)
+
+
+**b) With inflation differentials** (log approximation)
+
+$$
+\Delta \ln \mathrm{RER} \;\approx\; (\pi_{\mathrm{Q}} - \pi_{\mathrm{B}}) \;-\; \Delta \ln ER
+$$
+
+- **π<sub>B</sub>**: inflation in the BASE country  
+- **π<sub>Q</sub>**: inflation in the QUOTE country
+
+**Interpretation:** RER rises when QUOTE inflation outpaces BASE and/or when the BASE weakens (ER falls).
+
+**QUOTE inflation dominates :**
+
+$$
+m \uparrow 5\% \,,\quad \pi_{\mathrm{Q}} - \pi_{\mathrm{B}} = +8\%
+\qquad\Rightarrow\qquad
+\Delta \ln \mathrm{RER} \approx +3\%
+$$
+
+**BASE inflation dominates :**
+
+$$
+m \downarrow 3\% \,,\quad \pi_{\mathrm{Q}} - \pi_{\mathrm{B}} = -4\%
+\qquad\Rightarrow\qquad
+\Delta \ln \mathrm{RER} \approx -1\%
+$$
+
+**c) No inflation differential**
+
+$$
+\pi_{\mathrm{Q}} - \pi_{\mathrm{B}} = 0
+\qquad\Rightarrow\qquad
+m \uparrow 10\% \;\Rightarrow\; \mathrm{RER} \downarrow \approx 10\%
+$$
+
+
+### Rule of thumb
+
+Absent inflation gaps, **ER and RER move in opposite directions**.  
+With inflation gaps, compare **(π<sub>Q</sub> − π<sub>B</sub>)** to **Δln ER**:
+
+- If **(π<sub>Q</sub> − π<sub>B</sub>) > Δln ER** → **RER ↑**  
+- If **(π<sub>Q</sub> − π<sub>B</sub>) < Δln ER** → **RER ↓**
+
+
+### How RER helps in investing/trading
 
 
       
