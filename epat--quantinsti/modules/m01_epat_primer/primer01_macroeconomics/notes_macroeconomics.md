@@ -748,12 +748,82 @@ Below the short run AD, AS
 <img width="1238" height="996" alt="image" src="https://github.com/user-attachments/assets/72df7acb-6ca9-44a0-b6f0-ddd5da0bd428" />
 
 ## Equilibrium in the long and short run
+
+LAS : Long-run aggregate demand
 <img width="1146" height="998" alt="image" src="https://github.com/user-attachments/assets/e67e841e-524e-4254-8948-861686700254" />
 
 ---
 
-# 12. Sum up: Variables’ relationships in macroeconomics
+# 12. Core Takeaways — Economics Module (Quick Reference)
 
+Core Takeaways — Economics Module (Quick Reference)
+
+## Scarcity & Opportunity Cost
+- Every choice implies giving up the **next-best alternative** (opportunity cost).
+
+## Micro vs. Macro
+- **Micro:** individual markets (firms/households).
+- **Macro:** economy-wide aggregates (GDP, inflation, unemployment, rates, FX).
+
+## Demand & Supply
+- Demand ↓ when price ↑ (**ceteris paribus**) — exceptions: **Veblen/Giffen**.
+- Supply ↑ when price ↑ (rising marginal cost, entry on the extensive margin).
+- **Shifts** (exogenous drivers) vs **movements** (along the curve due to price changes).
+
+## Equilibrium & Shocks
+- **Surplus/shortage** push prices back toward **P\***.
+- **AD/AS shocks** move output and prices in the **short run**.
+
+## Aggregate Demand (AD) Identity
+- Anything that **raises** these components (or **lowers M** = imports) shifts **AD →**.
+  
+$$
+\mathbf{AD} \;=\; C \;+\; I \;+\; G \;+\; (X - M)
+$$
+
+## Short Run vs Long Run
+- Short run: money is **non-neutral** (sticky prices/wages).
+- Long run: money is **neutral**; **LAS** is **vertical** at **Y\*** (potential output).
+
+*(Heuristic for potential output)*  
+$$
+Y^\* \;\approx\; F(K,\,L,\,A)
+$$
+
+## Inflation & Fisher (real vs nominal)
+- Check **real** returns, not just nominal.
+
+$$
+r_{\text{real}} \;\approx\; i_{\text{nominal}} \;-\; \pi
+$$
+
+## FX Essentials
+
+**Market quote:** **BASE/QUOTE** (e.g., **EURUSD** = USD per 1 EUR).
+
+**Real Exchange Rate (for BASE), using market rate \( m = \) QUOTE per 1 BASE:**
+  
+$$
+\mathrm{RER}_{\text{BASE}} \;=\; \frac{P_{\text{Q}}}{\,m\,P_{\text{B}}}
+$$
+
+- **RER ↑** = **real depreciation** of BASE (foreign goods relatively more expensive, **exporters helped**).  
+- **RER ↓** = **real appreciation** of BASE.
+
+**Log link (inflation differential vs. ER move):**
+  
+$$
+\Delta \ln \mathrm{RER} \;\approx\; \big(\pi_{\text{Q}} - \pi_{\text{B}}\big) \;-\; \Delta \ln m
+$$
+
+## PPP (Purchasing Power Parity)
+- Long-run **valuation anchor**; if PPP holds, **RER = 1**.
+  
+$$
+\mathrm{RER} \;=\; 1 \quad \text{(under exact PPP)}
+$$
+
+> PPP is useful for **valuation**, not **short-term timing**.
 
 
 
