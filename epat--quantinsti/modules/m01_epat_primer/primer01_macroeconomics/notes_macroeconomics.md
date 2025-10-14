@@ -625,20 +625,20 @@ where **P<sub>B</sub>** (BASE price index) and **P<sub>Q</sub>** (QUOTE price in
 
 
 
-**a)Core relationship** (no price changes)
+**a) Core relationship (no price changes)**
 
 If **P<sub>B</sub>** and **P<sub>Q</sub>** are constant, ER and RER move in **opposite** directions:
 
 $$
 ER \uparrow \;\Rightarrow\; \mathrm{RER} \downarrow
 \qquad\text{and}\qquad
-m \downarrow \;\Rightarrow\; \mathrm{RER} \uparrow
+ER \downarrow \;\Rightarrow\; \mathrm{RER} \uparrow
 $$
 
 (Here, an increase in **ER** is a **nominal appreciation** of the BASE currency.)
 
 
-**b) With inflation differentials** (log approximation)
+**b) With inflation differentials (log approximation)** 
 
 $$
 \Delta \ln \mathrm{RER} \;\approx\; (\pi_{\mathrm{Q}} - \pi_{\mathrm{B}}) \;-\; \Delta \ln ER
@@ -674,7 +674,7 @@ m \uparrow 10\% \;\Rightarrow\; \mathrm{RER} \downarrow \approx 10\%
 $$
 
 
-### Rule of thumb
+**d) Rule of thumb**
 
 Absent inflation gaps, **ER and RER move in opposite directions**.  
 With inflation gaps, compare **(π<sub>Q</sub> − π<sub>B</sub>)** to **Δln ER**:
