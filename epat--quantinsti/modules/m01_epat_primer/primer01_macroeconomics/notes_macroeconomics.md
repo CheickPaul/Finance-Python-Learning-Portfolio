@@ -624,7 +624,6 @@ $$
 
 where **P<sub>B</sub>** (BASE price index) and **P<sub>Q</sub>** (QUOTE price index) are CPI or GDP deflators.
 
----
 
 **a) Core relationship (no price changes)**
 
@@ -638,7 +637,6 @@ $$
 
 *(Recall: since \( \mathrm{ER}=1/m \), a rise in **m** implies **ER** falls, and vice versa.)*
 
----
 
 **b) With inflation differentials (log approximation)**
 
@@ -669,8 +667,6 @@ $$
 \Delta \ln \mathrm{RER} \approx -7\%.
 $$
 
----
-
 **c) No inflation differential**
 
 $$
@@ -681,7 +677,6 @@ $$
 
 *(Équivalent côté marché : si **m ↑ 10%**, alors **ER ↓ ≈ 10%** et **RER ↓ ≈ 10%**.)*
 
----
 
 **d) Rule of thumb**
 
