@@ -694,7 +694,17 @@ With inflation gaps, compare **(π<sub>Q</sub> − π<sub>B</sub>)** to **Δln E
 - If **(π<sub>Q</sub> − π<sub>B</sub>) < Δln ER** → **RER ↓**
 
 
-### How RER helps in investing/trading
+## Purchasing power parity (PPP)
+
+The Purchasing Power Parity (PPP) is a macroeconomic term which states the 2 following below:
+1. The price of one good in country A should be equal to the price of the same good in country B ( the law of one price)
+2. No transaction cost and trade barriers.
+
+for example, according to PPP if a computer costs 1,000 USD in the US and in india costs 80,000 rupees, this means the ER based on the PPP should be : ER= 80,000/1,000 = 80 rupees per dollar
+
+RER = 80*(1,000/80,000) = 1 , SO THE RER IS ALWAYS EQUAL TO 1 according to the PPP rule.
+
+These assumptions never occur in reality but serves as an explanation in economics to understand that the country cost of living will fall in the gravity of the PPP.
 
 
       
