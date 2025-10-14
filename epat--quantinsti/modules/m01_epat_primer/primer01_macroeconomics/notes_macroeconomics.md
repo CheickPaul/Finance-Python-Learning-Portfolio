@@ -597,7 +597,6 @@ $$
 
 *(Note: $P \times Y$ is nominal GDP; here we only need the price indexes $P_f$ and $P_d$. Be consistent with index choice across countries.)*
 
----
 
 Mini Example
 
