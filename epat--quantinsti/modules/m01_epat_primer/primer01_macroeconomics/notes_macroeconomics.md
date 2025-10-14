@@ -630,7 +630,7 @@ where **P<sub>B</sub>** (BASE price index) and **P<sub>Q</sub>** (QUOTE price in
 If **P<sub>B</sub>** and **P<sub>Q</sub>** are constant, ER and RER move in **opposite** directions:
 
 $$
-m \uparrow \;\Rightarrow\; \mathrm{RER} \downarrow
+ER \uparrow \;\Rightarrow\; \mathrm{RER} \downarrow
 \qquad\text{and}\qquad
 m \downarrow \;\Rightarrow\; \mathrm{RER} \uparrow
 $$
