@@ -618,8 +618,8 @@ Define the textbook rate **ER = BASE per 1 QUOTE = 1/m**.
 **Real exchange rate for the BASE currency** (foreign basket priced in BASE goods):
 
 $$
-\mathrm{RER}_{\mathrm{BASE}} \;=\; \mathrm{ER}\,\frac{P_{\mathrm{Q}}}{P_{\mathrm{B}}}
-\;=\; \frac{P_{\mathrm{Q}}}{\,m\,P_{\mathrm{B}}}.
+\mathrm{RER}_{\mathrm{BASE}} \=\ \mathrm{ER}\,\frac{P_{\mathrm{Q}}}{P_{\mathrm{B}}}
+\=\ \frac{P_{\mathrm{Q}}}{\,m\,P_{\mathrm{B}}}.
 $$
 
 where **P<sub>B</sub>** (BASE price index) and **P<sub>Q</sub>** (QUOTE price index) are CPI or GDP deflators.
@@ -645,7 +645,7 @@ $$
 Starting from \( \ln \mathrm{RER} = \ln \mathrm{ER} + \ln P_Q - \ln P_B \), we get:
 
 $$
-\Delta \ln \mathrm{RER} \;\approx\; (\pi_{\mathrm{Q}} - \pi_{\mathrm{B}}) \;+\; \Delta \ln \mathrm{ER}.
+\Delta \ln \mathrm{RER} \\approx\ (\pi_{\mathrm{Q}} - \pi_{\mathrm{B}}) \+\ \Delta \ln \mathrm{ER}.
 $$
 
 - **π<sub>B</sub>**: inflation in the BASE country  
@@ -657,7 +657,7 @@ $$
 
 $$
 \mathrm{ER} \uparrow 5\% \,,\quad \pi_{\mathrm{Q}} - \pi_{\mathrm{B}} = +8\%
-\;\;\Rightarrow\;\;
+\\\Rightarrow\\
 \Delta \ln \mathrm{RER} \approx +13\%.
 $$
 
@@ -665,7 +665,7 @@ $$
 
 $$
 \mathrm{ER} \downarrow 3\% \,,\quad \pi_{\mathrm{Q}} - \pi_{\mathrm{B}} = -4\%
-\;\;\Rightarrow\;\;
+\\\Rightarrow\\
 \Delta \ln \mathrm{RER} \approx -7\%.
 $$
 
