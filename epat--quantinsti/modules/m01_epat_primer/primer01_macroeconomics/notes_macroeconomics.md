@@ -442,9 +442,18 @@ Every single country has its own bureaucracy to get this metric value.
 
 <img width="1378" height="374" alt="image" src="https://github.com/user-attachments/assets/3ed50238-bfd2-4079-93ca-1310a4fd70dc" />
 
+Structural unemployment : Unemployment that results from a mismatch between the skills workers have and the skills needed for available jobs.
+
+Frictional unemployment : Unemployment that results from the time it takes for workers to search for jobs that best suit their skills and tastes.
+
+Equilibrium unemployment : natural rate ( frictional + structural), where labor supply = demand at real wage w 
+
 ## Relation between GDP and Unemployement Rate - Boom and Bust cycle
 <img width="1134" height="1250" alt="image" src="https://github.com/user-attachments/assets/08896ad9-b873-439d-bf8b-5665d5a897c9" />
 
+the natural rate of unemployment is The long-run unemployment rate that exists when the economy is at its potential output.
+
+ 
 ## Trading in The US
 
 We have 2 main metrics related to unemployement rate. 
@@ -724,6 +733,15 @@ In the long run and according to classical economist, the money supply (monetary
 Aggregate demand is the sum of quantity demanded of domestic goods and services consumed or used by households, firms, government and foreign people.
 The aggregate supply is the sum of number of goods and services that firms produce and sell.
 
+aggregate demand (AD) represents the real GDP demanded, but viewed from the spending side of the economy. 
+
+So AD is essentially GDP, but it describes who is spending rather than who is producing.
+
+Aggregate Supply (AS) represents Y, the total real output (or real GDP) that firms in the economy are willing and able to produce at different price levels.
+
+The intersection of AD and AS gives the macroeconomic equilibrium:
+AD = AS = Y*
+
 <img width="1282" height="960" alt="image" src="https://github.com/user-attachments/assets/6e3a48e0-4acd-40d1-8222-1aaac450dd11" /> 
 
 ## The aggregate demand curve
@@ -750,7 +768,13 @@ Below the short run AD, AS
 ## Equilibrium in the long and short run
 
 LAS : Long-run aggregate demand
+
+The intersection of AD and AS gives the macroeconomic equilibrium:
+AD = AS = Y*
+
 <img width="1146" height="998" alt="image" src="https://github.com/user-attachments/assets/e67e841e-524e-4254-8948-861686700254" />
+
+And in the long run, **AS = LAS (Long-run Aggregate Supply)** becomes **vertical** at potential output (Y^*) — meaning the economy’s real capacity (technology, labor, capital) fixes how much can be produced, regardless of the price level.
 
 ---
 
