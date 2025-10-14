@@ -630,49 +630,56 @@ where **P<sub>B</sub>** (BASE price index) and **P<sub>Q</sub>** (QUOTE price in
 If **P<sub>B</sub>** and **P<sub>Q</sub>** are constant, **RER moves in the same direction as ER**:
 
 $$
-\mathrm{ER} \uparrow \;\Rightarrow\; \mathrm{RER} \uparrow
+\text{ER} \uparrow \\Rightarrow\ \text{RER} \uparrow
 \qquad\text{and}\qquad
-\mathrm{ER} \downarrow \;\Rightarrow\; \mathrm{RER} \downarrow
+\text{ER} \downarrow \\Rightarrow\ \text{RER} \downarrow
 $$
 
-*(Recall: since \( \mathrm{ER}=1/m \), a rise in **m** implies **ER** falls, and vice versa.)*
-
+*(Recall: with market rate m defined as QUOTE per 1 BASE, we use ER = 1/m.
+So m ↑ ⇒ ER ↓, and vice versa.)*
 
 **b) With inflation differentials (log approximation)**
 
-Starting from \( \ln \mathrm{RER} = \ln \mathrm{ER} + \ln P_Q - \ln P_B \), we get:
+Starting from
 
 $$
-\Delta \ln \mathrm{RER} \\approx\ (\pi_{\mathrm{Q}} - \pi_{\mathrm{B}}) \+\ \Delta \ln \mathrm{ER}.
+\ln \text{RER} \=\ \ln \text{ER} \+\ \ln P_{Q} \-\ \ln P_{B}
 $$
 
-- **π<sub>B</sub>**: inflation in the BASE country  
-- **π<sub>Q</sub>**: inflation in the QUOTE country
-
-**Interpretation:** RER rises when QUOTE inflation outpaces BASE **and/or** when **ER** rises (i.e., when the market rate **m** falls).
-
-**QUOTE inflation dominates :**
+we get
 
 $$
-\mathrm{ER} \uparrow 5\% \,,\quad \pi_{\mathrm{Q}} - \pi_{\mathrm{B}} = +8\%
-\\\Rightarrow\\
-\Delta \ln \mathrm{RER} \approx +13\%.
+\Delta \ln \text{RER} \\approx\ (\pi_{Q} - \pi_{B}) \+\ \Delta \ln \text{ER}.
 $$
 
-**BASE inflation dominates :**
+- **π<sub>B</sub>**: inflation in the **BASE** country  
+- **π<sub>Q</sub>**: inflation in the **QUOTE** country
+
+**Interpretation:** RER rises when QUOTE inflation outpaces BASE **and/or** when **ER** rises (i.e., when the market rate \(m\) falls).
+
+**QUOTE inflation dominates (example):**
 
 $$
-\mathrm{ER} \downarrow 3\% \,,\quad \pi_{\mathrm{Q}} - \pi_{\mathrm{B}} = -4\%
-\\\Rightarrow\\
-\Delta \ln \mathrm{RER} \approx -7\%.
+\text{ER} \uparrow 5\% \,,\quad \pi_{Q} - \pi_{B} = +8\%
+\qquad\Rightarrow\qquad
+\Delta \ln \text{RER} \approx +13\%.
 $$
+
+**BASE inflation dominates (example):**
+
+$$
+\text{ER} \downarrow 3\% \,,\quad \pi_{Q} - \pi_{B} = -4\%
+\qquad\Rightarrow\qquad
+\Delta \ln \text{RER} \approx -7\%.
+$$
+
 
 **c) No inflation differential**
 
 $$
 \pi_{\mathrm{Q}} - \pi_{\mathrm{B}} = 0
 \qquad\Rightarrow\qquad
-\mathrm{ER} \uparrow 10\% \;\Rightarrow\; \mathrm{RER} \uparrow \approx 10\%.
+\mathrm{ER} \uparrow 10\% \\Rightarrow\ \mathrm{RER} \uparrow \approx 10\%.
 $$
 
 *(Équivalent côté marché : si **m ↑ 10%**, alors **ER ↓ ≈ 10%** et **RER ↓ ≈ 10%**.)*
