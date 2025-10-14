@@ -1,4 +1,4 @@
-1. # ***Economics***
+ # 1.Economics
    Economics is the study of human behaviour and decision making.
    Economic can be split in 2 branches. Microeconomic and Macroeconomics. Micro one focuses on how individuals and firms buy and sell good and services
    
@@ -706,10 +706,58 @@ RER = 80*(1,000/80,000) = 1 , SO THE RER IS ALWAYS EQUAL TO 1 according to the P
 
 These assumptions never occur in reality but serves as an explanation in economics to understand that the country cost of living will fall in the gravity of the PPP.
 
+---
 
-      
+# 11. The economy as a whole
+in this section we are going to analyse the entie economy as a whole.
+We kmow that GDP could increase or decrease. If it does for consecutive month( usually 3 months), we can talk about booms and busts, as expension and recessions. If GDP drops of 10 % or more we say it's a depression.
+
+Economy is based on uncertainty and macroeconomic variables are unpredictable.
+Most of the macroeconomic variables are related to each other.
+
+let's talk about how the GDP fluctuatioN occur in economy
+
+## Short-run fluctuations
+In the long run and according to classical economist, the money supply (monetary mass) only has an impact on nominal variables (price level, nominal wages, nominal interest rates, exchange rates) not on real variables (output, employment, real rates). However, in the short run nominal variables might move in order to get close to the real variable. Nominal variables are to be analysed in the short run, while real variables are to be analysed in the long run.
+
+**Let's talk about aggregate demand and supply curves.**
+Aggregate demand is the sum of quantity demanded of domestic goods and services consumed or used by households, firms, government and foreign people.
+The aggregate supply is the sum of number of goods and services that firms produce and sell.
+
+<img width="1282" height="960" alt="image" src="https://github.com/user-attachments/assets/6e3a48e0-4acd-40d1-8222-1aaac450dd11" /> 
+
+## The aggregate demand curve
+
+Master memo:
+
+AD=C+I+G+(X−M)
+
+Anything that raises 𝐶,𝐼,𝐺,𝑋 or reduces 𝑀 (importation) shifts AD → (to the right). The reverse shifts it ←.
+
+## Why Each Shock Shifts AD — Two-Column Summary
+
+| Shock | Intuition / Channel |
+|---|---|
+| **G ↑ (government spending) → AD →** | The state buys more domestic goods/services ⇒ **direct demand rises**. <br> **G ↓ → AD ←**: fewer public purchases. |
+| **C ↑ (household consumption) → AD →** | Confidence, disposable income, wealth effects ⇒ **more purchases** of goods/services. <br> **C ↓ → AD ←**: households defer/spend less. |
+| **I ↑ (business investment) → AD →** | Lower rates, easier credit, better expectations ⇒ **capex up** (machines, buildings). <br> **I ↓ → AD ←**: projects postponed. |
+| **X ↑ (exports) → AD →** | Rest of the world buys more domestic products (**external demand**). <br> **X ↓ → AD ←**. |
+| **M ↑ (imports) → AD ←** | More spending goes **abroad** ⇒ **NX = X − M** falls ⇒ **AD falls**. <br> **M ↓ → AD →**: spending shifts to **domestic** production. |
+| **Policy rates ↓ → AD →** | Channels: (1) **C ↑** via consumer credit/wealth effect, (2) **I ↑** via lower cost of capital, (3) **weaker FX** ⇒ **X ↑, M ↓**. <br> **Rates ↑ → AD ←** (opposite effects). |
 
 
+## The aggregate demand curve
+
+
+## Equilibrium in the long and short run
+
+
+## Considerations while investing in the long run
+
+
+---
+
+# 12. Sum up: Variables’ relationships in macroeconomics
 
 
 
