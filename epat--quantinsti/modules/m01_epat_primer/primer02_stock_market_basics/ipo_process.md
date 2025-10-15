@@ -7,7 +7,7 @@ flowchart TD
 subgraph C0[Company]
   C1[Decide to go public]
   C2[Draft prospectus]
-  C3[Post IPO<br/>ongoing disclosures]
+  C3[Post IPO<br/>disclosures]
 end
 
 subgraph U0[Underwriters]
@@ -17,23 +17,23 @@ subgraph U0[Underwriters]
   U4[Book building<br/>collect demand]
   U5{Underwriting model}
   U5a[Firm commitment<br/>bank buys then resells]
-  U5b[Best efforts<br/>bank places no purchase]
-  U5c[Other models<br/>all or none mini maxi<br/>direct listing]
-  U6[Pricing and allocation]
-  U7[Stabilization<br/>Greenshoe]
+  U5b[Best efforts<br/>bank places]
+  U5c[Other models<br/>all or none / mini maxi /<br/>direct listing]
+  U6[Pricing &<br/>allocation]
+  U7[Stabilization<br/>greenshoe]
 end
 
 subgraph R0[Regulator]
-  R1[Regulatory review<br/>approval]
+  R1[Review &<br/>approval]
 end
 
 subgraph X0[Exchange / CCP]
-  X1[Listing on exchange<br/>first day of trading]
-  X2[Settlement and delivery<br/>T plus 2]
+  X1[Listing &<br/>first day]
+  X2[Settlement<br/>T+2]
 end
 
 subgraph I0[Investors]
-  I1[Subscribers and<br/>secondary buyers]
+  I1[Subscribers &<br/>secondary buyers]
 end
 
 %% --- Main flow with a few edge labels ---
@@ -51,10 +51,10 @@ U6 --> X1 --> U7 --> X2 --> C3
 I1 --- U4
 I1 --- X1
 
-%% --- Explanatory callouts (short and wrapped, no parentheses/dashes) ---
-Kx[Greenshoe up to 15 percent extra shares<br/>used by underwriters to stabilize price]
-Tx[T plus 2 cash and shares delivered<br/>two business days after trade<br/>via clearing and settlement]
-Lx[Post IPO lock ups for insiders 90 to 180 days<br/>plus periodic financial reports]
+%% --- Explanatory callouts (short and wrapped)
+Kx[Greenshoe up to 15%<br/>to help stabilize price]
+Tx[T+2: cash & shares delivered<br/>in two business days]
+Lx[Post IPO: insider lock ups<br/>90 to 180 days + periodic reports]
 
 U7 -.-> Kx
 X2 -.-> Tx
