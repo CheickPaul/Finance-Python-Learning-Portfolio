@@ -356,7 +356,7 @@ A single trade involves more entities and not only the stock exchange. Indeed, i
   *below the default waterfall process*
   ```mermaid
   flowchart TD
-  A[Member default] --> B[Use defaulter's margin(initial+daily variation)]
+  A[Member default] --> B[Use defaulter's margin <br/>(initial+daily variation)]
   B --> C[Consume the defaulter's default fund slice]
   C --> D[The CCP's own capital layer is applied <br/>(skin-in-the-game)]
   D --> E[Use mutualized default fund<br/>(If surviving members)]
