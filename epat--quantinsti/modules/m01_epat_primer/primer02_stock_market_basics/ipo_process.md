@@ -1,3 +1,5 @@
+### IPO Process — Roles & Steps
+
 ```mermaid
 flowchart TD
 
@@ -58,3 +60,40 @@ U7 -.-> Kx
 X2 -.-> Tx
 C3 -.-> Lx
 ```
+### IPO Process — Message Flow (Sequence)
+```mermaid
+sequenceDiagram
+  participant Co as Company
+  participant UW as Underwriters
+  participant Reg as Regulator
+  participant Ex as Exchange CCP
+  participant Inv as Investors
+
+  Co->>UW: 1 Decide to go public
+  Co->>UW: 2 Select advisors and mandate
+  UW-->>Inv: 3 Map investors universe
+
+  Co->>UW: 4 Draft prospectus start
+  UW->>Reg: 5 File to regulator
+  Reg-->>Co: 5 Review and approval cycle
+
+  UW->>Co: 6 Valuation and price range
+  UW->>Inv: 7 Roadshow and education
+  UW->>Inv: 8 Book building collect orders
+
+  UW->>Co: 9 Underwriting model
+  alt 9a Firm commitment
+    UW->>Co: Banks buy issue then resell
+  else 9b Best efforts
+    UW->>Co: Banks place issue no purchase
+  else 9c Other models
+    UW->>Co: All or none or mini maxi or direct listing
+  end
+
+  UW->>Inv: 10 Pricing and allocation
+  Co->>Ex: 11 List shares first day trading
+  UW->>Ex: 12 Stabilization Greenshoe if used
+  Inv->>Ex: Secondary trading
+  Ex->>Ex: 13 Settle and deliver T plus 2
+  Co-->>Inv: 14 Post IPO lock ups and ongoing disclosures
+  ```
