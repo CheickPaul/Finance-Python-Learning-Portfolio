@@ -180,5 +180,18 @@ flowchart TD
   J --> K[Stabilization<br/>Greenshoe]
   K --> L[Settlement and delivery<br/>T plus 2]
   L --> M[Post IPO<br/>lock ups and ongoing disclosures]
-
 ```
+
+---
+
+# 7. Introduction to Various Intermediaries
+
+# 8. Brokers
+
+# 9. Central Securities Depository
+
+# 10. Stock Exchange
+
+# 11. Clearinghouse
+
+# 12. Financial Regulator
