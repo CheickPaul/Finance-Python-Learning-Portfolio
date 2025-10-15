@@ -360,7 +360,8 @@ flowchart LR
   A[Defaulter margin] --> B[DF slice] --> C[CCP skin] --> D[Mutual DF] --> E[Assessments] --> F[Recovery] --> G[Wind down]
 ```
 
-- **CSD / Demat (Central Securities Depository):** Holds securities in electronic form and updates ownership after settlement.
+- **CSD / Demat (Central Securities Depository):The market’s electronic vault and ledger for securities. It records ownership and moves securities at settlement via DvP( =simultaneous exchange, shares to buyer, cash to seller, in one linked settlement). Only participants (brokers, custodians, CCPs) have CSD accounts. Investors hold demat accounts(dematerialized securities account) through their broker/custodian(bank or specialist firm that safekeeps investor's securities that operates demat account. The CSD also routes corporate actions (dividends, splits, rights, proxies).
+  
   
 - **Regulator:** Sets the rules, supervises participants, and enforces market integrity and investor protection.
 
