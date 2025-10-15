@@ -344,7 +344,7 @@ Inflation of yeart
 
 ---
 
-# 4. Cost of living
+# 4. Cost of living / Decent Annual Return
 we know the GDP deflator as the inflation metric. in this section we will discuss another measure.
 
 ## The Consumer Price Index (CPI)
@@ -354,8 +354,7 @@ we know the GDP deflator as the inflation metric. in this section we will discus
 
 <img width="1112" height="526" alt="image" src="https://github.com/user-attachments/assets/9f5ea644-540f-4453-ae22-8a028afce717" />
 
-## Do You Really Have a Decent Annual Return?
-# 4.6 Do You Really Have a Decent Annual Return?
+##  Real Annual Return?
 
 **Nominal return (i):** the headline % your account shows.  
 **Inflation (π):** loss of purchasing power over the period.  
