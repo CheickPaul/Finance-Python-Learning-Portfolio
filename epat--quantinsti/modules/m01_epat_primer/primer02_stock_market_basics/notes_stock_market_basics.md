@@ -357,15 +357,15 @@ A single trade involves more entities and not only the stock exchange. Indeed, i
   
   ```mermaid
 flowchart TB
-  subgraph R1[ ]
-  direction LR
-    A[Margin (def)] --> B[DF slice (def)] --> C[CCP skin] --> D[DF (mutual)]
-  end
-  subgraph R2[ ]
-  direction LR
-    E[Assess] --> F[Recovery] --> G[Wind-down]
-  end
-  D --> E
+subgraph R1
+direction LR
+  A[Defaulter margin] --> B[DF slice] --> C[CCP skin] --> D[Mutual DF]
+end
+subgraph R2
+direction LR
+  E[Assessments] --> F[Recovery] --> G[Wind down]
+end
+D --> E
 ```
 
 - **CSD / Demat (Central Securities Depository):** Holds securities in electronic form and updates ownership after settlement.
