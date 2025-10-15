@@ -49,10 +49,10 @@ U6 --> X1 --> U7 --> X2 --> C3
 I1 --- U4
 I1 --- X1
 
-%% --- Explanatory callouts (short and wrapped) ---
-Kx[Greenshoe: up to 15% extra shares<br/>used by underwriters to help<br/>stabilize price after the IPO]
-Tx[T plus 2: cash and shares delivered<br/>two business days after trade<br/>via clearing and settlement]
-Lx[Post IPO: lock ups for insiders<br/>(about 90–180 days) and periodic<br/>financial reports and disclosures]
+%% --- Explanatory callouts (short and wrapped, no parentheses/dashes) ---
+Kx[Greenshoe up to 15 percent extra shares<br/>used by underwriters to stabilize price]
+Tx[T plus 2 cash and shares delivered<br/>two business days after trade<br/>via clearing and settlement]
+Lx[Post IPO lock ups for insiders 90 to 180 days<br/>plus periodic financial reports]
 
 U7 -.-> Kx
 X2 -.-> Tx
