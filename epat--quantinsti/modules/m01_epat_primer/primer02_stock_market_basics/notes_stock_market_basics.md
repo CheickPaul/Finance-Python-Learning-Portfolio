@@ -159,8 +159,7 @@ The first one is where issuance happens and the second one where trading among i
 
 # 6. Initial Public Offering (IPO) Process 
 
-mermaid
-
+```mermaid
 flowchart LR
   A[Start] --> B{Test OK?}
   B -->|Yes| C[Mermaid works]
@@ -168,4 +167,4 @@ flowchart LR
 
   flowchart LR
   A[Start] --> B[Test OK?]
-
+```
