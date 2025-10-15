@@ -69,8 +69,8 @@ sequenceDiagram
   participant Ex as Exchange CCP
   participant Inv as Investors
 
-rect rgb(255, 249, 196)
-    Note over Co,Inv: Legend — Solid (->>) = action\nDashed (-->>) = info
+Note left of Co: Solid (->>) = action\nDashed (-->>) = info
+  Co->>UW: 1 Decide to go public
   end
 
   Co->>UW: 1 Decide to go public
