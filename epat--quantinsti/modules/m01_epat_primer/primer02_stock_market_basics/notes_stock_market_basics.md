@@ -363,7 +363,17 @@ flowchart LR
 - **CSD / Demat (Central Securities Depository):The market’s electronic vault and ledger for securities. It records ownership and moves securities at settlement via DvP( =simultaneous exchange, shares to buyer, cash to seller, in one linked settlement). Only participants (brokers, custodians, CCPs) have CSD accounts. Investors hold demat accounts(dematerialized securities account) through their broker/custodian(bank or specialist firm that safekeeps investor's securities that operates demat account. The CSD also routes corporate actions (dividends, splits, rights, proxies).
   
   
-- **Regulator:** Sets the rules, supervises participants, and enforces market integrity and investor protection.
+- **Regulator:** Sets the rules, licenses and supervises participants, and enforces fair, orderly, transparent markets with investor protection.
+In IPOs: the regulator reviews and approves the offering document (disclosure-based)—e.g., declares a registration effective (US) or approves the prospectus (UK/EU)—while the exchange separately decides on listing/admission.
+
+| Role | Principal names (examples) |
+|---|---|
+| Exchanges | NYSE, Nasdaq (US); LSE (UK); Euronext (EU); Deutsche Börse (Xetra, DE); SIX (CH); HKEX (HK); SGX (SG); BSE/NSE (IN); TSE (JP) |
+| Brokers / Investment banks | Goldman Sachs, Morgan Stanley, J.P. Morgan, Bank of America, Citi, Barclays, UBS, Deutsche Bank, HSBC; Jefferies, RBC, BNP Paribas, Société Générale; Stifel, Piper Sandler, Baird, William Blair |
+| Market makers / Wholesalers | Citadel Securities, Virtu Financial, Jane Street, Susquehanna (SIG), Optiver, IMC, Flow Traders, Hudson River Trading |
+| Clearing houses (CCPs) | DTCC/NSCC (US equities), OCC (US options); LCH EquityClear (EU/UK), Eurex Clearing (DE/EU), SIX x-clear (CH), HKEX Clearing (HK) |
+| CSDs / Depositories | DTC (DTCC, US); Euroclear, Clearstream (EU); CREST (UK); HKSCC (HK); CDP (SG); NSDL, CDSL (IN) |
+| Regulators | SEC (US); FCA/UKLA (UK); AMF (FR); BaFin (DE); CNMV (ES); CONSOB (IT); ESMA (EU coordination); SFC (HK); MAS (SG); SEBI (IN) |
 
 #### Market Access & Account Setup
 Most institutions access markets either via **Direct Market Access (DMA)**—becoming an exchange member to submit orders directly—or **via a broker**, which is the standard, lower-cost path for individuals and smaller firms.  
@@ -383,7 +393,7 @@ The regulator defines market rules, licensing and conduct standards, disclosure 
 
 #### Takeaways
 - A completed trade relies on **multiple intermediaries**, not just the exchange.  
-- **Access paths:** DMA for members vs. **broker** for most investors.  
+- **Access paths:** Direct Market Acces (DMA) for members vs. DMA via **broker** for most investors.  
 - **Finality:** Clearing and CSD/Demat custody are essential to move cash and update ownership safely.
 
 ---
