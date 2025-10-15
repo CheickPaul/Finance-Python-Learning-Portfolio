@@ -63,15 +63,12 @@ C3 -.-> Lx
 ### IPO Process — Message Flow (Sequence)
 ```mermaid
 sequenceDiagram
+
   participant Co as Company
   participant UW as Underwriters
   participant Reg as Regulator
   participant Ex as Exchange CCP
   participant Inv as Investors
-
-Note left of Co: Solid (->>) = action\nDashed (-->>) = info
-  Co->>UW: 1 Decide to go public
-  end
 
   Co->>UW: 1 Decide to go public
   Co->>UW: 2 Select advisors and mandate
