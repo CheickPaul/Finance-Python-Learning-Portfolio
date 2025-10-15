@@ -4,6 +4,7 @@ Instruments (equities, bonds, FX, derivatives), Primary vs. Secondary markets, T
 
 ---
 # 1. Introduction to Financial Market
+
 ## Markets in General
 In general markets are simply the places where stuff get traded in order to make profit. When it comes to financial market the actor gather together to transact on financial instrument. Like in our day to day life, we also have Online Financial Market place (similar to amazon in real world) or Physical premise.
 
@@ -103,4 +104,32 @@ Identification (Tickers & Listings): Each instrument has a symbol/ticker ( Micro
 |---|---|
 | OTC (over-the-counter) | Trades negotiated directly between participants. |
 | Exchange-traded | Standardized contracts under exchange rules, often with central clearing via a CCP. |
+
+---
+
+# 4. Stocks
+
+**What is a Stock** : A stock or a share or equity is a security that represents an ownership stake in a company. It carry rights and benefits
+
+**Why We Buy Stocks** : Investors buy stocks to seek capital appreciation when the price rises over time, and also dividend according to the firm policy
+
+**2 Types of Stocks** : (1) Common Stock, usually carries voting rights and gives shareholders a residual claim on dividends. (2) Preferred Stock, Typically has no voting rights but provides priority dividends and often a higher claim on assets in a liquidation
+
+
+**Market Cap (Size Bucket)** : 
+(1) Large-cap, multi billions companies with deep liquidity. They tend to have more stable earningsand lower volatility than smaller ones
+
+(2) Mid-cap, sitting between Large cap and small cap they are medium sized companies with solid growth potential and generally good liquidity. 
+
+(3) Small-cap, smaller companies with higher growth uncertainty, thinner liquidity and usually higher volatility
+
+(4) Penny Stocks, in USA the SEC treats penny stock as shares that cost less than 5 USD. Typically outside major exchange (OTC) and they can involve low liquidity and elevated risk( wide spread, price manipulation). In other part of the world, they have their owns juriductions and features.
+
+**Key Risks** : The main risk are firstly the price volatility. Indeed, the prices can swing in the short term and even healthy firms see fluctuation in prices. Secondly we have the bankruptcy hierarchy. In case of liquidation the common shareholders are last in line.
+
+---
+
+# 5. Primary and Secondary Market
+
+
 
