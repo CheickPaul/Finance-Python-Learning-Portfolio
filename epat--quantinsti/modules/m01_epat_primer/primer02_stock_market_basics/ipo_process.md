@@ -118,3 +118,52 @@ sequenceDiagram
 | 13 | Settlement T+2 | CCP, custodians, brokers | Cash ↔ shares in two business days | Final settlement | Settlement fails, fail coverage |
 | 14 | Post-IPO | Company, IR | Lock-ups 90–180 days; periodic reporting | 10-Q/10-K or local reports | IR calendar, guidance, blackout windows |
 
+## IPO - role cards 
+
+**Underwriters / Bookrunners**  
+Design the deal, run education/roadshow, build the order book, set price/allocation, and may stabilize (greenshoe).  
+Examples: Goldman Sachs, Morgan Stanley, J.P. Morgan, Bank of America, Citi, Barclays, UBS, Deutsche Bank, HSBC, Jefferies, RBC, BNP Paribas, Société Générale.
+
+**Legal counsel (company & banks)**  
+Prepare the prospectus/disclosures, manage due diligence, opinions, and regulatory filings.  
+Examples (company counsel / banks’ counsel): Skadden, Latham & Watkins, Simpson Thacher, Cooley, Wilson Sonsini, Davis Polk, Sullivan & Cromwell, Cravath, Freshfields, Clifford Chance, Linklaters, Allen & Overy, White & Case.
+
+**Auditors**  
+Provide audited financials, reviews, and a comfort letter supporting selected figures.  
+Examples: PwC, Deloitte, EY, KPMG.
+
+**Regulators**  
+Review filings, issue comment letters, and grant clearance/effectiveness.  
+Examples: SEC (US), FCA/UKLA (UK), AMF (FR), BaFin (DE), CNMV (ES), CONSOB (IT), ESMA (EU coordination), SFC (HK), MAS (SG), SEBI (IN).
+
+**Exchanges (listing venues)**  
+Admit securities to trading and provide the marketplace.  
+Examples: NYSE, Nasdaq (US); LSE (UK); Euronext (EU); Deutsche Börse (DE); SIX (CH); HKEX (HK); SGX (SG); BSE/NSE (IN); TSE (JP).
+
+**CCP / Clearing houses**  
+Novate trades (become the counterparty), collect margin, and manage default risk.  
+Examples: NSCC (DTCC, US equities), LCH EquityClear, Eurex Clearing, SIX x-clear, HKEX Clearing.
+
+**CSD / Depositories**  
+Record ownership and handle final securities settlement/custody at the market infrastructure level.  
+Examples: DTC (DTCC, US), Euroclear, Clearstream, CREST (UK), HKSCC (HK), NSDL/CDSL (IN).
+
+**Market makers / Liquidity providers**  
+Quote two-sided prices and provide liquidity, especially around the open/close and post-IPO.  
+Examples: Citadel Securities, Virtu, Jane Street, Susquehanna (SIG), Optiver, IMC, Flow Traders, Hudson River Trading.
+
+**Custodian banks**  
+Safekeep assets, handle settlement, corporate actions, and reporting for institutions.  
+Examples: BNY Mellon, State Street, J.P. Morgan, Northern Trust, HSBC.
+
+**Transfer agents / Registrars**  
+Maintain the shareholder register and process corporate actions (dividends, DRIPs, proxy).  
+Examples: Computershare, Equiniti, American Stock Transfer (AST), Continental Stock Transfer.
+
+**IR / PR advisors**  
+Craft the equity story, prepare investor materials, coordinate media and investor communications.  
+Examples: ICR, FTI Consulting, Brunswick, Edelman, Kekst CNC, Sard Verbinnen (SVC).
+
+**Investors (buy-side segments)**  
+Provide capital in the IPO book and form the aftermarket (each with different horizons/styles).  
+Examples: Long-only funds and pensions (BlackRock, Vanguard, Capital Group), hedge funds (Millennium, Citadel, Point72), sovereign wealth (GIC, ADIA), family offices, ETF issuers.
