@@ -131,5 +131,41 @@ Identification (Tickers & Listings): Each instrument has a symbol/ticker ( Micro
 
 # 5. Primary and Secondary Market
 
+Financial Markets have 2 main segments :  **Primary Market** and **Secondary Market**
 
+The first one is where issuance happens and the second one where trading among investors happens.
+
+**Primary Market (New Issue Market)** : The primary market is where a company sells its shares or bonds to the public for the first time to raise capital. Then, subscriptions are made at the issue price set by the company (and its advisors). Each offering happens once (per issuance). Typical events include the **Initial Public Offering (IPO)**, **Offer for Sale (OFS)** by existing promoters, **Rights Issues** to existing shareholders, and **Bonus Issues** of free additional shares.
+
+
+**Secondary Market (Exchanges)** : The secondary market is where listed shares, bonds and others instruments are traded
+
+
+**Lifecycle / Flow** : New securities are first Issue in primary → public subscribes → list on exchange → trade in secondary 
+
+
+**Primary vs Secondary, Key Differences (with Actors)** :
+| Dimension | Primary Market | Secondary Market |
+|---|---|---|
+| Purpose | Raise new capital for the issuer | Provide liquidity and price discovery |
+| Counterparties | Company ↔ Investors | Investor ↔ Investor (via exchange/broker) |
+| Cash flow | Money to the issuer | Money between investors |
+| Pricing | Issue price (fixed or book-built) | Market price (supply/demand) |
+| Frequency | One-time per offering | Continuous trading |
+| Events | IPO, OFS, Rights, Bonus | Exchange trading, block trades, etc. |
+| Key actors | Issuer (company/government); investment banks/underwriters; legal counsel and auditors; regulator/listing authority; registrar; institutional and retail subscribers | Retail and institutional investors; brokers/dealers; market makers, HFT and prop trading firms; exchanges/ATS and dark pools; clearinghouses (CCP); custodians; regulators |
+
+---
+
+# 6. Initial Public Offering (IPO) Process 
+
+mermaid
+
+flowchart LR
+  A[Start] --> B{Test OK?}
+  B -->|Yes| C[Mermaid works]
+  B -->|No| D[Check settings]
+
+  flowchart LR
+  A[Start] --> B[Test OK?]
 
