@@ -47,19 +47,19 @@ In every economy,financial markets connect investor (those who bring capital on 
 
 ### 2.2 What Financial Markets Enable
 
-#### a)Capital raising (primary market)
+#### Capital raising (primary market)
 The governments finance infrastructure buy selling debts (treasury bonds), The firms finance growth (more R&D, hiring, capacity) by selling share.
 
-#### b)Investment access (for individual)
+#### Investment access (for individual)
 Instead of leaving money idle in a bank, individual can invest this money and plays a relevant role in the economy growth. Obviously, they will expect a return and reward for this investment.
 
-### c)Diversification
+### Diversification
 The thousands of listed securities across stock exchanges worldwide allow investors to diversify their portfolios and to manage their risk.
 
-#### d)Indices as Economic health indicators
+#### Indices as Economic health indicators
 The stock indices aggregate company performance and often act as **leading indicators, a bellwether for broader ecomomy.
 
-#### e)Risk management (derivatives)
+#### Risk management (derivatives)
 Firms and producers can hedge price risks using forwards, futures, options.
 
 example: a wheat farmer who fears fall of the prices can sells wheat forwards to lock today's price and stabilize revenues.
