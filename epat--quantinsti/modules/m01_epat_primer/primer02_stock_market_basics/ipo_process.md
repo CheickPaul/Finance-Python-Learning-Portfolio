@@ -97,6 +97,7 @@ Note over Co,Ex: Legend — Solid (->>) = action • Dashed (-->>) = info
   Inv->>Ex: Secondary trading
   Ex->>Ex: 13 Settle and deliver T plus 2
   Co-->>Inv: 14 Post IPO lock ups and ongoing disclosures
+Note over Co,Ex: Legend : Solid (->>) = action • Dashed (-->>) = info
   ```
 
 ### IPO Step Details (Reference Table)
