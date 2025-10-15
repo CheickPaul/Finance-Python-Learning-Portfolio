@@ -45,7 +45,7 @@ Financial markets can be split into **Stock markets**, **Commodity markets**, **
 ### Why We Need Financial Markets
 In every economy,financial markets connect investor (those who bring capital on the table) to business owner and governement ( the users of this capital). Thus, thanks to this main function, the financial markets become very critical for the good health of any country's economic because they fund public projet and private expansion.
 
-### What Financial Markets Enable
+## What Financial Markets Enable
 
 #### Capital raising (primary market)
 The governments finance infrastructure buy selling debts (treasury bonds), The firms finance growth (more R&D, hiring, capacity) by selling share.
