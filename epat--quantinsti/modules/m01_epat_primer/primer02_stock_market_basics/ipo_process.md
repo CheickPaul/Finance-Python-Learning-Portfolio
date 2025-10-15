@@ -68,7 +68,10 @@ sequenceDiagram
   participant Reg as Regulator
   participant Ex as Exchange CCP
   participant Inv as Investors
-Note over Co,Ex: Legend — Solid (->>) = action • Dashed (-->>) = info
+
+rect rgb(255, 249, 196)
+    Note over Co,Inv: Legend — Solid (->>) = action\nDashed (-->>) = info
+  end
 
   Co->>UW: 1 Decide to go public
   Co->>UW: 2 Select advisors and mandate
