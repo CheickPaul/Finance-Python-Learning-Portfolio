@@ -53,7 +53,7 @@ The governments finance infrastructure buy selling debts (treasury bonds), The f
 #### Investment access (for individual)
 Instead of leaving money idle in a bank, individual can invest this money and plays a relevant role in the economy growth. Obviously, they will expect a return and reward for this investment.
 
-### Diversification
+#### Diversification
 The thousands of listed securities across stock exchanges worldwide allow investors to diversify their portfolios and to manage their risk.
 
 #### Indices as Economic health indicators
