@@ -360,24 +360,39 @@ flowchart LR
   A[Defaulter margin] --> B[DF slice] --> C[CCP skin] --> D[Mutual DF] --> E[Assessments] --> F[Recovery] --> G[Wind down]
 ```
 
-- **CSD / Demat (Central Securities Depository):The market’s electronic vault and ledger for securities. It records ownership and moves securities at settlement via DvP( =simultaneous exchange, shares to buyer, cash to seller, in one linked settlement). Only participants (brokers, custodians, CCPs) have CSD accounts. Investors hold demat accounts(dematerialized securities account) through their broker/custodian(bank or specialist firm that safekeeps investor's securities that operates demat account. The CSD also routes corporate actions (dividends, splits, rights, proxies).
+- **CSD / Demat (Central Securities Depository)**: The market’s electronic vault and ledger for securities. It records ownership and moves securities at settlement via DvP( =simultaneous exchange, shares to buyer, cash to seller, in one linked settlement). Only participants (brokers, custodians, CCPs) have CSD accounts. Investors hold demat accounts(dematerialized securities account) through their broker/custodian(bank or specialist firm that safekeeps investor's securities that operates demat account). The CSD also routes corporate actions (dividends, splits, rights, proxies).
   
   
 - **Regulator:** Sets the rules, licenses and supervises participants, and enforces fair, orderly, transparent markets with investor protection.
-In IPOs: the regulator reviews and approves the offering document (disclosure-based)—e.g., declares a registration effective (US) or approves the prospectus (UK/EU) while the exchange separately decides on listing/admission.
+In IPOs: the regulator reviews and approves the offering document, declares a registration effective (US) or approves the prospectus (UK/EU) while the exchange separately decides on listing/admission.
 
-| Role | Principal names (examples) |
-|---|---|
-| Exchanges | NYSE, Nasdaq (US); LSE (UK); Euronext (EU); Deutsche Börse (Xetra, DE); SIX (CH); HKEX (HK); SGX (SG); BSE/NSE (IN); TSE (JP) |
-| Brokers / Investment banks | Goldman Sachs, Morgan Stanley, J.P. Morgan, Bank of America, Citi, Barclays, UBS, Deutsche Bank, HSBC; Jefferies, RBC, BNP Paribas, Société Générale; Stifel, Piper Sandler, Baird, William Blair |
-| Market makers / Wholesalers | Citadel Securities, Virtu Financial, Jane Street, Susquehanna (SIG), Optiver, IMC, Flow Traders, Hudson River Trading |
-| Clearing houses (CCPs) | DTCC/NSCC (US equities), OCC (US options); LCH EquityClear (EU/UK), Eurex Clearing (DE/EU), SIX x-clear (CH), HKEX Clearing (HK) |
-| CSDs / Depositories | DTC (DTCC, US); Euroclear, Clearstream (EU); CREST (UK); HKSCC (HK); CDP (SG); NSDL, CDSL (IN) |
-| Regulators | SEC (US); FCA/UKLA (UK); AMF (FR); BaFin (DE); CNMV (ES); CONSOB (IT); ESMA (EU coordination); SFC (HK); MAS (SG); SEBI (IN) |
+
+*Key Intermediaries by Hub* (quick reference)
+
+| Hub / Region | Exchanges / MTFs | Brokers / IB (regional standouts) | Market Makers / Wholesalers | CCPs (clearing) | CSDs (depositories) | Regulator |
+|---|---|---|---|---|---|---|
+| **London (UK)** | LSE, Cboe Europe, Turquoise, Aquis | Barclays, HSBC, NatWest Markets; Peel Hunt, Numis; (plus globals: GS, MS, JPM, BofA, Citi, UBS, DB) | Citadel Sec., Virtu, Jane Street, XTX, SIG, IMC | LCH, EuroCCP | CREST (Euroclear UK & Intl) | FCA/UKLA |
+| **Amsterdam (NL)** | Euronext Amsterdam, Cboe NL | ABN AMRO Clearing, Van Lanschot Kempen; (plus globals) | Optiver, IMC, Flow Traders, Jane Street, Citadel Sec., Virtu | EuroCCP, Eurex Clearing | Euroclear NL | AFM / DNB |
+| **Zurich / Geneva (CH)** | SIX Swiss Exchange, BX Swiss | UBS, Credit Suisse (UBS), Julius Baer, ZKB; (plus globals) | Flow Traders, Jane Street, IMC (EU ops) | SIX x-clear, Eurex Clearing | SIX SIS | FINMA |
+| **Nordics (SE/DK/NO/FI/IS)** | Nasdaq Nordic (SE/DK/FI/IS), Euronext Oslo (Oslo Børs) | SEB, Nordea, Danske, DNB Markets, Carnegie, ABG Sundal Collier, Pareto, Handelsbanken, Swedbank | Optiver, IMC, Virtu, Jane Street, Flow Traders (EU ops) | Nasdaq Clearing AB, LCH, SIX x-clear, EuroCCP | Euroclear SE/FI, VP (DK), Euronext Securities Oslo (VPS), Nasdaq CSD (Baltics), Nasdaq CSD Iceland | Finansinspektionen (SE), Finanstilsynet (DK/NO), FIN-FSA (FI) |
+| **Frankfurt (DE)** | Deutsche Börse (Xetra), Tradegate | Deutsche Bank, Commerzbank; Hauck Aufhäuser, Berenberg; (plus globals) | Optiver, IMC, Flow Traders, Jane Street, Virtu | Eurex Clearing | Clearstream | BaFin |
+| **Paris / Brussels (FR/BE)** | Euronext Paris/Brussels | BNP Paribas, Société Générale, Natixis; Degroof Petercam | Citadel Sec., Virtu, Jane Street, IMC, Flow Traders | LCH (EquityClear), EuroCCP | Euroclear FR/BE | AMF (FR), FSMA (BE) |
+| **Dublin (IE)** | Euronext Dublin | Davy, Goodbody; (plus globals) | SIG (Dublin), Jane Street, Citadel Sec., Virtu | EuroCCP, Eurex Clearing | Euroclear Ireland (via Euroclear Bank) | CBI (Central Bank of Ireland) |
+| **Luxembourg (LU)** | LuxSE | (Focus on funds admin/custody; IB via globals) | (EU MMs via other hubs) | LCH / Eurex (access) | Clearstream Banking Luxembourg | CSSF |
+|
+
 
 #### Market Access & Account Setup
-Most institutions access markets either via **Direct Market Access (DMA)**—becoming an exchange member to submit orders directly—or **via a broker**, which is the standard, lower-cost path for individuals and smaller firms.  
-When you open a **brokerage account**, the broker also arranges a **Demat/CSD account** where the securities you buy will be held electronically.
+- (1)DMA via broker (most common): You are not an exchange member; you use the broker’s membership/infrastructure with mandatory pre-trade risk checks (limits, controls).
+
+- (2)DMA as a member: You become an exchange member yourself (costly; capital/technology/compliance requirements). Used by hedge funds, prop desks, and large institutions.
+
+      Advantages : Lower latency, fine grained control (routing, order type) and execution transparency.
+      Constraints : Technical requirements, pre-trade risk control(automatic checks applied before your        order reaches the exchange, to stop bad or dangerous orders, these action add friction, cost and limits even though they are necessary), compliance and higher fixed cost. 
+      
+When an investor opens a brokerage account, the broker also sets up a demat/custody account for the investor with (or through) a CSD participant. The top-level CSD account is held by the CSD participant (e.g., the broker/custodian/bank), not by the retail investor or a typical small trading firm.
+
+(Exception: only firms that become direct CSD participants hold their own CSD accounts.)
 
 #### Trading Workflow (End-to-End)
 1. **Order placement:** You place a buy/sell order with your broker (price, quantity, order type).
@@ -385,8 +400,26 @@ When you open a **brokerage account**, the broker also arranges a **Demat/CSD ac
 3. **Clearing:** A clearing member reports the trade to the clearing house, which **nets** obligations and manages risk between counterparties.
 4. **Settlement:** On settlement date, **cash** moves to the seller and **securities** move to the buyer’s **Demat/CSD** account; books and records are updated.
 
+```mermaid
+sequenceDiagram
+  participant Inv as Investor
+  participant Brk as Broker
+  participant Ex as Exchange
+  participant Clr as Clearing
+  participant CSD as CSD/Demat
+  participant Cash as Cash leg
+
+  Inv->>Brk: Place order
+  Brk->>Ex: Route order
+  Ex->>Ex: Match (execution)
+  Ex->>Clr: Trade details
+  Clr->>CSD: Deliver securities (DvP)
+  Clr->>Cash: Deliver cash (DvP)
+  CSD-->>Inv: Holdings updated
+```
+
 #### Investor Touchpoints
-As an investor, you typically **interact only with your broker** for onboarding, funding, order entry, confirmations, and statements. The exchange, clearing house, and CSD work **behind the scenes**, so the end-to-end process often appears like a black box.
+As an investor, you typically **interact only with your broker** for onboarding, funding, order entry, confirmations, and statements. The exchange, clearing house, and CSD work **behind the scenes**, so the end to end process often appears like a black box.
 
 #### Regulator’s Role
 The regulator defines market rules, licensing and conduct standards, disclosure requirements, and surveillance mechanisms. It aims to ensure **fair, orderly, and efficient markets** and **protect investors** through oversight and enforcement.
