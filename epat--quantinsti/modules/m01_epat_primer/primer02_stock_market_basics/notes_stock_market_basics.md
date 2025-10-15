@@ -5,10 +5,10 @@ Instruments (equities, bonds, FX, derivatives), Primary vs. Secondary markets, T
 ---
 # 1. Introduction to Financial Market
 
-## Markets in General
+### Markets in General
 In general markets are simply the places where stuff get traded in order to make profit. When it comes to financial market the actor gather together to transact on financial instrument. Like in our day to day life, we also have Online Financial Market place (similar to amazon in real world) or Physical premise.
 
-## The Major Financial Markets
+### The Major Financial Markets
 Financial markets can be split into **Stock markets**, **Commodity markets**, **Currency Markets**, **Derivative Markets** and so on.
 
 **Stock markets** : It's the place where we trade the share or stock of a compagny also called Stock Exchange.
@@ -42,29 +42,29 @@ Financial markets can be split into **Stock markets**, **Commodity markets**, **
 
 # 2. Need for Financial Markets
 
-## Why We Need Financial Markets
+### Why We Need Financial Markets
 In every economy,financial markets connect investor (those who bring capital on the table) to business owner and governement ( the users of this capital). Thus, thanks to this main function, the financial markets become very critical for the good health of any country's economic because they fund public projet and private expansion.
 
-## What Financial Markets Enable
+### What Financial Markets Enable
 
-### Capital raising (primary market)
+#### Capital raising (primary market)
 The governments finance infrastructure buy selling debts (treasury bonds), The firms finance growth (more R&D, hiring, capacity) by selling share.
 
-### Investment access (for individual)
+#### Investment access (for individual)
 Instead of leaving money idle in a bank, individual can invest this money and plays a relevant role in the economy growth. Obviously, they will expect a return and reward for this investment.
 
-## Diversification
+### Diversification
 The thousands of listed securities across stock exchanges worldwide allow investors to diversify their portfolios and to manage their risk.
 
-## Indices as Economic health indicators
+### Indices as Economic health indicators
 The stock indices aggregate company performance and often act as **leading indicators, a bellwether for broader ecomomy.
 
-## Risk management (derivatives)
+### Risk management (derivatives)
 Firms and producers can hedge price risks using forwards, futures, options.
 
 example: a wheat farmer who fears fall of the prices can sells wheat forwards to lock today's price and stabilize revenues.
 
-## Summary
+### Summary
 **Connect capital**: savers → projects (public & private).
 **Enable investing**: households can grow wealth with the economy.
 **Inform the cycle**: indices help track macro conditions.
@@ -74,32 +74,32 @@ example: a wheat farmer who fears fall of the prices can sells wheat forwards to
 
 # 3. Introduction to Financial Instrument
 
-## Definition - What Gets Traded
+### Definition - What Gets Traded
 Financial instrument are legal agreements where one party pay cash (or value) in exchange for a claim. According to International Accounting Standards (IAS), a Financial Instrument is any contract that creates a financial asset for one entity and a financial liability or equity instrument for another
 
 In practice, when it comes to **equity**, the investor pays cash and receives an **ownership claim (shares)** which may carry **voting right** and **dividend** depending of the share class and company policy.
 
 When it comes to **debt or bond**, the investor pays cash and receives **a creditor claim (a loan to the issuer of the debt)**. Here there are no ownership and tipically no dividend. The investor generally receives a **coupon payments (based on the bond's term)** + a **repayment of principal at maturity**
 
-## Purpose and Economic Role
+### Purpose and Economic Role
 Financial markets act as a channel to move money from the investors (providers) to the users( firms/government) at the lowest cost (fast, transparent, competitive).
 
 Simple image: pipes carrying savings to useful projects.
 
-## Classification by Asset Class
+### Classification by Asset Class
 | Equity-based | Debt-based | Currency instruments |
 |---|---|---|
 | Represent ownership (common shares). | Represent a loan/obligation (bonds/notes). | Neither equity nor debt, X is usually treated as a separate category. |
 
 Identification (Tickers & Listings): Each instrument has a symbol/ticker ( Microsoft = MSFT on NASDAQ). Some shares may be traded on multiple exchanges.
 
-## Classification by Instrument Type
+### Classification by Instrument Type
 | Category | Description |
 |---|---|
 | Cash instruments | Value determined directly by the market; typically easily transferable (e.g., stocks, bonds, deposits). |
 | Derivative instruments | Value derived from an underlying (equities, interest rates, FX, commodities), traded OTC or on an exchange (forwards, futures, options, swaps). |
 
-## Trading Channels
+### Trading Channels
 | Channel | Description |
 |---|---|
 | OTC (over-the-counter) | Trades negotiated directly between participants. |
