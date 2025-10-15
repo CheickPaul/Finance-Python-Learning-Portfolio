@@ -63,15 +63,12 @@ C3 -.-> Lx
 ### IPO Process — Message Flow (Sequence)
 ```mermaid
 sequenceDiagram
-%% Legend (shows what arrow styles mean)
-  %% Solid = primary/action ; Dashed = info/secondary
-  Note over Co,Inv: Legend — Solid (->>) = primary/action • Dashed (-->>) = info/secondary
-
   participant Co as Company
   participant UW as Underwriters
   participant Reg as Regulator
   participant Ex as Exchange CCP
   participant Inv as Investors
+Note over Co,Ex: Legend — Solid (->>) = action • Dashed (-->>) = info
 
   Co->>UW: 1 Decide to go public
   Co->>UW: 2 Select advisors and mandate
