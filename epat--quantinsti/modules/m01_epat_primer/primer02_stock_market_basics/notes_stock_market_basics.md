@@ -160,6 +160,7 @@ The first one is where issuance happens and the second one where trading among i
 # 6. Initial Public Offering (IPO) Process 
 
 ```mermaid
+%%{init: {'flowchart': {'wrap': true}} }%%
 flowchart TD
   A[Company goes public] --> B[Select advisors]
   B --> C[Due diligence and prospectus]
