@@ -356,12 +356,12 @@ A single trade involves more entities and not only the stock exchange. Indeed, i
   *below the default waterfall process*
   ```mermaid
   flowchart TD
-  A[Member default] --> B[Use defaulter's margin <br/>(initial+daily variation)]
-  B --> C[Consume the defaulter's default fund slice]
-  C --> D[The CCP's own capital layer is applied <br/>(skin-in-the-game)]
-  D --> E[Use mutualized default fund<br/>(If surviving members)]
-  E --> F[Call assessments<br/>(If allowed, call additional contributions from surviving members under pre-set caps)]
-  F --> G[Recovery / specific recovery tools]
+  A[Member default] --> B[Use defaulter margin<br/>initial and daily variation]
+  B --> C[Use defaulter default fund slice]
+  C --> D[Apply CCP capital<br/>skin in the game]
+  D --> E[Use mutualized default fund<br/>surviving members]
+  E --> F[Call assessments<br/>extra calls on survivors]
+  F --> G[Recovery or wind down tools]
 ```
 
 - **CSD / Demat (Central Securities Depository):** Holds securities in electronic form and updates ownership after settlement.
