@@ -160,11 +160,22 @@ The first one is where issuance happens and the second one where trading among i
 # 6. Initial Public Offering (IPO) Process 
 
 ```mermaid
-flowchart LR
-  A[Start] --> B{Test OK?}
-  B -->|Yes| C[Mermaid works]
-  B -->|No| D[Check settings]
-
-  flowchart LR
-  A[Start] --> B[Test OK?]
+flowchart TD
+  A[Company goes public] --> B[Select advisors]
+  B --> C[Due diligence and prospectus]
+  C --> D[Regulatory review and approval]
+  D --> E[Valuation and price range]
+  E --> F[Investor education and roadshow]
+  F --> G[Book building collect demand]
+  G --> H{Underwriting model}
+  H --> H1[Firm commitment bank buys then resells]
+  H --> H2[Best efforts bank places no purchase]
+  H --> H3[Other models all or none mini maxi direct listing]
+  H1 --> I[Pricing and allocation]
+  H2 --> I
+  H3 --> I
+  I --> J[Listing on exchange first day of trading]
+  J --> K[Stabilization Greenshoe]
+  K --> L[Settlement and delivery T plus 2]
+  L --> M[Post IPO lock ups and ongoing disclosures]
 ```
