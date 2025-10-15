@@ -339,6 +339,39 @@ Examples: Long-only funds and pensions (BlackRock, Vanguard, Capital Group), hed
 
 # 7. Introduction to Various Intermediaries
 
+A single trade involves more entities and not only the stock exchange. Indeed, in order to execute one trade, multiple specialized entities coordinate so that orders can be placed, matched, cleared, and settled safely. 
+
+#### Key Intermediaries
+- **Exchange (matching engine) :** Their role is to host the order book and matches buy/sell orders using its matching rules.
+- **Broker:** The role of broker is to provide client access to markets, routes orders to venues (exchange), and offers account services and reporting. They make money by adding comissions/fees to ther transaction and/or by selling retail Order Flow to Market Makers or wholesalers.
+- **Market Maker:** His goal is to provide liquidity to the market by posting continuous 2 sided quotes (bid/ask) and filling orders as principal on venues. Their earning comes bid-ask spread. its key risk is informed flow, orders likely driven by new informations whose can move price against them. ( they mitigate this riks by widening the spreads and hedging quickly. 
+- **Clearing member / Clearing house:**. Nets trades, manages counterparty risk, and ensures final cash/securities settlement.
+- **CSD / Demat (Central Securities Depository):** Holds securities in electronic form and updates ownership after settlement.
+- **Regulator:** Sets the rules, supervises participants, and enforces market integrity and investor protection.
+
+#### Market Access & Account Setup
+Most institutions access markets either via **Direct Market Access (DMA)**—becoming an exchange member to submit orders directly—or **via a broker**, which is the standard, lower-cost path for individuals and smaller firms.  
+When you open a **brokerage account**, the broker also arranges a **Demat/CSD account** where the securities you buy will be held electronically.
+
+#### Trading Workflow (End-to-End)
+1. **Order placement:** You place a buy/sell order with your broker (price, quantity, order type).
+2. **Routing & execution:** The broker forwards the order to the exchange, where it is matched against opposing orders—this is the **execution**.
+3. **Clearing:** A clearing member reports the trade to the clearing house, which **nets** obligations and manages risk between counterparties.
+4. **Settlement:** On settlement date, **cash** moves to the seller and **securities** move to the buyer’s **Demat/CSD** account; books and records are updated.
+
+#### Investor Touchpoints
+As an investor, you typically **interact only with your broker** for onboarding, funding, order entry, confirmations, and statements. The exchange, clearing house, and CSD work **behind the scenes**, so the end-to-end process often appears like a black box.
+
+#### Regulator’s Role
+The regulator defines market rules, licensing and conduct standards, disclosure requirements, and surveillance mechanisms. It aims to ensure **fair, orderly, and efficient markets** and **protect investors** through oversight and enforcement.
+
+#### Takeaways
+- A completed trade relies on **multiple intermediaries**, not just the exchange.  
+- **Access paths:** DMA for members vs. **broker** for most investors.  
+- **Finality:** Clearing and CSD/Demat custody are essential to move cash and update ownership safely.
+
+---
+
 # 8. Brokers
 
 # 9. Central Securities Depository
