@@ -52,13 +52,16 @@ I1 --- U4
 I1 --- X1
 
 %% --- Explanatory callouts (short and wrapped)
-Kx[Greenshoe up to 15%<br/>to help stabilize price]
-Tx[T+2: cash & shares delivered<br/>in two business days]
-Lx[Post IPO: insider lock ups<br/>90 to 180 days + periodic reports]
+Kx[Greenshoe up to 15%<br/>to stabilize price]
+Tx[T+2: cash & shares<br/>in 2 business days]
+L1[Post IPO:<br/>lock ups 90–180d]
+L2[Post IPO:<br/>periodic reports]
 
 U7 -.-> Kx
 X2 -.-> Tx
-C3 -.-> Lx
+C3 -.-> L1
+C3 -.-> L2
+
 ```
 ### IPO Process — Message Flow (Sequence)
 ```mermaid
