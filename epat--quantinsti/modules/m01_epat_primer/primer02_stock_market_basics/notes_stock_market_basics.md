@@ -400,6 +400,45 @@ When an investor opens a brokerage account, the broker also sets up a demat/cust
 3. **Clearing:** A clearing member reports the trade to the clearing house, which **nets** obligations and manages risk between counterparties.
 4. **Settlement:** On settlement date, **cash** moves to the seller and **securities** move to the buyer’s **Demat/CSD** account; books and records are updated.
 
+*trading Workflow (end-to-end) - Roles & Steps*
+```mermaid
+flowchart LR
+
+subgraph Inv[Investor]
+  I1[Place order]
+end
+
+subgraph Brk[Broker]
+  B1[Route order]
+end
+
+subgraph Ex[Exchange]
+  E1[Match (execution)]
+end
+
+subgraph Clr[Clearing]
+  C1[Net obligations]
+  C2[Risk mgmt]
+end
+
+subgraph CSD[CSD / Demat]
+  S1[Deliver shares]
+  S2[Update holdings]
+end
+
+subgraph Cash[Cash leg]
+  K1[Pay seller]
+end
+
+I1 --> B1 --> E1 --> C1 --> C2 --> S1
+C2 --> K1
+S1 --> S2
+K1 --> S2
+```
+
+
+*trading Workflow (end-to-end) - Message Flow (Sequence)*
+
 ```mermaid
 sequenceDiagram
   participant Inv as Investor
