@@ -355,13 +355,34 @@ A single trade involves more entities and not only the stock exchange. Indeed, i
 
   *below the default waterfall process*
   ```mermaid
-  flowchart TD
-  A[Member default] --> B[Use defaulter margin<br/>initial and daily variation]
-  B --> C[Use defaulter default fund slice]
-  C --> D[Apply CCP capital<br/>skin in the game]
-  D --> E[Use mutualized default fund<br/>surviving members]
-  E --> F[Call assessments<br/>extra calls on survivors]
-  F --> G[Recovery or wind down tools]
+  flowchart LR
+classDef spacer fill:none,stroke:none;
+
+%% Row 1
+subgraph R1[ ]
+direction LR
+  A[Member default] --> B[Use defaulter margin]
+  B --> C[Use defaulter DF slice]
+end
+
+%% Row 2
+subgraph R2[ ]
+direction LR
+  D[Apply CCP capital] --> E[Use mutual DF]
+  E --> F[Assessments: extra calls]
+end
+
+%% Row 3 (pad with spacers to keep 3 slots)
+subgraph R3[ ]
+direction LR
+  G[Recovery / wind down tools] --> S1[ ] --> S2[ ]
+end
+
+%% Vertical flow between rows
+C --> D
+F --> G
+
+class S1,S2 spacer;
 ```
 
 - **CSD / Demat (Central Securities Depository):** Holds securities in electronic form and updates ownership after settlement.
