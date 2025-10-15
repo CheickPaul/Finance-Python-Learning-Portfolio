@@ -413,12 +413,12 @@ subgraph Brk[Broker]
 end
 
 subgraph Ex[Exchange]
-  E1[Match (execution)]
+  E1[Match / execution]
 end
 
 subgraph Clr[Clearing]
   C1[Net obligations]
-  C2[Risk mgmt]
+  C2[Risk management]
 end
 
 subgraph CSD[CSD / Demat]
@@ -434,6 +434,7 @@ I1 --> B1 --> E1 --> C1 --> C2 --> S1
 C2 --> K1
 S1 --> S2
 K1 --> S2
+
 ```
 
 
