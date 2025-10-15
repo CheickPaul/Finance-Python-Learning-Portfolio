@@ -344,12 +344,26 @@ A single trade involves more entities and not only the stock exchange. Indeed, i
 #### Key Intermediaries
 - **Exchange (matching engine) :** Their role is to host the order book and matches buy/sell orders using its matching rules.
   
-- **Broker:** The role of broker is to provide client access to markets, routes orders to venues (exchange), and offers account services and reporting. They make money by adding comissions/fees to ther transaction and/or by selling retail Order Flow to Market Makers or wholesalers.
+- **Broker:** The role of broker is to provide client access to markets, routes orders to venues (exchange), and offers account services and reporting. They make money by adding comissions/fees to their transaction and/or by selling retail Order Flow to Market Makers or wholesalers.
   
-- **Market Maker:** His goal is to provide liquidity to the market by posting continuous 2 sided quotes (bid/ask) and filling orders as principal on venues. Their earning comes bid-ask spread. its key risk is informed flow, orders likely driven by new informations whose can move price against them. ( they mitigate this riks by widening the spreads and hedging quickly.
+- **Market Maker:** His goal is to provide liquidity to the market by posting continuous 2 sided quotes (bid/ask) and filling orders as principal on venues. Their earning comes bid-ask spread and maker rebates. Its key risk is informed flow orders likely driven by new informations whose can move price against them. They mitigate this riks by widening the spreads, adjusting size and hedging quickly.
   
-- **Clearing member / Clearing house:**. Nets trades, manages counterparty risk, and ensures final cash/securities settlement.
-  
+- **Clearing member / Clearing house:** They sit between buyers and sellers after a trade. It novates the trade (becomes buyer to every seller and seller to every buyer) and manage counterparty risk via marging (initial + daily variation) and a well structured **default waterfall:**
+
+[ 1. Defaulter's Margin → 2. Defaulter’s default-fund contribution ( Default fund is a mutual safety pool prefunfunded mainly by all CCP members and partially by investor) → 3. CCP capital (" Skin in the game") → 4. Mutualized default fund (pool prefunded by all CCP's members used after the CCP's skin)→ 5. Assesment(additional calls on surviving members) → 6.Recovery / wind-down tools 
+
+
+  *below the default waterfall process*
+  ```mermaid
+  flowchart TD
+  A[Member default] --> B[Use defaulter's margin(initial+daily variation)]
+  B --> C[Consume the defaulter's default fund slice]
+  C --> D[The CCP's own capital layer is applied <br/>(skin-in-the-game)]
+  D --> E[Use mutualized default fund<br/>(If surviving members)]
+  E --> F[Call assessments<br/>(If allowed, call additional contributions from surviving members under pre-set caps)]
+  F --> G[Recovery / specific recovery tools]
+```
+
 - **CSD / Demat (Central Securities Depository):** Holds securities in electronic form and updates ownership after settlement.
   
 - **Regulator:** Sets the rules, supervises participants, and enforces market integrity and investor protection.
