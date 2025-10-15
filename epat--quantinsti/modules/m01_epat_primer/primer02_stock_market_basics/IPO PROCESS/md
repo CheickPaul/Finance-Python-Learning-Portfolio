@@ -1,5 +1,4 @@
 ```mermaid
-
 flowchart TD
   A[Company decides to go public] --> B[Select advisors (IB/underwriters, legal, auditors)]
   B --> C[Due diligence & draft prospectus]
