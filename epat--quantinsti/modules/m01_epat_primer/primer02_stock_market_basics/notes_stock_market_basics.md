@@ -383,6 +383,8 @@ In IPOs: the regulator reviews and approves the offering document, declares a re
 
 
 #### Market Access & Account Setup
+<u>Market Access &amp; Account Setup</u>
+
 - (1)DMA via broker (most common): You are not an exchange member; you use the broker’s membership/infrastructure with mandatory pre-trade risk checks (limits, controls).
 
 - (2)DMA as a member: You become an exchange member yourself (costly; capital/technology/compliance requirements). Used by hedge funds, prop desks, and large institutions.
@@ -471,12 +473,101 @@ The regulator defines market rules, licensing and conduct standards, disclosure 
 
 ---
 
-# 8. Brokers
+# 8. Market Microstructure & Execution (Advanced)
+DRAFT :
 
-# 9. Central Securities Depository
+Understand queue mechanics, priority rules, and liquidity metrics.
 
-# 10. Stock Exchange
+Master venue/order-type differences and routing choices.
 
-# 11. Clearinghouse
+Outline
 
-# 12. Financial Regulator
+Priority & Queues
+
+Price–Time vs Pro-Rata vs Size priority
+
+Queue position, queue-jumping (pegs, midpoint, hidden/iceberg)
+
+Liquidity & Costs
+
+Spread, depth, impact, slippage; maker–taker fees/rebates
+
+Fill probability, toxicity (short-term alpha), volatility
+
+Order Types (by family)
+
+Limit, Market, IOC/FOK, Pegged (primary/mid/market), Iceberg, Hidden
+
+Post-Only, Reduce-Only, MinQty/Discretion, Stop/Trail (risk use)
+
+Routing & Venue Mix
+
+Lit vs Dark (midpoint), MTFs/ATS, SOR logic (price/size/latency/fees)
+
+Timing
+
+Auctions (Open/Close/IO), continuous trading, halts/volatility auctions
+
+Microstructure Metrics (quick kit)
+
+Effective/realized spread, markout, venue hit-rate, reversion
+
+(Add a Mermaid sequence for “Order → SOR → Venues (lit/dark) → Fills → TCA”.)
+
+---
+
+# 9.Client Assets, Clearing Accounts & Settlement (Advanced)
+
+Know how client assets are protected and how accounts are structured across clearing/custody.
+
+Understand EU/UK settlement rules and penalties.
+
+Outline
+
+Account Models
+
+Omnibus vs Segregated (at CCP/CSD/custodian)
+
+ISA/OSA (individual vs omnibus segregated at CCPs)
+
+Porting mechanics in member default
+
+Client Asset Protection
+
+Custody chains, rehypothecation limits, bankruptcy remoteness
+
+Statements, reconciliations, record-keeping
+
+Clearing Account Flows
+
+House vs Client accounts; give-ups; client margin collection
+
+Collateral types, haircuts, concentration limits
+
+Settlement & Penalties
+
+EU CSDR: T+2, fail penalties, buy-ins (framework)
+
+Partial settlement, Hold/Release, shaping
+
+Corporate Actions Ops
+
+Mandatory vs voluntary events; elections; deadlines; entitlement calc
+
+Cross-Border & ICSDs
+
+Euroclear/Clearstream bridges; FX/cash accounts; local sub-custody
+
+(Add a Mermaid flow: Trade → CCP house/client → CSD DvP → Custodian/Demat → Corporate actions.)
+
+# 10. Brokers
+
+# MM
+
+# 11. Central Securities Depository
+
+# 12. Stock Exchange
+
+# 13. Clearinghouse
+
+# 14. Financial Regulator
