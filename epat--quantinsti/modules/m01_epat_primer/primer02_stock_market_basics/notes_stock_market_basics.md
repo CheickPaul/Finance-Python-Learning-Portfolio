@@ -382,8 +382,7 @@ In IPOs: the regulator reviews and approves the offering document, declares a re
 |
 
 
-#### Market Access & Account Setup
-<u>Market Access &amp; Account Setup</u>
+<h4><ins>Market Access &amp; Account Setup</ins></h4>
 
 - (1)DMA via broker (most common): You are not an exchange member; you use the broker’s membership/infrastructure with mandatory pre-trade risk checks (limits, controls).
 
