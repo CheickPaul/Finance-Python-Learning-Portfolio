@@ -364,7 +364,7 @@ flowchart LR
   
   
 - **Regulator:** Sets the rules, licenses and supervises participants, and enforces fair, orderly, transparent markets with investor protection.
-In IPOs: the regulator reviews and approves the offering document (disclosure-based)—e.g., declares a registration effective (US) or approves the prospectus (UK/EU)—while the exchange separately decides on listing/admission.
+In IPOs: the regulator reviews and approves the offering document (disclosure-based)—e.g., declares a registration effective (US) or approves the prospectus (UK/EU) while the exchange separately decides on listing/admission.
 
 | Role | Principal names (examples) |
 |---|---|
