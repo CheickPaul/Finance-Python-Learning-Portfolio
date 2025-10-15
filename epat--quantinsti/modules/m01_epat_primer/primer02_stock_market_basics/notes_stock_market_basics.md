@@ -353,34 +353,38 @@ A single trade involves more entities and not only the stock exchange. Indeed, i
 [ 1. Defaulter's Margin → 2. Defaulter’s default-fund contribution ( Default fund is a mutual safety pool prefunfunded mainly by all CCP members and partially by investor) → 3. CCP capital (" Skin in the game") → 4. Mutualized default fund (pool prefunded by all CCP's members used after the CCP's skin)→ 5. Assesment(additional calls on surviving members) → 6.Recovery / wind-down tools 
 
 
-  *below the default waterfall process*
+  *below the default waterfall process*,
+  
   ```mermaid
-  flowchart LR
+ flowchart TB
 classDef spacer fill:none,stroke:none;
 
-%% Row 1
-subgraph R1[ ]
+%% Level 1 (3 cells)
+subgraph L1[ ]
 direction LR
-  A[Member default] --> B[Use defaulter margin]
-  B --> C[Use defaulter DF slice]
+  A[Defaulter margin]
+  B[Defaulter DF slice]
+  C[CCP capital]
 end
 
-%% Row 2
-subgraph R2[ ]
+%% Level 2 (3 cells)
+subgraph L2[ ]
 direction LR
-  D[Apply CCP capital] --> E[Use mutual DF]
-  E --> F[Assessments: extra calls]
+  D[Mutualized DF]
+  E[Assessments]
+  F[Recovery tools]
 end
 
-%% Row 3 (pad with spacers to keep 3 slots)
-subgraph R3[ ]
+%% Level 3 (1 visible cell + 2 spacers to keep 3 slots)
+subgraph L3[ ]
 direction LR
-  G[Recovery / wind down tools] --> S1[ ] --> S2[ ]
+  G[Wind down / resolution]
+  S1[ ]
+  S2[ ]
 end
 
-%% Vertical flow between rows
-C --> D
-F --> G
+%% Waterfall sequence (left-to-right, then next row)
+A --> B --> C --> D --> E --> F --> G
 
 class S1,S2 spacer;
 ```
