@@ -120,7 +120,7 @@ Note over Co,Ex: Legend : Solid (->>) = action • Dashed (-->>) = info
 | 13 | Settlement T+2 | CCP, custodians, brokers | Cash ↔ shares in two business days | Final settlement | Settlement fails, fail coverage |
 | 14 | Post-IPO | Company, IR | Lock-ups 90–180 days; periodic reporting | 10-Q/10-K or local reports | IR calendar, guidance, blackout windows |
 
-## IPO - role cards 
+### IPO - role cards 
 
 **Underwriters / Bookrunners**  
 Design the deal, run education/roadshow, build the order book, set price/allocation, and may stabilize (greenshoe).  
