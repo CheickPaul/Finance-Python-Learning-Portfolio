@@ -595,16 +595,19 @@ Execution & routing: can route to exchanges/venues or MM ; pre-trade risk checks
 *Cons:* costly, potential conflicts (product shelves/revenue sharing), less DIY focus.
     
 
-- **Broker-dealer (can internalize)** This broker is also a dealer. It can internalizes meaning execute your order against its own book (fill from its own inventory/quote; called principal trade) and become the counterparty or route it to venues (Agency trade). When it internalizes, it may give price improvement (better than the quoted price) and very fast fills. Revenues come from spread capture, maker–taker fees/rebates, and Pay For Order Flow (PFOF); agency commissions may also apply. Conflicts must be managed (best-execution duty, disclosures, routing reports). Indeed, if the broker-dealer decide to internalize, it must give a result at least as good as routing externally. 
+- **Broker-dealer (can internalize) :** This broker is also a dealer. It can internalizes meaning execute your order against its own book (fill from its own inventory/quote; called principal trade) and become the counterparty or route it to venues (Agency trade). When it internalizes, it may give price improvement (better than the quoted price) and very fast fills. Revenues come from spread capture, maker–taker fees/rebates, and Pay For Order Flow (PFOF); agency commissions may also apply. Conflicts must be managed (best-execution duty, disclosures, routing reports). Indeed, if the broker-dealer decide to internalize, it must give a result at least as good as routing externally. 
 
 Hedging : Even if it fills you internally, the broker-dealer will often hedge its position on an exchange/ MTF/ATS or with another market maker after your trade. Furthermore, if the broker-dealer doesn't want the risk, lacks inventory or quotes, or internalizations wouldn't meet its best expectation
 
   *Who uses it:* both retail (via wholesaler models) and institutions (high-touch or algo/SOR flow).    
   *Pros:* potential price improvement, fast fills. *Cons:* conflicts to manage; disclosures.
 
-- **Prime broker (institutional)**  
-  For hedge funds/prop: financing, margin/netting, custody, short-borrows, capital intro, reporting.  
-  *Pros:* end-to-end service + balance-sheet. *Cons:* high minimums, complex agreements.
+- **Prime broker (institutional) :** A prime broker (PB) is an institutional broker that provides the infrastructure and balance sheet a fund needs to trade at scale. The PB finances positions & margin (credit line; cross-margin across cash/futures/swaps; haircuts on position)
+  
+Execution : Fund trades via multiple executing brokers/algos/venues. The fills are then give up to the PB for clear(novate trade)/custody(holding and safeguarding customer's securities to prevent damage,loss or theft)/financing
+
+  *Who uses it:* hedge funds, prop firms, active family offices needing leverage, shorting, custody, and operational scale.    
+  *Pros:* end to end service + balance-sheet. *Cons:* high minimums, complex agreements.
 
 - **Introducing broker (IB)**  
   Brings clients, handles front-end/service; trades clear/settle at a **clearing broker**.  
