@@ -609,12 +609,14 @@ Execution : Fund trades via multiple executing brokers/algos/venues. The fills a
   *Who uses it:* hedge funds, prop firms, active family offices needing leverage, shorting, custody, and operational scale.    
   *Pros:* end to end service + balance-sheet. *Cons:* high minimums, complex agreements.
 
-- **Introducing broker (IB)**  
-  Brings clients, handles front-end/service; trades clear/settle at a **clearing broker**.  
-  *Pros:* local service, lower setup. *Cons:* relies on another firm for execution/custody.
+- **Introducing broker (IB) :**  An IB brings clients and provides the front-end service (onboarding, platform/help). It does not hold client assets or clear trades. Instead, orders are routed to the clearing broker(also called carrying broker). This carrying broker also handles execution, clearing, custody. IB earns introducing commission, clearing earns by charging for execution, clearing and custody then pays back the introducing broker depending of their agreement.
 
-- **White-label broker**  
-  rand on another broker’s tech/licence.  
+*Who uses it:* Client who want local services, small brokers or fintech who want to launch quickly.
+ *Pros:* local service, lower setup. *Cons:* relies on another firm for execution/custody.
+
+- **White-label broker :**  A white label broker operates under its own brand but on another broker’s technology, license, and infrastructure. The underlying provider handles all the technical services. The white label broker is in charge of branding, client acquisition and front-end (often with limited customization).
+  
+  *Who uses it:* fintechs, startups that want to launch fast without building full brokerage infrastructure.
   *Pros:* quick to launch.
   *Cons:* dependency on the underlying provider.
 
@@ -626,14 +628,6 @@ Execution : Fund trades via multiple executing brokers/algos/venues. The fills a
   Safekeeping, settlement, corporate actions; may not offer execution.  
   *Pros:* strong asset protection. *Cons:* need a separate exe
 
-
-<h4><ins> Services</ins></h4>
-
-- Account opening (KYC/AML), cash or margin accounts  
-- Order entry (platform / mobile / desktop / API), market data  
-- Custody (in-house or via custodian), corporate actions  
-- Margin lending; short selling (locates/borrows)  
-- Advisory / portfolio management; research/education (if applicable)
 
 <h4><ins> Market Access</ins></h4>
 
@@ -653,17 +647,6 @@ Execution : Fund trades via multiple executing brokers/algos/venues. The fills a
 - Price, likelihood of fill, speed, costs (holistic best-ex)  
 - High-level routing disclosures/policies
 
-<h4><ins> Risk Controls (Pre-Trade)</ins></h4>
-
-- Size/notional limits, price collars  
-- Credit/margin checks, rate limits/throttles  
-- Restricted lists, self-trade prevention
-
-<h4><ins> Accounts & Safekeeping</ins></h4>
-
-- Cash vs margin accounts  
-- Demat/custody via a CSD participant  
-- Omnibus vs segregated at custodian/CSD (brief)
 
 <h4><ins> Choosing a Broker (What to Check)</ins></h4>
 
@@ -690,6 +673,7 @@ flowchart LR
   D --> E[Clearing]
   E --> F[CSD / Custody<br/>settlement]
   F --> G[Confirmations<br/>statements]
+```
 
 
 # 11. Market Maker (MM)
