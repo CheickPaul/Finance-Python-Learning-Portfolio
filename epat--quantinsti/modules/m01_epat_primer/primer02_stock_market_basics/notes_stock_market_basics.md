@@ -620,8 +620,9 @@ Execution : Fund trades via multiple executing brokers/algos/venues. The fills a
   *Pros:* quick to launch.
   *Cons:* dependency on the underlying provider.
 
-- **Execution-only / Agency broker**  
-  Focus on best execution and routing (SOR), no research/advice, often for institutions.  
+- **Execution-only / Agency broker :**  Acts strictly as an agent, focuses on best execution and smart order routing (SOR) across exchanges, Multilateral Trading Facilities (MTFs), dark pools (venue where pre trade quote are hidden to reduce market impact). No involvent in research or investment advice. Does not trade against customer (no principal/internalization).
+
+  *Who uses it:* institutions and sophisticated clients who want low conflicts, advanced routing/algos, and price/venue expertise.
   *Pros:* low conflicts, price/venue expertise. *Cons:* limited extras.
 
 - **Custody-only (custodian bank)**  
