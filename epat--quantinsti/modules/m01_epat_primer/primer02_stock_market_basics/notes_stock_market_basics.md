@@ -625,9 +625,13 @@ Execution : Fund trades via multiple executing brokers/algos/venues. The fills a
   *Who uses it:* institutions and sophisticated clients who want low conflicts, advanced routing/algos, and price/venue expertise.
   *Pros:* low conflicts, price/venue expertise. *Cons:* limited extras.
 
-- **Custody-only (custodian bank)**  
-  Safekeeping, settlement, corporate actions; may not offer execution.  
-  *Pros:* strong asset protection. *Cons:* need a separate exe
+- **Custody-only (custodian bank):** It holds your securities at the CSD/ICSD through the bank’s participant accounts.
+It sends DvP settlement instructions, manages fails, and moves cash.
+It processes corporate actions (dividends, splits, rights issues, proxy voting) and handles tax reclaims/withholding.
+
+*Who uses it:* Funds, asset managers, family offices that want strong asset protection and industrial-grade ops, while using a separate executing broker for trades.
+
+  *Pros:* Robust asset protection. *Cons:* need a separate executing broker
 
 
 <h4><ins> Market Access</ins></h4>
