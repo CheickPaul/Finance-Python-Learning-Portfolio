@@ -347,7 +347,7 @@ A single trade involves more entities and not only the stock exchange. Indeed, i
   
 - **Broker:** The role of broker is to provide client access to markets, routes orders to venues (exchange), and offers account services and reporting. They make money by adding comissions/fees to their transaction and/or by selling retail Order Flow to Market Makers or wholesalers.
   
-- **Market Maker:** His goal is to provide liquidity to the market by posting continuous 2 sided quotes (bid/ask) and filling orders as principal on venues. Their earning comes bid-ask spread and maker rebates. Its key risk is informed flow orders likely driven by new informations whose can move price against them. They mitigate this riks by widening the spreads, adjusting size and hedging quickly.
+- **Market Maker:** His goal is to provide liquidity to the market by posting continuous 2 sided quotes (bid/ask) and filling orders as principal on venues. Their earning comes from bid-ask spread and maker rebates. Its key risk is informed flow orders likely driven by new informations whose can move price against them. They mitigate this riks by widening the spreads, adjusting size and hedging quickly.
   
 - **Clearing member / Clearing house:** They sit between buyers and sellers after a trade. It novates the trade (becomes buyer to every seller and seller to every buyer) and manage counterparty risk via marging (initial + daily variation) and a well structured **default waterfall:**
 
@@ -567,6 +567,77 @@ Euroclear/Clearstream bridges; FX/cash accounts; local sub-custody
 (Add a Mermaid flow: Trade → CCP house/client → CSD DvP → Custodian/Demat → Corporate actions.)
 
 # 10. Brokers
+
+- What a broker is, why most traders (retail & small institutions) use brokers vs. DMA.
+
+<h4><ins>2) What is a Broker?</ins></h4>
+- Separate from the exchange; connects you to venues; charges brokerage/commission.
+
+<h4><ins>3) Core Role</ins></h4>
+- Client access, account handling, order routing, confirmations/reporting.
+
+<h4><ins>4) Broker Types</ins></h4>
+- Retail/discount vs full-service  
+- Prime broker (institutional)  
+- Introducing broker (IB) / white-label  
+- Broker-dealer that can internalize
+
+<h4><ins>5) Services</ins></h4>
+- Account opening (KYC/AML), cash or margin accounts  
+- Order entry (platform / mobile / desktop / API), market data  
+- Custody (in-house or via custodian), corporate actions  
+- Margin lending; short selling (locates/borrows)  
+- Advisory / portfolio management; research/education (if applicable)
+
+<h4><ins>6) Market Access</ins></h4>
+- DMA via broker (most common)  
+- Venue connectivity (exchanges, MTFs, dark/ATS)  
+- Smart Order Router (SOR) basics
+
+<h4><ins>7) Fees & Revenue</ins></h4>
+- Commissions/fees; maker–taker rebates/fees  
+- Payment for Order Flow (where allowed)  
+- Interest on cash/margin; FX/ops fees  
+- Securities lending revenue share
+
+<h4><ins>8) Best Execution & Routing</ins></h4>
+- Price, likelihood of fill, speed, costs (holistic best-ex)  
+- High-level routing disclosures/policies
+
+<h4><ins>9) Risk Controls (Pre-Trade)</ins></h4>
+- Size/notional limits, price collars  
+- Credit/margin checks, rate limits/throttles  
+- Restricted lists, self-trade prevention
+
+<h4><ins>10) Accounts & Safekeeping</ins></h4>
+- Cash vs margin accounts  
+- Demat/custody via a CSD participant  
+- Omnibus vs segregated at custodian/CSD (brief)
+
+<h4><ins>11) Choosing a Broker (What to Check)</ins></h4>
+- Fees vs services, markets/venues covered  
+- Tools: web, mobile, desktop, APIs, call-to-trade  
+- Account entitlements (not all tools for all accounts)  
+- Full-service vs discount trade-offs
+
+<h4><ins>12) Examples</ins></h4>
+- Interactive Brokers, Robinhood, Merrill Lynch, Charles Schwab (+ local brokers)
+
+<h4><ins>13) Key Takeaways</ins></h4>
+- Broker = access + routing + safekeeping (directly or via custodian)  
+- Your cost = spread + fees + slippage; know routing and risk controls
+
+<h4><ins>Process: Order via Broker</ins></h4>
+
+```mermaid
+flowchart LR
+  A[Investor<br/>order entry] --> B[Broker<br/>pre-trade checks]
+  B --> C[SOR routing]
+  C --> D[Venue(s)<br/>execution]
+  D --> E[Clearing]
+  E --> F[CSD / Custody<br/>settlement]
+  F --> G[Confirmations<br/>statements]
+
 
 # MM
 
