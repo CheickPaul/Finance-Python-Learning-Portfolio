@@ -648,14 +648,16 @@ It processes corporate actions (dividends, splits, rights issues, proxy voting) 
 | **Luxembourg (LU)** | (Retail via EU platforms: DEGIRO, Saxo) | UBS WM LU, Julius Baer LU, local private banks | Citi/UBS/BNP (LU desks) | Agency via EU brokers (Paris/Frankfurt) | GS/MS/JPM/UBS PB (fund hub support) | White-label via bank/fund platforms | Clearstream Banking Luxembourg; State Street, J.P. Morgan Bank Luxembourg |
 | **North America (US/Canada)** | Robinhood, Charles Schwab, Interactive Brokers, Fidelity; Questrade, Wealthsimple Trade | Merrill Lynch (BofA), Morgan Stanley WM, UBS US WM, Raymond James; RBC Wealth, TD Wealth, BMO Nesbitt Burns, CIBC Wood Gundy, Scotia Wealth | Citadel Securities, Virtu, Two Sigma Securities, Jane Street (US ops) | Instinet, Liquidnet (TP ICAP), TD Cowen, BTIG; Virtu ITG Canada, Canaccord Genuity Exec. Svcs | Goldman Sachs PB, Morgan Stanley PB, J.P. Morgan PB, UBS PB, BofA Securities PB, Citi PB; RBC Prime Services, BMO Prime Brokerage, Scotiabank Prime Services | IBKR Introducing, Apex Clearing, DriveWealth, Alpaca; Fidelity Clearing Canada, NBCN (National Bank), CI Investment Services | BNY Mellon, State Street, Northern Trust, J.P. Morgan Custody; CIBC Mellon, RBC Investor & Treasury Services |
 
+*Note : Many names in this table ( JPM, Morgan Stanley, HSBC,Barclays, and so on ) are multi-line financial group and not just Investment bank. This conglomerate model means a single group can appear in multiple entities category (Broker, Investment bank, sales/trading, Securities services/custody).*
 
 <h4><ins> Market Access</ins></h4>
 
 **- DMA via broker (most common):**  With Direct Market Acess (DMA) via broker , the customer are not an exchange member; it use the broker’s membership/infrastructure with mandatory pre-trade risk checks (limits, controls).
   
-**- Venue connectivity (exchanges, MTFs, dark/ATS) :**
+**- Venue connectivity (exchanges, MTFs, dark/ATS) :** Brokers connect to multiple lit venue (exchange and MTFs) or dark pools and in EU/EK sometimes SIs (dealer quote streams).
+More venues = more liquidity sources and better routing choices but also more complexity, more fees.
   
-**- Smart Order Router (SOR) basics :**
+**- Smart Order Router (SOR) basics :** A Smart Oder Router (SOR) is and algorithmic system that decide where/when to send order accros lit venue, MTF or darkpool to get the best route with the overall outcome. In other word, it seeks the best route by balancing price, fees/rebates, speed/ latency and likelihood of fill 
 
 <h4><ins> Fees & Revenue</ins></h4>
 
