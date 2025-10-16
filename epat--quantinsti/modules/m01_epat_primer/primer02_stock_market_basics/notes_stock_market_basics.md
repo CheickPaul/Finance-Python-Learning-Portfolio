@@ -599,9 +599,7 @@ Execution & routing: can route to exchanges/venues or MM ; pre-trade risk checks
 
 Hedging : Even if it fills you internally, the broker-dealer will often hedge its position on an exchange/ MTF/ATS or with another market maker after your trade. Furthermore, if the broker-dealer doesn't want the risk, lacks inventory or quotes, or internalizations wouldn't meet its best expectation
 
-
-Who uses it: both retail (via wholesaler models) and institutions (high-touch or algo/SOR flow).    
-  *Who uses it:* both retail and institutions.  
+  *Who uses it:* both retail (via wholesaler models) and institutions (high-touch or algo/SOR flow).    
   *Pros:* potential price improvement, fast fills. *Cons:* conflicts to manage; disclosures.
 
 - **Prime broker (institutional)**  
