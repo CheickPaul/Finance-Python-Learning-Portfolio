@@ -570,60 +570,60 @@ Euroclear/Clearstream bridges; FX/cash accounts; local sub-custody
 
 - What a broker is, why most traders (retail & small institutions) use brokers vs. DMA.
 
-<h4><ins>2) What is a Broker?</ins></h4>
+<h4><ins> What is a Broker?</ins></h4>
 - Separate from the exchange; connects you to venues; charges brokerage/commission.
 
-<h4><ins>3) Core Role</ins></h4>
+<h4><ins> Core Role</ins></h4>
 - Client access, account handling, order routing, confirmations/reporting.
 
-<h4><ins>4) Broker Types</ins></h4>
+<h4><ins> Broker Types</ins></h4>
 - Retail/discount vs full-service  
 - Prime broker (institutional)  
 - Introducing broker (IB) / white-label  
 - Broker-dealer that can internalize
 
-<h4><ins>5) Services</ins></h4>
+<h4><ins> Services</ins></h4>
 - Account opening (KYC/AML), cash or margin accounts  
 - Order entry (platform / mobile / desktop / API), market data  
 - Custody (in-house or via custodian), corporate actions  
 - Margin lending; short selling (locates/borrows)  
 - Advisory / portfolio management; research/education (if applicable)
 
-<h4><ins>6) Market Access</ins></h4>
+<h4><ins> Market Access</ins></h4>
 - DMA via broker (most common)  
 - Venue connectivity (exchanges, MTFs, dark/ATS)  
 - Smart Order Router (SOR) basics
 
-<h4><ins>7) Fees & Revenue</ins></h4>
+<h4><ins> Fees & Revenue</ins></h4>
 - Commissions/fees; maker–taker rebates/fees  
 - Payment for Order Flow (where allowed)  
 - Interest on cash/margin; FX/ops fees  
 - Securities lending revenue share
 
-<h4><ins>8) Best Execution & Routing</ins></h4>
+<h4><ins> Best Execution & Routing</ins></h4>
 - Price, likelihood of fill, speed, costs (holistic best-ex)  
 - High-level routing disclosures/policies
 
-<h4><ins>9) Risk Controls (Pre-Trade)</ins></h4>
+<h4><ins> Risk Controls (Pre-Trade)</ins></h4>
 - Size/notional limits, price collars  
 - Credit/margin checks, rate limits/throttles  
 - Restricted lists, self-trade prevention
 
-<h4><ins>10) Accounts & Safekeeping</ins></h4>
+<h4><ins> Accounts & Safekeeping</ins></h4>
 - Cash vs margin accounts  
 - Demat/custody via a CSD participant  
 - Omnibus vs segregated at custodian/CSD (brief)
 
-<h4><ins>11) Choosing a Broker (What to Check)</ins></h4>
+<h4><ins> Choosing a Broker (What to Check)</ins></h4>
 - Fees vs services, markets/venues covered  
 - Tools: web, mobile, desktop, APIs, call-to-trade  
 - Account entitlements (not all tools for all accounts)  
 - Full-service vs discount trade-offs
 
-<h4><ins>12) Examples</ins></h4>
+<h4><ins> Examples</ins></h4>
 - Interactive Brokers, Robinhood, Merrill Lynch, Charles Schwab (+ local brokers)
 
-<h4><ins>13) Key Takeaways</ins></h4>
+<h4><ins> Key Takeaways</ins></h4>
 - Broker = access + routing + safekeeping (directly or via custodian)  
 - Your cost = spread + fees + slippage; know routing and risk controls
 
@@ -639,12 +639,12 @@ flowchart LR
   F --> G[Confirmations<br/>statements]
 
 
-# MM
+# 11. Market Maker (MM)
 
-# 11. Central Securities Depository
+# 12. Central Securities Depository
 
-# 12. Stock Exchange
+# 13. Stock Exchange
 
-# 13. Clearinghouse
+# 14. Clearinghouse
 
-# 14. Financial Regulator
+# 15. Financial Regulator
