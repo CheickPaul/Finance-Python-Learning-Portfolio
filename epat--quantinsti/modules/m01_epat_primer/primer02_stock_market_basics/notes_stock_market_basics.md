@@ -42,29 +42,29 @@ Financial markets can be split into **Stock markets**, **Commodity markets**, **
 
 # 2. Need for Financial Markets
 
-### 2.1 Why We Need Financial Markets
+#### Why We Need Financial Markets
 In every economy,financial markets connect investor (those who bring capital on the table) to business owner and governement ( the users of this capital). Thus, thanks to this main function, the financial markets become very critical for the good health of any country's economic because they fund public projet and private expansion.
 
-### 2.2 What Financial Markets Enable
+####  What Financial Markets Enable
 
-#### Capital raising (primary market)
+##### Capital raising (primary market)
 The governments finance infrastructure buy selling debts (treasury bonds), The firms finance growth (more R&D, hiring, capacity) by selling share.
 
-#### Investment access (for individual)
+##### Investment access (for individual)
 Instead of leaving money idle in a bank, individual can invest this money and plays a relevant role in the economy growth. Obviously, they will expect a return and reward for this investment.
 
-#### Diversification
+##### Diversification
 The thousands of listed securities across stock exchanges worldwide allow investors to diversify their portfolios and to manage their risk.
 
-#### Indices as Economic health indicators
+##### Indices as Economic health indicators
 The stock indices aggregate company performance and often act as **leading indicators, a bellwether for broader ecomomy.
 
-#### Risk management (derivatives)
+##### Risk management (derivatives)
 Firms and producers can hedge price risks using forwards, futures, options.
 
 example: a wheat farmer who fears fall of the prices can sells wheat forwards to lock today's price and stabilize revenues.
 
-### Summary
+#### Summary
 **Connect capital**: savers → projects (public & private).
 **Enable investing**: households can grow wealth with the economy.
 **Inform the cycle**: indices help track macro conditions.
@@ -337,7 +337,7 @@ Examples: Long-only funds and pensions (BlackRock, Vanguard, Capital Group), hed
 
 ---
 
-# 7. Introduction to Various Intermediaries
+# 7. Introduction to Various Intermediaries(= They facilitate others' trading)
 
 A single trade involves more entities and not only the stock exchange. Indeed, in order to execute one trade, multiple specialized entities coordinate so that orders can be placed, matched, cleared, and settled safely. 
 
@@ -669,14 +669,15 @@ More venues = more liquidity sources and better routing choices but also more co
 **- Interest on cash/margin; FX/ops fees :** Net interest on **idle cash** and **margin loans**; **FX conversion spreads**; operational fees (wire/withdrawal, custody/settlement pass-throughs, marketdata plans).
 
 
-**- Securities lending revenue share :** Revenue from lending out fully-paid or margin securities to short sellers. Some brokers share a portion with clients;
+**- Securities lending revenue share :** Revenue from lending out fully-paid or margin securities to short sellers. Some brokers share a portion with clients.
 
 
 <h4><ins> Best Execution & Routing</ins></h4>
 
-**- Price, likelihood of fill, speed, costs (holistic best-ex) :**
+**- Price, likelihood of fill, speed, costs (holistic best-ex) :** “Best execution” means the broker seeks the **best overall outcome** (generally through SOR). The strategy depends on customer **instructions** (urgent vs patient, lit-only vs allow dark).
 
-**- High-level routing disclosures/policies :**
+
+**- High-level routing disclosures/policies :** Brokers publish how they route orders (venues used, use of dark/SIs/wholesalers, internalization) and provide post-trade reports (where your order filled, timestamps). Policies explain when they post vs take, try midpoint/dark, or split across venues, and how fees/rebates and conflicts are handled all within their best execution framework.
 
 
 <h4><ins> Key Takeaways</ins></h4>
@@ -696,7 +697,7 @@ flowchart LR
 ```
 
 
-# 11. Market Maker (MM)
+# 11. Inside the Market Maker (MM) :  
 
 # 12. Central Securities Depository
 
