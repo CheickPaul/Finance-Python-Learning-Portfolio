@@ -576,9 +576,9 @@ The broker is the first link in the chain between investor's order and the marke
 <h4><ins> Broker Types</ins></h4>
 
 - **Retail / Discount broker**  : A retail(discount) broker focuses on execution and self directed trading (web,mobile,desktop,API) rather than advice. Their price offer tend to be low (zero comission) however, they charge the spread, data access, and the margin interest.
+  
 The order type are basics, market/limit/stop ; they offer cash or margin account ; Orders are routed to venues or Market Maker (wholesalers) with pre trade risk check(cash/margin avaibility, size, fat finger, compliance) 
   
-   
   *Who uses it:* retail traders, small LLCs.  
   *Pros:* cheap, fast onboarding.
   *Cons:* little or no advice.
