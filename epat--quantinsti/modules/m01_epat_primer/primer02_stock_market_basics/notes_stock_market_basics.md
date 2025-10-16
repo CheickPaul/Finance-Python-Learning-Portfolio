@@ -341,7 +341,8 @@ Examples: Long-only funds and pensions (BlackRock, Vanguard, Capital Group), hed
 
 A single trade involves more entities and not only the stock exchange. Indeed, in order to execute one trade, multiple specialized entities coordinate so that orders can be placed, matched, cleared, and settled safely. 
 
-#### Key Intermediaries
+<h4><ins>Key Intermediaries</ins></h4>
+
 - **Exchange (matching engine) :** Their role is to host the order book and matches buy/sell orders using its matching rules.
   
 - **Broker:** The role of broker is to provide client access to markets, routes orders to venues (exchange), and offers account services and reporting. They make money by adding comissions/fees to their transaction and/or by selling retail Order Flow to Market Makers or wholesalers.
@@ -395,7 +396,8 @@ When an investor opens a brokerage account, the broker also sets up a demat/cust
 
 (Exception: only firms that become direct CSD participants hold their own CSD accounts.)
 
-#### Trading Workflow (End-to-End)
+<h4><ins>Trading Workflow (End-to-End)</ins></h4>
+
 1. **Order placement:** You place a buy/sell order with your broker (price, quantity, order type).
 2. **Routing & execution:** The broker forwards the order to the exchange, where it is matched against opposing orders—this is the **execution**.
 3. **Clearing:** A clearing member reports the trade to the clearing house, which **nets** obligations and manages risk between counterparties.
@@ -459,13 +461,16 @@ sequenceDiagram
   CSD-->>Inv: Holdings updated
 ```
 
-#### Investor Touchpoints
+<h4><ins>Investor Touchpoints</ins></h4>
+
 As an investor, you typically **interact only with your broker** for onboarding, funding, order entry, confirmations, and statements. The exchange, clearing house, and CSD work **behind the scenes**, so the end to end process often appears like a black box.
 
-#### Regulator’s Role
+<h4><ins>Regulator’s Role</ins></h4>
+
 The regulator defines market rules, licensing and conduct standards, disclosure requirements, and surveillance mechanisms. It aims to ensure **fair, orderly, and efficient markets** and **protect investors** through oversight and enforcement.
 
-#### Takeaways
+<h4><ins>Takeaways</ins></h4>
+
 - A completed trade relies on **multiple intermediaries**, not just the exchange.  
 - **Access paths:** Direct Market Acces (DMA) for members vs. DMA via **broker** for most investors.  
 - **Finality:** Clearing and CSD/Demat custody are essential to move cash and update ownership safely.
