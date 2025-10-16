@@ -651,33 +651,29 @@ It processes corporate actions (dividends, splits, rights issues, proxy voting) 
 
 <h4><ins> Market Access</ins></h4>
 
-- DMA via broker (most common)  
-- Venue connectivity (exchanges, MTFs, dark/ATS)  
-- Smart Order Router (SOR) basics
+**- DMA via broker (most common):**  With Direct Market Acess (DMA) via broker , the customer are not an exchange member; it use the broker’s membership/infrastructure with mandatory pre-trade risk checks (limits, controls).
+  
+**- Venue connectivity (exchanges, MTFs, dark/ATS) :**
+  
+**- Smart Order Router (SOR) basics :**
 
 <h4><ins> Fees & Revenue</ins></h4>
 
-- Commissions/fees; maker–taker rebates/fees  
-- Payment for Order Flow (where allowed)  
-- Interest on cash/margin; FX/ops fees  
-- Securities lending revenue share
+**- Commissions/fees; maker–taker rebates/fees  :**
+
+**- Payment for Order Flow (where allowed) ** : Order flow sold to wholesaler, Market Maker
+  
+**- Interest on cash/margin; FX/ops fees :** 
+
+**- Securities lending revenue share :**
+
 
 <h4><ins> Best Execution & Routing</ins></h4>
 
-- Price, likelihood of fill, speed, costs (holistic best-ex)  
-- High-level routing disclosures/policies
+**- Price, likelihood of fill, speed, costs (holistic best-ex) :**
 
+**- High-level routing disclosures/policies :**
 
-<h4><ins> Choosing a Broker (What to Check)</ins></h4>
-
-- Fees vs services, markets/venues covered  
-- Tools: web, mobile, desktop, APIs, call-to-trade  
-- Account entitlements (not all tools for all accounts)  
-- Full-service vs discount trade-offs
-
-<h4><ins> Examples</ins></h4>
-
-- Interactive Brokers, Robinhood, Merrill Lynch, Charles Schwab (+ local brokers)
 
 <h4><ins> Key Takeaways</ins></h4>
 - Broker = access + routing + safekeeping (directly or via custodian)  
