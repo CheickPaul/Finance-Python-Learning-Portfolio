@@ -390,7 +390,9 @@ In IPOs: the regulator reviews and approves the offering document, declares a re
 - (2)DMA as a member: You become an exchange member yourself (costly; capital/technology/compliance requirements). Used by hedge funds, prop desks, and large institutions.
 
       Advantages : Lower latency, fine grained control (routing, order type) and execution transparency.
-      Constraints : Technical requirements, pre-trade risk control(automatic checks applied before your        order reaches the exchange, to stop bad or dangerous orders, these action add friction, cost and limits even though they are necessary), compliance and higher fixed cost. 
+      Constraints : Technical requirements, pre-trade risk control(automatic checks applied before your order
+      reaches the exchange, to stop bad or dangerous orders, these action add friction, cost and limits even though
+      they are necessary), compliance and higher fixed cost. 
       
 When an investor opens a brokerage account, the broker also sets up a demat/custody account for the investor with (or through) a CSD participant. The top-level CSD account is held by the CSD participant (e.g., the broker/custodian/bank), not by the retail investor or a typical small trading firm.
 
