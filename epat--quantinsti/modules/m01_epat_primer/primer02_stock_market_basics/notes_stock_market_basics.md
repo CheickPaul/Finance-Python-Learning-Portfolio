@@ -661,13 +661,15 @@ More venues = more liquidity sources and better routing choices but also more co
 
 <h4><ins> Fees & Revenue</ins></h4>
 
-**- Commissions/fees; maker–taker rebates/fees  :**
+**- Commissions/fees; maker–taker rebates/fees :** Per-order or per-share **commissions**, plus venue **fees/rebates** (maker–taker, taker–maker, auction fees). Many brokers **pass through** exchange/clearing costs; some add small **markups**.
 
-**- Payment for Order Flow (where allowed) ** : Order flow sold to wholesaler, Market Maker
+
+**- Payment for Order Flow (where allowed) ** : Order flow sold to wholesaler, Market Maker. Broker may also receives a rebate for routing retail order.
   
-**- Interest on cash/margin; FX/ops fees :** 
+**- Interest on cash/margin; FX/ops fees :** Net interest on **idle cash** and **margin loans**; **FX conversion spreads**; operational fees (wire/withdrawal, custody/settlement pass-throughs, marketdata plans).
 
-**- Securities lending revenue share :**
+
+**- Securities lending revenue share :** Revenue from lending out fully-paid or margin securities to short sellers. Some brokers share a portion with clients;
 
 
 <h4><ins> Best Execution & Routing</ins></h4>
