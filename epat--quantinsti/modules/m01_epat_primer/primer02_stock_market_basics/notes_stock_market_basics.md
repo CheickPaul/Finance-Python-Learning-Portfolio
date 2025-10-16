@@ -634,6 +634,20 @@ It processes corporate actions (dividends, splits, rights issues, proxy voting) 
   *Pros:* Robust asset protection. *Cons:* need a separate executing broker
 
 
+<h4><ins>Broker Types by Hub — Quick Reference</ins></h4>
+
+| Hub / Region | Retail / Discount | Full-service / Wealth | Broker-dealer (can internalize) | Execution-only / Agency | Prime Broker (institutional) | Introducing / White-label | Custody-only (custodian bank) |
+|---|---|---|---|---|---|---|---|
+| **London (UK)** | IG, Hargreaves Lansdown, Freetrade, Saxo | Barclays Wealth, HSBC GPB, UBS WM, Morgan Stanley WM | Citi, Barclays, JPM, BofA, Goldman Sachs, Morgan Stanley | Instinet, Virtu (ex-ITG), Liquidnet (TP ICAP), Redburn Atlantic | GS PB, MS PB, JPM PB, UBS PB, Citi PB | IBKR Introducing, Apex partners, DriveWealth WL | State Street, BNY Mellon, Northern Trust, HSBC Securities Services |
+| **Amsterdam (NL)** | DEGIRO, BUX, Saxo NL | ABN AMRO MeesPierson, Van Lanschot | ABN AMRO, ING, Citi EU desks | Optiver (agency services), IMC (agency), Kempen Execution | GS/MS/JPM/UBS PB (EU hubs) | IBKR Introducing NL, local fintech WL | Euroclear Bank (ICSD ops), BNP Paribas Securities Services NL |
+| **Zurich / Geneva (CH)** | Swissquote, Saxo CH | UBS WM, Julius Baer, Credit Suisse (UBS) | UBS, ZKB, Vontobel | Kepler Cheuvreux CH, Bernstein (EU) (access) | UBS PB, GS/MS/JPM PB (CH coverage) | White-label via Swiss core-banking providers | SIX SIS custody; HSBC, BNPSS, Northern Trust (CH branches) |
+| **Nordics (SE/DK/NO/FI/IS)** | Nordnet, Avanza, Saxo Nordics | SEB Private, Nordea Private, Danske, DNB PB | SEB, Nordea, Danske, DNB Markets, Handelsbanken | Carnegie (agency), ABG, Pareto (agency), Kepler Cheuvreux Nordics | GS/MS/JPM/UBS PB (regional coverage) | IBKR Introducing Nordics, local WLs | SEB/Handelsbanken custody; VP (DK), VPS (NO), Euroclear SE/FI (via banks) |
+| **Frankfurt (DE)** | Trade Republic, Scalable Capital, flatexDEGIRO | Deutsche Bank Wealth, Commerzbank PB, Berenberg | Deutsche Bank, Commerzbank, Citi DE | XTX/agency access via brokers, Bernstein/Kepler | GS/MS/JPM/UBS PB (DE desks) | IBKR Introducing DE, WL via Bank-as-a-Service | Clearstream (via banks), HSBC Germany, BNPSS DE |
+| **Paris / Brussels (FR/BE)** | Boursorama, Bourse Direct, DEGIRO BE | BNP Paribas WM, Société Générale PB, Natixis WM, Degroof Petercam | BNP Paribas, Société Générale, Natixis, Citi FR | Exane BNP Paribas (agency), Kepler Cheuvreux, Redburn Atlantic | GS/MS/JPM/UBS PB (FR/BE coverage) | IBKR Introducing FR/BE; DriveWealth/Alpaca WL via fintechs | BNP Paribas Securities Services, CACEIS, SGSS, Euroclear FR/BE (via participants) |
+| **Dublin (IE)** | Davy Select, Goodbody Online, DEGIRO IE | Davy PB, Goodbody WM | Citi/Barclays/UBS (IE desks), SIG Dublin (market making; BD arms) | Instinet/agency access via UK, Goodbody DMA | GS/MS/JPM/UBS PB (IE coverage) | IBKR Introducing IE; WL via fintech vendors | BNY Mellon Ireland, Northern Trust Ireland, HSBC Ireland; Euroclear Ireland (via EB) |
+| **Luxembourg (LU)** | (Retail via EU platforms: DEGIRO, Saxo) | UBS WM LU, Julius Baer LU, local private banks | Citi/UBS/BNP (LU desks) | Agency via EU brokers (Paris/Frankfurt) | GS/MS/JPM/UBS PB (fund hub support) | White-label via bank/fund platforms | Clearstream Banking Luxembourg; State Street, J.P. Morgan Bank Luxembourg |
+
+
 <h4><ins> Market Access</ins></h4>
 
 - DMA via broker (most common)  
