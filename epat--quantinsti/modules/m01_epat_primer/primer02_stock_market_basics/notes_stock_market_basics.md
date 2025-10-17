@@ -819,47 +819,18 @@ Stock Exchange is a regulated marketplace where buyers and sellers trade listed 
 
 ```mermaid
 flowchart LR
-  A[Capital Raising<br/>(IPO, follow-on)] --> H{Exchange}
-  B[Price Discovery<br/>(order book / continuous auction)] --> H
-  C[Fair & Orderly Market<br/>(tick size, halts/circuit breakers, surveillance)] --> H
-  D[Liquidity Provision<br/>(market makers, depth, tight spreads)] --> H
-  E[Indices & Benchmarks<br/>(market-wide & sector)] --> H
-  F[Investor Protection<br/>(disclosures, listing rules, compliance)] --> H
-
-  classDef node fill:#f0f7ff,stroke:#4a90e2,stroke-width:1px;
-  class A,B,C,D,E,F,H node;
+  A[Capital Raising\n(IPO, follow-on)] --> X[Exchange]
+  B[Price Discovery\n(order book, auction)] --> X
+  C[Fair & Orderly Market\n(tick size, halts, surveillance)] --> X
+  D[Liquidity Provision\n(market makers, depth, tight spreads)] --> X
+  E[Indices & Benchmarks\n(market-wide & sector)] --> X
+  F[Investor Protection\n(disclosures, listing rules, compliance)] --> X
 ```
 
 *(Price discovery = how the market sets prices via the order book; Liquidity = ability to trade size with minimal price impact.)*
 
 
 #### <ins>Trade Execution</ins>
-
-***Trade Execution - Message flow (sequence)***
-
-```mermaid
-flowchart LR
-  %% Main path modelled on the slides
-  Buyer([Buyer]) -->|Order| Broker[Broker Server]
-  Broker -->|Routed Order| Exch[Exchange]
-  Exch -->|Match & Execution Report| Seller([Seller])
-
-  %% RMS annotation
-  RMS((RMS)) -. pre-trade risk checks .-> Broker
-
-  %% DMA bracket (shows sponsored direct market access)
-  subgraph DMA[DMA (Direct Market Access)]
-    Buyer
-    Broker
-    Exch
-  end
-
-  %% Styling
-  classDef box fill:#ffd5cc,stroke:#cc6f5a,stroke-width:1px,color:#222;
-  class Buyer,Broker,Exch,Seller box;
-  classDef bubble fill:#e6eef7,stroke:#54729b,color:#000;
-  class RMS bubble;
-```
 
 ***Trade Execution - Message flow (sequence)***
 
@@ -917,14 +888,11 @@ sequenceDiagram
 
 ```mermaid
 flowchart TB
-  X{{Facilities}}
-  X --> T[Trading of Financial Instruments<br/>(listed venues for cash & derivatives)]
-  X --> D[Data Vending / Market Data<br/>(real-time quotes, trades, depth)]
-  X --> C[Clearing Membership Links<br/>(post-trade via CCP; margin & default mgmt)]
-  X --> L[Co-location<br/>(low-latency hosting near exchange)]
-
-  classDef fac fill:#fff3c4,stroke:#e3b341,stroke-width:1px,color:#222;
-  class X,T,D,C,L fac;
+  X[Facilities]
+  X --> T[Trading of Financial Instruments]
+  X --> D[Data Vending / Market Data\n(real-time quotes, trades, depth)]
+  X --> C[Clearing Membership Links\n(CCP, margin, default mgmt)]
+  X --> L[Co-location\n(low-latency hosting near the exchange)]
 ```
 
 Simply put: an exchange matches orders under price–time priority (for buyer higher bid = hiher priority / for seller Lower ask = lower priority) , provides data, connects to clearing/settlement, and offers low-latency access (by colocation), all within a regulated rulebook.
