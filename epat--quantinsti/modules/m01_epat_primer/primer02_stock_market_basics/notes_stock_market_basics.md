@@ -707,23 +707,30 @@ flowchart LR
 CSDs are the core posttrade infrastructure: they safekeep dematerialized securities; ensure Delivery-versus-Payment (DvP) settlement so that cash and securities move simultaneously; and perform asset servicing such as dividends, coupons, rights and proxy voting   
 
 <ins> **CSD**: </ins>
+
 CSD is a market infrastructure that maintains and keeps safe the securities accounts, settles transfers in **DvP**, and provides **asset servicing** (coupons, dividends, rights, voting, splits).
 Many countries have one domestic CSD traditionally associated with the National Stock Exchange
   
-<ins> **ICSD :** </ins>  International CSD focused on international instruments (notably **Eurobonds**) ( **Euroclear Bank** and **Clearstream Banking S.A.**). ICSDs are based in Europe but operates worldwide. Although headquartered in Europe, the two ICSDs Euroclear Bank and Clearstream Banking S.A. grew out of the Eurobond market. Today they provide global settlement, custody, and collateral services for a broad set of international instruments, not just Eurobonds.
+<ins> **ICSD :** </ins>  
+
+International CSD focused on international instruments (notably **Eurobonds**) ( **Euroclear Bank** and **Clearstream Banking S.A.**). ICSDs are based in Europe but operates worldwide. Although headquartered in Europe, the two ICSDs Euroclear Bank and Clearstream Banking S.A. grew out of the Eurobond market. Today they provide global settlement, custody, and collateral services for a broad set of international instruments, not just Eurobonds.
   
 ***ICSDs matter for Eurobonds because they provide a single international hub to issue, safekeep, and settle cross border bonds, offering multi-currency DvP, links to domestic CSDs so issuers reach global investors and investors move collateral efficiently.***
 
 *"Eurobond A bond issued outside the home jurisdiction of its currency and offered to investors across multiple international markets (the “euro” refers to the offshore euromarket, not Europe or the euro). Eurobonds are typically  and settled/cleared via ICSDs such as Euroclear and Clearstream"
 
   
-<ins> **Dematerialization / Rematerialization :** </ins> Converting paper certificates into electronic records; today, most major markets operate in demat form.
+<ins> **Dematerialization / Rematerialization :** </ins> 
+
+Converting paper certificates into electronic records; today, most major markets operate in demat form.
 
   *Why dematerialization ?* : Dematerialization accelerates settlement, reduces handling and transport risks, and lowers operational errors tied to lost or forged certificates.
 
 
   
-<ins>**DvP (Delivery-versus-Payment) :** </ins> Securities delivered iff cash is paid.
+<ins>**DvP (Delivery-versus-Payment) :** </ins> 
+
+Securities delivered iff cash is paid.
 
 ***Simply put, DvP is a settlement mechanism that links the cash and securities legs so neither becomes final unless the other does. This eliminates principal risk.***
    
@@ -764,16 +771,25 @@ Many countries have one domestic CSD traditionally associated with the National 
 
 
 
- <ins>**Asset servicing :** <ins> CSD covers the full corporate action lifecycle, capturing event terms, allocating entitlements, handling elections for rights issues, and supporting proxy voting. Many CSDs also support pledging/collateral management, blocking securities against credit lines or CCP margin calls.
+ <ins>**Asset servicing :** <ins> 
+ 
+ CSD covers the full corporate action lifecycle, capturing event terms, allocating entitlements, handling elections for rights issues, and supporting proxy voting. Many CSDs also support pledging/collateral management, blocking securities against credit lines or CCP margin calls.
 
  
 
-<ins>**Omnibus vs Segregated :** <ins> **CSD**: </ins> Pooled nominee account vs named/fully segregated client account structures at the CSD or custodian layer.
+<ins>**Omnibus vs Segregated :** <ins> **CSD**: 
+
+</ins> Pooled nominee account vs named/fully segregated client account structures at the CSD or custodian layer.
   
   
-- <ins>**T+X** :<ins> Contractual settlement cycle (e.g., **T+2** for many cash equity markets).
+- <ins>**T+X** :<ins>
+
+
+Contractual settlement cycle (e.g., **T+2** for many cash equity markets).
   
-- <ins>**Corporate actions**: <ins> **CSD**: </ins>Cash (coupons/dividends) and non-cash (bonus, rights, splits, mergers), plus **proxy voting**.
+- <ins>**Corporate actions**: <ins> 
+
+</ins>Cash (coupons/dividends) and non-cash (bonus, rights, splits, mergers), plus **proxy voting**.
 
 
 <ins>4) Actor & flow map (diagram)</ins>
@@ -790,8 +806,131 @@ flowchart LR
   CSD --> CCP[CCP (if cleared upstream)]
 ```
 
+---
 
 # 13. Stock Exchange
+
+#### <ins>Stock Exchanges — what are they?</ins>
+
+Stock Exchange is a regulated marketplace where buyers and sellers trade listed instruments (equities, ETFs, listed derivatives). It provides the infrastructure, rulebook, and surveillance for price discovery and liquidity.
+
+#### <ins>Functions of Stock Exchanges</ins>
+
+
+```mermaid
+flowchart LR
+  A[Capital Raising<br/>(IPO, follow-on)] --> H{Exchange}
+  B[Price Discovery<br/>(order book / continuous auction)] --> H
+  C[Fair & Orderly Market<br/>(tick size, halts/circuit breakers, surveillance)] --> H
+  D[Liquidity Provision<br/>(market makers, depth, tight spreads)] --> H
+  E[Indices & Benchmarks<br/>(market-wide & sector)] --> H
+  F[Investor Protection<br/>(disclosures, listing rules, compliance)] --> H
+
+  classDef node fill:#f0f7ff,stroke:#4a90e2,stroke-width:1px;
+  class A,B,C,D,E,F,H node;
+```
+
+*(Price discovery = how the market sets prices via the order book; Liquidity = ability to trade size with minimal price impact.)*
+
+
+#### <ins>Trade Execution</ins>
+
+***Trade Execution - Message flow (sequence)***
+
+```mermaid
+flowchart LR
+  %% Main path modelled on the slides
+  Buyer([Buyer]) -->|Order| Broker[Broker Server]
+  Broker -->|Routed Order| Exch[Exchange]
+  Exch -->|Match & Execution Report| Seller([Seller])
+
+  %% RMS annotation
+  RMS((RMS)) -. pre-trade risk checks .-> Broker
+
+  %% DMA bracket (shows sponsored direct market access)
+  subgraph DMA[DMA (Direct Market Access)]
+    Buyer
+    Broker
+    Exch
+  end
+
+  %% Styling
+  classDef box fill:#ffd5cc,stroke:#cc6f5a,stroke-width:1px,color:#222;
+  class Buyer,Broker,Exch,Seller box;
+  classDef bubble fill:#e6eef7,stroke:#54729b,color:#000;
+  class RMS bubble;
+```
+
+***Trade Execution - Message flow (sequence)***
+
+```mermaid
+sequenceDiagram
+    autonumber
+    participant B as Buyer
+    participant BRK as Broker Server
+    participant RMS as RMS (Pre-trade Risk)
+    participant EX as Exchange / Matching Engine
+    participant SEL as Seller
+    participant CCP as CCP (Clearing)
+    participant CSD as CSD (Settlement)
+
+    %% Order entry
+    B->>BRK: 1) Submit Order (price, qty, side)
+    BRK->>RMS: 2) Invoke pre-trade checks (limits, funds, fat-finger)
+    RMS-->>BRK: Checks OK / Reject
+    alt Rejected
+        BRK-->>B: Reject (risk breach)
+    else Accepted
+        BRK->>EX: 3) Route order to exchange
+        note over EX: Enqueue in order book (FIFO queue per price level)
+
+        %% Matching logic (Price–Time Priority)
+        EX->>EX: Evaluate best price, then time priority
+        Note over EX: Buys: highest bid first.<br/>If several at same price → first-come, first-served.<br/>Sells: lowest ask first.
+
+        %% Execution
+        par Contra available
+            EX->>SEL: 4) Trade execution vs contra order
+            EX-->>B: 5) Execution report (fill/partial, price, qty)
+            EX-->>SEL: 6) Execution report (fill/partial, price, qty)
+        and No immediate match
+            EX-->>B: Acknowledge resting order (queued)
+        end
+
+        %% Post-trade
+        EX->>CCP: 7) Send trade for clearing (novate, margin)
+        CCP->>CSD: 8) Settlement instructions (DvP — delivery vs payment)
+        CSD-->>CCP: 9) Securities delivered & cash paid
+        CCP-->>B: 10) Final confirmation (cleared/settled)
+        CCP-->>SEL: 11) Final confirmation (cleared/settled)
+    end
+
+    %% DMA variant (sponsored access)
+    rect rgba(230,238,247,0.5)
+    Note over B,EX: DMA path: Buyer uses Sponsored DMA.<br/>Pre-trade checks still enforced (sponsor risk controls) but routing latency is minimized (low-latency).
+    end
+```
+
+
+
+#### <ins>Facilities of Stock Exchanges</ins>
+
+```mermaid
+flowchart TB
+  X{{Facilities}}
+  X --> T[Trading of Financial Instruments<br/>(listed venues for cash & derivatives)]
+  X --> D[Data Vending / Market Data<br/>(real-time quotes, trades, depth)]
+  X --> C[Clearing Membership Links<br/>(post-trade via CCP; margin & default mgmt)]
+  X --> L[Co-location<br/>(low-latency hosting near exchange)]
+
+  classDef fac fill:#fff3c4,stroke:#e3b341,stroke-width:1px,color:#222;
+  class X,T,D,C,L fac;
+```
+
+Simply put: an exchange matches orders under price–time priority (for buyer higher bid = hiher priority / for seller Lower ask = lower priority) , provides data, connects to clearing/settlement, and offers low-latency access (by colocation), all within a regulated rulebook.
+
+
+---
 
 # 14. Clearinghouse
 
