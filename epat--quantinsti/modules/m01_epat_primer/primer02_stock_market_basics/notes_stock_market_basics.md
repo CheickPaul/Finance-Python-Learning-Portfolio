@@ -914,10 +914,12 @@ flowchart TB
 CCPs are another core post-trade Finantial Market Infrastructures (FMIs) : **they novate trades** (become buyer to every seller and seller to every buyer), **execute multilateral netting** (compress obligations), **call margins to cover market risk,** **manage collateral & liquidity (eligibility, haircuts, liquidity lines)** and **operate a default waterfall** if a member defaults. Then they **coordinate with CSDs and ICSDs for DvP settlement**.
 
 
+
 #### <ins>Clearing vs Settlement:</ins>
 
 Clearing = confirmation, novation, netting, risk calculation & margining.
 Settlement = final DvP exchange of cash and securities (at a CSD/ICSD).
+
 
 
 #### <ins>Margining (IM/VM)</ins>
@@ -935,6 +937,7 @@ Settlement = final DvP exchange of cash and securities (at a CSD/ICSD).
 | **VM**       | Mark-to-market            | Daily/Intraday | Cut-offs, thresholds                 |
 
 
+
 #### <ins>Default Management & Waterfall</ins>
 
 1. **Defaulter’s IM/VM :** First, the CCP uses the defaulting member's own margin
@@ -950,6 +953,7 @@ Settlement = final DvP exchange of cash and securities (at a CSD/ICSD).
 6. **Recovery tools :** Before shutting anything down, the CCP can use recovery tools to stabilize
     
 7. **Resolution :**  If recovery cannot restore safety, resolution authorities step in under law to restructure.
+
 
    
 #### <ins>Membership:</ins>
@@ -989,15 +993,7 @@ Settlement = final DvP exchange of cash and securities (at a CSD/ICSD).
 
 
 
-**Why it matters (risk/collateral/ops)**
-| Structure | Client Protection | Portability | Collateral Efficiency | Ops Complexity | Typical Use Case |
-|---|---|---:|---:|---:|---|
-| **House** | N/A (proprietary) | N/A | High (netting internal) | Low | Prop trading, market-making |
-| **Omnibus (OCA)** | Medium (pooled) | Medium | High (pooling/netting) | Low–Medium | Retail flow, many small clients |
-| **ISA** | High (per client) | High | Medium (less pooling) | Higher | Institutional mandates, PB with strict segregation |
-
-
-***Decision shortcut:
+***Decision shortcut:***
 
 ***Need collateral efficiency and simplicity → choose Omnibus.***
 
@@ -1013,3 +1009,521 @@ Settlement = final DvP exchange of cash and securities (at a CSD/ICSD).
 ---
 
 # 15. Financial Regulator
+
+DRAFT
+
+# 15. Inside the Financial Regulator: Mandates, Toolset & Market Oversight
+
+#### <ins>Regulators and their Core Roles</ins>
+
+Financial regulators are **public authorities** (sometimes with **SROs**) that **set rules** (rulemaking), **supervise firms/markets** (ongoing monitoring), **enforce** (investigations, sanctions), and **protect investors & market integrity** (fair, orderly, efficient markets). They also **oversee FMIs** (CCPs/CSDs) and **coordinate** with central banks and resolution authorities.
+
+
+#### <ins>Prudential vs Conduct (Twin Mandates)</ins>
+
+- **Prudential :** Keep firms **safe & sound** (capital, liquidity, risk governance, recovery/resolution).
+- **Conduct/Markets :** Ensure **clean behavior & transparency** (market abuse control, disclosure, best execution).
+
+**Mini-table (fill in your jurisdiction specifics)**
+
+| Pillar         | Focus                            | Typical Tools/Tests                         | Notes                                  |
+|----------------|----------------------------------|---------------------------------------------|----------------------------------------|
+| **Prudential** | Solvency, liquidity, resilience  | Capital ratios, LCR/NSFR, stress tests      | Recovery & Resolution playbooks        |
+| **Conduct**    | Fair treatment, market integrity | Surveillance, disclosures, best-ex policies | Suitability/appropriateness, conflicts |
+
+
+#### <ins>Perimeter & Who They Oversee</ins>
+
+- **Banks** (often w/ central bank & prudential authority).
+- **Securities markets**: issuers, **brokers/dealers**, **exchanges/MTFs/OTFs**, asset managers.
+
+  ---
+
+  # 16. Market Indices
+
+DRAFT
+
+#### <ins>What is an Index?</ins>
+A **market index** is a **basket** of selected securities whose **level** summarizes market moves (a barometer). It’s a **statistical indicator** built from constituent **prices/returns** via a formula (divisor).
+
+
+
+#### <ins>Construction: Universe → Method → Maintenance</ins>
+- **Universe & Selection**: listing venue, size/liquidity screens, free float (tradable shares).
+- **Weighting method** (how much each stock counts):
+  - **Market-cap weighted** (often **free-float** adjusted) — largest firms drive returns.
+  - **Price-weighted** — higher price = higher weight (e.g., Dow).
+  - **Equal-weighted** — each stock same weight (tilts to smaller caps).
+  - (Others: **fundamental/factor** weighting.)
+- **Corporate actions handling**: dividends, splits, spin-offs → **divisor** adjustment.
+- **Maintenance**: **rebalancing** (weights back to target) & **reconstitution** (adds/removes).
+
+**Mini-table (quick view)**
+
+| Method            | Intuition (gloss)                    | Pros                                 | Cons                                  |
+|-------------------|--------------------------------------|--------------------------------------|---------------------------------------|
+| Cap-weighted      | Weight ∝ size (market value)         | Low turnover; investable             | Concentration risk (mega-caps)        |
+| Price-weighted    | Weight ∝ share price                 | Simple history                       | Price ≠ size; arbitrary tilts         |
+| Equal-weighted    | Same weight each stock               | Diversifies leaders/laggards         | Higher turnover; capacity limits      |
+
+
+
+#### <ins>Types of Indices</ins>
+- **Global / Regional** (multi-country): e.g., MSCI World (broad “beta” to developed markets).
+- **National (broad-based)**: e.g., **S&P 500**, **Nikkei 225**, **FTSE 100**, **DAX**, **CAC 40**, **Nifty 50**.
+- **Sector / Industry**: e.g., **S&P 500 Energy (SPN)**, **Bank Nifty**.
+- **By asset class**: **Equity**, **Commodity**, **Rates**, **Credit**.
+- **Return variant**: **Price return** (ex-dividends) vs **Total return** (dividends reinvested).
+
+
+
+#### <ins>What Indices Are Used For</ins>
+- **Benchmarking**: compare portfolio/strategy to market **beta** (tracking error = active drift).
+- **Trading (via derivatives/ETPs)**: raw indices aren’t securities, but **futures & options** (and ETFs) make index exposure tradable.
+- **Hedging**: offset portfolio **systematic risk** (index futures/puts).
+- **Asset allocation**: core building blocks (country/sector tilts, factor sleeves).
+
+
+
+#### <ins>Reading Moves (Interpretation)</ins>
+Index up → aggregated expectations improving; down → worsening.  
+Note **composition effects** (few mega-caps can drive cap-weighted indices).
+
+
+
+#### <ins>Key Examples</ins>
+US: **S&P 500**, **Dow Jones Industrial Average**  
+UK: **FTSE 100** · Germany: **DAX** · France: **CAC 40**  
+India: **Nifty 50** · Hong Kong: **Hang Seng**  
+(Plus global families: **MSCI**, **S&P Global 100**.)
+
+
+
+#### <ins>Quick Q&A (exam-style)</ins>
+- **Are indices directly tradable?** No → use **ETFs, futures, options** (derivatives/wrappers).  
+- **Price vs Total Return?** Total includes **dividends** (reinvested); price does not.  
+- **Cap-weighted drawback?** **Concentration risk** (top names dominate).  
+- **Rebalance vs Reconstitute?** Weights reset vs members change.
+
+
+
+#### <ins>Mini-Gloss</ins>
+- **Free float**: shares actually tradable (excludes locked/insider).  
+- **Divisor**: scaling term keeping index level consistent after actions.  
+- **Tracking error**: std. dev. of active return vs benchmark.  
+- **Beta**: sensitivity to market index moves (systematic risk).
+
+
+---
+MARKET PARTICIPANT
+---
+
+# 17. INTRODUCTION TO MARKET PARTICIPANT 
+
+DRAFT
+
+#### <ins>Participants & Big Split</ins>
+Entities who operate in markets = **market participants**. Broad split:
+- **Investors** — long-horizon capital deployment (wealth accumulation).
+- **Traders** — higher frequency **positioning** for **short-term P&L** (profit & loss).
+
+
+#### <ins>Investors</ins>
+- **Institutional investors**: professional money (OPM = other people’s money): mutual/pension funds, insurers, investment banks, hedge funds.  
+  *Edge*: ticket size, fee tiers, research access.
+- **Retail investors**: individuals via brokers; goals-driven (retirement, education, etc.).
+
+
+
+#### <ins>Traders — Main Taxonomies</ins>
+
+**By analysis approach**
+- **Technical**: price/volume patterns, indicators (trend, momentum).
+- **Fundamental**: macro, earnings, valuation.
+- **Quantitative**: statistical/mathematical models (signals, factor models).
+
+
+**By execution style**
+- **Manual / Discretionary**: human-triggered orders (judgment).
+- **Algorithmic / Systematic**: rules code trades (automation).
+
+**By asset class**
+- **Equity**, **Commodity** (energy/metals), **FX** (currencies), **Rates/Credit**, **Derivatives** (futures & options).
+
+**By capital & seat**
+- **Proprietary (Prop)**: trades firm’s capital, profit split.
+- **Retail**: own capital from home/office via broker.
+
+**By horizon**
+- **Scalper / Day / Swing / Position** (minutes → months).
+
+
+
+#### <ins>Roles (preview)</ins>
+- **Speculator** — takes risk for return (views).  
+- **Hedger** — reduces existing risk (protection).  
+- **Arbitrageur** — exploits mispricing (low-risk spreads).
+
+*(Details in next unit.)*
+
+
+
+#### <ins>Mini-table (fill for your examples)</ins>
+
+| Dimension        | Buckets (examples)                         | Notes (gloss)                     |
+|------------------|--------------------------------------------|-----------------------------------|
+| Analysis         | Technical / Fundamental / Quant            | Signal source                     |
+| Execution        | Discretionary / Algorithmic                | Who clicks vs who codes           |
+| Asset            | Equity / FX / Commodity / Rates / Derivs   | Trading venue & microstructure    |
+| Capital & Seat   | Prop / Retail                              | Whose money, where                |
+| Horizon          | Scalper / Day / Swing / Position           | Holding period                    |
+| Role             | Speculator / Hedger / Arbitrageur          | Economic function                 |
+
+
+---
+
+# 18. Inside Speculators: Role, Playbooks & Market Impact
+
+DRAFT
+
+#### <ins>What is Speculation?</ins>
+Buying/selling an asset to **profit from near-term price moves** (short-term P&L), based on an **educated view** (not pure chance).
+
+
+
+#### <ins>Who are Speculators?</ins>
+Profit-motivated **traders** who take **directional risk** (long/short) when they believe expected return > risk.  
+*(Directional = betting on up or down; P&L = profit & loss).*
+
+
+
+#### <ins>Speculators vs Investors vs Gamblers</ins>
+- **Investor** — long horizon, fundamentals, wealth compounding (risk-adjusted).  
+- **Speculator** — short/medium horizon, catalysts/signals, disciplined **risk management**.  
+- **Gambler** — outcome-driven with weak thesis/edge (little analysis).  
+
+
+
+#### <ins>Typical Playbooks (signal source)</ins>
+- **Event-driven**: earnings, policy decisions, M&A, macro prints.  
+- **Momentum / Breakout**: ride trends (follow price strength).  
+- **Mean-reversion**: fade over-extensions to revert to average.  
+- **Relative-value**: long/short within sector, pairs.  
+- **Macro/Carry** (FX/rates/commodities): rate differentials, term structure.  
+- **Quant/Systematic**: statistical edges (factors, ML signals).
+
+
+
+#### <ins>Instruments & Implementation</ins>
+- **Cash equities**, **ETFs**, **futures & options** (leverage, shorting, convexity).  
+- **CFDs/Swaps** (OTC exposure; counterparty risk).  
+- **Order types**: limit/market/stop; **time-in-force** (DAY, IOC).  
+*(Convexity = options’ non-linear P&L; leverage = amplified exposure).*
+
+
+
+#### <ins>Risk Management (non-negotiable)</ins>
+- **Sizing** (risk per trade; % of equity).  
+- **Stops/Targets** (pre-defined exit rules).  
+- **Diversification** (avoid single-name concentration).  
+- **Volatility & Liquidity filters** (avoid slippage/gaps).  
+- **Review** (post-trade analytics; hit rate vs payoff ratio).  
+
+**Mini-table**
+
+| Metric            | What it means (gloss)                        | Typical target                  |
+|-------------------|----------------------------------------------|----------------------------------|
+| Hit rate          | % winning trades                             | < 50% ok if payoff > 1          |
+| Payoff ratio      | Avg win / Avg loss                           | > 1.5 desirable                 |
+| Max drawdown      | Peak-to-trough loss                          | Keep contained
+
+---
+
+# 19. Inside Hedgers: Purpose, Instruments & Hedge Design
+
+DRAFT 
+
+#### <ins>What is Hedging?</ins>
+Hedging = taking an **offsetting position** to reduce **price risk** on an existing exposure (insurance-like; reduces loss, doesn’t prevent the event).
+
+
+
+#### <ins>Who are Hedgers?</ins>
+Investors or firms that **neutralize unwanted risk** (market, FX, rates, commodity) by going **opposite** the current exposure (becoming “covered” vs “naked”).
+
+
+
+#### <ins>Why Hedge? (vs. do nothing / sell)</ins>
+- **Stabilize P&L** (limit drawdowns without exiting the core position).  
+- **Avoid exit/re-entry costs** (taxes, slippage, missed upside).  
+- **Meet mandates** (risk limits, covenants, accounting smoothness).
+
+
+
+#### <ins>Key Instruments</ins>
+- **Futures/Forwards** (linear, low cost, margin-based).  
+- **Options** (non-linear “convexity”; defined downside).  
+- **Swaps** (rates/FX/commodity; tailor term & notional).  
+- **ETF/Index overlays** (fast, liquid proxies).  
+
+*(Convexity = non-linear P&L response; linear = 1:1 with price.)*
+
+
+
+#### <ins>Hedge Design: Core Ideas</ins>
+- **Hedge ratio** (how much to hedge):  
+  - **Equity beta hedge**: `Contracts ≈ (β_port * V_port) / (β_fut*_
+
+
+---
+
+# 20. Inside Arbitrageurs: Spread Capture & Market Efficiency
+
+DRAFT
+
+#### <ins>What is Arbitrage?</ins>
+**Simultaneous** buy of the **cheaper** instrument and sell of the **richer** one to **lock in the spread** (price gap).  
+*(Spread = price difference; goal is near risk-free profit after costs.)*
+
+
+#### <ins>Who are Arbitrageurs?</ins>
+Traders who systematically **capture mispricings** across venues/instruments. They **buy low / sell high** at the same time and then **flatten** when prices converge.
+
+
+#### <ins>Core Archetypes</ins>
+- **Pure (cross-market) arbitrage**: same stock quoted 16.40 on Venue A and 18.00 on Venue B → buy A / sell B.  
+- **Cash–futures (basis) arbitrage**: stock vs its futures when **F ≠ fair value**.  
+  - Equity fair value (simplified): `F ≈ S * (1 + r - q)^{T}` *(r = financing; q = dividends/yield)*  
+- **Calendar (futures–futures)**: near-month vs next-month futures mispriced.  
+- **Correlated instruments**: de-anchored spread between two highly related securities.  
+- **FX triangular**: currency A/B, B/C, A/C loop not consistent.
+
+
+#### <ins>How It Works (mechanics)</ins>
+Signal (mispricing) → **Simultaneous** long/short → Hold until **convergence** → Close both legs → Book **spread net of costs**.  
+*(Convergence = spread back to normal/fair.)*
+
+
+
+#### <ins>Why It Matters (market function)</ins>
+- **Law of One Price** enforcement → **price alignment** across venues.  
+- **Liquidity & discovery** → tighter **bid–ask**, faster correction of anomalies.
+
+
+
+#### <ins>Key Risks & Frictions</ins>
+- **Transaction costs & fees** (can erase small spreads).  
+- **Latency/slippage** (fills not perfectly simultaneous).  
+- **Inventory/borrow** (short locate, recall risk).  
+- **Basis risk** (proxy not a perfect match).  
+- **Funding/margin** (capital usage; haircuts).  
+- **Operational** (routing, outages).  
+> *Result: “Risk-less” in theory, but **execution risk** in practice.*
+
+
+
+#### <ins>Typical Tooling</ins>
+- **Smart order routing**, **co-location**, **low-latency** infra.  
+- **Inventory/borrow management** for shorts.  
+- **Risk engine** (limits on legging risk, exposure caps).
+
+
+
+#### <ins>Mini-Examples</ins>
+- **Cash–carry**: F too high vs S → **buy S / sell F**; earn carry to expiry.  
+- **Reverse cash–carry**: F too low → **sell S (borrow) / buy F**.  
+- **Calendar**: long cheaper spread leg, short richer leg; exit on mean reversion.  
+- **FX triangle**: exploit inconsistent cross rates until parity restored.
+
+
+
+#### <ins>Quick Q&A (exam-style)</ins>
+- **Is arbitrage always risk-free?** No — **frictions & timing** risks remain.  
+- **What collapses the spread?** Arbitrage **flows** themselves (competition).  
+- **Why liquidity matters?** To enter/exit **both legs** cheaply and fast.  
+- **Cash vs futures link?** **Carry model** ties F to S via rates/dividends.
+
+
+
+#### <ins>Mini-Gloss</ins>
+- **Spread**: price gap to capture.  
+- **Convergence**: spread moves back to fair value.  
+- **Legging risk**: one leg fills, the other doesn’t (price moves).  
+- **Carry**: financing minus income (cost of holding).
+
+
+
+#### <ins>Checklist (fill for your case)</ins>
+- [ ] Define target spread & **all-in costs** (fees, borrow, funding).  
+- [ ] Pre-trade checks: borrow available? margin OK?  
+- [ ] Execution: simultaneous routing, fail-safes for partial fills.  
+- [ ] Monitoring: spread bands, kill-switch; exit rules.  
+- [ ] Post-trade: P&L attribution (edge vs slippage/costs).
+
+
+---
+
+Types of Market
+
+---
+
+# 21. Various Financial Markets
+
+
+#### <ins>Top-Level Classification</ins>
+- **By asset**: **Equity**, **Debt (Bonds)**, **FX (Currencies)**, **Commodities**.
+- **By product**: **Cash** (spot) vs **Derivatives** (forwards, futures, options, swaps).
+- **By venue**: **Exchange-Traded (ET)** vs **Over-the-Counter (OTC)**.
+- **By lifecycle**: **Primary** (issuance) vs **Secondary** (trading after issuance).
+
+
+
+#### <ins>Exchange-Traded vs OTC</ins>
+- **Exchange-Traded**: central order book; rules, **listing/clearing** via exchange/CCP; fixed hours.  
+- **OTC**: bilateral (dealer–client/interdealer), flexible terms; decentralized network; 24h for some assets (e.g., FX).
+
+
+
+#### <ins>Capital Markets</ins>
+- **Equity markets**: stocks/shares; raise equity capital; trade on **stock exchanges** (secondary).  
+- **Debt (bond) markets**: govies, corporates, munis; coupons/maturity; typically **OTC** (with some ET platforms).
+
+**Who funds whom?** Savers (retail/institutional) → firms/governments (capital users).
+
+
+
+#### <ins>Commodity Markets</ins>
+- **Underlying**: energy (oil/gas), metals (gold/copper), agri (corn/wheat).  
+- **Venues**: **OTC** and **commodity exchanges** (futures options).  
+- **Use-cases**: producers/consumers hedge; traders speculate/arbitrage.
+
+
+
+#### <ins>FX (Foreign Exchange) Markets</ins>
+- **Pairs** (EUR/USD, USD/JPY…); decentralized, dealer-driven; banks, central banks, funds, retail brokers.  
+- **Products**: spot, **forwards**, swaps, options (mostly **OTC**; some listed futures).
+
+
+
+#### <ins>Derivatives Markets</ins>
+- **Forwards**: bespoke, **OTC**.  
+- **Futures**: standardized, **exchange-traded**, cleared at **CCP**.  
+- **Options**: both **listed** (ET) and **OTC**.  
+- **Swaps**: rates/credit/FX/commodity — mainly **OTC** (often cleared for rates/credit).
+
+*(Derivative = contract whose value depends on an underlying; used for **hedging**, **speculating**, **arbitraging**.)*
+
+
+
+#### <ins>How They Link Together</ins>
+- **Cash ↔ Derivatives**: futures/options reference spot/index; arbitrage ties prices.  
+- **Exchange ↔ OTC**: same underlying can trade on both (different microstructure).  
+- **Primary ↔ Secondary**: issuance sets supply; secondary markets set ongoing **price discovery**.
+
+
+
+#### <ins>Mini-Table (quick map)</ins>
+
+| Market      | Typical Venue      | Instruments (examples)                | Main Users                        |
+|-------------|--------------------|---------------------------------------|-----------------------------------|
+| Equity      | Exchange (ET)      | Stocks, ETFs, equity options/futures  | Issuers, funds, retail, HFT       |
+| Bonds       | OTC (+ venues)     | Govies, IG/HY corps, munis            | Treasuries, AMs, dealers          |
+| Commodities | ET + OTC           | Futures/options, physical contracts   | Producers, consumers, traders     |
+| FX          | OTC (dealer)       | Spot, forwards, swaps, options        | Banks, CBs, funds, brokers        |
+| Derivatives | ET + OTC           | Futures, options, swaps, forwards     | Hedgers, specs, arbs              |
+
+
+
+#### <ins>Quick Q&A (exam-style)</ins>
+- **Exchange vs OTC?** Centralized & standardized vs bilateral & customizable.  
+- **Primary vs Secondary?** Issuance vs post-issuance trading.  
+- **Futures venue?** Exchange-traded & CCP-cleared.  
+- **Forwards venue?** OTC (custom terms).  
+- **Are stocks “debt-based”?** No — **equity-based**.
+
+
+
+#### <ins>Mini-Gloss</ins>
+- **Clearing/CCP**: central counterparty that novates & nets trades, calls **margin**.  
+- **Liquidity**: ease of trading size at low cost (tight **bid–ask**).  
+- **Basis**: futures vs spot difference (carry, convenience yield).  
+- **Credit risk**: counterparty default risk (higher in OTC, mitigated by collateral/clearing).
+
+
+
+#### <ins>Checklist (fill for your notes)</ins>
+- [ ] List your local main **equity** & **bond** venues.  
+- [ ] Identify **FX pairs** and **commodity** contracts you’d follow.  
+- [ ] Note 1 derivative you’d use for **hedging** vs **speculating**.
+
+---
+
+
+# 22. Glossary — Core Trading Jargon (Ultra-Short)
+DRAFT
+
+#### <ins>Positions & Direction</ins>
+- **Long**: you **buy** the asset (you’re “long” it).
+- **Short / Short-selling**: you **sell first** what you don’t own, plan to buy back later (borrowed shares).
+
+#### <ins>Open/Close</ins>
+- **Open position**: active long or short.
+- **Square off / Close**: trade that **neutralizes** the position (sell your long; buy back your short).
+
+#### <ins>Activity & Data</ins>
+- **Volume**: total **shares/contracts traded** over a period (buy + sell prints).
+- **OHLC**: **Open, High, Low, Close** prices per bar (e.g., daily).  
+- **OHLCV**: OHLC **plus Volume**.
+
+#### <ins>Trends & Market States</ins>
+- **Trend**: dominant **direction** of price (up/down/sideways).
+- **Bullish**: expectation **up**; **Bull market**: broad market rising.
+- **Bearish**: expectation **down**; **Bear market**: broad market falling.
+
+#### <ins>Extras you’ll meet often</ins>
+- **Bid–Ask**: best **buy (bid)** and **sell (ask)** quotes; **spread** = ask − bid (transaction cost proxy).
+- **Liquidity**: ease of trading **size** with low impact (tight spreads, deep book).
+- **Slippage**: worse fill than expected (execution gap).
+- **Leverage**: control larger exposure with less capital (amplifies P&L).
+- **Margin**: collateral posted to a broker/CCP (risk buffer).
+- **Stop-loss**: pre-set exit to cap downside.
+- **Take-profit**: pre-set exit to lock gains.
+- **Volatility (vol)**: magnitude of price swings (risk proxy).
+
+
+
+### Mini-table (quick recall)
+
+| Term        | One-liner (gloss)                           | Tiny example                         |
+|-------------|---------------------------------------------|--------------------------------------|
+| Long        | Buy to gain if price rises                  | Buy 100 AAPL                         |
+| Short       | Sell borrowed to gain if price falls        | Short 100 AAPL, cover lower          |
+| Square off  | Close/open → flat                           | Sell long / Buy back short           |
+| Volume      | Total traded qty                            | 1.5m shares today                    |
+| OHLC(V)     | Price bar (+ volume)                        | Daily OHLCV 2013–2018                |
+| Bull/Bear   | Uptrend vs downtrend                        | S&P up months = bull                 |
+| Spread      | Ask − Bid                                   | 100.02 − 100.00 = 0.02               |
+| Slippage    | Fill worse than quote                       | Expected 100.00, got 100.03          |
+
+
+
+### Quick Q&A (exam-style)
+- **Going long means?** Buying; profit if price rises.  
+- **Square off a short?** **Buy** to cover.  
+- **OHLCV stands for?** Open, High, Low, Close, **Volume**.  
+- **Bull vs Bear market?** Broad uptrend vs downtrend.
+
+
+
+### Checklist (fill for your notes)
+- [ ] Add 2 real tickers; write one long & one short example.  
+- [ ] Capture one week of **OHLCV** for a stock you follow.  
+- [ ] Define your default **stop-loss** & **take-profit** rules.
+
+
+
+
+  
+
+
+
