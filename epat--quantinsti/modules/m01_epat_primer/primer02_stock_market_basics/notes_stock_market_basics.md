@@ -810,30 +810,27 @@ flowchart LR
 
 # 13. Stock Exchange
 
-#### <ins>Stock Exchanges — what are they?</ins>
+#### <ins>what are they?</ins>
 
 Stock Exchange is a regulated marketplace where buyers and sellers trade listed instruments (equities, ETFs, listed derivatives). It provides the infrastructure, rulebook, and surveillance for price discovery and liquidity.
 
 #### <ins>Functions of Stock Exchanges</ins>
 
-
 ```mermaid
-graph LR
-  X[Exchange]
+flowchart TB
+  A["CAPITAL RAISING"] --> Adef["Issue shares to raise funds (IPO and follow on)"]
+  B["PRICE DISCOVERY"] --> Bdef["Prices set by bids and offers in the order book"]
+  C["FAIR AND ORDERLY MARKET"] --> Cdef["Rules, tick size, halts, surveillance"]
+  D["LIQUIDITY PROVISION"] --> Ddef["Market makers and depth enable quick trading"]
+  E["INDICES AND BENCHMARKS"] --> Edef["Indexes track market or sector performance"]
+  F["INVESTOR PROTECTION"] --> Fdef["Disclosures, listing rules, compliance"]
 
-  A[Capital raising] --> X
-  B[Price discovery] --> X
-  C[Fair and orderly market] --> X
-  D[Liquidity provision] --> X
-  E[Indices and benchmarks] --> X
-  F[Investor protection] --> X
+%% Styles (GitHub-safe)
+  classDef func fill:#1f77b4,stroke:#1f77b4,color:#ffffff;
+  classDef defn fill:#f5f7fb,stroke:#c7d2fe,color:#111111;
 
-  A -.-> Adef[Companies issue shares to raise funds]
-  B -.-> Bdef[Prices set by bids and offers in the order book]
-  C -.-> Cdef[Rules and surveillance keep trading fair]
-  D -.-> Ddef[Market makers and depth enable quick trading]
-  E -.-> Edef[Indexes track market or sector performance]
-  F -.-> Fdef[Disclosures and listing rules safeguard investors]
+  class A,B,C,D,E,F func;
+  class Adef,Bdef,Cdef,Ddef,Edef,Fdef defn;
 ```
 
 
@@ -897,15 +894,15 @@ sequenceDiagram
 
 ```mermaid
 flowchart TB
-  X[Facilities]
-  X --> T[Trading of Financial Instruments]
-  X --> D[Data Vending / Market Data\n(real-time quotes, trades, depth)]
-  X --> C[Clearing Membership Links\n(CCP, margin, default mgmt)]
-  X --> L[Co-location\n(low-latency hosting near the exchange)]
+  T["TRADING OF INSTRUMENTS"]:::fac --> Tdef["Listed venue for cash and derivatives"]:::defn
+  D["DATA VENDING / MARKET DATA"]:::fac --> Ddef["Real-time quotes, trades, depth"]:::defn
+  C["CLEARING MEMBERSHIP LINKS"]:::fac --> Cdef["Connectivity to CCP; margin & defaults"]:::defn
+  L["CO-LOCATION"]:::fac --> Ldef["Low-latency hosting near the exchange"]:::defn
+
+  %% Styles (GitHub-safe)
+  classDef fac fill:#1f77b4,stroke:#1f77b4,color:#ffffff;
+  classDef defn fill:#f5f7fb,stroke:#c7d2fe,color:#111111;
 ```
-
-Simply put: an exchange matches orders under price–time priority (for buyer higher bid = hiher priority / for seller Lower ask = lower priority) , provides data, connects to clearing/settlement, and offers low-latency access (by colocation), all within a regulated rulebook.
-
 
 ---
 
