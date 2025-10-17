@@ -639,7 +639,7 @@ It processes corporate actions (dividends, splits, rights issues, proxy voting) 
 | Hub / Region | Retail / Discount | Full-service / Wealth | Broker-dealer (can internalize) | Execution-only / Agency | Prime Broker (institutional) | Introducing / White-label | Custody-only (custodian bank) |
 |---|---|---|---|---|---|---|---|
 | **London (UK)** | IG, Hargreaves Lansdown, Freetrade, Saxo | Barclays Wealth, HSBC GPB, UBS WM, Morgan Stanley WM | Citi, Barclays, JPM, BofA, Goldman Sachs, Morgan Stanley | Instinet, Virtu (ex-ITG), Liquidnet (TP ICAP), Redburn Atlantic | GS PB, MS PB, JPM PB, UBS PB, Citi PB | IBKR Introducing, Apex partners, DriveWealth WL | State Street, BNY Mellon, Northern Trust, HSBC Securities Services |
-| **Amsterdam (NL)** | DEGIRO, BUX, Saxo NL | ABN AMRO MeesPierson, Van Lanschot | ABN AMRO, ING, Citi EU desks | Optiver (agency services), IMC (agency), Kempen Execution | GS/MS/JPM/UBS PB (EU hubs) | IBKR Introducing NL, local fintech WL | Euroclear Bank (ICSD ops), BNP Paribas Securities Services NL |
+| **Amsterdam (NL)** | DEGIRO, BUX, Saxo NL | ABN AMRO MeesPierson, Van Lanschot | ABN AMRO, ING, Citi EU desks | IMC (agency), Kempen Execution | GS/MS/JPM/UBS PB (EU hubs) | IBKR Introducing NL, local fintech WL | BNP Paribas Securities Services NL |
 | **Zurich / Geneva (CH)** | Swissquote, Saxo CH | UBS WM, Julius Baer, Credit Suisse (UBS) | UBS, ZKB, Vontobel | Kepler Cheuvreux CH, Bernstein (EU) (access) | UBS PB, GS/MS/JPM PB (CH coverage) | White-label via Swiss core-banking providers | SIX SIS custody; HSBC, BNPSS, Northern Trust (CH branches) |
 | **Nordics (SE/DK/NO/FI/IS)** | Nordnet, Avanza, Saxo Nordics | SEB Private, Nordea Private, Danske, DNB PB | SEB, Nordea, Danske, DNB Markets, Handelsbanken | Carnegie (agency), ABG, Pareto (agency), Kepler Cheuvreux Nordics | GS/MS/JPM/UBS PB (regional coverage) | IBKR Introducing Nordics, local WLs | SEB/Handelsbanken custody; VP (DK), VPS (NO), Euroclear SE/FI (via banks) |
 | **Frankfurt (DE)** | Trade Republic, Scalable Capital, flatexDEGIRO | Deutsche Bank Wealth, Commerzbank PB, Berenberg | Deutsche Bank, Commerzbank, Citi DE | XTX/agency access via brokers, Bernstein/Kepler | GS/MS/JPM/UBS PB (DE desks) | IBKR Introducing DE, WL via Bank-as-a-Service | Clearstream (via banks), HSBC Germany, BNPSS DE |
@@ -699,6 +699,8 @@ flowchart LR
 ---
 
 # 11. Inside the Market Maker (MM) :  
+
+*underway*
 
 ---
 
@@ -836,9 +838,8 @@ flowchart TB
 
 
 
-#### <ins>Trade Execution</ins>
+#### <ins>Trade Execution Message flow (sequence)</ins>
 
-***Trade Execution - Message flow (sequence)***
 
 ```mermaid
 sequenceDiagram
@@ -906,6 +907,109 @@ flowchart TB
 
 ---
 
-# 14. Clearinghouse
+# 14. Inside the Clearinghouse (CCP): Novation, Netting & Risk Management
+
+#### <ins>CCPs and their Core Roles</ins>
+
+CCPs are another core post-trade Finantial Market Infrastructures (FMIs) : **they novate trades** (become buyer to every seller and seller to every buyer), **execute multilateral netting** (compress obligations), **call margins to cover market risk,** **manage collateral & liquidity (eligibility, haircuts, liquidity lines)** and **operate a default waterfall** if a member defaults. Then they **coordinate with CSDs and ICSDs for DvP settlement**.
+
+
+#### <ins>Clearing vs Settlement:</ins>
+
+Clearing = confirmation, novation, netting, risk calculation & margining.
+Settlement = final DvP exchange of cash and securities (at a CSD/ICSD).
+
+
+#### <ins>Margining (IM/VM)</ins>
+
+- **Initial Margin(IM) :** Money put upfront to cover a possible future loss (PFE).
+  
+- **Variation Money (VM) :** It's a daily to-up or pay-out that brings your balance in line with current prices.
+  
+
+**Mini-table (fill in your specifics)**
+
+| Item         | Method                    | Frequency      | Notes                                |
+|--------------|---------------------------|----------------|--------------------------------------|
+| **IM**       | VaR/ES + add-ons          | Daily/Intraday | Concentration, liquidity add-ons     |
+| **VM**       | Mark-to-market            | Daily/Intraday | Cut-offs, thresholds                 |
+
+
+#### <ins>Default Management & Waterfall</ins>
+
+1. **Defaulter’s IM/VM :** First, the CCP uses the defaulting member's own margin
+   
+2. **Defaulter’s default fund contribution :** If the margin wasn't enough, the CCP takes the defaulter's slice of the default fund ( prepaid mutual buffer).
+   
+3. **Skin-in-the-game (CCP capital) :** Next, the CCP puts its own capital ( small tranche) to absorb a part of the loss.
+   
+4. **Mutualized Default Fund (other members) :** Then, losses hit the mutual pool funded by all surviving members (mutualization of residual risk)
+   
+5. **Assessments (additional calls) :** If needed, the CCP calls extra contributions from surviving members.
+    
+6. **Recovery tools :** Before shutting anything down, the CCP can use recovery tools to stabilize
+    
+7. **Resolution :**  If recovery cannot restore safety, resolution authorities step in under law to restructure.
+
+   
+#### <ins>Membership:</ins>
+
+- **General Clearing Member (GCM) **: A bank/prime broker that clears its own trandes and those of other firms
+  
+*simple picture : the GCM is a clearing hub for multiple participants*
+
+
+- **Principal Clearing Member (PCM)**: A clearing member that primarily clears for itself (and possibly a limited client set).
+
+  *Key idea: Less of a hub than a GCM*
+
+  
+- **House Account**:  The member has its ownn proprietary account (prop/treasury desks).
+
+  
+  *Consequence : The member is in charge of its netting itself but doesn't benefit for any client protection
+
+  
+- **Client Omnibus (OCA)**: An aggregated account where client's positions and assets are pooled at the member.
+
+  
+*Pros: operationally simple and cheaper, good netting (collateral efficiency).*
+
+
+*Cons: protection and portability (transfer to another CM upon default) are medium because everything is pooled.pooled client positions/assets under the member (operationally simple; cheaper).*
+
+
+- **Individual Segregated Account (ISA)**: A client by client segregated account, legally segregated (kept separate by law and contract).
+
+  
+*Pros: high protection and high portability (easy to move the client book if the CM defaults).*
+
+
+*Cons: higher cost and complexity; less pooling → slightly lower collateral efficiency.*
+
+
+
+**Why it matters (risk/collateral/ops)**
+| Structure | Client Protection | Portability | Collateral Efficiency | Ops Complexity | Typical Use Case |
+|---|---|---:|---:|---:|---|
+| **House** | N/A (proprietary) | N/A | High (netting internal) | Low | Prop trading, market-making |
+| **Omnibus (OCA)** | Medium (pooled) | Medium | High (pooling/netting) | Low–Medium | Retail flow, many small clients |
+| **ISA** | High (per client) | High | Medium (less pooling) | Higher | Institutional mandates, PB with strict segregation |
+
+
+***Decision shortcut:
+
+***Need collateral efficiency and simplicity → choose Omnibus.***
+
+***Need strong legal protection and portability → choose ISA.***
+
+***Acting as a client hub → GCM; mostly own-account activity → PCM***
+
+
+
+*Operational flow*: portfolio hedging → default management auction → residual loss allocation per the cascade.
+
+  
+---
 
 # 15. Financial Regulator
