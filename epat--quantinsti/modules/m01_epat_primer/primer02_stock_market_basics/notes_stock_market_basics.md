@@ -696,10 +696,88 @@ flowchart LR
   F --> G[Confirmations<br/>statements]
 ```
 
+---
 
 # 11. Inside the Market Maker (MM) :  
 
-# 12. Central Securities Depository
+---
+
+# 12. Inside the Customer Securities Depository (CSD): Safekeeping, DvP Settlement & Asset Servicing
+
+CSDs are the core posttrade infrastructure: they safekeep dematerialized securities, ensure Delivery-versus-Payment (DvP) settlement so that cash and securities move simultaneously, and perform asset servicing such as dividends, coupons, rights and proxy voting. 
+
+- <ins> **CSD**: </ins>
+CSD is a market infrastructure that maintains and keeps safe the securities accounts, settles transfers in **DvP**, and provides **asset servicing** (coupons, dividends, rights, voting, splits).
+  
+- <ins> **ICSD :** </ins>  International CSD focused on international instruments (notably **Eurobonds**) ( **Euroclear Bank** and **Clearstream Banking S.A.**). ICSDs are based in Europe but operates worldwide. Although headquartered in Europe, the two ICSDs Euroclear Bank and Clearstream Banking S.A. grew out of the Eurobond market. Today they provide global settlement, custody, and collateral services for a broad set of international instruments, not just Eurobonds.
+  
+***ICSDs matter for Eurobonds because they provide a single international hub to issue, safekeep, and settle cross border bonds, offering multi-currency DvP, links to domestic CSDs so issuers reach global investors and investors move collateral efficiently.***
+
+*"Eurobond A bond issued outside the home jurisdiction of its currency and offered to investors across multiple international markets (the “euro” refers to the offshore euromarket, not Europe or the euro). Eurobonds are typically  and settled/cleared via ICSDs such as Euroclear and Clearstream"
+  
+-  <ins> **Dematerialization / Rematerialization :** </ins> Converting paper certificates into electronic records; today, most major markets operate in demat form.
+
+  *Why dematerialization ?* : Dematerialization accelerates settlement, reduces handling and transport risks, and lowers operational errors tied to lost or forged certificates.
+
+  
+-  <ins>**DvP (Delivery-versus-Payment) :** </ins> Securities delivered iff cash is paid.
+
+***Simply put, DvP is a settlement mechanism that links the cash and securities legs so neither becomes final unless the other does. This eliminates principal risk.***
+   
+   -> All the DvP models apply the simple rules of No Cash,No Shares / No Shares,No Cash.
+
+*Below the 3 BIS(Bank for International Settlements) model and their consequences.*
+   
+  - **Model 1**, **gross** securities + **gross** cash (trade by trade) : Each matched instruction settled individually. The engine checks you have the securities and the cash right now. If yes → settle; if not → park & recycle. With this model we need highest intraday liquidity on both side, the risk profile is considered minimal.
+
+    *Who loves it : Risk controllers and central bank*
+    *Who complains : Treasury and desk with thin intraday lines(because cash is required instantally)*
+    
+     
+  - **Model 2**: **gross** securities + **net** cash : The securities are received/delivered instruction by instruction while cash is settled on a net basis at defined intervals (eg, at the end of the day). In this model, we need lower cash liquidity compared to model 1 but the same securities liquidity is needed (we must have the line by line inventory to deliver). Here the risk profil is considered also minimal with nuance. Indeed we must have the net cash at cutoff and operational issues can still cause fails or penalties.
+
+  *Who loves it : Treasury and cash management teams because of lower intraday cash usage ; Desk with high volume in equities and fixed income that do both buy and sell intraday.* 
+  *Who complains : Risk compliance teams remain cautious because cash settles on a net basis at defined windows, creating a funding pressure at cut-off, potential settlement-discipline penalties if funding fails ; traders relying on just-in-time inventory ; Participants with irregular one side flows (mostly buys or mostly sells) who see little cash netting relief.*
+
+    
+  - **Model 3**: **net** securities + **net** cash (batch) : During the day, trades are captured but not individually settled. At the batch window, the system multilaterally nets all participants's trade. We have here lowest liquidity need because we fund at only the nets. Regarding the risk, if one payer can't fund at the batch window, the batch can jam (systemic settlement risk) unless supported by guarantees (prefunding, CCP)
+    
+ *Who loves it : Treasury and cash teams (minimal cash usage) ; Market operators handling massive ticket volumes; Back-office teams (fewer payments to process)
+ *Who complains it : Risk/Compliance on batch dependency (failure of a big payer can jam the cycle); Participants with directional one-sided flows (limited netting benefit), and counterparties facing tight cut ouioffs without robust prefunding lines.
+
+*Below worked examples of model 1 / 2 / 3*
+
+| Case | Timeline | What happens | Cash movement | Liquidity impact | Risk/notes |
+|---|---|---|---|---|---|
+| A) Model 1  | 10:15 buy €200m; 11:00 sell €200m | Each trade settles immediately (gross/gross) | Cash leaves at 10:15 for the buy; sale cash arrives at 11:00 (no offset) | High intraday funding (no netting) | Needs pre-funding or intraday credit; potential gridlock if funding tight |
+| B) Model 2  | Same trades | Securities settle gross; cash nets at 17:00 | One net cash at window (buys offset sells) | Medium (cash compressed; securities still line-by-line) | Funding pressure at cut-off; settlement-discipline penalties if funding fails |
+| C) Model 3 — batch efficiency | 100 small two-way equity tickets | Multilateral netting; batch DvP on nets | One net cash + net per ISIN (International Securities Identification Number) | Low (max netting) | Batch can stall if a big net payer can’t fund; mitigants: CCP guarantees, prefunding, loss-allocation |
+
+
+ <ins>**Asset servicing :** <ins> CSD covers the full corporate action lifecycle, capturing event terms, allocating entitlements, handling elections for rights issues, and supporting proxy voting. Many CSDs also support pledging/collateral management, blocking securities against credit lines or CCP margin calls.
+ 
+- <ins>**Omnibus vs Segregated :** <ins> **CSD**: </ins> Pooled nominee account vs named/fully segregated client account structures at the CSD or custodian layer.
+  
+  
+- <ins>**T+X** :<ins> Contractual settlement cycle (e.g., **T+2** for many cash equity markets).
+  
+- <ins>**Corporate actions**: <ins> **CSD**: </ins>Cash (coupons/dividends) and non-cash (bonus, rights, splits, mergers), plus **proxy voting**.
+
+
+<ins>4) Actor & flow map (diagram)</ins>
+
+```mermaid
+flowchart LR
+  Investor[Investor] --> Broker[Broker]
+  Broker -->|Order| Exchange[Exchange/Venue]
+  Broker --> Custodian[Custodian Bank]
+  Custodian --> CSD[CSD (domestic)]
+  CSD <--> ICSD[ICSD (Euroclear/Clearstream)]
+  CSD --> RTGS[Central Bank RTGS (cash leg)]
+  CSD --> Issuer[Issuer/Agent]
+  CSD --> CCP[CCP (if cleared upstream)]
+```
+
 
 # 13. Stock Exchange
 
