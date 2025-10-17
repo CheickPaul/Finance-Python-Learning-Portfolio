@@ -818,13 +818,14 @@ Stock Exchange is a regulated marketplace where buyers and sellers trade listed 
 
 
 ```mermaid
-flowchart LR
-  A[Capital Raising\n(IPO, follow-on)] --> X[Exchange]
-  B[Price Discovery\n(order book, auction)] --> X
-  C[Fair & Orderly Market\n(tick size, halts, surveillance)] --> X
-  D[Liquidity Provision\n(market makers, depth, tight spreads)] --> X
-  E[Indices & Benchmarks\n(market-wide & sector)] --> X
-  F[Investor Protection\n(disclosures, listing rules, compliance)] --> X
+graph LR
+  X[Exchange]
+  A[Capital raising] --> X
+  B[Price discovery] --> X
+  C[Fair and orderly market] --> X
+  D[Liquidity provision] --> X
+  E[Indices and benchmarks] --> X
+  F[Investor protection] --> X
 ```
 
 *(Price discovery = how the market sets prices via the order book; Liquidity = ability to trade size with minimal price impact.)*
