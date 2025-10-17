@@ -706,21 +706,21 @@ flowchart LR
 
 CSDs are the core posttrade infrastructure: they safekeep dematerialized securities, ensure Delivery-versus-Payment (DvP) settlement so that cash and securities move simultaneously, and perform asset servicing such as dividends, coupons, rights and proxy voting. 
 
-- <ins> **CSD**: </ins>
+<ins> **CSD**: </ins>
 CSD is a market infrastructure that maintains and keeps safe the securities accounts, settles transfers in **DvP**, and provides **asset servicing** (coupons, dividends, rights, voting, splits).
   
-- <ins> **ICSD :** </ins>  International CSD focused on international instruments (notably **Eurobonds**) ( **Euroclear Bank** and **Clearstream Banking S.A.**). ICSDs are based in Europe but operates worldwide. Although headquartered in Europe, the two ICSDs Euroclear Bank and Clearstream Banking S.A. grew out of the Eurobond market. Today they provide global settlement, custody, and collateral services for a broad set of international instruments, not just Eurobonds.
+<ins> **ICSD :** </ins>  International CSD focused on international instruments (notably **Eurobonds**) ( **Euroclear Bank** and **Clearstream Banking S.A.**). ICSDs are based in Europe but operates worldwide. Although headquartered in Europe, the two ICSDs Euroclear Bank and Clearstream Banking S.A. grew out of the Eurobond market. Today they provide global settlement, custody, and collateral services for a broad set of international instruments, not just Eurobonds.
   
 ***ICSDs matter for Eurobonds because they provide a single international hub to issue, safekeep, and settle cross border bonds, offering multi-currency DvP, links to domestic CSDs so issuers reach global investors and investors move collateral efficiently.***
 
 *"Eurobond A bond issued outside the home jurisdiction of its currency and offered to investors across multiple international markets (the “euro” refers to the offshore euromarket, not Europe or the euro). Eurobonds are typically  and settled/cleared via ICSDs such as Euroclear and Clearstream"
   
--  <ins> **Dematerialization / Rematerialization :** </ins> Converting paper certificates into electronic records; today, most major markets operate in demat form.
+<ins> **Dematerialization / Rematerialization :** </ins> Converting paper certificates into electronic records; today, most major markets operate in demat form.
 
   *Why dematerialization ?* : Dematerialization accelerates settlement, reduces handling and transport risks, and lowers operational errors tied to lost or forged certificates.
 
   
--  <ins>**DvP (Delivery-versus-Payment) :** </ins> Securities delivered iff cash is paid.
+<ins>**DvP (Delivery-versus-Payment) :** </ins> Securities delivered iff cash is paid.
 
 ***Simply put, DvP is a settlement mechanism that links the cash and securities legs so neither becomes final unless the other does. This eliminates principal risk.***
    
@@ -754,7 +754,7 @@ CSD is a market infrastructure that maintains and keeps safe the securities acco
 | C) Model 3 — batch efficiency | 100 small two-way equity tickets | Multilateral netting; batch DvP on nets | One net cash + net per ISIN (International Securities Identification Number) | Low (max netting) | Batch can stall if a big net payer can’t fund; mitigants: CCP guarantees, prefunding, loss-allocation |
 
 
- <ins>**Asset servicing :** <ins> CSD covers the full corporate action lifecycle, capturing event terms, allocating entitlements, handling elections for rights issues, and supporting proxy voting. Many CSDs also support pledging/collateral management, blocking securities against credit lines or CCP margin calls.
+ <ins> **Asset servicing :** <ins> CSD covers the full corporate action lifecycle, capturing event terms, allocating entitlements, handling elections for rights issues, and supporting proxy voting. Many CSDs also support pledging/collateral management, blocking securities against credit lines or CCP margin calls.
  
 - <ins>**Omnibus vs Segregated :** <ins> **CSD**: </ins> Pooled nominee account vs named/fully segregated client account structures at the CSD or custodian layer.
   
