@@ -28,6 +28,19 @@ Science which deals with collection, organisation, analysing, interpretion and p
 
 could be split in 2 main field **Descriptif stat (summarizing and visualisation of data)** and **Inferential statistics (draw conclusion about a population from a sample)**
 
+```mermaid
+flowchart TB
+    A[Statistics - data for decisions] --> B[Descriptive Statistics - summarize and visualize]
+    A --> C[Inferential Statistics - infer population from a sample]
+
+    B --> B1[Measures: mean, median, variance, skewness, kurtosis]
+    B --> B2[Visualizations: histogram, box plot, time-series chart]
+    B --> B3[Markets use: quick risk profile, outliers, regime check]
+
+    C --> C1[Estimation: parameters + CI (confidence intervals)]
+    C --> C2[Hypothesis testing: p-values, alpha != 0 tests]
+    C --> C3[Prediction: VaR/ES, future beta, fill probability (execution)]
+```
 
 **<ins>Probability vs. Statistics (clear contrast)</ins>**
 
