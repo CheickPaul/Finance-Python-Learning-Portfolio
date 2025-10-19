@@ -216,6 +216,57 @@ Use for: Buy/Sell/Hold mix, sector allocation. (Best with few categories; otherw
 
 #### CHAP III :  Descriptive Statistics II: Summarizing the Data
 
+**<ins>1) Measures of Central Tendency </ins>**
+
+- **Mean** : **(1)Average** that is the sum of all observation divided by the number of observation.
+$$
+\bar{x}=\frac{1}{n}\sum_{i=1}^{n} x_i
+$$
+Example (Shares Owned) :6 investors with Shares Owned = [0,10,10,5,20,15]
+Sum = 60 ; n= 6 ; mean = 10 shares 
+
+If some values repeat, we use a **(2)weighted average (using frequencies)** where **weights = frequencies (how many times a value appears)** 
+
+$$
+\bar{x}_{w}=\frac{0\cdot1+5\cdot1+10\cdot2+15\cdot1+20\cdot1}{1+1+2+1+1}
+=\frac{60}{6}=10\ \text{shares}
+$$
+
+| Shares Owned (x_i) | Frequency (w_i) | Contribution w_i * x_i |
+|--------------------|-----------------:|-----------------------:|
+| 0                  |                1 |                      0 |
+| 5                  |                1 |                      5 |
+| 10                 |                2 |                     20 |
+| 15                 |                1 |                     15 |
+| 20                 |                1 |                     20 |
+| **Totals**         |            **6** |                **60** |
+
+Weighted average = 60/6 = 10
+
+Trader vocab : weights (importance/occurrence), **weighted average with volume weights → VWAP (volume-weighted average price) for execution quality.**
+
+example : let have **Discrete trades (k=1...N)** ; **P = trade price**, **Q = trade size**
+
+Continuous form over interval [t0,t1]
+
+$$
+\mathrm{VWAP}=\frac{\int_{t_0}^{t_1} P_t \, dV_t}{\int_{t_0}^{t_1} dV_t}
+$$
+
+$$
+\text{Trades: }(P,Q)=(100,200),(101,100),(99,700)
+$$
+$$
+\mathrm{VWAP}=\frac{100\cdot200+101\cdot100+99\cdot700}{200+100+700}
+=\frac{20000+10100+69300}{1000}
+=\frac{99400}{1000}=99.4
+$$
+
+
+- **Median** : Is the middle value for the data set once it is arranged in ascending order. For odd number of observations, median is the middle value of data set
+
+
+- **Mode** :
 
 ---
 
