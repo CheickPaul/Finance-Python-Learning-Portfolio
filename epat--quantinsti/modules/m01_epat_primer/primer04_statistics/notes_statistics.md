@@ -467,11 +467,40 @@ $z=\frac{x-\mu}{\sigma}$
   → The rule can **underestimate** extreme-move probabilities; always backtest/validate.
 
 
+
 ##### <ins>2.3 Variance</ins>
 
+This variable is closely linked to the standard deviation. Mathematically, variance is just the square of the standard deviation. both essentially convey the same information
+
 $$
-\sigma^{2} \;=\; \frac{1}{\,n-1\,}\sum_{i=1}^{n}\bigl(x_i-\mu\bigr)^2
+\sigma^{2} \=\ \frac{1}{\,n-1\,}\sum_{i=1}^{n}\bigl(x_i-\mu\bigr)^2
+\qquad
+\mu \=\ \frac{1}{n}\sum_{i=1}^{n} x_i
 $$
+
+**Where:**
+
+- \(\sigma^{2}\) = **sample variance** (square of the standard deviation; proxy for volatility\(^2\))  
+- \(x_i\) = value of observation \(i\)  
+- \(n\) = number of observations in the sample  
+- \(\mu\) = sample mean
+
+*Note:* variance is in **squared units** (e.g., \(%^2\) for returns). Standard deviation is \(\sigma=\sqrt{\sigma^2}\) (same units as the data).
+
+
+**Dataset range (UB30 closing prices)**
+
+| Date       |  Close |
+|------------|------:|
+| 2025-10-13 | 171.10 |
+| 2025-10-14 | 172.80 |
+| 2025-10-15 | 169.95 |
+| 2025-10-16 | 173.44 |
+| 2025-10-17 | 174.20 |
+
+- **Max close** = 174.20  
+- **Min close** = 169.95  
+- **Range** = 174.20 − 169.95 = **4.25**
 
 
 #### <ins>Trader vocab (quick)</ins>
@@ -488,6 +517,9 @@ IQR/MAD = robust spread (less sensitive to extremes)
 
 
  # CHAP IV : Basics of Probability Theory
+
+#### <ins>Definitions and Terminonogy</ins>
+
 
 ---
 
