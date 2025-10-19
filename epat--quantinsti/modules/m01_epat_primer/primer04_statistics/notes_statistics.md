@@ -16,7 +16,7 @@ Appendix 2
 
 ---
 
-#### CHAP I :  An Introduction to Probability & Statistics
+# CHAP I :  An Introduction to Probability & Statistics
 
 
 we encounter data everywhere in our society. Org takes decision based on data. (better judgment under uncertainty)
@@ -130,7 +130,7 @@ p-value: probability of seeing your result (or more extreme) if the null hypothe
 
 ---
 
-#### CHAP II : Descriptive Statistics I: Visualizing the Data
+# CHAP II:  Descriptive Statistics I: Visualizing the Data
 
 is about describing the caracteristque of a data set, we doing by organising, presenting and summarizing the data effectively
 
@@ -214,9 +214,35 @@ Use for: Buy/Sell/Hold mix, sector allocation. (Best with few categories; otherw
 
 ---
 
-#### CHAP III :  Descriptive Statistics II: Summarizing the Data
+# CHAP III:  Descriptive Statistics II: Summarizing the Data
 
-**<ins>1) Measures of Central Tendency </ins>**
+Here we have 2 mains branches. **The central tendency** which means the **typical level of data** (where values cluster) and the **Dispersion** which means the **spread of the data** ( how scattered values are round the central level.
+
+```mermaid
+flowchart TB
+    A["Descriptive Statistics"] --> B["Central Tendency (typical level)"]
+    A --> C["Dispersion (spread / risk)"]
+
+    %% Central Tendency branch
+    B --> B1["Mean (average)"]
+    B --> B2["Median (middle after sorting)"]
+    B --> B3["Mode (most frequent)"]
+
+    %% Dispersion branch
+    C --> C1["Range (max - min)"]
+    C --> C2["Variance (sigma^2)"]
+    C --> C3["Standard Deviation (sigma)"]
+    C --> C4["IQR (Q3 - Q1)"]
+    C --> C5["MAD (median abs deviation)"]
+
+    %% Notes (market context)
+    B1 --- D1["Sensitive to outliers"]
+    B2 --- D2["Robust to outliers"]
+    C3 --- D3["Volatility proxy"]
+    C4 --- D4["Robust spread"]
+```
+
+#### **<ins>1) Measures of Central Tendency (location) </ins>**
 
 
 
@@ -304,10 +330,122 @@ $$
 
 
 
-**<ins>1.2 Median</ins>** : Is the middle value for the data set once it is arranged in ascending order. For odd number of observations, median is the middle value of data set
+**<ins>1.2 Median</ins>**  
+
+The **median** is the **middle value** of a dataset **after sorting in ascending order**.
+
+- **Odd number of observations:** the median is the **single middle value**.  
+- **Even number of observations:** the median is the **average of the two middle values**.
+
+**Mini examples**
+- Odd: data = 2, 5, 7 → **median = 5**  
+- Even: data = 2, 5, 7, 100 → **median = (5 + 7)/2 = 6**
+
+*Trader note:* median is **robust to outliers** (extreme prints), giving a stable “central level” when the distribution has **fat tails**.
 
 
-- **Mode** :
+--> In fat-tail markets (more extreme moves than normal), prefer median (robust center) for a quick “level,” and use mean with care (sensitive to spikes).
+
+
+
+
+**<ins>1.3 Mode</ins>** :
+
+The **mode** is the value that occurs **most often** in a dataset (highest frequency).
+
+We can use the frequency distribution of **Shares Owned** to spot the mode:
+
+| Shares Owned | Frequency |
+|--------------|----------:|
+| 1            |         4 |
+| 2            |         1 |
+| 3            |         1 |
+| 4            |         1 |
+| 5            |         3 |
+
+Here, **1** has the **highest frequency (4)**. Hence, the **mode = 1**.
+
+*Notes (market sense):*  
+- If two values tie for highest frequency → **bimodal**.  
+- If all frequencies are equal → **no clear mode**.  
+- Mode is useful for **categorical** or **discrete** variables (e.g., “most common share count”), less informative for continuous prices unless **binned**.
+
+
+
+#### **<ins>2) Measures of dispersion (location) </ins>**
+
+##### <ins>2.1 Range, (max - min)</ins>
+
+ Range is the simplest measure of calculating **variability** : the difference between the largest and the smallest value of a dataset.
+
+ One limitation of using range is that it only reflecs the extremes and says nothing about how values are distributed in between.
+
+**Dataset range (UB30 closing prices)**
+| Date       | Close |
+|------------|------:|
+| 2025-10-13 | 171.10 |
+| 2025-10-14 | 172.80 |
+| 2025-10-15 | 169.95 |
+| 2025-10-16 | 173.44 |
+| 2025-10-17 | 174.20 |
+
+- **Max close** = 174.20  
+- **Min close** = 169.95  
+- **Range** = 174.20 − 169.95 = **4.25**
+
+  *Market sense:* how wide prices (or any metric) spread over a period.
+
+
+##### <ins>2.2 Standard Deviation</ins>
+
+Standard deviation is the measure of spread of data relative to its mean.
+
+- High deviation indicates that data are quite far away from the mean.
+  
+- Less deviation indicates that data points are very close to the mean
+
+**Standard deviation is widely use as a proxy for volatility in the field of quantitative finance**
+
+| | |
+|---|---|
+| <img src="https://github.com/user-attachments/assets/2cbf1d08-3eb9-4704-ae29-60008f76b2e9" width="100%"/> | <img src="https://github.com/user-attachments/assets/3e953ab9-a2f6-4f27-a6fb-26a30663d3e9" width="100%"/> |
+
+
+
+
+
+$$
+\sigma \=\ \sqrt{\;\frac{1}{\,n-1\,}\;\sum_{i=1}^{n}\left(x_i - \bar{x}\right)^2}\,
+\qquad
+\mu \=\ \frac{1}{n}\sum_{i=1}^{n} x_i
+$$
+
+**Where:**
+
+- \(sigma \) = sample standard deviation (proxy for **volatility** in markets)
+- \(x_i\) = value of observation \(i\)
+- \(n\) = number of observations in the sample
+- \(\mu \) = sample mean
+
+
+
+
+##### <ins>2.3 Variance</ins>
+
+$$
+\sigma^{2} \;=\; \frac{1}{\,n-1\,}\sum_{i=1}^{n}\bigl(x_i-\mu\bigr)^2
+$$
+
+
+**<ins>Trader vocab (quick)</ins>**
+
+Level = central tendency (typical price/return).
+
+Vol/variance = dispersion (risk/spread).
+
+Median = robust center (resists outliers/spikes).
+
+IQR/MAD = robust spread (less sensitive to extremes)
 
 ---
 
