@@ -16,7 +16,7 @@ Appendix 2
 
 ---
 
-####  An Introduction to Probability & Statistics
+#### CHAP I :  An Introduction to Probability & Statistics
 
 
 we encounter data everywhere in our society. Org takes decision based on data. (better judgment under uncertainty)
@@ -130,7 +130,7 @@ p-value: probability of seeing your result (or more extreme) if the null hypothe
 
 ---
 
-#### Descriptive Statistics I: Visualizing the Data
+#### CHAP II : Descriptive Statistics I: Visualizing the Data
 
 is about describing the caracteristque of a data set, we doing by organising, presenting and summarizing the data effectively
 
@@ -212,11 +212,9 @@ Use for: Buy/Sell/Hold mix, sector allocation. (Best with few categories; otherw
 - **Distribution shape → histogram (continuous), bar (categorical)**
 
 
-
-
 ---
 
-#### Descriptive Statistics II: Summarizing the Data
+#### CHAP III :  Descriptive Statistics II: Summarizing the Data
 
 
 ---
