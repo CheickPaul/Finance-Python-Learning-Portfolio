@@ -22,7 +22,7 @@ Appendix 2
 we encounter data everywhere in our society. Org takes decision based on data. (better judgment under uncertainty)
 
 
-#### <ins>What is Statistics?</ins>
+#### 1. <ins>What is Statistics?</ins>
 
 Science which deals with collection, organisation, analysing, interpretion and presentation of data to support decision making. It helps decision makers in making informed decision 
 
@@ -42,7 +42,7 @@ flowchart TB
     C --> C3["Prediction: VaR, ES, future beta, fill probability"]
 ```
 
-#### <ins>Probability vs. Statistics (clear contrast)</ins>
+#### 2. <ins>Probability vs. Statistics (clear contrast)</ins>
 
 Also study together it remains a difference between both of them.
 
@@ -64,7 +64,7 @@ Ex: “Using 3 years of returns, what is the volatility (σ) and its confidence 
 
 
 
-#### <ins>4.practical application of statistic</ins>
+#### 3. <ins>practical application of statistic</ins>
 
 we see stat accross many field such as medicine( predict the presence of a disease in a patient) ; **economy ( analyze relationship between economic measures such as GDP and unemployement rate)** ; business (to study past trends of customer behaviour; A/B test) ; insurance ( to calculate the risk presented by the insured client or property- insurance premium is directly proportional to the risk posed by the insured) ; 
 
@@ -80,7 +80,7 @@ we see stat accross many field such as medicine( predict the presence of a disea
 
 
 
-#### <ins>Statistics in Quant Finance & Algorithmic Trading (desk-friendly)</ins>
+#### 4. <ins>Statistics in Quant Finance & Algorithmic Trading (desk-friendly)</ins>
 
 - **Signal discovery:** is a pattern real or just **noise**? (use p-values, out-of-sample tests).
 
@@ -99,11 +99,11 @@ we see stat accross many field such as medicine( predict the presence of a disea
 **Alpha** (excess return), **beta** (market sensitivity), **vol** (volatility), **drawdown** (peak-to-trough loss), **Sharpe** (return per unit risk), **VaR/ES** (tail risk), **slippage** (execution shortfall), **fill rate** (execution probability).
 
 
-#### <ins>Common Pitfalls (to avoid early)</ins>
+#### 5. <ins>Common Pitfalls (to avoid early)</ins>
 
 Look-ahead bias (using future info), survivorship bias (dropping failed firms), data-snooping/p-hacking (testing too many ideas), non-stationarity (market regimes change), overfitting (model glued to past).
 
-#### <ins>Mini Example (simple & concrete)</ins>
+#### 6. <ins>Mini Example (simple & concrete)</ins>
 
 You have 1,000 daily returns for Stock X.
 
@@ -114,7 +114,7 @@ Inferential: 95% CI for mean return; test H₀: mean = 0 (is there alpha?).
 Decision: if alpha is statistically significant and economically meaningful (after costs/slippage), proceed to paper-trade.
 
 
-#### <ins>Tiny Glossary (one-liners)</ins>
+#### 7. <ins>Tiny Glossary (one-liners)</ins>
 
 Population: the full set you care about (all possible returns).
 
@@ -135,14 +135,14 @@ p-value: probability of seeing your result (or more extreme) if the null hypothe
 is about describing the caracteristque of a data set, we doing by organising, presenting and summarizing the data effectively
 
 
-#### <ins>1) Time Series: tabular data</ins>
+#### 1. <ins>Time Series: tabular data</ins>
 Use a simple table (date-indexed) to store Open/High/Low/Close, Volume, and any labels (e.g., Buy/Sell/Hold).
 
 What it shows (markets): evolution of closing price (trend), range (intraday volatility), volume (participation/liquidity), and position signals.
 
 How to read it: scan rows by date to see sequences (streaks), sudden jumps, gaps, or regime changes.
 
-#### <ins>2) Data Types</ins>**
+#### 2. <ins>Data Types</ins>**
 Collected data can be qualitative or quantitative (important for choosing the right chart / summary).
 
 
@@ -165,7 +165,7 @@ data that **can not be counted but measured**. variable of continuous data are w
 Examples: Closing Price; time; returns; spread.
 
 
-#### <ins>3) Frequency Distribution of Data</ins>
+#### 3. <ins>Frequency Distribution of Data</ins>
 
 Frequency distribution of data : show all the possible values(or ranges/bins) that the data can take along the frequency of occurence of these value.
 
@@ -193,7 +193,7 @@ Count each closing price into its bin → build a histogram (shape, center, spre
 
 Trader vocab: distribution (shape of outcomes), bin (range bucket), mode (peak), fat tails (extreme-risk).
 
-#### <ins>4) Visualizing the Data</ins>*
+#### 4. <ins> Visualizing the Data</ins>*
 
 **Line chart** : show trend over time (simple way to feel underlying fluctuations).
 Markets: momentum, trend breaks, gaps, regime shifts.
@@ -245,11 +245,11 @@ flowchart TB
     C4 --- D4["Robust spread"]
 ```
 
-#### <ins>1) Measures of Central Tendency (location) </ins>
+#### 1. <ins>Measures of Central Tendency (location) </ins>
 
 
 
-##### <ins>1.1 Mean</ins> : 
+##### 1.1 <ins>Mean</ins> : 
 **(1)Average** that is the sum of all observation divided by the number of observation.
   
 $$
@@ -334,7 +334,7 @@ $$
 
 
 
-##### <ins>1.2 Median</ins>  
+##### 1.2 <ins>Median</ins>  
 
 The **median** is the **middle value** of a dataset **after sorting in ascending order**.
 
@@ -353,7 +353,7 @@ The **median** is the **middle value** of a dataset **after sorting in ascending
 
 
 
-##### <ins>1.3 Mode</ins> :
+##### 1.3 <ins>Mode</ins> :
 
 The **mode** is the value that occurs **most often** in a dataset (highest frequency).
 
@@ -376,9 +376,9 @@ Here, **1** has the **highest frequency (4)**. Hence, the **mode = 1**.
 
 
 
-#### **<ins>2) Measures of dispersion (spread/risk) </ins>**
+#### 2. <ins>Measures of dispersion (spread/risk) </ins>
 
-##### <ins>2.1 Range, (max - min)</ins>
+##### 2.1 <ins>Range, (max - min)</ins>
 
  Range is the simplest measure of calculating **variability** : the difference between the largest and the smallest value of a dataset.
 
@@ -400,7 +400,7 @@ Here, **1** has the **highest frequency (4)**. Hence, the **mode = 1**.
   *Market sense:* how wide prices (or any metric) spread over a period.
 
 
-##### <ins>2.2 Standard Deviation</ins>
+##### 2.2 <ins>Standard Deviation</ins>
 
 Standard deviation is the measure of spread of data relative to its mean.
 
@@ -468,7 +468,7 @@ $z=\frac{x-\mu}{\sigma}$
 
 
 
-##### <ins>2.3 Variance</ins>
+##### 2.3 <ins>Variance</ins>
 
 This variable is closely linked to the standard deviation. Mathematically, variance is just the square of the standard deviation. both essentially convey the same information
 
@@ -504,8 +504,56 @@ IQR/MAD = robust spread (less sensitive to extremes)
 
  # CHAP IV : Basics of Probability Theory
 
-#### <ins>Definitions and Terminonogy</ins>
+#### 1. <ins>Definitions and Terminology</ins>
 
+ let suppose we are playing a game of dice. The die has 6 sided and is fair. Every side or face has an equal chance of turning up on rolling. Before rolling the die, the results are unknown. This is term as a **Random experiment**. Once the experiment is over, that is once we roll the die, we get to know the result. These result are termed as **Outcomes**.
+
+Then, when we roll this die we have 6 possibles outcomes. The set of all possibles outcomes is termed as the **Sample Space**. It is denoted by the **Greek alphabet omega = {Sample Space}**
+
+- Rolling a 6-sided die : Omega = {1,2,3,4,5,6}
+  
+- Flipping a Coin  : Omega ={Heads,Tails}
+
+When a random experience is repeated several times, we term each of these repetitions as a **Trial**. 
+
+- When we roll a six-faced fair die repeatedly, each trial would have an outcome from 1 to 6
+
+- In our trial of flipping a fair coin once, each trial will result in either heads or tails for each trial.
+
+
+  Suppose we consider a subset of the rolling die sample space : {2,3,5} ; {1,3,5} ; {3,6}.
+
+   Any subset is termed as an **Event**.
+
+  Still for this game, an Event can be to get a an odd number; to roll a multiple of three or to land a prime number : 
+
+
+  - **E(odd) = {1,3,5}** 
+ 
+  - **E(3x) = {3,6}**
+ 
+  - **E(prime) = {2,3,5}** 
+
+
+**The probability** now is termed as the **chance of an event taking place**.
+
+an Event that is certain to happen has a probability of 1, ***P(E) = 1*** / NO CHANCE to happen has a probability of 0, ***P(E) = 0*** / IF there is any chance to the probability to happen then probability lies between 0 and 1 ***0<P(E)<1***
+
+<table>
+  <tr>
+    <td style="border:1px solid #bbb; padding:10px; text-align:center;">
+      $\mathbb{P}(\text{Event})=\dfrac{\text{Number of Favourable Outcomes}}{\text{Total Number of Possible Outcomes}}$
+    </td>
+  </tr>
+</table>
+
+
+
+
+
+#### 2. <ins>Union and Intersection</ins> 
+
+"02:53" 
 
 ---
 
