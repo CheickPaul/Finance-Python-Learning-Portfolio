@@ -488,20 +488,6 @@ $$
 *Note:* variance is in **squared units** (e.g., \(%^2\) for returns). Standard deviation is \(\sigma=\sqrt{\sigma^2}\) (same units as the data).
 
 
-**Dataset range (UB30 closing prices)**
-
-| Date       |  Close |
-|------------|------:|
-| 2025-10-13 | 171.10 |
-| 2025-10-14 | 172.80 |
-| 2025-10-15 | 169.95 |
-| 2025-10-16 | 173.44 |
-| 2025-10-17 | 174.20 |
-
-- **Max close** = 174.20  
-- **Min close** = 169.95  
-- **Range** = 174.20 − 169.95 = **4.25**
-
 
 #### <ins>Trader vocab (quick)</ins>
 
