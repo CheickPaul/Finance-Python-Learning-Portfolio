@@ -555,6 +555,12 @@ an Event that is certain to happen has a probability of 1, ***P(E) = 1*** / NO C
 
 "02:53" 
 
+#### 3. <ins>Inclusion-Exclusion Principle</ins> 
+
+
+#### 4. <ins>Mutually Exclusice/ Disjoint Events</ins> 
+
+
 ---
 
 # CHAP V : Probability Distributions of Random Variables
