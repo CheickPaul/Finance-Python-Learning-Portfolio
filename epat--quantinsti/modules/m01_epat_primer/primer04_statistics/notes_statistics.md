@@ -218,7 +218,9 @@ Use for: Buy/Sell/Hold mix, sector allocation. (Best with few categories; otherw
 
 **<ins>1) Measures of Central Tendency </ins>**
 
-**1.1 Mean** : **(1)Average** that is the sum of all observation divided by the number of observation.
+
+
+**<ins>1.1 Mean</ins>** : **(1)Average** that is the sum of all observation divided by the number of observation.
   
 $$
 \bar{x}=\frac{1}{n}\sum_{i=1}^{n} x_i
@@ -300,7 +302,9 @@ $$
 
 
 
-**1.2 Median** : Is the middle value for the data set once it is arranged in ascending order. For odd number of observations, median is the middle value of data set
+
+
+**<ins>1.2 Median</ins>** : Is the middle value for the data set once it is arranged in ascending order. For odd number of observations, median is the middle value of data set
 
 
 - **Mode** :
