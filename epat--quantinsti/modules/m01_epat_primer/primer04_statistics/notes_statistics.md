@@ -372,7 +372,7 @@ Here, **1** has the **highest frequency (4)**. Hence, the **mode = 1**.
 
 
 
-#### **<ins>2) Measures of dispersion (location) </ins>**
+#### **<ins>2) Measures of dispersion (spread/risk) </ins>**
 
 ##### <ins>2.1 Range, (max - min)</ins>
 
