@@ -22,7 +22,7 @@ Appendix 2
 we encounter data everywhere in our society. Org takes decision based on data. (better judgment under uncertainty)
 
 
-**<ins>What is Statistics?</ins>**
+#### <ins>What is Statistics?</ins>
 
 Science which deals with collection, organisation, analysing, interpretion and presentation of data to support decision making. It helps decision makers in making informed decision 
 
@@ -42,7 +42,7 @@ flowchart TB
     C --> C3["Prediction: VaR, ES, future beta, fill probability"]
 ```
 
-**<ins>Probability vs. Statistics (clear contrast)</ins>**
+#### <ins>Probability vs. Statistics (clear contrast)</ins>
 
 Also study together it remains a difference between both of them.
 
@@ -64,7 +64,7 @@ Ex: “Using 3 years of returns, what is the volatility (σ) and its confidence 
 
 
 
-**<ins>4.practical application of statistic</ins>**
+#### <ins>4.practical application of statistic</ins>
 
 we see stat accross many field such as medicine( predict the presence of a disease in a patient) ; **economy ( analyze relationship between economic measures such as GDP and unemployement rate)** ; business (to study past trends of customer behaviour; A/B test) ; insurance ( to calculate the risk presented by the insured client or property- insurance premium is directly proportional to the risk posed by the insured) ; 
 
@@ -80,7 +80,7 @@ we see stat accross many field such as medicine( predict the presence of a disea
 
 
 
-**<ins>Statistics in Quant Finance & Algorithmic Trading (desk-friendly)</ins>**
+#### <ins>Statistics in Quant Finance & Algorithmic Trading (desk-friendly)</ins>
 
 - **Signal discovery:** is a pattern real or just **noise**? (use p-values, out-of-sample tests).
 
@@ -99,11 +99,11 @@ we see stat accross many field such as medicine( predict the presence of a disea
 **Alpha** (excess return), **beta** (market sensitivity), **vol** (volatility), **drawdown** (peak-to-trough loss), **Sharpe** (return per unit risk), **VaR/ES** (tail risk), **slippage** (execution shortfall), **fill rate** (execution probability).
 
 
-**<ins>Common Pitfalls (to avoid early)</ins>**
+#### <ins>Common Pitfalls (to avoid early)</ins>
 
 Look-ahead bias (using future info), survivorship bias (dropping failed firms), data-snooping/p-hacking (testing too many ideas), non-stationarity (market regimes change), overfitting (model glued to past).
 
-**<ins>Mini Example (simple & concrete)</ins>**
+#### <ins>Mini Example (simple & concrete)</ins>
 
 You have 1,000 daily returns for Stock X.
 
@@ -114,7 +114,7 @@ Inferential: 95% CI for mean return; test H₀: mean = 0 (is there alpha?).
 Decision: if alpha is statistically significant and economically meaningful (after costs/slippage), proceed to paper-trade.
 
 
-**<ins>Tiny Glossary (one-liners)</ins>**
+#### <ins>Tiny Glossary (one-liners)</ins>
 
 Population: the full set you care about (all possible returns).
 
@@ -134,39 +134,42 @@ p-value: probability of seeing your result (or more extreme) if the null hypothe
 
 is about describing the caracteristque of a data set, we doing by organising, presenting and summarizing the data effectively
 
-exemple : ....
 
-**<ins>1) Time Series: tabular data</ins>
+#### <ins>1) Time Series: tabular data</ins>
 Use a simple table (date-indexed) to store Open/High/Low/Close, Volume, and any labels (e.g., Buy/Sell/Hold).
 
 What it shows (markets): evolution of closing price (trend), range (intraday volatility), volume (participation/liquidity), and position signals.
 
 How to read it: scan rows by date to see sequences (streaks), sudden jumps, gaps, or regime changes.
 
-**<ins>2) Data Types</ins>**
+#### <ins>2) Data Types</ins>**
 Collected data can be qualitative or quantitative (important for choosing the right chart / summary).
 
 
-**2.1 Qualitative data :** usually consist of non-numeric values, also referred to as "Categorical variables"
+##### 2.1 Qualitative data :
+usually consist of **non-numeric values**, also referred to as "Categorical variables"
 
 Non-numeric labels or categories (e.g., Buy / Sell / Hold, sector, rating).
 
 
-**2.2 Quantitative data:** consist of numerical values and can be further divided into discrete and continuous data
+##### 2.2 Quantitative data:
+consist of **numerical values** and can be further divided into discrete and continuous data
 
-*2.2.1 Discrete data :* Usually takes up integer values and is often used to represent countable item
+###### 2.2.1 Discrete data :
+Usually takes up integer values and is often used to represent **countable items**
 for example the number of tails when we flip a coin 50 times, the number of children in a family. the variables "shares owned " in the tab is a discrete data as the number of share is never fractional
 
 
-*2.2.2 Continuous data :* data that can not be counted but measured. variable of continuous data are within a range but it can take any numerical value. 
+###### 2.2.2 Continuous data :
+data that **can not be counted but measured**. variable of continuous data are within a range but it can take any numerical value. 
 Examples: Closing Price; time; returns; spread.
 
 
-**<ins>3) Frequency Distribution of Data</ins>**
+#### <ins>3) Frequency Distribution of Data</ins>
 
-Frequency distribution of data : SHOW all the possible values(or ranges/bins) that the data can take along the frequency of occurence of these value.
+Frequency distribution of data : show all the possible values(or ranges/bins) that the data can take along the frequency of occurence of these value.
 
-*3.1 Categorical example :*
+##### 3.1 Categorical example :*
 
 Buy: frequency = 4 → percentage = 4/6 ≈ 66.7%
 
@@ -183,14 +186,14 @@ Hold: frequency = 1 → percentage = 1/6 ≈ 16.7%
 
 
 
-*3.2 Continuous example (Closing Price):*
+##### 3.2 Continuous example (Closing Price):
 Values (illustrative): 173.00, 173.44, 171.10, …
 Define bins (equal ranges): 165–167, 167–169, 169–171, 171–173, 173–175.
 Count each closing price into its bin → build a histogram (shape, center, spread, tails).
 
 Trader vocab: distribution (shape of outcomes), bin (range bucket), mode (peak), fat tails (extreme-risk).
 
-**<ins>4) Visualizing the Data</ins>**
+#### <ins>4) Visualizing the Data</ins>*
 
 **Line chart** : show trend over time (simple way to feel underlying fluctuations).
 Markets: momentum, trend breaks, gaps, regime shifts.
@@ -201,7 +204,7 @@ Use for: counts (categorical frequencies), volume by day, returns by month.
 **Pie chart** : show proportions of categories (percentage split).
 Use for: Buy/Sell/Hold mix, sector allocation. (Best with few categories; otherwise use bar chart.)
 
-**Rules of thumb (desk):**
+#### Rules of thumb (desk):
 
 - **Time evolution → line.**
 
@@ -216,7 +219,7 @@ Use for: Buy/Sell/Hold mix, sector allocation. (Best with few categories; otherw
 
 # CHAP III:  Descriptive Statistics II: Summarizing the Data
 
-Here we have 2 mains branches. **The central tendency** which means the **typical level of data** (where values cluster) and the **Dispersion** which means the **spread of the data** ( how scattered values are round the central level.
+Here we have 2 mains branches. **The central tendency** which means the **typical level of data** (where values cluster) and the **Dispersion** which means the **spread of the data** ( how scattered values are around the central level.
 
 ```mermaid
 flowchart TB
@@ -242,11 +245,12 @@ flowchart TB
     C4 --- D4["Robust spread"]
 ```
 
-#### **<ins>1) Measures of Central Tendency (location) </ins>**
+#### <ins>1) Measures of Central Tendency (location) </ins>
 
 
 
-**<ins>1.1 Mean</ins>** : **(1)Average** that is the sum of all observation divided by the number of observation.
+##### <ins>1.1 Mean</ins> : 
+**(1)Average** that is the sum of all observation divided by the number of observation.
   
 $$
 \bar{x}=\frac{1}{n}\sum_{i=1}^{n} x_i
@@ -307,7 +311,7 @@ $$
 V_{t_1}=200,\quad V_{t_2}=300,\quad V_{t_3}=1000.
 $$
 
-Jumps (equal to trade sizes):
+- **Jumps (equal to trade sizes):**
 
 $$
 \Delta V_{t_1}=200,\quad \Delta V_{t_2}=100,\quad \Delta V_{t_3}=700 \;=\; \text{trade sizes}.
@@ -330,7 +334,7 @@ $$
 
 
 
-**<ins>1.2 Median</ins>**  
+##### <ins>1.2 Median</ins>  
 
 The **median** is the **middle value** of a dataset **after sorting in ascending order**.
 
@@ -349,7 +353,7 @@ The **median** is the **middle value** of a dataset **after sorting in ascending
 
 
 
-**<ins>1.3 Mode</ins>** :
+##### <ins>1.3 Mode</ins> :
 
 The **mode** is the value that occurs **most often** in a dataset (highest frequency).
 
@@ -427,7 +431,40 @@ $$
 - \(n\) = number of observations in the sample
 - \(\mu \) = sample mean
 
+###### <ins>Empirical Rule (68–95–99.7)</ins>
 
+If a dataset is **approximately normal** (bell-shaped), then most observations fall near the mean **μ** in bands of **σ** (standard deviation):
+
+- **[ μ − 1σ , μ + 1σ ] ≈ 68%** of observations  
+- **[ μ − 2σ , μ + 2σ ] ≈ 95%**  
+- **[ μ − 3σ , μ + 3σ ] ≈ 99.7%**
+
+###### How to read it (market sense):
+- **σ** is a proxy for **volatility** (dispersion).  
+- a daily return within **±1σ** is “common”; beyond **±2σ** is “unusual”; beyond **±3σ** is “rare”.
+
+###### Z-score link:
+
+The **z-score** tells how many **standard deviations (σ)** a value **x** is from the mean **μ**.
+
+
+$z=\frac{x-\mu}{\sigma}$
+
+- $|z|\le 1$ $\Rightarrow$ inside $\pm 1\sigma$ (~68%)
+- $|z|\le 2$ $\Rightarrow$ inside $\pm 2\sigma$ (~95%)
+- $|z|\le 3$ $\Rightarrow$ inside $\pm 3\sigma$ (~99.7%)
+- 
+
+###### Usage (desk):
+
+- Build **risk bands** around μ (e.g., μ ± kσ) to gauge moves.  
+- Compare assets/days using **z-scores** (standardized returns).  
+- Convert **daily σ** to annual: \( \sigma_{\text{ann}} \approx \sigma_{\text{daily}}\sqrt{252} \).
+
+###### Caveats:
+- Works **only** if the distribution is close to **normal**.  
+- Markets often have **fat tails** (more extremes) and **skew** (asymmetry).  
+  → The rule can **underestimate** extreme-move probabilities; always backtest/validate.
 
 
 ##### <ins>2.3 Variance</ins>
@@ -437,7 +474,7 @@ $$
 $$
 
 
-**<ins>Trader vocab (quick)</ins>**
+#### <ins>Trader vocab (quick)</ins>
 
 Level = central tendency (typical price/return).
 
@@ -450,27 +487,35 @@ IQR/MAD = robust spread (less sensitive to extremes)
 ---
 
 
-#### Basics of Probability Theory
+ # CHAP IV : Basics of Probability Theory
 
 ---
 
-#### Probability Distributions of Random Variables
+# CHAP V : Probability Distributions of Random Variables
 
 ---
 
-#### 6 Standard Statistical Distributions
+# CHAP VI :Standard Statistical Distributions
 
 ---
 
-#### 7 Basics of Inferential Statistics
----
-#### 8 Hypothesis Testing
----
-#### 9 Covariance & Correlation
+# CHAP VII :  Basics of Inferential Statistics
 
-#### 10 Linear Regression
 ---
-#### 11 Other Resources & Reference Material
+
+# CHAP VIII : Hypothesis Testing
+
+---
+
+# CHAP IX :  Covariance & Correlation
+
+---
+
+# CHAP X : Linear Regression
+
+---
+
+# CHAP XI :Other Resources & Reference Material
 
 
 
