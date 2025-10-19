@@ -218,10 +218,12 @@ Use for: Buy/Sell/Hold mix, sector allocation. (Best with few categories; otherw
 
 **<ins>1) Measures of Central Tendency </ins>**
 
-- **Mean** : **(1)Average** that is the sum of all observation divided by the number of observation.
+**1.1 Mean** : **(1)Average** that is the sum of all observation divided by the number of observation.
+  
 $$
 \bar{x}=\frac{1}{n}\sum_{i=1}^{n} x_i
 $$
+
 Example (Shares Owned) :6 investors with Shares Owned = [0,10,10,5,20,15]
 Sum = 60 ; n= 6 ; mean = 10 shares 
 
@@ -247,23 +249,58 @@ Trader vocab : weights (importance/occurrence), **weighted average with volume w
 
 example : let have **Discrete trades (k=1...N)** ; **P = trade price**, **Q = trade size**
 
-Continuous form over interval [t0,t1]
+Continuous form (intergrals over time [t0,t1] )
 
 $$
 \mathrm{VWAP}=\frac{\int_{t_0}^{t_1} P_t \, dV_t}{\int_{t_0}^{t_1} dV_t}
 $$
 
 $$
-\text{Trades: }(P,Q)=(100,200),(101,100),(99,700)
+P_t = price   process ;
+V_t = cumulative  volume 
 $$
+
+$$
+\int P_t\, dV_t \;\approx\; \sum_{k} P_{t_k}\,\Delta V_{t_k} \;=\; \sum_{k} P_k\, Q_k
+$$
+
+
+ **Mini-example (tick by tick)**
+
+Successive trades:
+
+$$
+(P_1,Q_1)=(100,200),\quad (P_2,Q_2)=(101,100),\quad (P_3,Q_3)=(99,700)
+$$
+
+- **Cumulative volume after each trade:**
+  
+$$
+V_{t_1}=200,\quad V_{t_2}=300,\quad V_{t_3}=1000.
+$$
+
+Jumps (equal to trade sizes):
+
+$$
+\Delta V_{t_1}=200,\quad \Delta V_{t_2}=100,\quad \Delta V_{t_3}=700 \;=\; \text{trade sizes}.
+$$
+
+- **Bar volume** (if the 3 trades fall in the same 1-minute bar):
+  
+$$
+\mathrm{Volume(1\text{-}min)}=200+100+700=1000.
+$$
+
+- **Bar VWAP** (volume-weighted)
+  
 $$
 \mathrm{VWAP}=\frac{100\cdot200+101\cdot100+99\cdot700}{200+100+700}
-=\frac{20000+10100+69300}{1000}
-=\frac{99400}{1000}=99.4
+=\frac{99400}{1000}=99.4.
 $$
 
 
-- **Median** : Is the middle value for the data set once it is arranged in ascending order. For odd number of observations, median is the middle value of data set
+
+**1.2 Median** : Is the middle value for the data set once it is arranged in ascending order. For odd number of observations, median is the middle value of data set
 
 
 - **Mode** :
