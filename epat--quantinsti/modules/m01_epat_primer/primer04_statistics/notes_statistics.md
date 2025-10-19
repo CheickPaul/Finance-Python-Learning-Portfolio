@@ -16,7 +16,7 @@ Appendix 2
 
 ---
 
-## CHAP I :  An Introduction to Probability & Statistics
+# CHAP I :  An Introduction to Probability & Statistics
 
 
 we encounter data everywhere in our society. Org takes decision based on data. (better judgment under uncertainty)
@@ -130,7 +130,7 @@ p-value: probability of seeing your result (or more extreme) if the null hypothe
 
 ---
 
-## CHAP II:  Descriptive Statistics I: Visualizing the Data
+# CHAP II:  Descriptive Statistics I: Visualizing the Data
 
 is about describing the caracteristque of a data set, we doing by organising, presenting and summarizing the data effectively
 
@@ -217,7 +217,7 @@ Use for: Buy/Sell/Hold mix, sector allocation. (Best with few categories; otherw
 
 ---
 
-## CHAP III:  Descriptive Statistics II: Summarizing the Data
+# CHAP III:  Descriptive Statistics II: Summarizing the Data
 
 Here we have 2 mains branches. **The central tendency** which means the **typical level of data** (where values cluster) and the **Dispersion** which means the **spread of the data** ( how scattered values are around the central level.
 
@@ -502,7 +502,7 @@ IQR/MAD = robust spread (less sensitive to extremes)
 ---
 
 
- ## CHAP IV : Basics of Probability Theory
+ # CHAP IV : Basics of Probability Theory
 
 #### 1. <ins>Definitions and Terminology</ins>
 
