@@ -506,9 +506,9 @@ IQR/MAD = robust spread (less sensitive to extremes)
 
 #### 1. <ins>Definitions and Terminology</ins>
 
- let suppose we are playing a game of dice. The die has 6 sided and is fair. Every side or face has an equal chance of turning up on rolling. Before rolling the die, the results are unknown. This is term as a **Random experiment**. Once the experiment is over, that is once we roll the die, we get to know the result. These result are termed as **Outcomes**.
+ let suppose we are playing a game of dice. The die has 6 sided and is fair. Every side or face has an equal chance of turning up on rolling. Before rolling the die, the results are unknown. This is term as a <ins>**Random experiment**</ins>. Once the experiment is over, that is once we roll the die, we get to know the result. These result are termed as <ins>**Outcomes**</ins>.
 
-Then, when we roll this die we have 6 possibles outcomes. The set of all possibles outcomes is termed as the **Sample Space**. It is denoted by the **Greek alphabet omega = {Sample Space}**
+Then, when we roll this die we have 6 possibles outcomes. The set of all possibles outcomes is termed as the **Sample Space**. It is denoted by the <ins>**Greek alphabet omega = {Sample Space}**</ins>
 
 - Rolling a 6-sided die : Omega = {1,2,3,4,5,6}
   
@@ -523,7 +523,7 @@ When a random experience is repeated several times, we term each of these repeti
 
   Suppose we consider a subset of the rolling die sample space : {2,3,5} ; {1,3,5} ; {3,6}.
 
-   Any subset is termed as an **Event**.
+   Any subset is termed as an <ins>**Event**</ins>.
 
   Still for this game, an Event can be to get a an odd number; to roll a multiple of three or to land a prime number : 
 
@@ -535,7 +535,7 @@ When a random experience is repeated several times, we term each of these repeti
   - **E(prime) = {2,3,5}** 
 
 
-**The probability** now is termed as the **chance of an event taking place**.
+<ins>**The probability**</ins> now is termed as the <ins>**chance of an event taking place**</ins>.
 
 an Event that is certain to happen has a probability of 1, ***P(E) = 1*** / NO CHANCE to happen has a probability of 0, ***P(E) = 0*** / IF there is any chance to the probability to happen then probability lies between 0 and 1 ***0<P(E)<1***
 
