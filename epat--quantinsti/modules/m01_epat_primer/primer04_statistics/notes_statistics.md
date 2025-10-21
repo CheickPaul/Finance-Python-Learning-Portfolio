@@ -556,6 +556,45 @@ an Event that is certain to happen has a probability of 1, ***P(E) = 1*** / NO C
   </tr>
 </table>
 
+#### 2. Exemple Coin Flip — 3 Tosses (Sample Space)
+
+**Setup** : 
+- Outcomes per toss: **H** (Heads), **T** (Tails)  
+- Tosses: **3**, independent, fair coin
+
+<ins>**Rule of Product**</ins>  
+- \(2 \times 2 \times 2 = 2^3 = 8\) possible sequences.
+
+<ins>**Sample Space \(\Omega\)**</ins>  
+\[
+\Omega = \{ \text{HHH}, \text{HHT}, \text{HTH}, \text{HTT}, \text{THH}, \text{THT}, \text{TTH}, \text{TTT} \}
+\]
+
+<ins>**Uniform probabilities**</ins>  
+- For a fair coin: \(P(\text{each sequence}) = 1/8\).
+
+---
+
+### Counting Heads with a Binomial Model
+Let \(X =\) number of Heads in 3 tosses. Then \(X \sim \text{Binomial}(n=3, p=1/2)\).
+
+\[
+P(X=k) = \binom{3}{k}\left(\tfrac{1}{2}\right)^3, \quad k=0,1,2,3.
+\]
+
+| k (Heads) | Sequences                          | \(P(X=k)\) |
+|:---------:|------------------------------------|:----------:|
+| 0         | TTT                                | 1/8        |
+| 1         | HTT, THT, TTH                      | 3/8        |
+| 2         | HHT, HTH, THH                      | 3/8        |
+| 3         | HHH                                | 1/8        |
+
+---
+
+### Example Events
+- **Exactly 2 Heads**: \(\{\text{HHT}, \text{HTH}, \text{THH}\}\) — \(P=3/8\)  
+- **At least 1 Head**: \(\Omega \setminus \{\text{TTT}\}\) — \(P=7/8\)  
+- **First toss is Head**: \(\{\text{HHH}, \text{HHT}, \text{HTH}, \text{HTT}\}\) — \(P=4/8=1/2\)
 
 
 
