@@ -556,22 +556,22 @@ an Event that is certain to happen has a probability of 1, ***P(E) = 1*** / NO C
   </tr>
 </table>
 
-#### 2. Exemple Coin Flip — 3 Tosses (Sample Space)
+#### 2. <ins>Exemple Coin Flip — 3 Tosses (Sample Space)</ins>
 
 **Setup** : 
 - Outcomes per toss: **H** (Heads), **T** (Tails)  
 - Tosses: **3**, independent, fair coin
 
-<ins>**Rule of Product**</ins>
+<ins>**Rule of Product**</ins> :
 $2 \times 2 \times 2 = 2^3 = 8$ possible sequences.
 
-<ins>**Sample Space ($\Omega$)**<ins>
+<ins>**Sample Space ($\Omega$)**<ins> :
 
 $$
 \Omega=\{\mathrm{HHH},\ \mathrm{HHT},\ \mathrm{HTH},\ \mathrm{HTT},\ \mathrm{THH},\ \mathrm{THT},\ \mathrm{TTH},\ \mathrm{TTT}\}
 $$
 
-<ins>**Uniform probabilities**</ins>
+<ins>**Uniform probabilities**</ins> :
 For a fair coin: $P(\text{each sequence}) = \tfrac{1}{8}$.
 
 
@@ -591,8 +591,8 @@ $$
 
 
 **Example Events**
-- **Exactly 2 Heads**: $\{\mathrm{HHT},\,\mathrm{HTH},\,\mathrm{THH}\}$ — $P=3/8$
-- **At least 1 Head**: $\Omega \setminus \{\mathrm{TTT}\}$ — $P=7/8$
+- **Exactly 2 Heads**: $\{\mathrm{HHT},\,\mathrm{HTH},\,\mathrm{THH}\}$  $P=3/8$
+- **At least 1 Head**: $\Omega \setminus \{\mathrm{TTT}\}$ $P=7/8$
 - **First toss is Head**: $\{\mathrm{HHH},\,\mathrm{HHT},\,\mathrm{HTH},\,\mathrm{HTT}\}$ — $P=4/8=1/2$
 
 
@@ -600,7 +600,64 @@ $$
 
 #### 2. <ins>Union and Intersection</ins> 
 
-"02:53" 
+- Consider A, the event of rolling an odd number in rolling die game.
+  
+A= E(odd) = {1,3,5}, then P(E_odd) =3/6 = 1/2
+
+- B, the event of rolling a multiple of 3
+  
+  B= E(3x)={3,6}, then P(E_3x)=2/6=1/3
+
+
+##### 2.1 <ins> Intersection</ins>  
+
+We term the outcomes of the both event, the **intersection**
+
+The intersection would comprise all the values that are shared by both even A and B.
+
+$$
+E(A \cup B) = {3}.
+$$
+
+<img width="1024" height="1024" alt="image" src="https://github.com/user-attachments/assets/1a138f7b-d158-490d-b243-b8b2ab2fce7e" />
+
+$$
+P\big(E(\text{odd}) \cap E(3x)\big) = \tfrac{1}{6}.
+$$
+
+Intersection of 2 or multiple event is also an event. 
+
+
+##### 2. <ins> Union</ins>  
+
+If we want at least one outcome of both events to occur, we have to seek for the union.
+
+The union would comprise all the values that are contained in all the events but without any repetition.
+
+$$
+E(A \cap B) = {1,3,5,6}.
+$$
+
+Union of 2 or multiple events is also an event. 
+
+<img width="1024" height="1024" alt="image" src="https://github.com/user-attachments/assets/0554f1bb-61ec-4984-b82f-a2bd109dd2d5" />
+
+
+##### Event Notation & Rules
+
+| # | Rule (notation) | Quick reading | Example (fair 6-sided die) |
+|---|------------------|---------------|-----------------------------|
+| 1 | \(E(A)\cap E(B)=E(I)=E(A\ \text{and}\ B)\) | **Intersection** = “A **and** B” | \(E(\text{odd})\cap E(3x)=\{3\}\) |
+| 2 | \(E(A)\cup E(B)=E(U)=E(A\ \text{or}\ B)\) | **Union** = “A **or** B” (inclusive) | \(E(\text{odd})\cup E(3x)=\{1,3,5,6\}\) |
+| 3 | \(E(A)\cap E(B)\cap E(C)\cap E(D)\ldots\) | **n-ary intersection** | \(\{3\}\cap\{3,6\}\cap\{2,3,5\}=\{3\}\) |
+| 4 | \(E(A)\cup E(B)\cup E(C)\cup E(D)\ldots\) | **n-ary union** | \(\{1,3,5\}\cup\{2,4\}\cup\{6\}=\{1,2,3,4,5,6\}\) |
+| 5 | \(P(A\cup B)=P(A)+P(B)-P(A\cap B)\) | **Inclusion–Exclusion** (two events) | \(\tfrac12+\tfrac13-\tfrac16=\tfrac23\) |
+
+> Notes:  
+> • In probability, “or” is **inclusive** (A, B, or both).  
+> • If A and B are **independent**, \(P(A\cap B)=P(A)\,P(B)\).
+
+
 
 #### 3. <ins>Inclusion-Exclusion Principle</ins> 
 
