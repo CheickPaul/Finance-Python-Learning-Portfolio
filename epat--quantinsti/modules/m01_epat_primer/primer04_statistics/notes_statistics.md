@@ -645,17 +645,22 @@ Union of 2 or multiple events is also an event.
 
 ##### Event Notation & Rules
 
+## Event Notation & Rules (MathJax inline)
+
 | # | Rule (notation) | Quick reading | Example (fair 6-sided die) |
-|---|------------------|---------------|-----------------------------|
-| 1 | \(E(A)\cap E(B)=E(I)=E(A\ \text{and}\ B)\) | **Intersection** = “A **and** B” | \(E(\text{odd})\cap E(3x)=\{3\}\) |
-| 2 | \(E(A)\cup E(B)=E(U)=E(A\ \text{or}\ B)\) | **Union** = “A **or** B” (inclusive) | \(E(\text{odd})\cup E(3x)=\{1,3,5,6\}\) |
-| 3 | \(E(A)\cap E(B)\cap E(C)\cap E(D)\ldots\) | **n-ary intersection** | \(\{3\}\cap\{3,6\}\cap\{2,3,5\}=\{3\}\) |
-| 4 | \(E(A)\cup E(B)\cup E(C)\cup E(D)\ldots\) | **n-ary union** | \(\{1,3,5\}\cup\{2,4\}\cup\{6\}=\{1,2,3,4,5,6\}\) |
-| 5 | \(P(A\cup B)=P(A)+P(B)-P(A\cap B)\) | **Inclusion–Exclusion** (two events) | \(\tfrac12+\tfrac13-\tfrac16=\tfrac23\) |
+|---|---|---|---|
+| 1 | $A\cap B$ | Intersection = “A and B” | $E(\mathrm{odd})\cap E(3x)=\{3\}$ |
+| 2 | $A\cup B$ | Union = “A or B$^\*$” | $E(\mathrm{odd})\cup E(3x)=\{1,3,5,6\}$ |
+| 3 | $A\cap B\cap C\cap D\ldots$ | n-ary intersection | $\{3\}\cap\{3,6\}\cap\{2,3,5\}=\{3\}$ |
+| 4 | $A\cup B\cup C\cup D\ldots$ | n-ary union | $\{1,3,5\}\cup\{2,4\}\cup\{6\}=\{1,2,3,4,5,6\}$ |
+| 5 | $P(A\cup B)=P(A)+P(B)-P(A\cap B)$ | Inclusion–Exclusion | $\tfrac12+\tfrac13-\tfrac16=\tfrac23$ |
+
+$\;^\*$“or” is **inclusive**. If $A,B$ independent: $P(A\cap B)=P(A)P(B)$.
+
 
 > Notes:  
 > • In probability, “or” is **inclusive** (A, B, or both).  
-> • If A and B are **independent**, \(P(A\cap B)=P(A)\,P(B)\).
+> • If A and B are independent: P(A ∩ B) = P(A) · P(B).
 
 
 
