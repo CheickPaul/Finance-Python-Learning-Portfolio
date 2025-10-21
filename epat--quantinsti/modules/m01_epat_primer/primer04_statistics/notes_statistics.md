@@ -790,7 +790,7 @@ It is the **probability of the data, conditional on the hypothesis**: `L(H) = P(
 Likelihood = how unsurprising the data would be if the hypothesis were true (fit score).
 
 ##### 6.3 post 
-
+Updated belief after seeing the data. We use the **posterior (or posterior predictive)** to make decisions after a data print.
 
 ##### 6.4 <ins>Exemple : **Bayes (odds form) — Fed example**</ins>
 
