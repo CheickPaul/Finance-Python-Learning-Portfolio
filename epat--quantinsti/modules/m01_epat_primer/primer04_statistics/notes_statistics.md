@@ -711,10 +711,15 @@ We rolled a fair die **30** times and **no 6** appeared. What is the probability
 <ins>Question:</ins>  P(next roll = 6 | no 6 in first 30)
 
 <ins> Answer under IID</ins>  (fair die)**
-- The process is Independent an Identically Distributed(i.i.d). → no memory.
-- P(next = 6 | history) = 1/6
-- **(Trader) Past prints don’t create edge (avantage) → avoid gambler’s fallacy.**
+- The process is Independent an Identically Distributed(i.i.d). → no memory/ Independence from history, (<ins>Independant and Identically distributed</ins>).
+- P(next = 6 | history) = 1/6, because P(A | history up to t) = P(A) when the process is iid
+ 
+- <ins>**Trader vocab (one-liner): IID ⇒ no information edge from history.**</ins>
+  *Past prints don’t create edge (avantage) → ***avoid gambler’s fallacy***.*
 
+-  Under IID, past data provides no predictive edge for the next tick; if dependence or non-stationarity is present (autocorrelation, regime shifts), use conditional models—e.g., ARMA/GARCH (time-series), factor models (beta exposures), or HAC/Newey–West (robust SE).
+
+        
 <ins> How rare was the history?</ins> 
 - P(no 6 in 30) = (5/6)^30 ≈ 0.0042 (0.42%)
 
@@ -727,7 +732,7 @@ We rolled a fair die **30** times and **no 6** appeared. What is the probability
 Even after 30 rolls with no 6, an **IID fair** die keeps the next-roll probability at **1/6**. The past frequency is not the future probability (no *edge*).
 
 **Mini glossary (market-friendly)**:
-- **IID**: independent & identically distributed (no memory, same law).
+- **IID**: independent & identically distributed (no memory,same law, independance from memory).
 - **Ex-ante** (model-based) vs **ex-post** (data-based) probability.
 - **Edge**: exploitable advantage; none here under IID.
 
@@ -739,9 +744,88 @@ Even after 30 rolls with no 6, an **IID fair** die keeps the next-roll probabili
 
 -**Bayes** :        P(A | B) = P(B | A) · P(A) / P(B)
 
-##### 5.3 <ins>Bayes's Theorem</ins> 
+
+#### 6. <ins>Bayes's Theorem</ins> 
+
+ Bayes is simple a mechanism to update the odds when new info arrives. Like a trader updating a view after a fresh data print.
+
+##### 6.1  <ins> What it actually means</ins> 
+
+- **Odds** = chance ratio. `odds = p/(1-p)` Is ratio of probability of win divided probability of loss. (Pwin/Ploss)
+  
+-**Prior odds** = your baseline belief **before** seeing the data.
+
+-**Likelihood** = how compatible the observed data is with each hypothesis/ data fit.
+
+-**Posterior odds** = your updated belief after combining prior × likelihood (and normalizing).
+
+**Posterior ∝ Likelihood × Prior** (posterior = belief after data; likelihood = data fit; prior = belief before data).
+
+$$
+P(A \mid B)=\frac{P(B \mid A)\,P(A)}{P(B)} \qquad\text{and}\qquad
+\text{Posterior}(\theta\mid \text{data}) \propto \text{Likelihood}(\text{data}\mid\theta)\times \text{Prior}(\theta).
+$$
 
 
+In our game of rolling die, we suppose we have to play a number greater than 3 to win.
+P(win) = 3/6 = 0.5
+
+##### 6.2 <ins> Prior</ins>  
+
+The belief **before** seeing the data (ex-ante view).  
+> “**starting point**” update after the data (like a base case in trading).
+
+**Terminology (very important).** The prior is **about the hypothesis/parameter itself** (your initial belief),  
+not the data fit. Bayes then combines **Prior × Likelihood → Posterior**.
+
+##### 6.3 <ins>likelihood</ins> 
+
+**Key idea.** *Likelihood* measures **how well** a model/hypothesis makes the **observed data unsurprising** (*data fit*).  
+>  As“a **score** for each hypothesis given the data.” Higher likelihood ⇒ **better fit**.
+
+**Terminology (very important).** Likelihood is **not** “the probability of the hypothesis.”  
+It is the **probability of the data, conditional on the hypothesis**: `L(H) = P(Data | H)`.
+
+***One-liner*** (memo):
+Likelihood = how unsurprising the data would be if the hypothesis were true (fit score).
+
+##### 6.3 post 
+
+
+##### 6.4 <ins>Exemple : **Bayes (odds form) — Fed example**</ins>
+
+**<ins>Scenarios</ins>** : H1 = hawkish, H0 = dovish  
+- Prior odds = 1:1 (50/50) → odds = 1  
+**Surprise** = Actual − Consensus (vs what the market expected).
+
+**Market read**
+- **Positive surprise** (inflation > expected) → **hawkish tilt** (rates higher/longer), yields ↑, USD ↑.  
+- **Negative surprise** (inflation < expected) → **dovish tilt** (rate-cut odds up), yields ↓, USD ↓.
+  
+- Evidence: CPI surprise is 3× more likely under H1 than under H0 → LR = 3.
+
+*Note:* A surprise shifts **expectations** (pricing) — it doesn’t mean the central bank changed rates yet.
+Posterior odds = Prior odds × LR = 1 × 3 = 3  
+Posterior probability = odds / (1 + odds) = 3 / (1 + 3) = **75%**
+
+<ins>**Sensitivity**</ins>
+- Prior 40/60 → prior_odds = 0.4/0.6 = 0.667 → posterior_odds = 0.667 × 3 = 2  
+  ⇒ P = 2 / (1 + 2) = **66.7%**
+- If LR = 2 with 50/50 prior → posterior_odds = 2  
+  ⇒ P = **66.7%**
+
+<ins>**Rule of thumb**</ins>
+Posterior odds = Prior odds × Likelihood ratio (LR)  
+- If **LR > 1** ⇒ posterior > prior (evidence **favors** H1).
+  
+- If **LR = 1** ⇒ no change.
+  
+- If **LR < 1** ⇒ posterior < prior (evidence **disfavors** H1).
+
+<ins>**Quick refs**</ins>
+- **Odds** = p / (1 − p)  
+   
+- **LR (likelihood ratio)** = P(Data | H1) / P(Data | H0)  *(Bayes factor, “signal” upgrade/downgrade)*
 
 
 ---
