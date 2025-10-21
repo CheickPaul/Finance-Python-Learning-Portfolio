@@ -827,6 +827,18 @@ Posterior odds = Prior odds × Likelihood ratio (LR)
    
 - **LR (likelihood ratio)** = P(Data | H1) / P(Data | H0)  *(Bayes factor, “signal” upgrade/downgrade)*
 
+##### Cheat-sheet
+ Odds & Bayes
+odds = p / (1 - p)
+p = odds / (1 + odds)
+
+Posterior_odds = Prior_odds × LR
+LR = P(Data | H1) / P(Data | H0)
+
+Log version (plus stable)
+LLR = log P(Data | H1) − log P(Data | H0)
+Posterior_logodds = Prior_logodds + LLR
+p = exp(logodds) / (1 + exp(logodds))
 
 ---
 
