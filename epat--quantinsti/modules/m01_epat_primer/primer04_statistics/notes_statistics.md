@@ -488,6 +488,15 @@ $$
 *Note:* variance is in **squared units** (e.g., \(%^2\) for returns). Standard deviation is \(\sigma=\sqrt{\sigma^2}\) (same units as the data).
 
 
+> **why square?**  
+> - Prevents +/− deviations from canceling out (captures spread around the mean).  
+> - Gives extra weight to large deviations ( 10 counts more than 5 because 100 > 25).  
+> - Has convenient math properties (least squares, var–cov models, derivatives).  
+> - We often report **standard deviation = √variance** for interpretability (same units as data).  
+> - Alternative: use **MAD / IQR** when you want robustness to outliers.
+
+
+
 
 #### <ins>Trader vocab (quick)</ins>
 
