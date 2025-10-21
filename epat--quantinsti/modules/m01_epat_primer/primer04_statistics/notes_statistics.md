@@ -433,7 +433,7 @@ $$
 
 ###### <ins>Empirical Rule (68–95–99.7)</ins>
 
-If a dataset is **approximately normal** (bell-shaped, normal distribution), then most observations fall near the mean **μ** in bands of **σ** (standard deviation):
+If a dataset is <ins>**approximately normal**</ins> (bell-shaped, normal distribution), then most observations fall near the mean **μ** in bands of **σ** (standard deviation):
 
 - **[ μ − 1σ , μ + 1σ ] ≈ 68%** of observations  
 - **[ μ − 2σ , μ + 2σ ] ≈ 95%**  
@@ -453,7 +453,7 @@ $z=\frac{x-\mu}{\sigma}$
 - $|z|\le 1$ $\Rightarrow$ inside $\pm 1\sigma$ (~68%)
 - $|z|\le 2$ $\Rightarrow$ inside $\pm 2\sigma$ (~95%)
 - $|z|\le 3$ $\Rightarrow$ inside $\pm 3\sigma$ (~99.7%)
-- > **In short:** “$|z| > 3$” x is an outlier but only if we are in the normality. Outside normality consider IQR/MAD tools. 
+-  **In short:** “$|z| > 3$” x is an outlier but only if we are in the normality. Outside normality consider IQR/MAD tools. 
 
 ###### Usage (desk):
 
