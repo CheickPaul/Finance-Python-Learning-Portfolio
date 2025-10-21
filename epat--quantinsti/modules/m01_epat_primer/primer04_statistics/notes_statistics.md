@@ -562,25 +562,24 @@ an Event that is certain to happen has a probability of 1, ***P(E) = 1*** / NO C
 - Outcomes per toss: **H** (Heads), **T** (Tails)  
 - Tosses: **3**, independent, fair coin
 
-<ins>**Rule of Product**</ins>  
-- \(2 \times 2 \times 2 = 2^3 = 8\) possible sequences.
+<ins>**Rule of Product**</ins>
+$2 \times 2 \times 2 = 2^3 = 8$ possible sequences.
 
-<ins>**Sample Space \(\Omega\)**</ins>  
-\[
-\Omega = \{ \text{HHH}, \text{HHT}, \text{HTH}, \text{HTT}, \text{THH}, \text{THT}, \text{TTH}, \text{TTT} \}
-\]
+<ins>**Sample Space ($\Omega$)**<ins>
+$$
+\Omega=\{\mathrm{HHH},\ \mathrm{HHT},\ \mathrm{HTH},\ \mathrm{HTT},\ \mathrm{THH},\ \mathrm{THT},\ \mathrm{TTH},\ \mathrm{TTT}\}
+$$
 
-<ins>**Uniform probabilities**</ins>  
-- For a fair coin: \(P(\text{each sequence}) = 1/8\).
+<ins>**Uniform probabilities**</ins>
+For a fair coin: $P(\text{each sequence}) = \tfrac{1}{8}$.
 
----
 
-### Counting Heads with a Binomial Model
-Let \(X =\) number of Heads in 3 tosses. Then \(X \sim \text{Binomial}(n=3, p=1/2)\).
+<ins>**Counting Heads with a Binomial Model**</ins>
+Let $X$ = number of Heads in 3 tosses. Then $X \sim \mathrm{Binomial}(n=3,\ p=\tfrac12)$.
 
-\[
-P(X=k) = \binom{3}{k}\left(\tfrac{1}{2}\right)^3, \quad k=0,1,2,3.
-\]
+$$
+P(X=k)=\binom{3}{k}\left(\tfrac12\right)^3,\quad k=0,1,2,3.
+$$
 
 | k (Heads) | Sequences                          | \(P(X=k)\) |
 |:---------:|------------------------------------|:----------:|
@@ -589,12 +588,11 @@ P(X=k) = \binom{3}{k}\left(\tfrac{1}{2}\right)^3, \quad k=0,1,2,3.
 | 2         | HHT, HTH, THH                      | 3/8        |
 | 3         | HHH                                | 1/8        |
 
----
 
-### Example Events
-- **Exactly 2 Heads**: \(\{\text{HHT}, \text{HTH}, \text{THH}\}\) — \(P=3/8\)  
-- **At least 1 Head**: \(\Omega \setminus \{\text{TTT}\}\) — \(P=7/8\)  
-- **First toss is Head**: \(\{\text{HHH}, \text{HHT}, \text{HTH}, \text{HTT}\}\) — \(P=4/8=1/2\)
+**Example Events**
+- **Exactly 2 Heads**: $\{\mathrm{HHT},\,\mathrm{HTH},\,\mathrm{THH}\}$ — $P=3/8$
+- **At least 1 Head**: $\Omega \setminus \{\mathrm{TTT}\}$ — $P=7/8$
+- **First toss is Head**: $\{\mathrm{HHH},\,\mathrm{HHT},\,\mathrm{HTH},\,\mathrm{HTT}\}$ — $P=4/8=1/2$
 
 
 
