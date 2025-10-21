@@ -690,7 +690,7 @@ suppose this case : we still rolling our die but after rolling the die, we are n
 
 Suppose this case : we still rolling our die but after rolling the die, we are not supposed to see the outcome directly but we are informed that we have rolled an odd number. With this information known, what is the probability of having rolled the number 3 ? 
 
-- <ins>**Given**</ins> odd: {1,3,5}
+- <ins>Given</ins> odd: {1,3,5}
 
 → only “3” is multiple of 3
 
@@ -704,28 +704,26 @@ Once you know the outcome is odd {1,3,5}, 1 out of 3 outcomes is a multiple of 3
 
 ###### 5.1.2 -<ins> Exemple (b): Next-Roll Probability  :</ins>  
 
-. Given : No 6 in first 30 rolls
+- <ins> Given</ins>  : No 6 in first 30 rolls
 
 We rolled a fair die **30** times and **no 6** appeared. What is the probability that the **31st** roll is a 6?
 
-**Question:** P(next roll = 6 | no 6 in first 30)
+<ins>Question:</ins>  P(next roll = 6 | no 6 in first 30)
 
-**Answer under IID (fair die)**
-- The process is i.i.d. → no memory (pas d’effet mémoire).
+<ins> Answer under IID</ins>  (fair die)**
+- The process is Independent an Identically Distributed(i.i.d). → no memory.
 - P(next = 6 | history) = 1/6
-- (Trader) Past prints don’t create edge (avantage) → avoid gambler’s fallacy.
+- **(Trader) Past prints don’t create edge (avantage) → avoid gambler’s fallacy.**
 
-**How rare was the history?**
+<ins> How rare was the history?</ins> 
 - P(no 6 in 30) = (5/6)^30 ≈ 0.0042 (0.42%)
 
-**Data-only estimates (if you infer p6 from the sample)**
+<ins> Data-only estimates</ins>  (if you infer p6 from the sample)
 - MLE: p6_hat = 0/30 = 0  (overfits; not recommended)
 - Laplace/Bayes (6 vs not-6): (0+1)/(30+2) = 1/32 ≈ 3.1%
 - Dirichlet-6 mean: (0+1)/(30+6) = 1/36 ≈ 2.78%
 
-**Intuition:** Even after 30 rolls with no 6, IID fair die ⇒ next-roll prob = 1/6.
-
-**Intuition (one-liner)**:
+**Intuition **:
 Even after 30 rolls with no 6, an **IID fair** die keeps the next-roll probability at **1/6**. The past frequency is not the future probability (no *edge*).
 
 **Mini glossary (market-friendly)**:
