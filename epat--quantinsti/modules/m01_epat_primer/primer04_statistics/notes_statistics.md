@@ -566,6 +566,7 @@ an Event that is certain to happen has a probability of 1, ***P(E) = 1*** / NO C
 $2 \times 2 \times 2 = 2^3 = 8$ possible sequences.
 
 <ins>**Sample Space ($\Omega$)**<ins>
+
 $$
 \Omega=\{\mathrm{HHH},\ \mathrm{HHT},\ \mathrm{HTH},\ \mathrm{HTT},\ \mathrm{THH},\ \mathrm{THT},\ \mathrm{TTH},\ \mathrm{TTT}\}
 $$
