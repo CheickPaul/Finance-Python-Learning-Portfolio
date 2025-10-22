@@ -1126,9 +1126,9 @@ $$
 
 ***σ (population SD) is generally unknown. It’s a population parameter (the “true vol” of the observations) that we estimate with s (sample SD).***
 
-##### 4.2 <ins>Sample mean (x̄) and its Standard Error(SE) and Dispersion of the sample(s)</ins>
+##### 4.2 <ins>Sample mean (x̄), its Standard Error (SE), and sample dispersion (s)</ins>
 
-<ins>**sample average**</ins> (estimator of μ)
+<ins>**sample average (x̄)** </ins> *(estimator of μ)*
 
 $$
 \bar{x}=\frac{1}{n}\sum_{i=1}^{n} x_i
@@ -1140,8 +1140,27 @@ $$
 
 <ins>**Standard Error, SE** </ins> (*vol of the mean*)
 
+$$
+\mathrm{SE}(\bar{x})=\frac{s}{\sqrt{n}}
+$$
 
-<ins>**s** </ins> (*vol of the mean*)
+- **Idea:** larger n ⇒ **lower SE** (more precise estimate).
+- 
+- **If σ known (theoretical):**
+  
+$$
+\mathrm{SD}[\bar{X}]=\frac{\sigma}{\sqrt{n}}
+$$
+
+<ins>**Dispersion of observations (s)**</ins> — (*sample SD*)
+
+$$
+s=\sqrt{\frac{1}{n-1}\sum_{i=1}^{n}(x_i-\bar{x})^2}
+$$
+
+-**What is it?** **Vol of individual ratings** (spread of the points).
+
+-**Role:** s is the **plug-in** to compute **SE** via $$\( s/\sqrt{n} \)$$; it also **estimates** the population SD (σ).
 
 
 $$
@@ -1153,6 +1172,7 @@ $$
 
 
 ##### 4. <ins>Comparing 2 means (A: 4.9★, B:3.0★) </ins>
+
 
 ##### 4. <ins>Sample mean(x̄)</ins>
 
