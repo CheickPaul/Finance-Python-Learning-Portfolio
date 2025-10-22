@@ -1075,6 +1075,19 @@ The statistical distribution called the lognormal distribution is continuous pro
 
 # CHAP VII :  Basics of Inferential Statistics
 
+In real life, the data points about all the possible observations are rarely available for analysis. Under such situation, we have to make do with sample. This is where the field of **inferential statistics comes in the picture.
+
+#### 1. <ins>Population and Sample</ins>
+
+#### 2. <ins>Sampling Distribution</ins>
+
+#### 3. <ins>The Central Limit Theorem (CLT)</ins>
+
+#### 4. <ins>Implication of the Central Limit Theorem (CLT)</ins>
+
+
+
+
 ---
 
 # CHAP VIII : Hypothesis Testing
