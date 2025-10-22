@@ -1057,18 +1057,19 @@ Trader read (TL;DR)
 Excess kurtosis (κ_excess)
 
 ≈ 0 → Mesokurtic (Normal-like tails)
+ 
+sup 0 → Leptokurtic (heavier tails, more outliers) → more tail risk
 
-> 0 → Leptokurtic (heavier tails, more outliers) → more tail risk
+inf 0 → Platykurtic (thinner tails) → less tail risk
 
-< 0 → Platykurtic (thinner tails) → less tail risk
-
-In practice: higher κ ⇒ fatter tails ⇒ larger chance of extreme moves (bigger tail P&L hits).
+**In practice: higher κ ⇒ fatter tails ⇒ larger chance of extreme moves (bigger tail P&L hits).**
 
 
 #### 4. <ins>Log-normal distribution (for modelling asset prices)</ins>
 The statistical distribution called the lognormal distribution is continuous probability of a random variable whose natural loagrithm is normally distributed
 
 <img width="1700" height="1019" alt="image" src="https://github.com/user-attachments/assets/b2d2d65d-136e-4955-8bc4-169b456f6f95" />
+
 
 ---
 
