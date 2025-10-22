@@ -928,8 +928,8 @@ $\(\mathbb{P}(a \le X \le b)$ = $\int_a^b f(x)\,dx\)$.
 
 | Type        | Objet          | Proba d’un point       | Proba d’un intervalle   |
 | ----------- | -------------- | ---------------------- | ----------------------- |
-| **Discret** | **PMF** (p(x)) | (\mathbb{P}(X=x)=p(x)) | (\sum_{x\in[a,b]} p(x)) |
-| **Continu** | **PDF** (f(x)) | (\mathbb{P}(X=x)=0)    | (\int_a^b f(x),dx)      |
+| **Discret** | **PMF** (p(x)) | $(\mathbb{P}(X=x)=p(x))$ | $(\sum_{x\in[a,b]} p(x))$ |
+| **Continu** | **PDF** (f(x)) | $(\mathbb{P}(X=x)=0)$    | $(\int_a^b f(x),dx)$      |
 
 
 ---
