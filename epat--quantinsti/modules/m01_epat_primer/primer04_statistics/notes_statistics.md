@@ -1101,7 +1101,16 @@ Now we consider that the cie collects rating from 2 samples with the same number
 
 Lets make a quick recap. we saw that the sample mean itself is a random variable. Now lets suppose that we have a large enough sample with sample size n and sample mean as x̄.
 
-The Central Limit theorem states that the random variable x̄ which is the mean value of the simple is normally distributed with the mean of the normal distribution as μ and the standard deviation
+The central limit theorem states that the probability distribution of the sample mean of a large enough sample will converge to a normal distribution with its mean as the mean of the population.
+
+**Trader intuition**
+
+- **Averaging = noise reduction:** you aggregate noisy prints → the **signal (the mean)** gets **cleaner**.
+- **Scaling:** doubling \(n\) **does not** halve the error; it shrinks by **\$$(\sqrt{2}\)$$**, because
+  
+$$
+\mathrm{SE}(\bar{x})=\frac{s}{\sqrt{n}}.
+$$
 
 
 #### 4. <ins>Implication of the Central Limit Theorem (CLT) - Averages in Practice μ / x̄ / s / SE </ins>
@@ -1126,7 +1135,7 @@ $$
 
 ***σ (population SD) is generally unknown. It’s a population parameter (the “true vol” of the observations) that we estimate with s (sample SD).***
 
-##### 4.2 <ins>Sample mean (x̄), its Standard Error (SE), and sample dispersion (s)</ins>
+##### 4.2 <ins>Sample mean (x̄), its Precision (Standard Error,SE), and sample dispersion (s)</ins>
 
 <ins>**sample average (x̄)** </ins> *(estimator of μ)*
 
@@ -1138,7 +1147,10 @@ $$
 
 -**Market vocab:** **signal** with **noise** (sampling noise).
 
-<ins>**Standard Error, SE** </ins> (*vol of the mean*)
+
+<ins>**Standard Error, SE** </ins> (*vol of the mean x̄*)
+
+SE measures how precisely we have estimated the average rating.
 
 $$
 \mathrm{SE}(\bar{x})=\frac{s}{\sqrt{n}}
@@ -1152,7 +1164,9 @@ $$
 \mathrm{SD}[\bar{X}]=\frac{\sigma}{\sqrt{n}}
 $$
 
-<ins>**Dispersion of observations (s)**</ins> — (*sample SD*)
+<ins>**Dispersion of observations (s)** </ins> — (*sample SD*)
+
+s measures how spread out individual ratings are.
 
 $$
 s=\sqrt{\frac{1}{n-1}\sum_{i=1}^{n}(x_i-\bar{x})^2}
@@ -1160,7 +1174,8 @@ $$
 
 -**What is it?** **Vol of individual ratings** (spread of the points).
 
--**Role:** s is the **plug-in** to compute **SE** via $$\( s/\sqrt{n} \)$$; it also **estimates** the population SD (σ).
+-**Role:** s is the **plug-in** to compute **SE** via $$\( s/\sqrt{n} \)$$; it also **estimates the population SD (σ)**.
+
 
 
 $$
@@ -1171,8 +1186,58 @@ $$
 $$
 
 
+##### 4.2 <ins>Confidence interval (95%) </ins>
+
+
+-**What it is :** a **plausible range** for the true mean μ — **pricing of uncertainty** around x̄ (market word).
+
+
+-**Formula (σ unknown → t):**
+
+$$
+\bar{x}\ \pm\ t_{0.975,\ \text{df}}\cdot \frac{s}{\sqrt{n}}
+$$
+
+**Read it:** if you repeated the sampling many times, **95%** of such intervals would **contain μ** (coverage, not “probability of μ”).
+
+**Quick use:** compute **SE** $$\(=s/\sqrt{n}\)$$ → pick **t** → **ME = t·SE** → report $$\( \bar{x} \pm \text{ME} \)$$.
+
+**Pitfall:** don’t confuse **s** (spread of points) with **SE** (vol of the mean).
+
+
 ##### 4. <ins>Comparing 2 means (A: 4.9★, B:3.0★) </ins>
 
+-**Observed gap**  
+
+$$
+\Delta=\bar{x}_A-\bar{x}_B
+$$
+
+*(here \(\Delta=1.9\))*
+
+-**Vol of the gap**  
+
+$$
+\text{SE}_\Delta=\sqrt{\frac{s_A^2}{n_A}+\frac{s_B^2}{n_B}}
+$$
+
+-**Test (Welch t-test)** — robust to unequal variances  
+
+$$
+t=\frac{\bar{x}_A-\bar{x}_B}{\sqrt{\frac{s_A^2}{n_A}+\frac{s_B^2}{n_B}}}
+$$
+
+-**Effect size (Cohen’s d)** — *magnitude of the signal*  
+
+$$
+d=\frac{\bar{x}_A-\bar{x}_B}{s_{\text{pooled}}}
+$$
+
+-*(Optional)* **Weighted mean** (if some customers should count more) 
+
+$$
+\bar{x}_w=\frac{\sum_{i=1}^{n} w_i x_i}{\sum_{i=1}^{n} w_i}
+$$
 
 ##### 4. <ins>Sample mean(x̄)</ins>
 
