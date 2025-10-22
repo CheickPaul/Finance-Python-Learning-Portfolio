@@ -1239,11 +1239,97 @@ $$
 \bar{x}_w=\frac{\sum_{i=1}^{n} w_i x_i}{\sum_{i=1}^{n} w_i}
 $$
 
-##### 4. <ins>Sample mean(x̄)</ins>
 
 ---
 
 # CHAP VIII : Hypothesis Testing
+
+
+Question a poser en cours : 
+
+(1) Which criteria allow us to reject the null hypothesis (H₀) and find support for the alternative hypothesis (H₁) ?
+# PART 1 
+
+Lets think about one person Albert, a Quant Analyst who want to invest its money in a monthly investment scheme that promises variable monthly returns. However he will invest in it only if he is assured of an average $18,000 monthly income. He gathered data and found that the standard deviation of monthly returns from this scheme is $7,500. Albert has a sample of 300 months returns which has a mean of $19,000.
+
+Should he invest in this scheme. As a quant analyst, he is quite proficient at using statistical technique which is known as <ins>**Hypothesis Testing**</ins>
+
+#### 1. <ins>TERMINOLOGY</ins>
+
+Making assumption is crucial in decision making. Generally, we make assumption about specific issues based on our experience, knowledge or available information.
+
+**Hypothesis testing is a scientific approach that tests these assumptions by employing statistics**. below some common terms in hypothesis testing
+
+##### 1.1 <ins>Null and alternative Hypotheses</ins>
+
+Lets suppose we are testing the effectiveness of a medicine. We would start by making an assumption about its effectiveness. 
+
+For our medicine, there can be 2 hypothesis :
+
+-(1) The medicine has no effect on the patient : <ins>**H0, The Null Hypothesis**</ins>
+(this first assume status quoi or no change)
+
+-(2) The medicine works on the patient : <ins>**H1, The Alternative Hypothesis**</ins>
+ (this first assume status quoi or no change)
+
+
+The Null Hypothesis is an assertion that we **hold as true** unless we have sufficient evidence to conclude otherwise. 
+
+***In the light of such strong evidence we refute the null hypothesis and accept the alternative hypothesis to be true.***
+(Note: “The test statistic falls in the rejection region; we reject H₀ and side with H₁.”)
+
+In stat we say : “reject H₀” and find (strong) support for H₁.
+
+##### 1.2 <ins>Test Statistic</ins>
+
+The evidence supporting H₁ comes from the sample data. This information is summarized in the test statistic, a single standardized metric ( z-score or t-statistic) that <ins>**measures how far the sample result is from the null benchmark**</ins>. 
+
+We compare this metric to a critical value or evaluate its p-value (tail probability under H₀) to decide whether to reject H₀ and support H₁.
+
+*Notes :*
+- *Test statistic : standardized score (signal/noise).*
+- *Critical value : decision threshold (hurdle).*
+- *p-value : tail probability under H₀ of observing a signal at least as extreme (i.e., tail risk under H₀).*
+
+<img width="2379" height="1480" alt="image" src="https://github.com/user-attachments/assets/b2f7c522-22ee-4170-bb28-0f83545984fd" />
+
+
+
+
+<ins>Hypothesis Tests — Pick & Decide (with formulas)</ins>
+
+
+| Test | Use-case | Test statistic (SE in denom.) | Reference dist. (df) | Assumptions (quick) | Decision rule |
+|---|---|---|---|---|---|
+| **Z (one-sample mean, σ known)** | Mean vs hurdle (σ known / large n) | $\displaystyle z=\frac{\bar{x}-\mu_0}{\sigma/\sqrt{n}}$ | $\mathcal{N}(0,1)$ — standard normal (mean 0, var 1) | iid; finite variance; normal or large $n$ | reject $H_0$ if $\lvert z\rvert>z^\*$ or $p<\alpha$ |
+| **t (one-sample mean, σ unknown)** | Mean vs hurdle (σ unknown) | $\displaystyle t=\frac{\bar{x}-\mu_0}{s/\sqrt{n}}$ | $t_{\,n-1}$ — Student-t | iid; approx normal (CLT helps if $n$ is moderate) | reject $H_0$ if $\lvert t\rvert>t^\*$ or $p<\alpha$ |
+| **Welch t (two means, vars unequal)** | $\mu_1-\mu_2$ (indep., vols $\neq$) | $\displaystyle t=\frac{\bar{x}_1-\bar{x}_2}{\sqrt{s_1^2/n_1+s_2^2/n_2}}$ | $t_{\,\nu}$ — Student-t (Welch df) | independent samples; approx normal; variances can differ | reject $H_0$ if $\lvert t\rvert>t^\*$ or $p<\alpha$ |
+| **Pooled t (two means, vars $\approx$ equal)** | $\mu_1-\mu_2$ (indep., vols $\approx$) | $\displaystyle t=\frac{\bar{x}_1-\bar{x}_2}{\,s_p\sqrt{1/n_1+1/n_2}\,}$ with $\displaystyle s_p^2=\frac{(n_1-1)s_1^2+(n_2-1)s_2^2}{n_1+n_2-2}$ | $t_{\,n_1+n_2-2}$ — Student-t | independent samples; approx normal; **equal variances** | reject $H_0$ if $\lvert t\rvert>t^\*$ or $p<\alpha$ |
+| **Z (one proportion)** | $p$ vs $p_0$ (single sample) | $\displaystyle z=\frac{\hat{p}-p_0}{\sqrt{p_0(1-p_0)/n}}$ | $\mathcal{N}(0,1)$ — standard normal (mean 0, var 1) | independent trials; large counts ($np_0,\ n(1-p_0)\ge 10$) | reject $H_0$ if $\lvert z\rvert>z^\*$ or $p<\alpha$ |
+| **Z (two proportions, pooled)** | $p_1-p_2$ | $\displaystyle z=\frac{\hat{p}_1-\hat{p}_2}{\sqrt{\hat{p}(1-\hat{p})\left(\frac{1}{n_1}+\frac{1}{n_2}\right)}}$ with $\displaystyle \hat{p}=\frac{x_1+x_2}{n_1+n_2}$ | $\mathcal{N}(0,1)$ — standard normal (mean 0, var 1) | independent samples; large counts in both groups ($n_1\hat p_1,\ n_1(1-\hat p_1),\ n_2\hat p_2,\ n_2(1-\hat p_2)\ge 10$) | reject $H_0$ if $\lvert z\rvert>z^\*$ or $p<\alpha$ |
+| **Chi-square (variance)** | $\sigma^2$ vs $\sigma_0^2$ | $\displaystyle \chi^2=\frac{(n-1)s^2}{\sigma_0^2}$ | $\chi^2_{\,n-1}$ — chi-square | iid; **normal data** | reject $H_0$ if $\chi^2<\chi^2_L$ or $\chi^2>\chi^2_U$ |
+| **F (variance ratio)** | $\sigma_1^2/\sigma_2^2$ | $\displaystyle F=\frac{s_1^2}{s_2^2}$ | $\mathcal{F}(d_1,d_2)$ — Fisher-F (with $d_1=n_1-1,\ d_2=n_2-1$) | independent samples; **normal data** | right-tailed: reject if $F>F^\*$ (two-tailed via $F<F_L$ or $F>F_U$) |
+
+*Notes:* **SE** = standard error (volatility of estimator). **df** = degrees of freedom (effective independent information). Two-tailed ⇒ use absolute values.
+
+
+ *Null / Alt (parameter) — templates (for the table above)*
+
+- **One-sample mean:** $H_0:\ \mu=\mu_0;\quad H_1:\ \mu\neq\mu_0$ (or one-sided $>,<$)  
+- **Two means (Welch / Pooled):** $H_0:\ \mu_1=\mu_2;\quad H_1:\ \mu_1\neq\mu_2$ (or one-sided)  
+- **One proportion:** $H_0:\ p=p_0;\quad H_1:\ p\neq p_0$ (or one-sided $>,<$)  
+- **Two proportions:** $H_0:\ p_1=p_2;\quad H_1:\ p_1\neq p_2$ (or one-sided)  
+- **Single variance:** $H_0:\ \sigma^2=\sigma_0^2;\quad H_1:\ \sigma^2\neq\sigma_0^2$  
+- **Variance ratio (F):** $H_0:\ \sigma_1^2=\sigma_2^2;\quad H_1:\ \sigma_1^2\neq\sigma_2^2$ (or one-sided)
+
+
+##### 1.2 <ins>Test statistic vs critical value (comparison)</ins>
+
+
+
+#### 2. <ins>STEPS IN HYPOTHESIS TESTING</ins>
+
+
 
 ---
 
