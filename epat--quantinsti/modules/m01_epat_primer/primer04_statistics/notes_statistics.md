@@ -844,9 +844,231 @@ p = exp(logodds) / (1 + exp(logodds))
 
 # CHAP V : Probability Distributions of Random Variables
 
+#### 1. <ins>Random Variable</ins>
+
+Often represented as x is a variable whose its value it's an outcome of random experiment.
+exemple : the number of head obtained after 30 coins flips, the amount of time we have to wait in a restaurant before getting the food. We sort random values in 2 categories : **discrete** and **continuous  
+
+#### 2. <ins>Discrete Random Variable</ins>
+
+random variable whose value is countable. Exemple : number of student in a class, number of red coins in a wallet and so on. the distribution of discrete random variables is compactly expressed as a <ins>**Probability Mass Function PMF**</ins>.
+
+- **<ins>Binomial PMF (N=10, P=0.3)</ins>**
+  <img width="1380" height="880" alt="image" src="https://github.com/user-attachments/assets/13ae8d64-3391-489b-87d0-52bd3e7307ae" />
+
+
+
+    
+Models the **number of successes** in *n* independent trials with success probability *p* (e.g., trades that end green).
+
+**Formula**  
+
+$$
+\mathbb{P}(X=k)=\binom{n}{k}p^k(1-p)^{n-k}.
+$$
+
+
+
+
+
+
+- **<ins>Poisson PMF (N=10, P=0.3)</ins>**
+
+<img width="1380" height="880" alt="image" src="https://github.com/user-attachments/assets/575020c7-9313-4101-9b02-95e25036fd29" />
+
+
+ Models a **count of events** per interval (discrete: $k=0,1,2,\dots$) 
+
+with **intensity** $\lambda$ (average arrival rate).  
+
+Formula: $\mathbb{P}(X=k)=e^{-\lambda}\frac{\lambda^k}{k!}$.  
+
+
+
+
+#### 3. <ins>Continuous Random Variable</ins>
+
+The PMF gives the probability **at a point**: $\(p(x) = \mathbb{P}(X = x)\)$. 
+
+It applies to discrete variables (isolated values) such as **event counts** per minute (order flow).
+
+
+**<ins>PDF (Probability Density Function)</ins>**
+
+For a **continuous** variable there are **infinitely many** possible values.  
+The probability of landing **exactly** on one point is therefore **0**: $\(\mathbb{P}(X = x) = 0\)$.  
+
+We instead use a **PDF (density)** $\(f(x)\)$ and compute probability **over an interval**:  
+$\(\mathbb{P}(a \le X \le b)$ = $\int_a^b f(x)\,dx\)$.
+
+*<ins>Trader angle:</ins>*  
+- **Discrete → PMF** (e.g., **order arrivals** = flow counts).  
+- **Continuous → PDF** (e.g., **returns**; probability is the **area** under the curve).
+
+
+
+
+#### 4. <ins>Probability Density Function of uniform continuous variable</ins>
+
+-Density can be defined as probability per unit of lenght  
+
+-Density = Probability/Lenght
+
+
+<img width="1580" height="940" alt="image" src="https://github.com/user-attachments/assets/dcc8c863-eb38-49fc-8904-6a0b21ee6ea1" />
+
+
+
+
+<img width="1040" height="126" alt="image" src="https://github.com/user-attachments/assets/9b77c234-5a95-4584-9ab8-f258992e787e" />
+
+
+
+#### 5. <ins>Discret vs continuous</ins>
+
+| Type        | Objet          | Proba d’un point       | Proba d’un intervalle   |
+| ----------- | -------------- | ---------------------- | ----------------------- |
+| **Discret** | **PMF** (p(x)) | (\mathbb{P}(X=x)=p(x)) | (\sum_{x\in[a,b]} p(x)) |
+| **Continu** | **PDF** (f(x)) | (\mathbb{P}(X=x)=0)    | (\int_a^b f(x),dx)      |
+
+
 ---
 
 # CHAP VI :Standard Statistical Distributions
+
+#### 1. <ins>Exponential distribution</ins>
+
+**Exponential distribution is a continuous distribution that is often used to model the expected time one needs to wait before the occurence of an event**. in other words, it determines the probability distribution of time between random occurrences.
+
+For example, it can be used to model how long it would take a trade to get a fill, How long a shopkeeper needs to wait until a customer enters the shop and how much time to wait before the occurence of the next flood. In these events, waiting time is unknown and it can be thought of as a random variable following an exponential distribution.
+
+##### 1.1 <ins>Exponential PDF chart - Probability as Area</ins>
+
+<img width="1580" height="940" alt="image" src="https://github.com/user-attachments/assets/10ead39e-5e7d-4690-98c4-0b0eb5477974" />
+
+##### 1.2 <ins>λ rate parameter - Exponential function</ins>
+
+**λ (lambda) = rate / intensity (flow)**. It's an average arrival rate of events (e.g., orders per second).
+Units: “events per time”. Example: λ = 12/min → on average 12 arrivals per minute.
+
+- Bigger λ ⇒ steeper decay near 0.
+
+More mass near 0 → shorter waits are more likely.
+
+Mean and volatility both decrease: E[X] = 1/λ, SD[X] = 1/λ.
+
+- Smaller λ ⇒ flatter decay.
+
+More mass in the tail → longer waits are more likely.
+
+Mean and volatility increase.
+
+- Mental image: λ is a “speed knob.” Turn it up → the curve drops faster, more area near 0 (fast fills). Turn it down → curve drops slower, more area in the tail (slow fills).
+
+<img width="1699" height="1019" alt="image" src="https://github.com/user-attachments/assets/53772c05-8057-4549-b8b8-c1a1ca784056" />
+
+PDF:   f(x) = λ * e^(−λ x),  x ≥ 0   ;   f(x) = 0,  x < 0
+CDF:   F(x) = 1 − e^(−λ x)
+Area:  P(a ≤ X ≤ b) = e^(−λ a) − e^(−λ b)
+Note:  λ = rate/flow  ; mean = 1/λ ;Volatility σ=1/λ ; var = 1/λ^2
+
+#### 2. <ins>Probability Density Function of Normal Distribution</ins>
+
+if : 
+- X follows a normal distribution
+
+- (\mu) mean
+
+- (\sigma) = Standard deviation
+
+  ##### 2.1 Z-score
+
+  ##### 2.2 Application normal distribution in trading
+  
+Assuming **normal returns** (R \sim \mathcal N(\mu,\sigma^2)) with
+**mean** (\mu=8%) and **SD (vol)** (\sigma=5%):
+
+- **Z-score** for 10%:** $(z=\dfrac{0.10-0.08}{0.05}=0.40)$.
+
+  Z-score table
+* **P(R ≥ 10%)** (= 1-\Phi(0.40) \approx 1-0.6554 = \mathbf{34.5%})
+  *(“chance of beating 10%” — upside tail)*.
+
+ (values are Φ(z) = P(Z ≤ z))
+
+| z \ c | **.00** | **.01** | **.02** | **.03** | **.04** | **.05** | **.06** | **.07** | **.08** | **.09** |
+|:----:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|
+| **0.30** | 0.6179 | 0.6217 | 0.6255 | 0.6293 | 0.6331 | 0.6368 | 0.6406 | 0.6443 | 0.6480 | 0.6517 |
+| **0.40** | **0.6554** | 0.6591 | 0.6628 | 0.6664 | 0.6700 | 0.6736 | 0.6772 | 0.6808 | 0.6844 | 0.6879 |
+
+row **0.4**, col **.00** → Φ(0.40) = **0.6554**
+
+**P(Z>04) = 1-0.6554 =0.3446 --> P(R ≥ 10%) =34-35%
+* **P(R ≤ 10%)** (=\Phi(0.40)\approx \mathbf{65.5%})
+  *(“at or below 10%” — cumulative)*.
+* **P(R = 10%)** (= 0) for a continuous distribution (probability at a single point is zero).
+
+> Trader read: with **drift 8%** and **vol 5%**, there’s about a **34–35%** chance the return **exceeds 10%** over the period.
+
+  ##### 2.3 Normal vs Exponential distribution Application normal distribution in trading
+
+| Distribution                   | Parameters            | Mean (drift) | Volatility (vol) | Relationship              |
+|--------------------------------|-----------------------|--------------:|------------------:|---------------------------|
+| Normal N(mu, sigma^2)          | mu, sigma             | mu            | sigma             | Independent               |
+| Exponential Exp(lambda)        | lambda (rate/flow)    | 1/lambda      | 1/lambda          | Equal                     |
+| Poisson Pois(lambda) (discrete)| lambda                | lambda        | sqrt(lambda)      | Related but not equal     |
+| Binomial Bin(n, p) (discrete)  | n, p                  | n*p           | sqrt(n*p*(1-p))   | Related but not equal     |
+
+#### 3. <ins>Skewness</ins>
+
+A normal distribution is perfectly symmetrical with no skew if mean median and mode are equal
+
+- A LEFT SKEW (NEGATIVELY skewed distribution, with a long left tail:
+  Daily stock, Exam grades
+  
+<img width="1619" height="979" alt="image" src="https://github.com/user-attachments/assets/56e86bc7-f1e5-44dd-b5fd-2dba06b82668" />
+
+- A RIGHT SKEW DISTRIBITION (POSITIVELY SKEWED DISTRIBUTION, with a long right tail) :
+  Distribution of Income, Movie ticket sales
+  
+<img width="1620" height="979" alt="image" src="https://github.com/user-attachments/assets/0cb5b514-1a53-4ded-abba-c809f52d86e4" />
+
+
+#### 4. <ins>Kurtosis</ins>
+
+##### 4.1 <ins>Quick indicator of tail risk (should not be  take alone, need other measure tools</ins>
+
+Kurtosis is a measure that defines how heavy the tails of a distribution are
+Higher kurtosis implies fatter tails that is more probability density for extreme values
+
+<img width="2580" height="1019" alt="image" src="https://github.com/user-attachments/assets/83d01ada-e85d-4eb4-acb6-6243074e89d8" />
+
+##### 4.2 <ins>Mesokurtic, Leptokurtik, Platykurtic</ins>
+Based on kurtosis, distribution can be classified in 3 categories : Mesokurtic distribution ( a distribution that shaped in roughly the same way as normal distribution) ; Leptokurtik distribution (distribution sometimes identified by peaks that are thin and tall. the tails to both right and left are thick and heavy) ; Platykurtic distribution ( peak is lower than mesokurtic )
+
+<img width="2579" height="819" alt="image" src="https://github.com/user-attachments/assets/6dfff93b-d53b-4a53-92e5-be875e2a87a1" />
+
+
+<img width="2579" height="819" alt="image" src="https://github.com/user-attachments/assets/a3cc4235-a3a3-46e8-946f-7f386fd3dade" />
+
+
+Trader read (TL;DR)
+
+Excess kurtosis (κ_excess)
+
+≈ 0 → Mesokurtic (Normal-like tails)
+
+> 0 → Leptokurtic (heavier tails, more outliers) → more tail risk
+
+< 0 → Platykurtic (thinner tails) → less tail risk
+
+In practice: higher κ ⇒ fatter tails ⇒ larger chance of extreme moves (bigger tail P&L hits).
+
+
+#### 4. <ins>Log-normal distribution (for modelling asset prices)</ins>
+The statistical distribution called the lognormal distribution is continuous probability of a random variable whose natural loagrithm is normally distributed
+
+<img width="1700" height="1019" alt="image" src="https://github.com/user-attachments/assets/b2d2d65d-136e-4955-8bc4-169b456f6f95" />
 
 ---
 
