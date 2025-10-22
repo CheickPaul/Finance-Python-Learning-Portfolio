@@ -1079,9 +1079,15 @@ In real life, the data points about all the possible observations are rarely ava
 
 #### 1. <ins>Population and Sample</ins>
 
+Suppose we need to compute the average height of all people of a country. It is not possible to meet and mesure every citizen height. Statistics allow us to take a subset of this population termed as sample. then mesuring the height of this sample is DOABLE. The value of the average height of this sample is then extrapolated to the entire population.
+
+We use this technic for the survey
+
 #### 2. <ins>Sampling Distribution</ins>
 
+
 #### 3. <ins>The Central Limit Theorem (CLT)</ins>
+
 
 #### 4. <ins>Implication of the Central Limit Theorem (CLT)</ins>
 
