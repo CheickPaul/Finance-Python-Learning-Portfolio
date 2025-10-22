@@ -926,10 +926,10 @@ $\(\mathbb{P}(a \le X \le b)$ = $\int_a^b f(x)\,dx\)$.
 
 #### 5. <ins>Discret vs continuous</ins>
 
-| Type        | Objet          | Proba d’un point       | Proba d’un intervalle   |
+| Type        | Objet          | Probability at a point       | Probability in an interval   |
 | ----------- | -------------- | ---------------------- | ----------------------- |
 | **Discret** | **PMF** (p(x)) | $(\mathbb{P}(X=x)=p(x))$ | $(\sum_{x\in[a,b]} p(x))$ |
-| **Continu** | **PDF** (f(x)) | $(\mathbb{P}(X=x)=0)$    | $(\int_a^b f(x),dx)$      |
+| **Continuous** | **PDF** (f(x)) | $(\mathbb{P}(X=x)=0)$    | $(\int_a^b f(x),dx)$      |
 
 
 ---
