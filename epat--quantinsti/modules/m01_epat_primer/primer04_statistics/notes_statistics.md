@@ -1075,24 +1075,86 @@ The statistical distribution called the lognormal distribution is continuous pro
 
 # CHAP VII :  Basics of Inferential Statistics
 
-In real life, the data points about all the possible observations are rarely available for analysis. Under such situation, we have to make do with sample. This is where the field of **inferential statistics comes in the picture.
+In real life, the data points about all the possible observations are rarely available for analysis. Under such situation, we have to make it through sample. This is where the field of **Inferential Statistics** comes in the picture.
 
 #### 1. <ins>Population and Sample</ins>
 
-Suppose we need to compute the average height of all people of a country. It is not possible to meet and mesure every citizen height. Statistics allow us to take a subset of this population termed as sample. then mesuring the height of this sample is DOABLE. The value of the average height of this sample is then extrapolated to the entire population.
+Suppose we need to compute the average height of all people of a country. It is not possible to meet and mesure each and every citizen height. Statistics allow us to take a subset of this population termed as sample, then mesuring the height of this sample is doable. The value of the average height of this sample is then extrapolated to the entire population.
 
-We use this technic for the survey
+We use this technic for the survey, poll and so on.
+
+One good thing to note is that, sample has to be a good representative of the population, so that the inferences drawn from the sample generalize well to the population.
 
 #### 2. <ins>Sampling Distribution</ins>
+
+lets imagine a company who that want to know what the customers do and what the population think about their products.
+
+a good metric to gauge here is the <ins>**Average Rating**</ins> given by all the customers which is the <ins>**population mean**</ins>(The true average of all rating from every customers in the target population) denoted by **μ**. However as the rating from each and every customer can't be obtained, we have to use the average rating from a sample the <ins>**Sample Mean**</ins> (The observed average) denoted by **x̄** as its proxy.
+
+Now we consider that the cie collects rating from 2 samples with the same number of customers n. the average rating for the first sample is 4.9 out of five stars and for the second sample it is only 3 out of five stars. We also note that is common that the sample average vary depending on the batch of people that gives the rating. In other word the average rating x̄ is a random variable itself and like any other random variable has a distribution of its own which is called its **Sampling Distribution**
+
+<img width="3319" height="1080" alt="ratings_panels_side_by_side (1)" src="https://github.com/user-attachments/assets/e6ec95c0-dcc2-4f84-96eb-0faff1ca9e66" />
+
 
 
 #### 3. <ins>The Central Limit Theorem (CLT)</ins>
 
+Lets make a quick recap. we saw that the sample mean itself is a random variable. Now lets suppose that we have a large enough sample with sample size n and sample mean as x̄.
 
-#### 4. <ins>Implication of the Central Limit Theorem (CLT)</ins>
+The Central Limit theorem states that the random variable x̄ which is the mean value of the simple is normally distributed with the mean of the normal distribution as μ and the standard deviation
 
 
+#### 4. <ins>Implication of the Central Limit Theorem (CLT) - Averages in Practice μ / x̄ / s / SE </ins>
 
+The beautiful implication of CLT is that regardless the nature of distribution of the underlying that we inspect( Logarithmic distribution, Left or right skewed distribution) the sample mean would always be normally distributed.
+
+##### 4.1 <ins>Population mean(μ) - Dispersion of observations,SD(σ)</ins>
+
+<ins>**population average**</ins>
+
+$$
+\mu = \frac{1}{N}\sum_{i=1}^{N} x_i
+$$
+
+-**What is it?** The **true average** across **all** customers (unobservable unless you cover 100%).
+  
+-**Market vocab:** **fair value** (fundamental value).
+
+<ins>**Dispersion of observations,SD(σ)** </ins>
+
+-**What is it?** It's the true dispersion of the population, the dispersion around μ.
+
+***σ (population SD) is generally unknown. It’s a population parameter (the “true vol” of the observations) that we estimate with s (sample SD).***
+
+##### 4.2 <ins>Sample mean (x̄) and its Standard Error(SE) and Dispersion of the sample(s)</ins>
+
+<ins>**sample average**</ins> (estimator of μ)
+
+$$
+\bar{x}=\frac{1}{n}\sum_{i=1}^{n} x_i
+$$
+
+-**What is it?** The **estimator** (proxy) of μ obtained via a **survey** (sample).
+
+-**Market vocab:** **signal** with **noise** (sampling noise).
+
+<ins>**Standard Error, SE** </ins> (*vol of the mean*)
+
+
+<ins>**s** </ins> (*vol of the mean*)
+
+
+$$
+\text{SE}(\bar{x})=\frac{s}{\sqrt{n}}
+$$
+$$
+\mathrm{SD}[\bar{X}]=\frac{\sigma}{\sqrt{n}}
+$$
+
+
+##### 4. <ins>Comparing 2 means (A: 4.9★, B:3.0★) </ins>
+
+##### 4. <ins>Sample mean(x̄)</ins>
 
 ---
 
