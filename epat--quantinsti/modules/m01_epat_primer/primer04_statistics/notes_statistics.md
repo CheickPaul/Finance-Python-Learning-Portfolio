@@ -1521,10 +1521,38 @@ Here -1 refers to a perfectly negative relationship between two variables. Plus 
 
 <img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/ed6a31ac-2f63-4936-8e6b-e47d3d6e4b84" />
 
+**IMPORTANT POINT : CORRELATION ANALYSIS ASSUMES THAT THE RELATIONSHIP BETWEEN THE 2 VARIABLES IS LINEAR, OTHERWISE THE RESULTS ARE NOT USEFUL.**
+
+
+| Concept                          | Notation        | Formula                                                                                                                              |
+| -------------------------------- | --------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
+| **Population correlation**       | $\rho_{XY}$     | $\displaystyle \rho_{XY}=\frac{\mathrm{Cov}(X,Y)}{\sigma_X,\sigma_Y}$                                                                |
+| **Sample correlation (Pearson)** | $r_{XY}$        | $\displaystyle r_{XY}=\frac{s_{XY}}{s_X,s_Y}$                                                                                        |
+| **Sample covariance**            | $s_{XY}$        | $\displaystyle s_{XY}=\frac{1}{n-1}\sum_{i=1}^{n}(x_i-\bar x)(y_i-\bar y)$                                                           |
+| **Sample std. dev.**             | $s_X,\ s_Y$     | $\displaystyle s_X=\sqrt{\frac{1}{n-1}\sum_{i=1}^{n}(x_i-\bar x)^2},\quad s_Y=\sqrt{\frac{1}{n-1}\sum_{i=1}^{n}(y_i-\bar y)^2}$      |
+| **Computational form (sums)**    | $r_{XY}$        | $\displaystyle r_{XY}=\frac{\sum_i (x_i-\bar x)(y_i-\bar y)}{\sqrt{\sum_i (x_i-\bar x)^2},\sqrt{\sum_i (y_i-\bar y)^2}}$             |
+| **Z-scores form**                | $r_{XY}$        | $\displaystyle r_{XY}=\frac{1}{n-1}\sum_{i=1}^{n} z_{x,i},z_{y,i},\quad z_{x,i}=\frac{x_i-\bar x}{s_X}$                              |
+| **Bounds**                       | —               | $\displaystyle -1 \le r_{XY}\le 1$                                                                                                   |
+| **Affine invariance**            | —               | $\displaystyle r_{XY}=r_{,aX+b,\ cY+d}\ \text{for}\ a,c>0$                                                                           |
+| **Regression link**              | slope $\beta_1$ | $\displaystyle \beta_1=r_{XY},\frac{s_Y}{s_X}$                                                                                       |
+| **Correlation matrix**           | $\mathbf R$     | $\displaystyle \mathbf R=\mathrm{diag}(\Sigma)^{-1/2}\ \Sigma\ \mathrm{diag}(\Sigma)^{-1/2}$ where $\Sigma$ is the covariance matrix |
+
 
 #### 3. <ins>Person Correlation Coefficient </ins>
 
+$\displaystyle \rho_{XY}=\frac{\mathrm{Cov}(X,Y)}{\sigma_X,\sigma_Y}$  
 
+where:
+
+- $\displaystyle \rho_{XY}=\$ Pearson correlation coefficient between X and Y
+
+- $\displaystyle \ {Cov}(X,Y)=\$ Covariance between X and Y
+
+- $\displaystyle \sigma_X\$ = Standard deviation of X
+
+- $\displaystyle \sigma_Y\$ = Standard deviation of Y
+
+**IMPORTANT POINT : THE PEARSON CORRELATIONS ANALYSIS DESCRIBED HERE ASSUMES THAT THE DATA ARE NORMALLY DISTRIBUTED ; OTHERWISE THE SPEARMAN NON-PARAMETRIC ANALYSIS WOULD BE MORE APPROPRIATE.**
 
 # CHAP X : Linear Regression
 
