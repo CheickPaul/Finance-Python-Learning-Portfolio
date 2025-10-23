@@ -143,6 +143,173 @@ then 3 options :
 
 # Chap III :   Charts in Excel
 
+
+Charts (Line, Histogram, Scatter) give fast insight into **price action** (time path of prices), **distribution** (shape, skew, tails), and **cross-variable relations** (correlation).
+
+## <ins>Quick Summary</ins>
+
+- **Line chart** = price **vs** time → visualize **price action** and **volatility
+
+- regimes** (periods of distinct vol levels).
+
+- **Histogram** = distribution view (shape, skew, tails) → read the **risk profile**.
+
+- **Scatterplot** = X–Y relation (correlation) → co-movement, patterns, outliers.
+
+- Always set **X-axis** (time/categories) and **Y-axis** (values) correctly to reduce **ops risk** (operational risk).
+
+- For histograms, enable **Analysis ToolPak** and choose **bins** carefully (not too wide/narrow).
+
+- Clear labeling (titles, axes, units) improves **readability** → fewer handling errors.
+
+
+
+## <ins>Line Chart — Close vs Time</ins>
+
+**Goal (markets)**: track **Close** over time (trend, pullbacks, ranges).
+
+**Steps**
+1. Select the **Close** column (header click or `Ctrl + Space`).
+
+2. **Insert → Line** (Charts).
+
+3. **X-axis as real time**:  
+   Right-click X-axis → **Select Data…** → **Horizontal (Category) Axis Labels → Edit** → select **Time** range → **OK**.
+
+4. Axis titles (Chart Tools → Layout):  
+   **Primary Horizontal Axis Title → Title Below Axis** → `Time`  
+   **Primary Vertical Axis Title → Rotated Title** → `Prices`
+
+5. Chart title: double-click → `ABC Stock`.
+
+> **Trader tip**: For large price ranges, try **log scale** to read **returns** (proportional moves) more intuitively.
+
+
+
+## <ins>Histogram — Volume Distribution</ins>
+
+**Goal (markets)**: characterize **liquidity** (execution capacity with limited **slippage**), check **skew** and **tail risk**.
+
+**Prereq**: enable **Analysis ToolPak**  
+`File → Options → Add-Ins → Manage: Excel Add-ins → Go → tick "Analysis ToolPak" → OK`
+
+**Steps**
+
+1. Create a **Bins** column (e.g., 1,000 → 10,000 with constant step).
+
+2. **Data → Data Analysis → Histogram → OK**
+   
+   - **Input Range**: **Volume** values (no header)  
+
+    - **Bin Range**: your **Bins**  
+
+   - **Output Options**: **New Worksheet Ply** + **Chart Output** → **OK**
+
+4. Output = **frequency table** + **histogram chart**.
+
+> **Trader tip**: Equal-width **bins** help compare **tails**. Too wide = loss of granularity; too narrow = **noise**.
+
+
+
+## <ins>Scatterplot — Open vs Close</ins>
+
+**Goal (markets)**: assess **intraday correlation** between **Open** (X) and **Close** (Y).
+
+**Steps**
+
+1. **Insert → Scatter (only markers)**.
+
+2. Right-click chart → **Select Data… → Add**:  
+   - **Series name**: `Open-Close`  
+   - **Series X values**: **Open** range  
+   - **Series Y values**: **Close** range  
+   - **OK → OK**
+
+3. Axis titles (Layout): **X = Open**, **Y = Close**.
+
+**Reading**: upward cloud = **positive correlation**. Wide dispersion = **volatility clustering** (vol in “clusters”).
+
+
+
+## <ins>Chart Hygiene (axes, formats, readability)</ins>
+
+- **Axes**: consistent number formats (prices 2 d.p., rates 4 d.p.).  
+
+- Light **gridlines**, clear **legend**, explicit **titles** (ticker, timeframe).  
+
+- **Freeze Panes** (`View → Freeze Panes`) to keep headers visible when scrolling large OHLCV tables.
+
+
+
+## <ins>Pitfalls to Avoid</ins>
+
+- Using index on X-axis instead of **Time** → misleading trajectory.  
+
+- Histogram with ad-hoc **bins** → unreadable distribution.  
+
+- Mixed **text/number** types in time/price columns → broken axes/sorts.  
+
+- Missing units or wrong scale (linear vs log) → misread **risk/return**.
+
+
+
+## <ins>Useful Shortcuts</ins>
+
+- Select column: `Ctrl + Space`  
+
+- Duplicate chart: `Ctrl + C`, `Ctrl + V`  
+
+- Format Cells: `Ctrl + 1`  
+
+- AutoFit Column Width: `Alt, H, O, I`  
+
+- Toggle Filter: `Ctrl + Shift + L`  
+
+- New sheet: `Shift + F11`
+
+
+
+## <ins>Mini Exercise (OHLCV)</ins>
+
+1. **Line**: Close vs Time. Add axis labels + chart title `ABC Stock`.  
+2. **Histogram**: Volume (bins 1k→10k) via **Data Analysis → Histogram** (table + chart).  
+3. **Scatter**: Open (X) vs Close (Y). Add axis titles.  
+4. Note two **market** observations:  
+   - (i) a **price action** feature (trend/range)  
+   - (ii) a distribution (skew/tails) or **correlation** takeaway.  
+5. Keep **Freeze Top Row + First Column**; save as **.xlsx**.
+
+
+
+## <ins>Trader Vocab (with brief explanations)</ins>
+
+- **Price action**: raw price movement (no indicators).  
+
+- **Liquidity**: ability to execute with limited **slippage** (execution gap).  
+
+- **Skew**: distribution asymmetry (heavier tail on one side).  
+
+- **Tails**: distribution extremes (rare, high-impact events → **tail risk**).  
+
+- **Volatility clustering**: vol tends to persist in “clusters”.  
+
+- **Correlation (ρ)**: co-movement between two series.
+
+
+
+## <ins>Data Quality (pre-chart)</ins>
+
+
+- Time/Date in proper types (not text), no **duplicate timestamps**.  
+
+- **OHLCV** column order: **Date, Time, Open, High, Low, Close, Volume**.  
+
+- Remove **NA/blank rows** to avoid holes in charts.
+
+
+# Chap IV :   Functions in Excel
+
+
 ---
 # Chap IV :   Courses Files
 
