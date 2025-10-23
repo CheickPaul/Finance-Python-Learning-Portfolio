@@ -1326,9 +1326,11 @@ We compare this metric to a critical value or evaluate its p-value (tail probabi
 - **Variance ratio (F):** $H_0:\ \sigma_1^2=\sigma_2^2;\quad H_1:\ \sigma_1^2\neq\sigma_2^2$ (or one-sided)
 
 
-##### 1.2 <ins>Test statistic vs critical value (comparison) - Z Statistic</ins>
+##### 1.2 <ins>Test statistic vs critical value (comparison) </ins>
 
-In hypothesis testing, we compare the **test statistic** to a **critical value** determined by the chosen significance level $\alpha$ and tail(s).
+In hypothesis testing, we compare the **test statistic** to a **critical value** determined by the chosen **significance level** **$\alpha$** and tail(s).
+
+α is an ex-ante probability threshold (not data-driven), typically 1%, 5%, or 10%. α is not calculated but gave by researchers.
 
 -**Z statistic (one-sample mean, $\sigma$ known):**
 
@@ -1346,11 +1348,17 @@ In hypothesis testing, we compare the **test statistic** to a **critical value**
   - Right-tailed: reject $H_0$ if $z > z^\*$
   - Left-tailed: reject $H_0$ if $z < z^\*$
 
-    (1)two-tailes Z test:
+(1)two-tailed Z test:
 <img width="1979" height="1080" alt="image" src="https://github.com/user-attachments/assets/322fc048-b214-4d01-bb50-8af2b76099f2" />
-    *Figure — Two-tailed Z-test (α = 5%). The curve is the standard normal density under     H₀. The dashed lines at ±z* ≈ ±1.96 are the critical thresholds. The shaded tails (α/2 = 2.5% each) are the rejection regions; the central area is “fail to reject H₀.” Decision rule: reject H₀ if (|z| > z^*) ⇔ (p < \alpha). The p-value is the tail area beyond (|z_{\text{obs}}|) under H₀. Lower α ⇒ higher hurdle (larger z*, stricter test); higher α ⇒ lower hurdle (smaller z*, more permissive). Trader gloss: (z = \text{signal}/\text{SE}); (z^*) = hurdle; tails = tail risk under H₀.*
-    
-    (2)right-tailes Z test:
+    *Figure — Two-tailed Z-test (α = 5%). The curve is the standard normal density under     H₀. The dashed lines at ±z* ≈ ±1.96 are the critical thresholds.
+
+(2)right-tailed Z test:
+    <img width="1380" height="771" alt="image" src="https://github.com/user-attachments/assets/a7ddd173-62db-40aa-8daf-7d4274e4edc3" />
+*Figure — Right-tailed Z-test (α = 5%). The curve is the standard normal density under H₀. The dashed line at $z^\* \approx 1.645$ is the critical threshold. The shaded right tail beyond $z^\*$ is the rejection region of size α. 
+
+(3)left-tailed Z test:
+<img width="1979" height="1080" alt="image" src="https://github.com/user-attachments/assets/e9e1ecb1-6dc2-4cf6-9925-a1e06a898341" />
+*Figure — Left-tailed Z-test (α = 5%). The curve is the standard normal density under H₀. The dashed line at $z^\* \approx -1.645$ is the critical threshold. The shaded left tail beyond $z^\*$ is the rejection region of size α. 
 
     
 ##### 1.2 <ins> p-value vs critical value (comparison) - Z Statistic</ins>
@@ -1358,6 +1366,10 @@ In hypothesis testing, we compare the **test statistic** to a **critical value**
 The **p-value** is the probability **under $H_0$** of observing a test statistic **at least as extreme** as the sample result. Smaller $p$ means **stronger evidence against $H_0$**.
 
 The p-value is that the smaller it gets, more is the likelihood of accepting the alternative hypothesis. Once the null hypothesis is defined and the test statistic is evalued, we need to estimate the **strength of evidence** in support the null hypothesis or against it. And this strenght  is measured by the p value, which is the probabiliti of obtaining a value that is more extreme than the test statistic.
+
+The p-value is the tail area under the reference distribution under H0 beyond the observed statistic (and, for two-tailed tests, the sum of both tails beyond ±∣𝑧obs∣).
+
+
 
 #### 2. <ins>STEPS IN HYPOTHESIS TESTING</ins>
 
