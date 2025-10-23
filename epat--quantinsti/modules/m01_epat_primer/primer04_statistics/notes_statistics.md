@@ -1482,11 +1482,11 @@ H1 determines whether to place the level of significance in any one tail or both
 
 # CHAP IX :  Covariance & Correlation
 
-The goal of this chapter is to study the association or relationship between 2 or nore variables.
+The goal of this chapter is to study the association or relationship between 2 or more variables.
 
 
 #### 1. <ins>Covariance </ins>
-Covariance measure the strenght of linear relationship between 2 random variables.In plain english, covariance measures how 2 randoms variables evolve in the same time.
+Covariance measure the strenght of linear relationship between 2 random variables.In other words, covariance measures how 2 randoms variables evolve in the same time.
 
 - Positive : When X is above this its mean, Y also tends to be above its mean
 
@@ -1510,8 +1510,21 @@ Covariance measure the strenght of linear relationship between 2 random variable
 | Covariance matrix               | $\Sigma$            | $\Sigma=\mathbb{E}!\left[(\mathbf X-\boldsymbol\mu)(\mathbf X-\boldsymbol\mu)^{\top}\right]$ | Diagonal = variances; off-diagonals = covariances. |
 
 
+#### 2. <ins>Correlation </ins>
 
----
+One problem we have with covariance is that this metric can take any value from minus infinity to plus infinity.
+
+Correlation is also used to measure the strenght of the linear relationship between two variables. However, its value varies from ρ=-1 to ρ=+1 only. 
+
+Here -1 refers to a perfectly negative relationship between two variables. Plus one refers to a perfectly positive.
+
+
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/ed6a31ac-2f63-4936-8e6b-e47d3d6e4b84" />
+
+
+#### 3. <ins>Person Correlation Coefficient </ins>
+
+
 
 # CHAP X : Linear Regression
 
