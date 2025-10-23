@@ -1,6 +1,6 @@
 # CHAP I : Introduction to Excell
 
---
+
 # Chap II :   Data formatting
 
 Data formatting enables good data hygiene, reducing noise and improving price discovery
@@ -25,7 +25,7 @@ Data formatting enables good data hygiene, reducing noise and improving price di
 
 > Trader tip: keep columns as **Date, Time, Open, High, Low, Close, Volume** (in that order) to simplify formulas & charts.
 
---
+
 
 ## <ins>**Quick formatting (Home)** </ins>
 
@@ -36,7 +36,7 @@ Data formatting enables good data hygiene, reducing noise and improving price di
 
 > Better readability = fewer operational-risk errors
 
---
+
 
 
 ## <ins>**Number formats**  </ins>
@@ -46,7 +46,7 @@ Data formatting enables good data hygiene, reducing noise and improving price di
 
 > Standardize decimals (e.g., **2 d.p.** for prices, **4 d.p.** for rates) for consistent **P&L** (profit & loss).
 
----
+
 
 ## <ins>**Filter the data (Data → Filter)** </ins>
 
@@ -68,7 +68,7 @@ You must set a separate criterion on **Volume**. Excel then applies **all active
 - Use **Number Filters → Custom Filter…** and select “is greater than” OR “is equal to”, etc.
 - For advanced OR across columns, use a **helper column** with a logical formula (e.g., `=OR(Close>480, Volume>10000)`).
 
---
+
 
 ## <ins>**Sort the data (Data → Sort)** </ins>
 
@@ -87,7 +87,7 @@ You must set a separate criterion on **Volume**. Excel then applies **all active
 
 > Use-case: find **peak liquidity** (max volume), e.g., **10:35** shows **453,968**.
 
----
+
 
 ## <ins>Freeze Panes (View → Freeze Panes)</ins>
 
@@ -106,7 +106,7 @@ then 3 options :
 
 > Great when scanning thousands of **intraday bars** (you keep headers/dates in view while scrolling).
 
---
+
 
 ## <ins>**Useful shortcuts** </ins>
 
@@ -116,7 +116,7 @@ then 3 options :
 - **Ctrl+Shift+L**: toggle Filter
 - **Ctrl+T**: convert range to **Table** (stronger filtering/sorting + Slicers)
 
---
+
 
 ## <ins>Mini exercise (OHLCV)</ins>
 
@@ -127,7 +127,7 @@ then 3 options :
 5. **Freeze Top Row** + **Freeze First Column**.
 6. Save as **.xlsx** to preserve formats.
 
----
+
 
 ## <ins>Trader vocab (with brief explanation)</ins>
 
@@ -140,6 +140,7 @@ then 3 options :
 
 
 ---
+
 # Chap III :   Charts in Excel
 
 ---
