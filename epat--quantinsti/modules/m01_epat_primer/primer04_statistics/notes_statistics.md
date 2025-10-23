@@ -1458,8 +1458,18 @@ If the **\(H_0\) value** is **inside** the CI ⇒ **do not reject \(H_0\)** (**n
 H1 determines whether to place the level of significance in any one tail or both tailes of the sampling distribution.
 
 -Suppose  H1 : mu < 10 (One tailed test, Left)
--Suppose  H1 : mu > 10 (One tailed test, Left)
--Suppose  H1 : mu  10 (One tailed test, Left)
+-Suppose  H1 : mu > 10 (One tailed test, right)
+-Suppose  H1 : mu  10 (Two tailed test)
+
+#### 3. <ins>Step </ins>
+
+**Step 1** : Stating the null and the alternative hypotheses
+**Step 2** : Stating the significance level α
+**Step 3** : Stating the decision criteria (right-tailed, left tailed, two tailed)
+**Step 4** : Determining and calculationg the test statistic (Z stat, t stat,...)
+**Step 5** : Calculating the p-value. 
+**step 6** : Comparing the p-value with the significance level, and accordingly rejecting or not rejecting the null hypothesis.
+**step 7** : Interpreting the result of the test.
 
 ---
 
