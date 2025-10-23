@@ -1,3 +1,4 @@
+
 TABLE OF CONTENTS
 
 1 An Introduction to Probability & Statistics
@@ -1415,11 +1416,33 @@ $P(Z \le z_{\text{obs}} \mid H_0)$.
 # Part 2 : Hypothesis Testing II
 
 #### 1. <ins>Type I and Type II Errors</ins>
-The significance level **"α"** also denote the probability of making a type I error (false positive).
+The significance level **"α"** also denote the probability of making a type I error (false positive). **"β"** (beta) denotes the probability of making a Type II error (false negative)
 
--Suppose we have a hypothesis test and based on the result, we decide to reject the Null Hypothesis H0. If this rejection is wrong, we term this as a <ins>**Type I error**</ins>
+-Suppose we have a hypothesis test and based on the result, we decide to reject the Null Hypothesis H0. If this rejection is wrong, we term this as a **Type I error**
+<ins>**A Type I error (α) occurs when our test rejects H0 incorrectly (False positive)** </ins>
 
--On the other hand if we fail to reject the Null Hypothesis H0 when it should have been rejected, we term this as <ins>**Type error II**</ins>.
+	​
+-On the other hand if we fail to reject the Null Hypothesis H0 when it should have been rejected, we term this as **Type error II**.
+<ins>**A Type II error (β) occurs when we fail to reject H0 even though H1 is true (false negative /missed signal)** </ins>
+
+-<ins>Example :</ins>
+
+- H1 : A breakout above level R generates an edge
+  
+- Type I (α, false positive): our algo buys the breakout, but it’s a fake break → negative P&L.
+  
+- Type II (β, false negative): your algo ignores a genuine explosive breakout (clean signal) → you miss the winning trade.
+Typical cause: threshold too strict, news filter overly conservative.
+
+	​
+-<ins>​Trading :</ins>
+
+- Type I (α) = you take a trade with no real edge (false signal) → losses.
+
+- Type II (β) = you miss a trade with a real edge → opportunity P&L lost.
+
+
+#### 2. <ins>Confidence level</ins>
 
 #### 2. <ins>Confidence Level</ins>
 
