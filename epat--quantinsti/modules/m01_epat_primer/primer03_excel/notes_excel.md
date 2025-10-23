@@ -5,7 +5,18 @@
 
 Data formatting enables good data hygiene, reducing noise and improving price discovery
 
-<ins>Import a CSV (stock data)</ins>
+## <ins>Quick Summary</ins>
+
+- Proper **data formatting** ⇒ better **data hygiene** (clean structure), **lower noise**, improved **price discovery**.
+- **Filters are cumulative (AND)** across columns; use **Custom Filter** or a **helper column** for **OR** logic.
+- **Sort** safely: always check **“My data has headers”** to protect header row and sort by field names.
+- **Freeze Panes** (View → Freeze Panes) to keep headers/dates visible when scrolling large OHLCV tables.
+- **Standardize number formats/decimals** (prices=2 d.p., rates=4 d.p.) for consistent **P&L** (profit & loss).
+- Clean formatting ⇒ higher **readability** ⇒ fewer **operational-risk (ops risk)** errors during handling.
+- Handy shortcuts: **Ctrl+Shift+L** (Filter), **Ctrl+T** (Table), **Alt,H,O,I** (AutoFit), **Ctrl+1** (Format Cells).
+
+
+<ins>**Import a CSV (stock data)** </ins>
 
 - Data menu → From Text/CSV (older: Data → From Text).
 - Import wizard:
@@ -16,7 +27,7 @@ Data formatting enables good data hygiene, reducing noise and improving price di
 
 --
 
-<ins>Quick formatting (Home)</ins>
+<ins>**Quick formatting (Home)** </ins>
 
 - Font: select `A1:G1` → Cambria, Size 14
 - Style: Ctrl+B (bold), Ctrl+I (italic), Ctrl+U (underline)
@@ -49,7 +60,6 @@ A dropdown appears on each header.
 **Example 2 — Add Volume > 10,000 (chaining = AND)**
 - Click **VOLUME** dropdown → **Number Filters → Greater Than…** → **10,000** → **OK**.
 - Filters are **cumulative**: only rows that meet **Close > 480 AND Volume > 10,000** remain visible.
-- You’ll see even fewer rows (e.g., **21**).
 
 **Key point (“chained” filters):** Filtering **Close** does **not** automatically filter **Volume**.  
 You must set a separate criterion on **Volume**. Excel then applies **all active filters simultaneously** (logical **AND**).
@@ -65,7 +75,7 @@ You must set a separate criterion on **Volume**. Excel then applies **all active
 **Where to click:** **Data → Sort & Filter → Sort** (opens Sort dialog).
 
 **Check “My data has headers” — what it means**
-- If your first row contains **column names** (e.g., Date, Open, High, Low, Close, Volume), **check** this box.
+- If the first row contains **column names** (e.g., Date, Open, High, Low, Close, Volume), **check** this box.
 - Excel then **excludes the header row** from sorting will let choose fields by **name** (Close, Volume), not by Column A/B/C.
 - If we **don’t** check it, Excel may treat the first row as data and **scramble the header** (bad).
 
@@ -83,7 +93,7 @@ You must set a separate criterion on **Volume**. Excel then applies **all active
 
  **View** → section **Window** → click **Freeze Panes**.  
  
-then 3 options
+then 3 options :
 
 - **Freeze Top Row** → keeps **row 1** visible when scrolling **down**.
   
@@ -96,7 +106,7 @@ then 3 options
 
 > Great when scanning thousands of **intraday bars** (you keep headers/dates in view while scrolling).
 
----
+--
 
 <ins>**Useful shortcuts** </ins>
 
@@ -106,7 +116,7 @@ then 3 options
 - **Ctrl+Shift+L**: toggle Filter
 - **Ctrl+T**: convert range to **Table** (stronger filtering/sorting + Slicers)
 
----
+--
 
 <ins>Mini exercise (OHLCV)</ins>
 
@@ -126,6 +136,8 @@ then 3 options
 - **P&L**: profit & loss (gains/losses).
 - **Outlier**: extreme observation that can skew analysis.
 - **Screening**: filtering a universe to focus on candidates of interest.
+
+
 
 ---
 # Chap III :   Charts in Excel
