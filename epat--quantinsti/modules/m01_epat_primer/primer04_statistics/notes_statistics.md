@@ -1464,16 +1464,52 @@ H1 determines whether to place the level of significance in any one tail or both
 #### 3. <ins>Step </ins>
 
 **Step 1** : Stating the null and the alternative hypotheses
+
 **Step 2** : Stating the significance level α
+
 **Step 3** : Stating the decision criteria (right-tailed, left tailed, two tailed)
+
 **Step 4** : Determining and calculationg the test statistic (Z stat, t stat,...)
+
 **Step 5** : Calculating the p-value. 
+
 **step 6** : Comparing the p-value with the significance level, and accordingly rejecting or not rejecting the null hypothesis.
+
 **step 7** : Interpreting the result of the test.
+
 
 ---
 
 # CHAP IX :  Covariance & Correlation
+
+The goal of this chapter is to study the association or relationship between 2 or nore variables.
+
+
+#### 1. <ins>Covariance </ins>
+Covariance measure the strenght of linear relationship between 2 random variables.In plain english, covariance measures how 2 randoms variables evolve in the same time.
+
+- Positive : When X is above this its mean, Y also tends to be above its mean
+
+- Negative : When X is above its mean, Y tends to be below its mean.
+
+- Near 0 : Little to no linear relationship
+
+
+
+| Concept                         | Notation            | Formula                                                                                      | Notes                                              |
+| ------------------------------- | ------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------- |
+| Population covariance           | $\mathrm{Cov}(X,Y)$ | $\mathrm{Cov}(X,Y)=\mathbb{E}!\left[(X-\mu_X)(Y-\mu_Y)\right]$                               | Measures linear co-movement; units $[X]\cdot[Y]$.  |
+| Population (computational form) | $\mathrm{Cov}(X,Y)$ | $\mathrm{Cov}(X,Y)=\mathbb{E}[XY]-\mu_X\mu_Y$                                                | Often easier for algebra/derivations.              |
+| Sample covariance (size $n$)    | $s_{XY}$            | $s_{XY}=\dfrac{1}{n-1}\sum_{i=1}^{n}(x_i-\bar x)(y_i-\bar y)$                                | Unbiased with $n-1$.                               |
+| Sample (computational form)     | $s_{XY}$            | $s_{XY}=\dfrac{1}{n-1}!\left(\sum_{i=1}^{n} x_i y_i - n,\bar x,\bar y\right)$                | Efficient for computation.                         |
+| Symmetry                        | —                   | $\mathrm{Cov}(X,Y)=\mathrm{Cov}(Y,X)$                                                        | Covariance is symmetric.                           |
+| Linearity (affine transforms)   | —                   | $\mathrm{Cov}(aX+b,,cY+d)=ac,\mathrm{Cov}(X,Y)$                                              | Shifts $b,d$ cancel; scales $a,c$ factor out.      |
+| Additivity (bilinearity)        | —                   | $\mathrm{Cov}(X,,Y+Z)=\mathrm{Cov}(X,Y)+\mathrm{Cov}(X,Z)$                                   | Extends to sums by linearity.                      |
+| Variance as covariance          | $\mathrm{Var}(X)$   | $\mathrm{Var}(X)=\mathrm{Cov}(X,X)$                                                          | Diagonal special case.                             |
+| Zero covariance caveat          | —                   | $\mathrm{Cov}(X,Y)=0 ;\not\Rightarrow; \text{independence}$                                  | Except special cases (e.g., jointly Gaussian).     |
+| Covariance matrix               | $\Sigma$            | $\Sigma=\mathbb{E}!\left[(\mathbf X-\boldsymbol\mu)(\mathbf X-\boldsymbol\mu)^{\top}\right]$ | Diagonal = variances; off-diagonals = covariances. |
+
+
 
 ---
 
