@@ -1444,10 +1444,11 @@ Typical cause: threshold too strict, news filter overly conservative.
 
 #### 2. <ins>Confidence level</ins>
 
+
 #### 2. <ins>Confidence Level</ins>
 
 
-#### 3. <ins>STEPS IN HYPOTHESIS TESTING</ins>
+#### 3. <ins>One tailed and two tailed test</ins>
 
 
 
