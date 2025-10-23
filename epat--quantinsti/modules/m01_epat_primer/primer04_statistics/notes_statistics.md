@@ -1343,7 +1343,7 @@ In hypothesis testing, we compare the **test statistic** to a **critical value**
   - Right-tailed: $z^\* = z_{1-\alpha}$
   - Left-tailed: $z^\* = z_{\alpha}$
 
-  -**Decision rules** (“more extreme” = further in the tail under $H_0$):
+  -**Decision rules** (Z stat;“more extreme” = further in the tail under $H_0$):
   - Two-tailed: reject $H_0$ if $\lvert z\rvert > z^\*$
   - Right-tailed: reject $H_0$ if $z > z^\*$
   - Left-tailed: reject $H_0$ if $z < z^\*$
@@ -1369,6 +1369,45 @@ The p-value is that the smaller it gets, more is the likelihood of accepting the
 
 The p-value is the tail area under the reference distribution under H0 beyond the observed statistic (and, for two-tailed tests, the sum of both tails beyond ±∣𝑧obs∣).
 
+-**Decision rules** (p-value; “more extreme” = tail area under H₀)
+
+- **Two-tailed:** reject H₀ if `p < α`  
+  *(for Z: `p = 2 * [1 - Φ(|z_obs|)]`)*
+
+- **Right-tailed:** reject H₀ if `p < α`  
+  *(for Z: `p = 1 - Φ(z_obs)`)*
+
+- **Left-tailed:** reject H₀ if `p < α`  
+  *(for Z: `p = Φ(z_obs)`)*
+
+> We replace `Φ` (standard normal CDF) by the **t CDF** with proper df if you use a **t-test**.
+
+(1)two-tailed, p-value:
+<img width="2079" height="1080" alt="image" src="https://github.com/user-attachments/assets/45c8a80e-3478-469e-a59a-789d4d5220f9" />
+*Figure — Two-tailed Z-test (α = 5%) with p-value for $z_{\text{obs}}=2.10$. 
+Dashed lines at $\pm z^\* \approx \pm 1.96$ mark the critical thresholds 
+(rejection regions of size $\alpha/2$ each). 
+Solid lines at $\pm |z_{\text{obs}}|$ bound the darker shaded tails, 
+which together form the p-value $2\,[1-\Phi(|z_{\text{obs}}|)]$.*
+
+
+(2)right-tailed, p-value:
+<img width="1979" height="1080" alt="image" src="https://github.com/user-attachments/assets/bcdb9ccb-ef46-44ce-a60e-15bf5553b23e" />
+Figure — Right-tailed Z-test (α = 5%) with p-value for $z_{\text{obs}}=1.80$. 
+The dashed line at $z^\* \approx 1.645$ marks the critical threshold 
+(right-tail rejection region of size $\alpha$). 
+The darker shaded area to the right of $z_{\text{obs}}$ is the p-value 
+$P(Z \ge z_{\text{obs}} \mid H_0)$.
+
+
+
+(3)left-tailed, p-value:
+<img width="1979" height="1080" alt="image" src="https://github.com/user-attachments/assets/929e6ba2-4c52-43c6-aad4-d6017829e39f" />
+Figure — Left-tailed Z-test (α = 5%) with p-value for $z_{\text{obs}}=-1.90$. 
+The dashed line at $z^\* \approx -1.645$ marks the critical threshold 
+(left-tail rejection region of size $\alpha$). 
+The darker shaded area to the left of $z_{\text{obs}}$ is the p-value 
+$P(Z \le z_{\text{obs}} \mid H_0)$.
 
 
 #### 2. <ins>STEPS IN HYPOTHESIS TESTING</ins>
