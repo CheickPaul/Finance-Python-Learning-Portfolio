@@ -1458,6 +1458,8 @@ If the **\(H_0\) value** is **inside** the CI ⇒ **do not reject \(H_0\)** (**n
 H1 determines whether to place the level of significance in any one tail or both tailes of the sampling distribution.
 
 -Suppose  H1 : mu < 10 (One tailed test, Left)
+-Suppose  H1 : mu > 10 (One tailed test, Left)
+-Suppose  H1 : mu  10 (One tailed test, Left)
 
 ---
 
