@@ -1248,7 +1248,7 @@ $$
 Question a poser en cours : 
 
 (1) Which criteria allow us to reject the null hypothesis (H₀) and find support for the alternative hypothesis (H₁) ?
-# PART 1 
+# PART 1 : Hypothesis Testing I
 
 Lets think about one person Albert, a Quant Analyst who want to invest its money in a monthly investment scheme that promises variable monthly returns. However he will invest in it only if he is assured of an average $18,000 monthly income. He gathered data and found that the standard deviation of monthly returns from this scheme is $7,500. Albert has a sample of 300 months returns which has a mean of $19,000.
 
@@ -1326,7 +1326,7 @@ We compare this metric to a critical value or evaluate its p-value (tail probabi
 - **Variance ratio (F):** $H_0:\ \sigma_1^2=\sigma_2^2;\quad H_1:\ \sigma_1^2\neq\sigma_2^2$ (or one-sided)
 
 
-##### 1.2 <ins>Test statistic vs critical value (comparison) </ins>
+#### 2. <ins>Test statistic vs critical value (comparison) </ins>
 
 In hypothesis testing, we compare the **test statistic** to a **critical value** determined by the chosen **significance level** **$\alpha$** and tail(s).
 
@@ -1361,7 +1361,7 @@ In hypothesis testing, we compare the **test statistic** to a **critical value**
 *Figure — Left-tailed Z-test (α = 5%). The curve is the standard normal density under H₀. The dashed line at $z^\* \approx -1.645$ is the critical threshold. The shaded left tail beyond $z^\*$ is the rejection region of size α. 
 
     
-##### 1.2 <ins> p-value vs critical value (comparison) - Z Statistic</ins>
+#### 3 <ins> p-value vs critical value (comparison) - Z Statistic</ins>
 
 The **p-value** is the probability **under $H_0$** of observing a test statistic **at least as extreme** as the sample result. Smaller $p$ means **stronger evidence against $H_0$**.
 
@@ -1409,8 +1409,22 @@ The dashed line at $z^\* \approx -1.645$ marks the critical threshold
 The darker shaded area to the left of $z_{\text{obs}}$ is the p-value 
 $P(Z \le z_{\text{obs}} \mid H_0)$.
 
+#### 4 <ins>Confidence Level</ins>
 
-#### 2. <ins>STEPS IN HYPOTHESIS TESTING</ins>
+---
+# Part 2 : Hypothesis Testing II
+
+#### 1. <ins>Type I and Type II Errors</ins>
+The significance level **"α"** also denote the probability of making a type I error (false positive).
+
+-Suppose we have a hypothesis test and based on the result, we decide to reject the Null Hypothesis H0. If this rejection is wrong, we term this as a <ins>**Type I error**</ins>
+
+-On the other hand if we fail to reject the Null Hypothesis H0 when it should have been rejected, we term this as <ins>**Type error II**</ins>.
+
+#### 2. <ins>Confidence Level</ins>
+
+
+#### 3. <ins>STEPS IN HYPOTHESIS TESTING</ins>
 
 
 
