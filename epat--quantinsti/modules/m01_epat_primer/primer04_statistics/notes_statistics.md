@@ -1410,7 +1410,8 @@ The dashed line at $z^\* \approx -1.645$ marks the critical threshold
 The darker shaded area to the left of $z_{\text{obs}}$ is the p-value 
 $P(Z \le z_{\text{obs}} \mid H_0)$.
 
-#### 4 <ins>Confidence Level</ins>
+
+
 
 ---
 # Part 2 : Hypothesis Testing II
@@ -1444,13 +1445,19 @@ Typical cause: threshold too strict, news filter overly conservative.
 
 #### 2. <ins>Confidence level</ins>
 
+The confidence level is 1-α (95% when α = 5%). 
 
-#### 2. <ins>Confidence Level</ins>
+A **\(1-\alpha\) confidence interval (CI)** defines the **region consistent with \(H_0\)** (*no-trade zone*: area where data are compatible with the null).
+
+If the **\(H_0\) value** lies **outside** the CI ⇒ **reject \(H_0\)** and **accept \(H_1\)** (**signal/edge**).
+If the **\(H_0\) value** is **inside** the CI ⇒ **do not reject \(H_0\)** (**no signal**).
 
 
-#### 3. <ins>One tailed and two tailed test</ins>
+#### 3. <ins>One tailed and two tailed tests</ins>
 
+H1 determines whether to place the level of significance in any one tail or both tailes of the sampling distribution.
 
+-Suppose  H1 : mu < 10 (One tailed test, Left)
 
 ---
 
