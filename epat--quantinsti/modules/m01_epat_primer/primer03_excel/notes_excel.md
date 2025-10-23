@@ -16,7 +16,7 @@ Data formatting enables good data hygiene, reducing noise and improving price di
 - Handy shortcuts: **Ctrl+Shift+L** (Filter), **Ctrl+T** (Table), **Alt,H,O,I** (AutoFit), **Ctrl+1** (Format Cells).
 
 
-<ins>**Import a CSV (stock data)** </ins>
+## <ins>**Import a CSV (stock data)** </ins>
 
 - Data menu → From Text/CSV (older: Data → From Text).
 - Import wizard:
@@ -27,7 +27,7 @@ Data formatting enables good data hygiene, reducing noise and improving price di
 
 --
 
-<ins>**Quick formatting (Home)** </ins>
+## <ins>**Quick formatting (Home)** </ins>
 
 - Font: select `A1:G1` → Cambria, Size 14
 - Style: Ctrl+B (bold), Ctrl+I (italic), Ctrl+U (underline)
@@ -39,7 +39,7 @@ Data formatting enables good data hygiene, reducing noise and improving price di
 --
 
 
-<ins>**Number formats**  </ins>
+## <ins>**Number formats**  </ins>
 
 - Number Format: General (default), Number, Date, Time, Currency, Percentage, etc.
 - Decimals: Increase Decimal / Decrease Decimal
@@ -48,7 +48,7 @@ Data formatting enables good data hygiene, reducing noise and improving price di
 
 ---
 
-<ins>**Filter the data (Data → Filter)** </ins>
+## <ins>**Filter the data (Data → Filter)** </ins>
 
 **Where to click:** select header row → Data → Sort & Filter → Filter (or **Ctrl+Shift+L**).  
 A dropdown appears on each header.
@@ -70,7 +70,7 @@ You must set a separate criterion on **Volume**. Excel then applies **all active
 
 --
 
-<ins>**Sort the data (Data → Sort)** </ins>
+## <ins>**Sort the data (Data → Sort)** </ins>
 
 **Where to click:** **Data → Sort & Filter → Sort** (opens Sort dialog).
 
@@ -89,7 +89,7 @@ You must set a separate criterion on **Volume**. Excel then applies **all active
 
 ---
 
-<ins>Freeze Panes (View → Freeze Panes)</ins>
+## <ins>Freeze Panes (View → Freeze Panes)</ins>
 
  **View** → section **Window** → click **Freeze Panes**.  
  
@@ -108,7 +108,7 @@ then 3 options :
 
 --
 
-<ins>**Useful shortcuts** </ins>
+## <ins>**Useful shortcuts** </ins>
 
 - **Ctrl+B / Ctrl+I / Ctrl+U**: bold / italic / underline
 - **Alt, H, O, I**: AutoFit Column Width
@@ -118,7 +118,7 @@ then 3 options :
 
 --
 
-<ins>Mini exercise (OHLCV)</ins>
+## <ins>Mini exercise (OHLCV)</ins>
 
 1. Import an OHLCV CSV.
 2. Format header (Cambria 14, bold, center/middle).
@@ -129,7 +129,7 @@ then 3 options :
 
 ---
 
-<ins>Trader vocab (with brief explanation)</ins>
+## <ins>Trader vocab (with brief explanation)</ins>
 
 - **Price discovery**: process by which markets find a “fair” price (supply/demand).
 - **Noise (bruit)**: variability with little information content.
