@@ -2,17 +2,29 @@
 TABLE OF CONTENTS
 
 1 An Introduction to Probability & Statistics
+
 2 Descriptive Statistics I: Visualizing the Data
+
 3 Descriptive Statistics II: Summarizing the Data
+
 4 Basics of Probability Theory
+
 5 Probability Distributions of Random Variables
+
 6 Standard Statistical Distributions
+
 7 Basics of Inferential Statistics
+
 8 Hypothesis Testing
+
 9 Covariance & Correlation
+
 10 Linear Regression
+
 11 Other Resources & Reference Material
+
 Appendix 1
+
 Appendix 2
 
 ---
@@ -1558,6 +1570,7 @@ where:
 
 # CHAP X : Linear Regression
 
+DRAFT
 
 #### 3. <ins>SCATTER PLOT </ins>
 
