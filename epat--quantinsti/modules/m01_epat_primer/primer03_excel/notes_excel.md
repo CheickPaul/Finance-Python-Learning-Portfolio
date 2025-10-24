@@ -118,16 +118,6 @@ then 3 options :
 
 
 
-## <ins>Mini exercise (OHLCV)</ins>
-
-1. Import an OHLCV CSV.
-2. Format header (Cambria 14, bold, center/middle).
-3. Filter **Close > 480**, then **Volume > 10,000** (note the row count).
-4. Sort **Volume** (*Largest to Smallest*) and note time of the peak.
-5. **Freeze Top Row** + **Freeze First Column**.
-6. Save as **.xlsx** to preserve formats.
-
-
 
 ## <ins>Trader vocab (with brief explanation)</ins>
 
@@ -309,8 +299,74 @@ Charts (Line, Histogram, Scatter) give fast insight into **price action** (time 
 ---
 
 # Chap IV :   Functions in Excel
-
+ ---
+ 
+ PART 1
+ 
+ ---
+ 
  Excel functions + proper cell **referencing** lead to faster analysis and fewer **operationals errors** 
+
+# <ins>Functions in Excel – Part I</ins>
+
+## 1 Introduction
+In the previous video, we learned how to visualize data in Excel and how it can be plotted on charts.  
+In this video, we will learn about **referencing** and various **inbuilt functions**.
+
+## 2 Referencing (Références de cellule)
+Often in data analysis, one value is used in multiple cells.  
+If this value changes, it should automatically update everywhere.  
+Excel allows this through **cell referencing**.
+
+### Relative Reference
+**Example:**
+- Cell `A1` contains `22`.
+- In `C1`, type `=A1` → displays `22`.
+- If you change `A1`, `C1` updates automatically.
+- When copied down (`C2`, `C3`, …), Excel adjusts the reference automatically (`A2`, `A3`, …).  
+  → This is **Relative Referencing**.
+
+### Absolute Reference
+To lock the reference (always point to `A1`), use `$`:
+- Example: `=$A$1`
+- When copied anywhere, still refers to `A1`.
+- **Shortcut:** Press **F4** to toggle between relative/absolute references.
+
+### Mixed Reference
+- `$A1` → locks **column A**, row changes.  
+- `A$1` → locks **row 1**, column changes.
+
+## 3 Ranges & Functions
+You can reference a **range** of cells as well, e.g. `=SUM(A1:D2)`.
+
+**Common usage in trading spreadsheets (desk usage):**  
+Sum up **OHLCV** data, compute **total volume**, **daily returns**, etc.
+
+## 4 Formulas (Formules personnalisées)
+A **formula** = combination of **values + operators** that returns a single value.  
+Example: `=Cell1 + Cell2`  
+Formulas are written in the **Formula Bar**.
+
+## 5 Functions (Fonctions intégrées)
+Functions are **built-in formulas** that:
+- take arguments (numbers or cell references),
+- perform an operation,
+- return a result.
+
+**Categories:** Mathematical • Statistical • Logical
+
+Using Excel functions speeds up **data analysis** and **decision-making** — crucial in finance for automation and reducing **operational risk** (risque opérationnel).
+
+## 6 Logical Functions (Fonctions logiques)
+
+### IF Function
+Performs a logical test, returns one value for TRUE and another for FALSE.
+
+**Example (Trading logic):** Check if daily return > 2%:
+```excel
+=IF(D3>0.02,"Above 2%","Below 2%")
+
+ 
 
 
 ---
