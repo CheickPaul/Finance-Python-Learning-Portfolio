@@ -306,8 +306,11 @@ Charts (Line, Histogram, Scatter) give fast insight into **price action** (time 
 
 - Remove **NA/blank rows** to avoid holes in charts.
 
+---
 
 # Chap IV :   Functions in Excel
+
+ Excel functions + proper cell **referencing** lead to faster analysis and fewer **operationals errors** 
 
 
 ---
