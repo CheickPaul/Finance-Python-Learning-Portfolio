@@ -342,12 +342,12 @@ You can reference a **range** of cells as well, e.g. `=SUM(A1:D2)`.
 **Common usage in trading spreadsheets (desk usage):**  
 Sum up **OHLCV** data, compute **total volume**, **daily returns**, etc.
 
-## 4 Formulas (Formules personnalisées)
+## 4 Formulas (Personnalized formulas)
 A **formula** = combination of **values + operators** that returns a single value.  
 Example: `=Cell1 + Cell2`  
 Formulas are written in the **Formula Bar**.
 
-## 5 Functions (Fonctions intégrées)
+## 5 Functions (Built-in functions)
 Functions are **built-in formulas** that:
 - take arguments (numbers or cell references),
 - perform an operation,
@@ -366,6 +366,9 @@ Performs a logical test, returns one value for TRUE and another for FALSE.
 excel 
 =IF(D3>0.02,"Above 2%","Below 2%")
 
+ ---
+ PART 2
+ ---
  
 
 
