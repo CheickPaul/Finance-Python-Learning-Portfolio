@@ -363,7 +363,7 @@ Using Excel functions speeds up **data analysis** and **decision-making** — cr
 Performs a logical test, returns one value for TRUE and another for FALSE.
 
 **Example (Trading logic):** Check if daily return > 2%:
-```excel
+excel 
 =IF(D3>0.02,"Above 2%","Below 2%")
 
  
