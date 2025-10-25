@@ -370,6 +370,150 @@ excel
  PART 2
  ---
  
+# <ins>Functions in Excel – Part II</ins>
+
+## 1 Introduction
+
+This lesson extends Part I with practical tools for time-series analysis and data retrieval in Excel: RAND, AVERAGE, rolling averages, CORREL, rolling correlation, VLOOKUP, and OFFSET. It also introduces standard deviation (sample vs population) and their rolling versions — key in finance for measuring volatility (risk), momentum (trend), and correlation (co-movement).
+
+
+## 2 Random Numbers & Averages
+
+### 2.1 Random Numbers (simulations)
+
+Generate uniform random values in (0,1): `=RAND()`
+
+Generate random integers between two bounds (e.g., 1–100): `=RANDBETWEEN(1,100)`
+
+Use case: basic Monte Carlo simulations for portfolio P&L or price paths.
+
+
+### 2.2 Average (mean)
+
+Arithmetic mean of a range: `=AVERAGE(D3:D22)`
+
+Trading usage: average daily return, average traded volume.
+
+
+### 2.3 Rolling Average (moving average)
+
+Daily returns in column D, 20-day window (place in E22 and fill down):  
+`=IF(ROW()<22,"", AVERAGE( INDEX($D:$D,ROW()-20+1) : INDEX($D:$D,ROW()) ))`
+
+Replace 20 with your window size n. The IF prevents partial windows. Use as a trend filter (noise reduction).
+
+
+## 3 Standard Deviation (Volatility)
+
+### 3.1 Sample vs Population
+
+STDEV.S divides by (n−1): unbiased estimator for a sample (estimation context).  
+`=STDEV.S(D3:D22)`
+
+STDEV.P divides by n: for the entire population (rare in markets).  
+`=STDEV.P(D3:D22)`
+
+Rule of thumb: use STDEV.S for realized volatility estimated from sample returns.
+
+
+### 3.2 Rolling Standard Deviation (rolling vol)
+
+20-day rolling volatility in F22, fill down:  
+`=IF(ROW()<22,"", STDEV.S( INDEX($D:$D,ROW()-20+1) : INDEX($D:$D,ROW()) ))`
+
+Interpretation: short-term dispersion; a common risk proxy.
+
+
+## 4 Correlation
+
+### 4.1 Static Correlation
+
+Correlation between two series (e.g., D and E):  
+`=CORREL(D3:D252, E3:E252)`
+
+Interpretation: linear co-movement (rho). Useful for hedging, diversification.
+
+
+### 4.2 Rolling Correlation
+
+20-day rolling correlation in G22, fill down:  
+`=IF(ROW()<22,"", CORREL( INDEX($D:$D,ROW()-20+1):INDEX($D:$D,ROW()), INDEX($E:$E,ROW()-20+1):INDEX($E:$E,ROW()) ))`
+
+Use case: monitor regime shifts or correlation breakdowns and adjust hedges.
+
+
+## 5 Lookup & Reference Functions — VLOOKUP and OFFSET
+
+### 5.1 VLOOKUP
+
+Syntax: VLOOKUP(lookup_value, table_array, col_index_num, [range_lookup])
+
+- lookup_value: value to search (e.g., ticker).
+
+- table_array: table to search; key must be first column.
+
+- col_index_num: 1-based column number to return.
+
+- [range_lookup]: FALSE = exact match (recommended), TRUE = approximate (sorted first col required).
+
+Example (exact match, return Close price):  
+`=VLOOKUP($A2, $H$2:$L$1000, 3, FALSE)`
+
+Tip: lock the table range with $ to keep references stable when filling down.
+
+
+### 5.2 OFFSET (dynamic ranges)
+
+Syntax: OFFSET(reference, rows, cols, [height], [width])
+
+Returns a range offset from a starting reference. Powerful for dynamic windows but volatile (recalculates frequently).
+
+Example: last n observations’ average; n stored in $B$1:  
+`=AVERAGE( OFFSET( D3, COUNTA($D:$D)-$B$1, 0, $B$1, 1 ) )`
+
+Performance note: prefer INDEX-based rolling formulas for large models.
+
+
+## 6 Rolling Formula Patterns (INDEX-based, non-volatile)
+
+### 6.1 Rolling Average
+
+`=IF(ROW()<($R$1), "", AVERAGE( INDEX($D:$D, ROW()-$R$1+1) : INDEX($D:$D, ROW()) ))`
+
+$R$1 holds the window length n (e.g., 20).
+
+
+### 6.2 Rolling STDEV.S (realized vol)
+
+`=IF(ROW()<($R$1), "", STDEV.S( INDEX($D:$D, ROW()-$R$1+1) : INDEX($D:$D, ROW()) ))`
+
+
+### 6.3 Rolling CORREL (between D and E)
+
+`=IF(ROW()<($R$1), "", CORREL( INDEX($D:$D,ROW()-$R$1+1):INDEX($D:$D,ROW()), INDEX($E:$E,ROW()-$R$1+1):INDEX($E:$E,ROW()) ))`
+
+
+## 7 Quick Reference (Cheat Sheet)
+
+- RAND() → random value (0–1) for simulations.
+
+- AVERAGE(range) → mean (signal smoothing).
+
+- Rolling AVERAGE → moving-window trend filter.
+
+- STDEV.S / STDEV.P → sample vs population volatility (use S for estimation).
+
+- Rolling STDEV.S → rolling realized volatility.
+
+- CORREL(r1,r2) → static correlation.
+
+- Rolling CORREL → dynamic co-movement tracking.
+
+- VLOOKUP(value, table, col, FALSE) → exact-match table retrieval.
+
+- OFFSET(ref, rows, cols, [h], [w]) → dynamic ranges (use carefully).
+
+Operational note: INDEX-based rolling windows reduce volatile recalculations, improving model stability and lowering operational risk (process errors, latency).
 
 
 ---
