@@ -86,3 +86,68 @@ Band width = **volatility**: wider = more **unstable** market.
 | **Volatility**   | Risk / profit opportunity                                |
 
 ---
+
+## Price Priority — Sequence (message flow)
+```mermaid
+sequenceDiagram
+    autonumber
+    participant A as TraderA
+    participant B as TraderB
+    participant C as TraderC
+    participant S as Seller
+    participant ME as MatchEng
+    participant OB as OrderBook
+
+    A->>ME: Limit BUY 50 @100.00
+    ME->>OB: Add 50 @100.00 (pos1)
+
+    B->>ME: Limit BUY 40 @100.05
+    ME->>OB: Add 40 @100.05 (pos1)
+
+    C->>ME: Limit BUY 30 @100.05
+    ME->>OB: Add 30 @100.05 (pos2)
+
+    S->>ME: Market SELL 60
+    ME->>OB: Query best bid
+    OB-->>ME: Best bid 100.05 (queue B then C)
+
+    ME-->>S: Trade 40 @100.05 with B
+    ME->>OB: Remove B 40 @100.05
+
+    ME-->>S: Trade 20 @100.05 with C
+    ME->>OB: Reduce C from 30 to 10 @100.05
+
+    ME-->>S: Done at best price
+```
+
+Before
+Price   Bid   Ask
+100.10    -    60
+100.05   70     -
+100.00   50     -
+
+Sell 60 hits best bid 100.05:
+- Fill B 40 @100.05
+- Fill C 20 @100.05 (C left 10)
+
+After
+Price   Bid   Ask
+100.10    -    60
+100.05   10     -
+100.00   50     -
+
+
+## Matching Logic — Flowchart (price → time)
+```mermaid
+graph TD
+    A[Incoming aggressive order] --> B{Opposite liquidity}
+    B -- No --> X[No trade]
+    B -- Yes --> C[Pick best opposite price]
+    C --> D{Qty at this price}
+    D -- No --> G[Move to next price]
+    D -- Yes --> E[Fill FIFO at this price]
+    E --> F{Qty remaining}
+    F -- Yes --> G
+    G --> C
+    F -- No --> H[Done]
+```
