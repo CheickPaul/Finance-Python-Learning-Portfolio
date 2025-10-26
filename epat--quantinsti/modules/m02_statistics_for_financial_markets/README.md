@@ -14,7 +14,7 @@
 <h1 align="center">SECTION 1 : INTRO TO EXCEL</h1>
 ---
 
- <ins>Excel — Functions (with detailed examples)</ins>
+# <ins>Excel — Functions (with detailed examples)</ins>
 
  **Sample OHLCV Dataset**
 
@@ -93,6 +93,7 @@ Column mapping: A=Date, B=Open, C=High, D=Low, E=Close, F=Volume, G=Spread.
 
 
 ---
+
 # Price Adjustsments & Return
 
 ## <ins>1)Adj close</ins> : Adjusted Close (Adj Close) is the closing price corrected for splits and dividends, so the series is consistent over time and reflects total-return performance.
@@ -107,3 +108,13 @@ Quick rules :
 ---
 
 # Basic Strategy Construction
+
+---
+
+<h1 align="center">SECTION 2 : BASIC STATISTICS</h1>
+
+---
+
+<h1 align="center">SECTION 2 : Practical session Basics Statistics</h1>
+
+
