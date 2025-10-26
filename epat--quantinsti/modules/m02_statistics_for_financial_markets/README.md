@@ -14,6 +14,12 @@
 <h1 align="center">SECTION 1 : INTRO TO EXCEL</h1>
 ---
 
+# <ins>Quant trading</ins>
+
+- Building hypothesis ( Require Financial Knowledge)
+- Testing Hypothesis ( Statistics and Programming Knowledge)
+- Execution ( Programming Knowledge)
+
 # <ins>Excel — Functions (with detailed examples)</ins>
 
  **Sample OHLCV Dataset**
@@ -100,6 +106,8 @@ Column mapping: A=Date, B=Open, C=High, D=Low, E=Close, F=Volume, G=Spread.
 Quick rules :
 - Trading levels / OHLC analysis → **Close**
 - Return / backtests / performance → **Adj Close**
+
+  
 
 ---
 
