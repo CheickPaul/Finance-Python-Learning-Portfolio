@@ -1,1 +1,101 @@
+> **Disclaimer**
+> These notes are my personal learning summaries based on the Statistics for Financial Markets (SFM) module I followed, **supplemented by additional personal research** and practice.
+> To avoid sharing proprietary course material from QuantInsti, all examples, datasets, and diagrams have been independently created or sourced elsewhere. 
+> The definitions and explanations below reflect my understanding at the time of writing and should not be taken as gospel. Please do your own research and verification. 
+> I reserve the right to revise and update this document as my learning progresses and to correct any errors I discover.
 
+
+> **Purpose:** The notes belows are include in my repository " Finance-Python-Learning-Portfolio". The purpose is to document my learning journey and centralizes my personal notes for future revision.
+> It is non-commercial and respects QuantInsti’s IP; the aim is transparency in learning, not redistribution of course materials.
+
+---
+
+
+# SECTION 1 : INTRO TO EXCEL
+---
+## <ins>**Excel — Functions (with detailed examples)**</ins>
+
+ **Sample OHLCV Dataset**
+
+Assume a table (A:G):
+
+| Row | Date       | Open  | High  | Low   | Close | Volume | Spread |
+|----:|------------|------:|------:|------:|------:|-------:|------:|
+|  2  | 2025-10-20 | 170.0 | 172.0 | 169.5 | 171.2 | 12500  | 0.015 |
+|  3  | 2025-10-21 | 171.5 | 173.4 | 170.9 | 173.0 |  9800  | 0.021 |
+|  4  | 2025-10-22 | 169.8 | 170.4 | 168.2 | 168.9 | 15400  | 0.018 |
+|  5  | 2025-10-23 | 173.7 | 175.0 | 173.2 | 174.3 | 11200  | 0.013 |
+|  6  | 2025-10-24 | 170.4 | 171.0 | 169.1 | 170.0 |  8900  | 0.017 |
+
+Column mapping: A=Date, B=Open, C=High, D=Low, E=Close, F=Volume, G=Spread.
+
+
+
+## <ins>1) Math Functions</ins>
+
+| Function | Purpose | Syntax | Step-by-step Example (using the table above) |
+|---|---|---|---|
+| `RAND()` | Random number in [0,1). Useful for simulation. | `=RAND()` | In H2: `=RAND()` → returns a number like `0.3721`. Recalculates on F9. |
+| `RANDBETWEEN` | Random integer between bounds. | `=RANDBETWEEN(bottom, top)` | In H3: `=RANDBETWEEN(1,10)` → e.g., `7`. |
+| `LN` / `LOG` | Natural log / log base *b*. | `=LN(x)` ; `=LOG(x, b)` | Log-return day 3 vs day 2: in H4: `=LN(E3/E2)` → `=LN(173.0/171.2)` ≈ **0.01046** (≈ **+1.046%**). |
+| `PRODUCT` | Product of values (compounding). | `=PRODUCT(n1, n2, …)` | If J2:J4 = `+2%`, `-1%`, `+1.5%`: in H5: `=PRODUCT(1+J2,1+J3,1+J4)-1` → ≈ **+2.495%**. |
+| `SUMIF` | Sum with one condition. | `=SUMIF(range, criteria, [sum_range])` | Sum of volumes where `Close>170`: `=SUMIF(E2:E6, ">170", F2:F6)` → rows 2,3,5 ⇒ **12500+9800+11200 = 33500**. |
+| `COUNTIF` | Count with one condition. | `=COUNTIF(range, criteria)` | Days with `Spread<0.02`: `=COUNTIF(G2:G6,"<0.02")` → **4** (rows 2,4,5,6). |
+
+---
+
+## <ins>2) Statistical Functions</ins>
+
+| Function | Purpose | Syntax | Step-by-step Example |
+|---|---|---|---|
+| `AVERAGE` | Arithmetic mean. | `=AVERAGE(numbers)` | Average of `Close`: `=AVERAGE(E2:E6)` → (171.2+173.0+168.9+174.3+170.0)/5 = **171.48**. |
+| Related | Median / Std dev / Variance | `=MEDIAN(...)` / `=STDEV.S(...)` / `=VAR.S(...)` | Std dev of daily returns in H3:H6 (see logic section for returns): `=STDEV.S(H3:H6)` |
+
+---
+
+## <ins>3) Logical Functions</ins>
+
+| Function | Purpose | Syntax | Step-by-step Example |
+|---|---|---|---|
+| `IF` | Test a condition and return A/B. | `=IF(test, value_if_true, value_if_false)` | Label “Up/Down”: in H2: `=IF(E2>B2,"Up","Down")`, then fill down to H6 → row 2 Up (171.2>170.0), row 3 Up, row 4 Down, row 5 Up, row 6 Down. |
+| `IFS` | Multiple cases without nested IFs. | `=IFS(test1,val1, test2,val2, …)` | Classify the daily return (H = % vs prior day). First compute H3:H6: `=E3/E2-1`, `=E4/E3-1`, etc. Then in I3: `=IFS(H3<-0.02,"Large Down", H3<0,"Down", H3<0.02,"Up small", TRUE,"Large Up")` → H3≈+1.051% ⇒ Up small; H4≈−2.37% ⇒ Large Down; H5≈+3.197% ⇒ Large Up; H6≈−2.467% ⇒ Large Down. |
+| `AND` / `OR` / `NOT` | Combine conditions. | `=AND(a,b)` ; `=OR(a,b)` | Signal when `Return>0` **and** `Volume>10000`: in J3: `=IF(AND(H3>0,F3>10000),1,0)` then fill down → only row 5 returns **1** (return>0 and volume 11200). |
+
+---
+
+## <ins>4) Lookup Functions</ins>
+
+| Function | Purpose | Syntax | Step-by-step Example |
+|---|---|---|---|
+| `XLOOKUP` | Flexible lookup (replaces `VLOOKUP`). | `=XLOOKUP(lookup_value, lookup_array, return_array, [if_not_found], [match_mode], [search_mode])` | Get `Volume` for a given date. If `K2` is `2025-10-23`: `=XLOOKUP(K2, A2:A6, F2:F6, "NA")` → **11200**. |
+| `VLOOKUP` | Vertical lookup (key must be first column). | `=VLOOKUP(value, table, col_index, [exact])` | On block `A2:F6`: `=VLOOKUP(K2, A2:F6, 6, FALSE)` → **11200** (col 6 = Volume). |
+| `INDEX` + `MATCH` | Robust combo (position + value). | `=INDEX(array, row)` + `=MATCH(value, array, 0)` | `=INDEX(F2:F6, MATCH(K2, A2:A6, 0))` → **11200**. |
+
+---
+
+## <ins>5) Dynamic Ranges / Indexing</ins>
+
+| Function | Purpose | Syntax | Step-by-step Example |
+|---|---|---|---|
+| `OFFSET` | Returns a **shifted range** (volatile). | `=OFFSET(ref, rows, cols, [height], [width])` | Average of the **last 3** closes: `=AVERAGE( OFFSET(E2, COUNTA(E2:E6)-3, 0, 3, 1) )` → mean of E4:E6 = (168.9+174.3+170.0)/3 ≈ **171.067**. |
+| `INDEX` (range) | Access by position (non-volatile). | `=INDEX(array, row_num, [col_num])` | Last close: `=INDEX(E2:E6, COUNTA(E2:E6))` → **170.0**. |
+| `MATCH` | Return the position of a value. | `=MATCH(lookup_value, lookup_array, 0)` | Position of date `2025-10-23`: `=MATCH("2025-10-23", A2:A6, 0)` → **4** (4th entry in A2:A6). |
+
+---
+
+## <ins>6) Multiple Criteria (Bonus)</ins>
+
+| Function | Purpose | Syntax | Step-by-step Example |
+|---|---|---|---|
+| `SUMIFS` | Sum with multiple criteria. | `=SUMIFS(sum_range, crit_range1, crit1, …)` | Sum `Volume` where `Volume>10000` **and** `Close>170`: `=SUMIFS(F2:F6, F2:F6, ">10000", E2:E6, ">170")` → rows 2 and 5 ⇒ **12500+11200 = 23700**. |
+| `COUNTIFS` | Count with multiple criteria. | `=COUNTIFS(range1, crit1, …)` | Days with `Close>170` **and** `Spread<0.02`: `=COUNTIFS(E2:E6, ">170", G2:G6, "<0.02")` → **2** (rows 2 and 5). |
+
+---
+
+
+
+---
+1. <ins>Adj close</ins> : Adjusted Close (Adj Close) is the closing price corrected for splits and dividends, so the series is consistent over time and reflects total-return performance.
+Quick rules :
+- Trading levels / OHLC analysis → **Close**
+- Return / backtests / performance → **Adj Close**
