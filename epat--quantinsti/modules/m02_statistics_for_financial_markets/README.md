@@ -11,9 +11,10 @@
 ---
 
 
-# SECTION 1 : INTRO TO EXCEL
+<h1 align="center">SECTION 1 : INTRO TO EXCEL</h1>
 ---
-## <ins>**Excel — Functions (with detailed examples)**</ins>
+
+ <ins>Excel — Functions (with detailed examples)</ins>
 
  **Sample OHLCV Dataset**
 
@@ -42,7 +43,7 @@ Column mapping: A=Date, B=Open, C=High, D=Low, E=Close, F=Volume, G=Spread.
 | `SUMIF` | Sum with one condition. | `=SUMIF(range, criteria, [sum_range])` | Sum of volumes where `Close>170`: `=SUMIF(E2:E6, ">170", F2:F6)` → rows 2,3,5 ⇒ **12500+9800+11200 = 33500**. |
 | `COUNTIF` | Count with one condition. | `=COUNTIF(range, criteria)` | Days with `Spread<0.02`: `=COUNTIF(G2:G6,"<0.02")` → **4** (rows 2,4,5,6). |
 
----
+
 
 ## <ins>2) Statistical Functions</ins>
 
@@ -51,7 +52,7 @@ Column mapping: A=Date, B=Open, C=High, D=Low, E=Close, F=Volume, G=Spread.
 | `AVERAGE` | Arithmetic mean. | `=AVERAGE(numbers)` | Average of `Close`: `=AVERAGE(E2:E6)` → (171.2+173.0+168.9+174.3+170.0)/5 = **171.48**. |
 | Related | Median / Std dev / Variance | `=MEDIAN(...)` / `=STDEV.S(...)` / `=VAR.S(...)` | Std dev of daily returns in H3:H6 (see logic section for returns): `=STDEV.S(H3:H6)` |
 
----
+
 
 ## <ins>3) Logical Functions</ins>
 
@@ -61,7 +62,7 @@ Column mapping: A=Date, B=Open, C=High, D=Low, E=Close, F=Volume, G=Spread.
 | `IFS` | Multiple cases without nested IFs. | `=IFS(test1,val1, test2,val2, …)` | Classify the daily return (H = % vs prior day). First compute H3:H6: `=E3/E2-1`, `=E4/E3-1`, etc. Then in I3: `=IFS(H3<-0.02,"Large Down", H3<0,"Down", H3<0.02,"Up small", TRUE,"Large Up")` → H3≈+1.051% ⇒ Up small; H4≈−2.37% ⇒ Large Down; H5≈+3.197% ⇒ Large Up; H6≈−2.467% ⇒ Large Down. |
 | `AND` / `OR` / `NOT` | Combine conditions. | `=AND(a,b)` ; `=OR(a,b)` | Signal when `Return>0` **and** `Volume>10000`: in J3: `=IF(AND(H3>0,F3>10000),1,0)` then fill down → only row 5 returns **1** (return>0 and volume 11200). |
 
----
+
 
 ## <ins>4) Lookup Functions</ins>
 
@@ -71,7 +72,7 @@ Column mapping: A=Date, B=Open, C=High, D=Low, E=Close, F=Volume, G=Spread.
 | `VLOOKUP` | Vertical lookup (key must be first column). | `=VLOOKUP(value, table, col_index, [exact])` | On block `A2:F6`: `=VLOOKUP(K2, A2:F6, 6, FALSE)` → **11200** (col 6 = Volume). |
 | `INDEX` + `MATCH` | Robust combo (position + value). | `=INDEX(array, row)` + `=MATCH(value, array, 0)` | `=INDEX(F2:F6, MATCH(K2, A2:A6, 0))` → **11200**. |
 
----
+
 
 ## <ins>5) Dynamic Ranges / Indexing</ins>
 
@@ -81,7 +82,7 @@ Column mapping: A=Date, B=Open, C=High, D=Low, E=Close, F=Volume, G=Spread.
 | `INDEX` (range) | Access by position (non-volatile). | `=INDEX(array, row_num, [col_num])` | Last close: `=INDEX(E2:E6, COUNTA(E2:E6))` → **170.0**. |
 | `MATCH` | Return the position of a value. | `=MATCH(lookup_value, lookup_array, 0)` | Position of date `2025-10-23`: `=MATCH("2025-10-23", A2:A6, 0)` → **4** (4th entry in A2:A6). |
 
----
+
 
 ## <ins>6) Multiple Criteria (Bonus)</ins>
 
@@ -90,12 +91,19 @@ Column mapping: A=Date, B=Open, C=High, D=Low, E=Close, F=Volume, G=Spread.
 | `SUMIFS` | Sum with multiple criteria. | `=SUMIFS(sum_range, crit_range1, crit1, …)` | Sum `Volume` where `Volume>10000` **and** `Close>170`: `=SUMIFS(F2:F6, F2:F6, ">10000", E2:E6, ">170")` → rows 2 and 5 ⇒ **12500+11200 = 23700**. |
 | `COUNTIFS` | Count with multiple criteria. | `=COUNTIFS(range1, crit1, …)` | Days with `Close>170` **and** `Spread<0.02`: `=COUNTIFS(E2:E6, ">170", G2:G6, "<0.02")` → **2** (rows 2 and 5). |
 
----
-
-
 
 ---
-1. <ins>Adj close</ins> : Adjusted Close (Adj Close) is the closing price corrected for splits and dividends, so the series is consistent over time and reflects total-return performance.
+# Price Adjustsments & Return
+
+## <ins>1)Adj close</ins> : Adjusted Close (Adj Close) is the closing price corrected for splits and dividends, so the series is consistent over time and reflects total-return performance.
 Quick rules :
 - Trading levels / OHLC analysis → **Close**
 - Return / backtests / performance → **Adj Close**
+
+---
+
+# Technical Indicators (MA, VWAP, RSI) 
+
+---
+
+# Basic Strategy Construction
