@@ -100,7 +100,7 @@ Column mapping: A=Date, B=Open, C=High, D=Low, E=Close, F=Volume, G=Spread.
 
 ---
 
-# Price Adjustsments & Return
+# <ins>Price Adjustsments & Return</ins>
 
 ## <ins>1)Adj close</ins> : Adjusted Close (Adj Close) is the closing price corrected for splits and dividends, so the series is consistent over time and reflects total-return performance.
 Quick rules :
@@ -111,11 +111,11 @@ Quick rules :
 
 ---
 
-# Technical Indicators (MA, VWAP, RSI) 
+# </ins>Technical Indicators<ins> (MA, VWAP, RSI) 
 
 ---
 
-# Basic Strategy Construction
+# <ins>Basic Strategy Construction</ins>
 
 ---
 
@@ -123,6 +123,6 @@ Quick rules :
 
 ---
 
-<h1 align="center">SECTION 2 : Practical session Basics Statistics</h1>
+<h1 align="center">SECTION 3 : Practical session Basics Statistics</h1>
 
 
