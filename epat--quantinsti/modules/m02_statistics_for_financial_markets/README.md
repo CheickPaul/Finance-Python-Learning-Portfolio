@@ -102,7 +102,8 @@ Column mapping: A=Date, B=Open, C=High, D=Low, E=Close, F=Volume, G=Spread.
 
 # <ins>Price Adjustsments & Return</ins>
 
-## <ins>1)Adj close</ins> : Adjusted Close (Adj Close) is the closing price corrected for splits and dividends, so the series is consistent over time and reflects total-return performance.
+## <ins>1)Adj close</ins> :
+Adjusted Close (Adj Close) is the closing price corrected for splits and dividends, so the series is consistent over time and reflects total-return performance. In case of split or dividends sharing the returns after this new action would be totally wrong if we did not adjust the close price. In practice we adjust the Adj Close price retrospectively.
 Quick rules :
 - Trading levels / OHLC analysis → **Close**
 - Return / backtests / performance → **Adj Close**
