@@ -102,13 +102,28 @@ Column mapping: A=Date, B=Open, C=High, D=Low, E=Close, F=Volume, G=Spread.
 
 # <ins>Price Adjustsments & Return</ins>
 
-## <ins>1)Adj close</ins> :
+## <ins>1)Adj close, Adj Factor</ins> :
 Adjusted Close (Adj Close) is the closing price corrected for splits and dividends, so the series is consistent over time and reflects total-return performance. In case of split or dividends sharing the returns after this new action would be totally wrong if we did not adjust the close price. In practice we adjust the Adj Close price retrospectively.
 Quick rules :
 - Trading levels / OHLC analysis → **Close**
 - Return / backtests / performance → **Adj Close**
 
-  
+Adj Factor = Close Price/ Adj Price
+
+  ## <ins>1)Adj Prices, Adj Volume</ins> :
+
+# Price & Volume Adjustments (backward-adjusted; factor = F_p)
+
+| Metric        | Adjusted formula           | Market comment (brief)                                      |
+|---------------|----------------------------|--------------------------------------------------------------|
+| **Adj Open**  | `Open_adj = Open_raw × F_p`  | F_p = price adjustment factor (splits; may include dividends for total return). |
+| **Adj High**  | `High_adj = High_raw × F_p`  | Same logic for all OHLC.                                     |
+| **Adj Low**   | `Low_adj = Low_raw × F_p`    | —                                                            |
+| **Adj Close** | `Close_adj = Close_raw × F_p`| —                                                            |
+| **Adj Volume**| `Vol_adj = Vol_raw ÷ F_p`    | Divide by F_p to offset unit change from splits (shares).    |
+
+>  **Backward-adjusted** = rescale history so corporate actions don’t create artificial jumps.
+> Volume is in **shares** (units), not dollars.
 
 ---
 
