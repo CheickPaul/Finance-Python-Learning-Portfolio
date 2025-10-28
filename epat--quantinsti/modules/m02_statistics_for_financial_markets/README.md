@@ -110,9 +110,8 @@ Quick rules :
 
 Adj Factor = Close Price/ Adj Price
 
-  ## <ins>1)Adj Prices, Adj Volume</ins> :
+  ## <ins>2)Adj Prices, Adj Volume</ins> :
 
-# Price & Volume Adjustments (backward-adjusted; factor = F_p)
 
 | Metric        | Adjusted formula           | Market comment (brief)                                      |
 |---------------|----------------------------|--------------------------------------------------------------|
@@ -125,9 +124,23 @@ Adj Factor = Close Price/ Adj Price
 >  **Backward-adjusted** = rescale history so corporate actions don’t create artificial jumps.
 > Volume is in **shares** (units), not dollars.
 
+
+  ## <ins>3)Return, Cumulative return</ins> :
+
+- Daily Return :(Today Adj - Yesterday Adj)/Yesterday Adj
+- Cumulative Return : Adding Today's value to Yesterday's value ;
+
 ---
 
 # </ins>Technical Indicators<ins> (MA, VWAP, RSI) 
+
+  ## <ins>1)Moving Average</ins> :
+
+  - Calcultate the moving average of the last 30,100 or x closest days
+  - When the blue line (MA30) cross the red line ( MA100) from top to BOttom, we sell
+  - When the blue line (MA30) cross the red line ( MA100) from BOttom to top, we buy
+    
+<img width="786" height="668" alt="image" src="https://github.com/user-attachments/assets/6d5fe01e-8cac-42df-b425-af1aaa5f672c" />
 
 ---
 
