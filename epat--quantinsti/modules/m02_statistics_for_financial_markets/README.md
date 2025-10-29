@@ -203,7 +203,7 @@ Adj Factor = Close Price/ Adj Price
 > ```
 
 
-  ## <ins>2)Vwap-Volume Weighted Average Price</ins> :
+  ## <ins>2)VWAP-Volume Weighted Average Price</ins> :
 
 
 ---
