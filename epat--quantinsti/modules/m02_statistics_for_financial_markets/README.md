@@ -142,6 +142,66 @@ Adj Factor = Close Price/ Adj Price
     
 <img width="786" height="668" alt="image" src="https://github.com/user-attachments/assets/6d5fe01e-8cac-42df-b425-af1aaa5f672c" />
 
+
+### <ins>Example of different way to identify Signal</ins>
+
+ **Dataset (raw data)**
+
+| Scenario | Row (Date) | MA30 (Q) | MA100 (R) |
+|---|---|---:|---:|
+| BUY (*golden cross* — bullish crossover) | 260 (Yesterday) | 98 | 100 |
+| BUY (*golden cross* — bullish crossover) | 261 (Today) | 101 | 100 |
+| SELL (*death cross* — bearish crossover) | 260 (Yesterday) | 105 | 100 |
+| SELL (*death cross* — bearish crossover) | 261 (Today) | 99 | 100 |
+
+---
+
+#### **IFS function** (crossover, text output)
+
+> Guardrail: `COUNT(Q260:R261)=4` ensures all four cells are numeric (data quality check).
+
+| Scenario | Excel formula (EU `;`) to place on the **Today** row | Expected output |
+|---|---|---|
+| BUY (*golden cross*) | ```excel
+=IFS(
+  AND(COUNT(Q260:R261)=4; Q260<R260; Q261>R261); "BUY",
+  AND(COUNT(Q260:R261)=4; Q260>R260; Q261<R261); "SELL",
+  TRUE; "-"
+)
+``` | **BUY** |
+| SELL (*death cross*) | ```excel
+=IFS(
+  AND(COUNT(Q260:R261)=4; Q260<R260; Q261>R261); "BUY",
+  AND(COUNT(Q260:R261)=4; Q260>R260; Q261<R261); "SELL",
+  TRUE; "-"
+)
+``` | **SELL** |
+
+---
+
+#### 3) **Signal (SIGN method)** — ultra-compact (trader-style)
+
+> Idea: compare the **sign** of *(MA30−MA100)* today vs yesterday to detect a true cross.  
+> Output: **2** = golden cross (BUY), **−2** = death cross (SELL), else no trade.
+
+| Scenario | ΔSIGN (numeric) — Excel formula (EU `;`) on **Today** | ΔSIGN value | Text mapping from ΔSIGN | Final signal |
+|---|---|---:|---|---|
+| BUY (*golden cross*) | ```excel
+=IF(COUNT(Q260:R261)=4; SIGN(Q261-R261) - SIGN(Q260-R260); "")
+``` | **2** | ```excel
+=IF(S261=2; "BUY"; IF(S261=-2; "SELL"; "-"))
+``` | **BUY** |
+| SELL (*death cross*) | ```excel
+=IF(COUNT(Q260:R261)=4; SIGN(Q261-R261) - SIGN(Q260-R260); "")
+``` | **-2** | ```excel
+=IF(S261=2; "BUY"; IF(S261=-2; "SELL"; "-"))
+``` | **SELL** |
+
+> Noise filter (anti-whipsaw = fewer false signals): round before `SIGN` to ignore micro-touches  
+> ```excel
+> =IF(COUNT(Q260:R261)=4; SIGN(ROUND(Q261-R261;4)) - SIGN(ROUND(Q260-R260;4)); "")
+> ```
+
 ---
 
 # <ins>Basic Strategy Construction</ins>
