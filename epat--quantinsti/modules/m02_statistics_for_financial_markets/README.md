@@ -232,8 +232,22 @@ We “square off” (close the position) on the last line so the return reflects
   ## <ins>3)VWAP On a rolling period</ins> :
 Instead of computing cummulative P*V, we do it on a rolling basis(e.g. 10 days)
 
-  ## <ins>4) Relative Strength Indicator (RSI)</ins> :
+  ## <ins>4) Relative Strength Indicator (RSI)</ins>
 
+-Momentum gauge: relative strength of up moves vs. down moves (buying vs. selling pressure).
+
+-Overbought/Oversold: classic thresholds at 70/30.
+
+-Price–RSI divergences: signals of momentum rollover (loss of momentum).
+
+- Gain : If today adj close price greater than yesterday, we calculate the spread otherwise 0.
+- Losses : If today adj close price smaller than yesterday, we calculate the difference
+
+### <ins>Step by step calculations RSI</ins>
+
+-(1) Calculate Gain and Loss
+-(2) Calculate Avg Gain / Avg Loss (rolling 14 days)
+-(3) Calculate MAR (ratio : Avg Gain/ Avg Losses )
 ---
 
 # <ins>Basic Strategy Construction</ins>
