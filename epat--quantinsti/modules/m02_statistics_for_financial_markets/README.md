@@ -217,7 +217,19 @@ Reminder :
 
 The main reason is that we assume that VWAP is sort of  a fair price then if the market price is below, it will tend to get up and vice versa
 
-Whenever we get ssignal, we square off the earlier position and enter a new position according to the signal
+Whenever we get signal, we square off the earlier position and enter a new position according to the signal
+
+### <ins>Step by step calculations</ins> (mean-reversion)
+- (1) If we have a daily volume, we must to calculate de **average daily price** between Adj High, Adj Low, Adj close
+- (2) AVERAGE DAILY PRICE * VOLUME
+- (3) CUMMULATIVE P*V
+- (4) CUMMULATIVE VOLUME
+- (5) VWAP
+
+VERY IMPORTANT : SQUARRE OFF THE LAST SIGNAL
+We “square off” (close the position) on the last line so the return reflects a complete round-trip and the performance is measurable in cash.
+
+
 ---
 
 # <ins>Basic Strategy Construction</ins>
