@@ -129,7 +129,7 @@ Adj Factor = Close Price/ Adj Price
 
 - Daily Return :(Today Adj - Yesterday Adj)/Yesterday Adj
 - Cumulative Return : Adding Today's value to Yesterday's value ;
-
+- Returns are always (Sell-buy)/Initial Investment.
 ---
 
 # </ins>Technical Indicators<ins> (MA, VWAP, RSI) 
