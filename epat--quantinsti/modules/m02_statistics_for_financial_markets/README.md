@@ -143,7 +143,7 @@ Adj Factor = Close Price/ Adj Price
 <img width="786" height="668" alt="image" src="https://github.com/user-attachments/assets/6d5fe01e-8cac-42df-b425-af1aaa5f672c" />
 
 
-### <ins>Example of different way to identify Signal</ins>
+### <ins>Example of different way to identify Signal wth MA</ins>
 
  **Dataset (raw data)**
 
@@ -201,6 +201,10 @@ Adj Factor = Close Price/ Adj Price
 > ```excel
 > =IF(COUNT(Q260:R261)=4; SIGN(ROUND(Q261-R261;4)) - SIGN(ROUND(Q260-R260;4)); "")
 > ```
+
+
+  ## <ins>2)Vwap-Volume Weighted Average Price</ins> :
+
 
 ---
 
