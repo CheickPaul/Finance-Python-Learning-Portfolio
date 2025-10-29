@@ -205,7 +205,19 @@ Adj Factor = Close Price/ Adj Price
 
   ## <ins>2)VWAP-Volume Weighted Average Price</ins> :
 
+Reminder :
 
+<img width="687" height="776" alt="image" src="https://github.com/user-attachments/assets/52cd35b0-bf1a-4ace-8164-94b4f5a2908f" />
+
+### <ins>VWAP Signals</ins> (mean-reversion)
+
+**Rule**
+- If **Price < VWAP** ⇒ **BUY**
+- If **Price > VWAP** ⇒ **SELL**
+
+The main reason is that we assume that VWAP is quite a faire price then if the market price is below, it will tend to get up and vice versa
+
+Whenever we get ssignal, we square off the earlier position and enter a new position according to the signal
 ---
 
 # <ins>Basic Strategy Construction</ins>
