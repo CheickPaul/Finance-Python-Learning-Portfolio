@@ -229,6 +229,10 @@ Whenever we get signal, we square off the earlier position and enter a new posit
 VERY IMPORTANT : SQUARRE OFF THE LAST SIGNAL
 We “square off” (close the position) on the last line so the return reflects a complete round-trip and the performance is measurable in cash.
 
+  ## <ins>3)VWAP On a rolling period</ins> :
+Instead of computing cummulative P*V, we do it on a rolling basis(e.g. 10 days)
+
+  ## <ins>4) Relative Strength Indicator (RSI)</ins> :
 
 ---
 
