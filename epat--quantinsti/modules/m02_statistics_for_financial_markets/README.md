@@ -215,7 +215,11 @@ Reminder :
 - If **Price < VWAP** ⇒ **BUY**
 - If **Price > VWAP** ⇒ **SELL**
 
+
 The main reason is that we assume that VWAP is sort of  a fair price then if the market price is below, it will tend to get up and vice versa
+
+  ***we assume the main reversion. if we assumed trend following it would change.***
+
 
 Whenever we get signal, we square off the earlier position and enter a new position according to the signal
 
