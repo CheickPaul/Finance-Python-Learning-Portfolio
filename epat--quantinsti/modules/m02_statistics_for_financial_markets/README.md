@@ -245,9 +245,21 @@ Instead of computing cummulative P*V, we do it on a rolling basis(e.g. 10 days)
 
 ### <ins>Step by step calculations RSI</ins>
 
+IDEA : We sell if RSI >70. We buy if RSI <30
+
 -(1) Calculate Gain and Loss
 -(2) Calculate Avg Gain / Avg Loss (rolling 14 days)
 -(3) Calculate MAR (ratio : Avg Gain/ Avg Losses )
+-(4) Calculate RSI
+
+Reminder :
+
+<img width="562" height="105" alt="image" src="https://github.com/user-attachments/assets/562bc024-13a3-4479-ab6d-89f0e22911d6" />
+
+-(5) SIGNAL / TRADE / INVENTORY (NET POSITION)
+
+
+
 ---
 
 # <ins>Basic Strategy Construction</ins>
