@@ -1507,18 +1507,7 @@ DRAFT
 
 
 
-### Quick Q&A (exam-style)
-- **Going long means?** Buying; profit if price rises.  
-- **Square off a short?** **Buy** to cover.  
-- **OHLCV stands for?** Open, High, Low, Close, **Volume**.  
-- **Bull vs Bear market?** Broad uptrend vs downtrend.
 
-
-
-### Checklist (fill for your notes)
-- [ ] Add 2 real tickers; write one long & one short example.  
-- [ ] Capture one week of **OHLCV** for a stock you follow.  
-- [ ] Define your default **stop-loss** & **take-profit** rules.
 
 
 
