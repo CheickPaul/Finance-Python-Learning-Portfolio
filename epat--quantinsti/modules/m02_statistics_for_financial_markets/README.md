@@ -271,8 +271,30 @@ Reminder :
 ---
 
 <h1 align="center">SECTION 2 : BASIC STATISTICS</h1>
+---
+
+# <ins>1.Basic Statistic</ins>
+
+why stat : it helps us understand and quantify the risk associated with any investment.
+
+# <ins>2. Probability</ins>
+
+-Probability can be defined as chance an event occurs
+-P(Event)=(count of Event = true)/ total number of event outcomes
+
+## <ins>2.1 Joint Events Probability</ins>
+
+| Relation                                 | Simple definition                                           | Intersection / Conditional formula                    | Trader intuition (market vocab)                                                                                                 |
+| ---------------------------------------- | ----------------------------------------------------------- | ----------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| **General (always true)**                | Holds without any assumption                                | ( P(A\cap B)=P(A),P(B\mid A)=P(B),P(A\mid B) )        | Read via **conditioning** (information flow): “probability of B *given A*”.                                                     |
+| **Conditional probability** (P(B\mid A)) | Probability of **B given A** (info update)                  | ( P(B\mid A)=\frac{P(A\cap B)}{P(A)} \quad (P(A)>0) ) | Measures **edge** (stat advantage) from A: after **volume spike (A)**, chance of **breakout (B)**.                              |
+| **Independent**                          | A does **not** change the probability of B (and vice versa) | ( P(A\cap B)=P(A),P(B) )                              | No **information flow** between signals → no extra **edge** from conditioning.                                                  |
+| **Dependent**                            | A **does** change the probability of B (and/or vice versa)  | ( P(A\cap B)=P(A),P(B\mid A)=P(B),P(A\mid B) )        | **Linked signals** (co-movement). If **positive association** ⇒ (P(A\cap B) > P(A)P(B)) (combined edge); if **negative** ⇒ (<). |
+| **Mutually exclusive (disjoint)**        | Cannot occur together                                       | ( P(A\cap B)=0 )                                      | “Never together” (limit case of anti-co-occurrence).                                                                            |
+
 
 ---
+
 
 <h1 align="center">SECTION 3 : Practical session Basics Statistics</h1>
 
