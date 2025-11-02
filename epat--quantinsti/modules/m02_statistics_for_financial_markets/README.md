@@ -160,22 +160,11 @@ Adj Factor = Close Price/ Adj Price
 
 > Guardrail: `COUNT(Q260:R261)=4` ensures all four cells are numeric (data quality check).
 
-| Scenario | Excel formula (EU `;`) to place on the **Today** row | Expected output |
-|---|---|---|
-| BUY (*golden cross*) | ```excel
-=IFS(
-  AND(COUNT(Q260:R261)=4; Q260<R260; Q261>R261); "BUY",
-  AND(COUNT(Q260:R261)=4; Q260>R260; Q261<R261); "SELL",
-  TRUE; "-"
-)
-``` | **BUY** |
-| SELL (*death cross*) | ```excel
-=IFS(
-  AND(COUNT(Q260:R261)=4; Q260<R260; Q261>R261); "BUY",
-  AND(COUNT(Q260:R261)=4; Q260>R260; Q261<R261); "SELL",
-  TRUE; "-"
-)
-``` | **SELL** |
+| Scenario             | Excel formula (EU `;`) to place on the **Today** row                                                                           | Expected output |
+| -------------------- | ------------------------------------------------------------------------------------------------------------------------------ | --------------- |
+| BUY (*golden cross*) | =IF(COUNT(Q260:R261)=4; IFS(AND(Q260<R260; Q261>R261); "BUY"; AND(Q260>R260; Q261<R261); "SELL"; TRUE; "-"); "-") | **BUY**         |
+| SELL (*death cross*) | =IF(COUNT(Q260:R261)=4; IFS(AND(Q260<R260; Q261>R261); "BUY"; AND(Q260>R260; Q261<R261); "SELL"; TRUE; "-"); "-")` | **SELL**        |
+
 
 ---
 
@@ -184,18 +173,12 @@ Adj Factor = Close Price/ Adj Price
 > Idea: compare the **sign** of *(MA30−MA100)* today vs yesterday to detect a true cross.  
 > Output: **2** = golden cross (BUY), **−2** = death cross (SELL), else no trade.
 
-| Scenario | ΔSIGN (numeric) — Excel formula (EU `;`) on **Today** | ΔSIGN value | Text mapping from ΔSIGN | Final signal |
-|---|---|---:|---|---|
-| BUY (*golden cross*) | ```excel
-=IF(COUNT(Q260:R261)=4; SIGN(Q261-R261) - SIGN(Q260-R260); "")
-``` | **2** | ```excel
-=IF(S261=2; "BUY"; IF(S261=-2; "SELL"; "-"))
-``` | **BUY** |
-| SELL (*death cross*) | ```excel
-=IF(COUNT(Q260:R261)=4; SIGN(Q261-R261) - SIGN(Q260-R260); "")
-``` | **-2** | ```excel
-=IF(S261=2; "BUY"; IF(S261=-2; "SELL"; "-"))
-``` | **SELL** |
+| Scenario                | ΔSIGN (numeric) — Excel formula (EU `;`) on Today              | ΔSIGN value | Text mapping from ΔSIGN                        | Final signal |
+| ----------------------- | -------------------------------------------------------------- | ----------- | ---------------------------------------------- | ------------ |
+| BUY (*golden cross*)    | `=IF(COUNT(Q260:R261)=4; SIGN(Q261-R261)-SIGN(Q260-R260); "")` | `2`         | `=IF(S261=2; "BUY"; IF(S261=-2; "SELL"; "-"))` | **BUY**      |
+| SELL (*death cross*)    | `=IF(COUNT(Q260:R261)=4; SIGN(Q261-R261)-SIGN(Q260-R260); "")` | `-2`        | `=IF(S261=2; "BUY"; IF(S261=-2; "SELL"; "-"))` | **SELL**     |
+| No cross (flat/whipsaw) | `=IF(COUNT(Q260:R261)=4; SIGN(Q261-R261)-SIGN(Q260-R260); "")` | `0`         | `=IF(S261=2; "BUY"; IF(S261=-2; "SELL"; "-"))` | `-`          |
+
 
 > Noise filter (anti-whipsaw = fewer false signals): round before `SIGN` to ignore micro-touches  
 > ```excel
@@ -279,10 +262,10 @@ why stat : it helps us understand and quantify the risk associated with any inve
 
 # <ins>2. Probability</ins>
 
--Probability can be defined as chance an event occurs
+-Probability can be defined as the chance an event occurs
 -P(Event)=(count of Event = true)/ total number of event outcomes
 
-## <ins>2.1 Joint Events Probability</ins>
+## <ins>2.1 Joint Events Probability / Conditional Probability</ins>
 
 | Relation                                 | Simple definition                                           | Intersection / Conditional formula               | Trader intuition (market vocab)                                                                                        |
 | ---------------------------------------- | ----------------------------------------------------------- | ------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------- |
@@ -291,6 +274,66 @@ why stat : it helps us understand and quantify the risk associated with any inve
 | **Independent**                          | A does **not** change the probability of B (and vice versa) | $P(A\cap B)=P(A),P(B)$                           | No **information flow** between signals → no extra **edge** from conditioning.                                         |
 | **Dependent**                            | A **does** change the probability of B (and/or vice versa)  | $P(A\cap B)=P(A),P(B\mid A)=P(B),P(A\mid B)$     | **Linked signals** (co-movement). If positive association: $P(A\cap B) > P(A)P(B)$ (combined edge); if negative: $<$ . |
 | **Mutually exclusive (disjoint)**        | Cannot occur together                                       | $P(A\cap B)=0$                                   | “Never together” (limit case of anti-co-occurrence).                                                                   |
+
+*Example 1. :*
+
+ Setup (events & probabilities)
+ 
+- A: Volume spike (rare signal), P(A)=0.20
+- B: Breakout (price move), P(B)=0.30
+
+Independent (no information flow)
+   P(A∩B)=P(A)P(B)=0.20×0.30=0.06
+
+Dependent (positive association) breakout more likely after a spike with P(B∣A)=0.50
+    P(A∩B)=P(A)P(B∣A)=0.20×0.50=0.10
+
+
+ *Example 2. :* Disjoint (mutually exclusive on the same asset / same bar)
+
+
+- A: Daily return > 0 (close above open).
+- B: Daily return < 0 (close below open).
+
+  P(A∩B)=0
+
+  *Example 3. :*  Effect of Interest rates on Index - Conditional probability
+
+  F1 : Hike days 780 days / F2 : Cut days 620 days
+  - on f1 (hikes) : index down on 468 days; up on 312 days
+  - on f2(cuts) : index up on 403 days ; up on 217 days
+ 
+    -P(D∣F1​) = 468/780 = 0.6 ; P(D∣F2​) = 217/620 = 0.35 ; P(U∣F2​)= 0.65
+
+    - Likelihood ratio:  P(D∣F1​)/P(D∣F2​) = 1.71
+
+  ## <ins>2.2 Expected Value : Sum of { all values * their probability} </ins>
+  
+The EV of rolling a fair dice is 3.5. that's mean if we roll 1M times the average will be around 3.5.
+In a fair value of game, the Expected Value of winning is equal to the Expected value of lossing 
+
+# <ins>3. Visualising Data</ins>
+
+Data in the raw form does not tell any story. Then we need to set the data in order to benefit from it. We need to summarize the data (reduction to a small number of data) ; identify what hypothesis are most likely ( mean reversion, trending,any relationship between variables)
+
+  ## <ins>3.1 Pyramid of Data </ins>
+| Level                                 | Definition                                             | Typical transforms (pipeline)                                                | Trading examples                                                                               | Deliverables                                                                             | Common pitfalls                                                                                    |
+| ------------------------------------- | ------------------------------------------------------ | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| **DATA** (raw)                        | Unprocessed facts straight from sources.               | Ingest → timestamping → deduplication → basic QC (NA/outliers).              | Tick data, OHLCV bars, L2 order book, corporate actions, macro headlines.                      | Reliable raw datasets; reproducible logs.                                                | Noise, bad timestamps, survivorship bias, incomplete fields, mixed timezones.                      |
+| **INFORMATION** (structured signals)  | Cleaned/organized data with context; features.         | Resampling, normalization, feature engineering, labeling.                    | Returns (r_t), realized vol σ, VWAP, volume profile, order-flow imbalance, RSI/MAs.     | Feature tables ready for backtests; documentation of feature definitions.                | Data leakage, look-ahead bias, inconsistent calendars, over-smoothed series.                       |
+| **KNOWLEDGE** (validated rules/edges) | Relationships that survive testing (statistical edge). | Hypothesis tests, backtests, cross-validation, regime checks, cost modeling. | P(down∣Fed hike), LR>1 after CPI surprise, volume spike ⇒ breakout prob ↑. | Playbook rules with KPIs: Sharpe, hit rate, payoff ratio, max DD, turnover, cost/impact. | Overfitting/p-hacking, ignoring slippage/market impact, unstable across regimes, weak sample size. |
+| **WISDOM** (decision & risk)          | Executable decisions under constraints.                | Position sizing, portfolio/risk budgeting, execution algos, monitoring.      | Size with capped-Kelly, hedge via options, TWAP/VWAP scheduling, kill-switches.                | Live runbook, guardrails (limits/alerts), PnL & risk attribution, post-trade analytics.  | Breaching risk budget, poor execution (slippage), operational risk, model drift not monitored.     |
+
+Notes (market vocab)
+
+
+- Edge = statistical advantage (positive expected value).
+- Data leakage : using information that wasn’t available at decision time (or is too correlated with the target). e.g., "Look-ahead" (seen in the future): computing a Friday signal using Friday’s close when the decision should be made before the close.
+- Risk budget = how much risk each strategy can consume.
+- Slippage/impact = execution costs that erode edge.
+- Regime = market state (vol/liquidity/rates) — always test robustness across regimes.
+
+
 
 
 ---
