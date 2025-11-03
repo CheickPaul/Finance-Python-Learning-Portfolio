@@ -360,6 +360,84 @@ The bigger is the random sample, the closer will be the resemblance.
 | Case correlation = −1                          | ρ₁₂ = −1                       | You can choose w₁, w₂ so that σₚ ≈ 0                                                                                               | Almost perfect hedge: one asset offsets the other.                                                                                      |
 | Why covariance matters                         | 2 · w₁ · w₂ · Cov(R₁,R₂) in Var(Rₚ) | If you assume Cov = 0 but in reality Cov > 0, you underestimate true portfolio risk.                                              | In stressed markets, many assets fall together → correlation spikes → the portfolio is riskier than expected.                          |
 
+n asset :
+
+| Concept                                      | Formula / Notation                                                                                         | Interpretation / Key Points                                                                                                                 |
+| -------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
+| n-asset portfolio return                     | Rₚ = w₁ · R₁ + w₂ · R₂ + … + wₙ · Rₙ                                                                        | The portfolio return is the weighted combination of the n individual asset returns.                                                         |
+| Weight vector                                | w = (w₁, w₂, … , wₙ)ᵀ                                                                                       | wᵢ = portfolio weight in asset i. Typically w₁ + w₂ + … + wₙ = 1 (100% of capital invested).                                                |
+| Covariance matrix                            | Σ = [ Cov(Rᵢ , Rⱼ) ]                                                                                        | Σ is an n×n matrix. Entry (i,j) is the covariance between asset i and asset j.                                                              |
+| Portfolio variance (double sum form)         | Var(Rₚ) = Σᵢ Σⱼ [ wᵢ · wⱼ · Cov(Rᵢ , Rⱼ) ]                                                                  | Add up the risk contribution of every pair of assets (i,j).                                                                                |
+| Portfolio variance (separated form)          | Var(Rₚ) = Σᵢ [ wᵢ² · σᵢ² ] + 2 · Σ_{i<j} [ wᵢ · wⱼ · Cov(Rᵢ , Rⱼ) ]                                        | (1) Own risk of each asset (wᵢ² σᵢ²) + (2) interaction terms between assets (diversification via covariance).                             |
+| Portfolio variance (using correlation)       | Var(Rₚ) = Σᵢ [ wᵢ² · σᵢ² ] + 2 · Σ_{i<j} [ wᵢ · wⱼ · ρᵢⱼ · σᵢ · σⱼ ]                                       | Same idea but written with the correlation ρᵢⱼ between asset i and asset j, which is often more intuitive for risk management.             |
+| Portfolio variance (matrix form)             | Var(Rₚ) = wᵀ · Σ · w                                                                                         | Compact notation used in quantitative finance, portfolio optimization, and risk systems.                                                   |
+| Total portfolio volatility                   | σₚ = √( wᵀ · Σ · w )                                                                                        | σₚ is the standard deviation of the portfolio returns. This is the standard “risk” number of the portfolio.                               |
+| Diversification (intuition)                  | Term wᵢ · wⱼ · Cov(Rᵢ , Rⱼ) for i ≠ j                                                                       | If ρᵢⱼ (and therefore Cov) is low or negative between two assets, combining them reduces total risk without necessarily reducing return.  |
+| Extreme case: perfectly correlated assets    | If ρᵢⱼ = 1 for all i,j                                                                                       | All assets behave like one single “mega-asset.” No real diversification: the portfolio is just scaling the same exposure.                  |
+| Extreme case: strong hedge                   | If some ρᵢⱼ are very negative                                                                               | Some assets offset the movement of others → σₚ can drop a lot. This is the logic of hedging / risk protection.                             |
+
+
+## Risk Application Note (How I Use These Formulas)
+
+(1). Volatility (σ) is my unit of risk  
+   - σ of an asset (σ₁, σ₂, …) tells me how violently it moves.
+   - Portfolio volatility σₚ tells me how violently my total book can move.
+   - I should never judge risk only by PnL expectations. I must look at σ.
+
+(2). Portfolio risk is not just “sum of individual risks”  
+   - Portfolio variance is not just Var(asset 1) + Var(asset 2).
+   - The real risk is Var(Rₚ) = wᵀ · Σ · w.
+   - The covariance terms (Cov(Rᵢ,Rⱼ)) and correlations (ρᵢⱼ) tell me how positions interact.
+   - Translation: even two “small” trades can create huge total risk if they move together.
+
+(3). Correlation tells me if I am repeating the same bet  
+   - High correlation (ρ close to +1) means both trades are basically the same exposure.
+     → Example: I am not diversifying. I am doubling the same view.
+   - Low or negative correlation means the trades behave differently.
+     → This can reduce total portfolio risk.
+
+(4). “Is this a new edge or just leverage on the same idea?”  
+   - Before adding a new strategy/position, I should ask:
+     - Does it increase σₚ a lot?
+     - Is its correlation with my current book high or low?
+   - If correlation with the existing book is very high, I am mostly scaling up the same theme (same macro bet, same regime sensitivity).
+   - If correlation is low or negative, I may actually be diversifying.
+
+(5). Hedging logic  
+   - If two positions have negative correlation (ρ < 0), they can hedge each other.
+   - A hedge is not “a position I like less”. A hedge is “a position that reduces σₚ”.
+   - Good hedges reduce the 2 · wᵢ · wⱼ · Cov(Rᵢ,Rⱼ) part of portfolio variance.
+
+(6). Sizing and leverage should be done from risk, not from conviction  
+   - High-σ assets (or high-σ strategies) should usually get smaller weights wᵢ.
+   - I can target a desired portfolio volatility (for example: “keep σₚ under a limit”).
+   - Position sizing is not random: it comes from the math of Var(Rₚ) and σₚ.
+
+(7). Production mindset (algo trading)  
+   - These formulas are not academic.
+   - In practice:
+     - I estimate Σ (the covariance matrix of strategy/asset returns).
+     - I compute σₚ = √( wᵀ Σ w ) for my current allocation.
+     - I check how σₚ changes if I add a new trade.
+   - If σₚ explodes, I am adding unstable risk.
+   - If σₚ stays controlled or even goes down, I am improving the portfolio.
+
+(8). Dynamic sizing
+   - I don't keep the same weights forever. I adjust the weights w₁, w₂, …, wₙ.
+   - Goal: for a given target return, I try to get the lowest possible total risk.
+   - In math terms: I choose the weights w that make portfolio variance (wᵀ Σ w) as small as possible,
+     while still hitting the return I want and staying inside my risk budget.
+   - Practically:
+     - I cut size in strategies that add a lot of risk but don't pay enough.
+     - I increase size in strategies that bring return without adding too much correlation with the rest.
+     - If two strategies are basically the same bet (high correlation), I don't size them both big.
+   - This is not “I like this trade more.” It's “this weight makes the whole book safer for the same expected PnL.”
+
+Summary:
+- σ = how risky something is alone.
+- ρ = how two things move together.
+- wᵀ Σ w = how dangerous the full book is.
+- The job is not only “find return,” it’s “control portfolio σₚ while getting return.”
 
 
 ---
