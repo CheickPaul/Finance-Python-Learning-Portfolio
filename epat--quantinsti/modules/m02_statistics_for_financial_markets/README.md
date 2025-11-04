@@ -459,6 +459,9 @@ On the Markowitz efficient frontier, it is the **left-most point** (smallest σ)
 
 <img width="1079" height="674" alt="image" src="https://github.com/user-attachments/assets/faebebaa-8222-418b-9fd1-e21c434a1a11" />
 
+<img width="926" height="633" alt="image" src="https://github.com/user-attachments/assets/0114fe8d-0ea1-430f-b799-ddfa4f9104af" />
+
+
 *2 Assets Portfolio (X and Y) :*
 
 | Concept                                      | Formula                                                                                                  | Explanation                                                                                                             |
