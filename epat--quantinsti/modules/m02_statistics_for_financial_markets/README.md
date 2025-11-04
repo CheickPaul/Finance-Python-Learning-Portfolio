@@ -511,8 +511,51 @@ In practice, the min-var portfolio can be used as:
 
 ## <ins>6.1 Probability Distribution</ins>
 
-## <ins>6.2 Probability Density (PDF)</ins>
+## <ins>6.2 Probability Density Function (PDF)</ins>
 
+| Block                         | What is it?                                                                                              | Key formula (Unicode, inline)                                                                                                                                                                                      | Shape / Parameters                                                             | Support                            | Market reading (desk)                                             | Caveats                                                            |
+| ----------------------------- | -------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ---------------------------------- | ----------------------------------------------------------------- | ------------------------------------------------------------------ |
+| **6.2.1 Normal**              | Symmetric model of returns r around mean μ with spread σ (volatility).                                   | PDF: **f(r) = 1 / ( σ · √(2π) ) · exp( −(r − μ)² / (2·σ²) )** ; Interval prob.: **P(a ≤ r ≤ b) = ∫ₐᵇ f(r) dr** ; CDF: **F(x) = ∫₋∞ˣ f(r) dr** ; Total mass: **∫₋∞⁺∞ f(r) dr = 1** ; Point prob.: **P(r = r₀) = 0** | Bell shape; skew = 0, kurtosis = 3 (thin tails); 68–95–99.7 rule.              | r ∈ ℝ (practically > −100%).       | Baseline; larger σ ⇒ wider dispersion ⇒ more extreme P&L.         | Often underestimates tail risk (fat tails / negative skew).        |
+| **6.2.2 Log-normal**          | If log-return **Y = ln(1+r)** is normal, then **1+r = eʸ** is log-normal ⇒ simple return **R = eʸ − 1**. | Induced PDF: **fᴿ(r) = 1 / ( (1+r) · σ · √(2π) ) · exp( −(ln(1+r) − μ)² / (2·σ²) )**, with **r > −1** ; Area still applies: **P(a ≤ r ≤ b) = ∫ₐᵇ fᴿ(r) dr**                                                        | Asymmetric (right-skew), heavier right tail; positive prices (multiplicative). | **R > −100%** (since **1+R > 0**). | Natural for prices/compounding; enforces positivity & right-skew. | Can overstate big gains if naïve; not ideal for left-tail crashes. |
+| **6.2.3 VaR (Value at Risk)** | Loss **quantile** at level **α** (worst α% outcomes).                                                    | Defined by area: **F(VaRₐ) = α ⇔ ∫₋∞ VaRₐ f(r) dr = α** ; Normal ex. (μ=0, σ=1%): **VaR₀.₀₅ ≈ −1.64%**                                                                                                             | Left-tail quantile (threshold at level α).                                     | —                                  | Headline downside metric (quantile; risk budget).                 | Doesn’t show tail severity beyond the threshold → use **ES**.      |
+| **ES / CVaR**                 | Expected Shortfall = mean loss **beyond** VaR (tail severity).                                           | **ESₐ = 𝔼[ r ∣ r ≤ VaRₐ ] = (1/α) · ∫₋∞ VaRₐ r · f(r) dr**                                                                                                                                                        | Coherent tail measure (stricter).                                              | —                                  | Captures severity inside the tail better than VaR.                | Noisier to estimate (needs enough data).                           |
+| **6.2.4 KDE (fat tails)**     | Kernel Density Estimate: empirical smoothed density (no parametric shape).                               | Estimator: **f̂(x) = (1 / (n·h)) · Σᵢ K( (x − xᵢ) / h )** ; Probabilities = areas: **P(a ≤ r ≤ b) = ∫ₐᵇ f̂(r) dr**                                                                                                 | Often reveals fat tails & skew vs Normal.                                      | —                                  | Realistic base for VaR/ES; guides position sizing/stops.          | h choice critical (over/under-smoothing); data quality matters.    |
+
+
+Quick glossary:
+- Simple return r = (Pₜ − Pₜ₋₁) / Pₜ₋₁ (in %) ; 
+- Log-return Y = ln(1 + r) ; 
+- Volatility σ = standard deviation ;
+- Skew = asymmetry (negative skew ⇒ heavier downside) ; 
+- Kurtosis = tail thickness ; 
+- VaRₐ = loss quantile at level α ; 
+- ES/CVaR = mean loss beyond VaRₐ (tail severity).
+- Support = the set of values the variable can take (its domain).
+In other words: where the PDF is non-zero.
+ositive support = the variable can take only positive values (or values strictly above some lower bound).
+
+**<ins>6.2.5 Plot Curve</ins>**
+
+
+**- Normal PDF (μ = 0%, σ = 1%)**
+<img width="1580" height="980" alt="image" src="https://github.com/user-attachments/assets/f725565f-2f7f-48aa-8851-baf0fc38eaeb" />
+
+*Symmetric, thin tails (baseline risk shape).*
+
+**- Log-normal (induced returns)**
+<img width="1580" height="980" alt="image" src="https://github.com/user-attachments/assets/cfcc59df-3d0e-4642-af65-0cf5d9593df6" />
+
+*Positive support, right-skew (multiplicative process).*
+
+**- VaR 5% (left tail) — threshold −1.64%**
+<img width="1580" height="980" alt="image" src="https://github.com/user-attachments/assets/4e6cb222-f02a-4dea-902a-99aa9b2ed11c" />
+
+*Shaded area = α = 5%; vertical line marks VaR₅%.*
+
+**- KDE — heavy tails (Student-t, σ ≈ 1%)**
+<img width="1580" height="980" alt="image" src="https://github.com/user-attachments/assets/f59def5e-6fd1-4c34-8148-d3b622f221c5" />
+
+*Empirical shape revealing fat tails (higher tail risk / ES).*
 
 ---
 
