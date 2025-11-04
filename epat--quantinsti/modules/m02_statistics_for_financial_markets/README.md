@@ -511,7 +511,7 @@ In practice, the min-var portfolio can be used as:
 
 ## <ins>6.1 Probability Distribution</ins>
 
-## <ins>6.2 Probability Density</ins>
+## <ins>6.2 Probability Density (PDF)</ins>
 
 
 ---
