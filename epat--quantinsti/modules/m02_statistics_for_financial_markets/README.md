@@ -557,6 +557,12 @@ ositive support = the variable can take only positive values (or values strictly
 
 *Empirical shape revealing fat tails (higher tail risk / ES).*
 
+
+# <ins>7.Relationship between 2 Variables</ins>
+
+## <ins>7.1 Linear Regression</ins>
+
+
 ---
 
 
