@@ -486,7 +486,7 @@ On the Markowitz efficient frontier, it is the **left-most point** (smallest σ)
 | Global min-variance portfolio variance     | σₚ,ₘᵢₙ² = 1 / ( 1ᵀ · Σ⁻¹ · 1 )                             | Plugging w* into σₚ² = wᵀ Σ w gives the minimum achievable variance on the global minimum-variance portfolio.   |
 | Global min-variance portfolio volatility   | σₚ,ₘᵢₙ = √( 1 / ( 1ᵀ · Σ⁻¹ · 1 ) )                         | Volatility of the global minimum-variance portfolio.                                                             |
 
-## <ins>5.3 Minimum-Variance Portfolio(or book) vs Current Book</ins>
+## <ins>5.3 Minimum-Variance Portfolio vs Current Book</ins>
 
 Comparing the **minimum-variance portfolio** to the **current portfolio (Current PF)** helps to understand how much extra risk we are taking and whether this extra risk is compensated by a higher expected return.
 
@@ -500,6 +500,9 @@ In practice, the min-var portfolio can be used as:
 - a **reference point** to measure how far the Current PF is from the lowest-risk configuration,
 - a **diagnostic tool** to check if the Current PF is reasonably positioned on or near the efficient frontier, or if it is taking unnecessary risk for too little return.
 
+<ins>In our numerical example </ins> :
+
+σ(Min-Var) ≈ 5.90% with an expected return of 10.85%, while the Current PF has σ ≈ 6.00% and an expected return of 11.70%. The increase in volatility is very small (+0.10 percentage point), whereas the increase in expected return is relatively large (+0.85 percentage point). In this case, moving from Min-Var to the Current PF looks like a reasonable trade-off: slightly more risk for a clearly higher expected return, and the Current PF remains an efficient portfolio on the Markowitz frontier.
 
 ---
 
