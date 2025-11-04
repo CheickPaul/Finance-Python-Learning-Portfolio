@@ -8,6 +8,8 @@
 > **Purpose:** The notes belows are include in my repository " Finance-Python-Learning-Portfolio". The purpose is to document my learning journey and centralizes my personal notes for future revision.
 > It is non-commercial and respects QuantInsti’s IP; the aim is transparency in learning, not redistribution of course materials.
 
+
+
 ---
 
 
@@ -503,6 +505,10 @@ In practice, the min-var portfolio can be used as:
 <ins>In our numerical example </ins> :
 
 σ(Min-Var) ≈ 5.90% with an expected return of 10.85%, while the Current PF has σ ≈ 6.00% and an expected return of 11.70%. The increase in volatility is very small (+0.10 percentage point), whereas the increase in expected return is relatively large (+0.85 percentage point). In this case, moving from Min-Var to the Current PF looks like a reasonable trade-off: slightly more risk for a clearly higher expected return, and the Current PF remains an efficient portfolio on the Markowitz frontier.
+
+
+# <ins>6. Probability Distribution</ins>
+
 
 ---
 
