@@ -439,6 +439,64 @@ Summary:
 - wᵀ Σ w = how dangerous the full book is.
 - The job is not only “find return,” it’s “control portfolio σₚ while getting return.”
 
+# <ins>5. Application - Capital Asset Pricing Model</ins>
+
+## <ins>5.1 Efficient Frontier - MARKOWITZ </ins>
+
+<img width="960" height="337" alt="image" src="https://github.com/user-attachments/assets/b86dabdc-7bf4-4290-94e0-e5e5a6960d59" />
+
+
+<img width="1117" height="719" alt="image" src="https://github.com/user-attachments/assets/20053ed9-07b9-482e-ac7f-469731861456" />
+
+
+In this chart, I evaluate the risk and return of a two-stock portfolio. We simulate 101 hypothetical portfolios with different fractions of wealth invested in each stock. According to the chart, the portfolio with the highest return for the minimum level of risk has an expected return of 11.7% and a standard deviation of 6%. In our simulations, this corresponds to portfolio 67, which allocates 66% of the wealth to Stock A and 34% to Stock B. The efficient frontier is constructed using Markowitz’s mean–variance framework.
+
+
+## <ins>5.2 Minimum-Variance Portfolio</ins>
+
+For a given set of assets, the *minimum-variance portfolio* (min-var) is the portfolio with the **lowest possible volatility** (risk), regardless of expected return.  
+On the Markowitz efficient frontier, it is the **left-most point** (smallest σ). The Min-Var (low-vol) is a reference Portfolio, the one with the lowest possible risk. 
+
+<img width="1079" height="674" alt="image" src="https://github.com/user-attachments/assets/faebebaa-8222-418b-9fd1-e21c434a1a11" />
+
+*2 Assets Portfolio (X and Y) :*
+
+| Concept                                      | Formula                                                                                                  | Explanation                                                                                                             |
+|----------------------------------------------|----------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------|
+| 2-asset portfolio variance                   | σₚ² = wₓ²·σₓ² + wᵧ²·σᵧ² + 2·wₓ·wᵧ·ρₓᵧ·σₓ·σᵧ                                                             | General variance of a two-asset portfolio combining assets X and Y with correlation ρₓᵧ.                              |
+| 2-asset portfolio volatility (st. dev.)      | σₚ = √(σₚ²)                                                                                             | The portfolio volatility is the square root of the portfolio variance.                                                 |
+| Min-variance weight on X                     | wₓ* = (σᵧ² − ρₓᵧ·σₓ·σᵧ) / (σₓ² + σᵧ² − 2·ρₓᵧ·σₓ·σᵧ)                                                    | Optimal weight on asset X that minimizes the portfolio variance (two-asset Markowitz closed-form solution).            |
+| Min-variance weight on Y                     | wᵧ* = 1 − wₓ*                                                                                           | Since the portfolio is fully invested in X and Y, the optimal weight on Y is one minus the optimal weight on X.        |
+| Min-variance portfolio variance              | σₚ,ₘᵢₙ² = (wₓ*)²·σₓ² + (wᵧ*)²·σᵧ² + 2·wₓ*·wᵧ*·ρₓᵧ·σₓ·σᵧ                                               | Plug the optimal weights wₓ* and wᵧ* into the variance formula to obtain the minimum achievable portfolio variance.    |
+| Min-variance portfolio volatility (st. dev.) | σₚ,ₘᵢₙ = √(σₚ,ₘᵢₙ²)                                                                                    | The minimum-variance portfolio volatility is the square root of the minimum-variance portfolio variance.              |
+           |
+
+*n Assets Portfolio :*
+
+
+| Concept                                    | Formula                                                     | Explanation                                                                                                       |
+|--------------------------------------------|-------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------|
+| n-asset portfolio variance                 | σₚ² = wᵀ · Σ · w                                            | Portfolio variance as a quadratic form of the weight vector w and the covariance matrix Σ.                       |
+| n-asset portfolio volatility (st. dev.)    | σₚ = √( wᵀ · Σ · w )                                       | Portfolio volatility is the square root of the portfolio variance.                                               |
+| Ones vector                                | 1 = (1, 1, … , 1)ᵀ                                         | 1 is an n×1 vector of ones, used to impose the “fully invested” constraint 1ᵀ · w = 1.                           |
+| Global min-variance weights (vector form)  | w* = Σ⁻¹ · 1 / ( 1ᵀ · Σ⁻¹ · 1 )                            | Closed-form solution for the global minimum-variance portfolio (fully invested, no other constraints).           |
+| Global min-variance portfolio variance     | σₚ,ₘᵢₙ² = 1 / ( 1ᵀ · Σ⁻¹ · 1 )                             | Plugging w* into σₚ² = wᵀ Σ w gives the minimum achievable variance on the global minimum-variance portfolio.   |
+| Global min-variance portfolio volatility   | σₚ,ₘᵢₙ = √( 1 / ( 1ᵀ · Σ⁻¹ · 1 ) )                         | Volatility of the global minimum-variance portfolio.                                                             |
+
+## <ins>5.3 Minimum-Variance Portfolio(or book) vs Current Book</ins>
+
+Comparing the **minimum-variance portfolio** to the **current portfolio (Current PF)** helps to understand how much extra risk we are taking and whether this extra risk is compensated by a higher expected return.
+
+- If **σ(Current PF) is close to σ(Min-Var)** and the expected return is only slightly higher, the investor is taking **more risk for a relatively small gain in return**.
+- If **σ(Current PF) is much higher than σ(Min-Var)**, the portfolio is **aggressive** relative to the most diversified combination of the same assets.
+- If there exists a portfolio on the efficient frontier with the **same volatility as the Current PF but a higher expected return**, then the Current PF is **inefficient** (same risk, lower return).
+
+In practice, the min-var portfolio can be used as:
+
+- a **low-risk anchor** (baseline allocation in a “defensive” regime),
+- a **reference point** to measure how far the Current PF is from the lowest-risk configuration,
+- a **diagnostic tool** to check if the Current PF is reasonably positioned on or near the efficient frontier, or if it is taking unnecessary risk for too little return.
+
 
 ---
 
