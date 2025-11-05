@@ -562,6 +562,113 @@ ositive support = the variable can take only positive values (or values strictly
 
 ## <ins>7.1 Linear Regression</ins>
 
+If we only have the return of one stock the best estimate is the average of these return. If we have data return for another stock, then we can find out the relationship between these 2 stocks. 
+
+<img width="620" height="374" alt="image" src="https://github.com/user-attachments/assets/166f0f89-a0e1-41cb-adde-a9d9c9adf08b" />
+
+<img width="752" height="451" alt="image" src="https://github.com/user-attachments/assets/69c1a8d2-6439-4664-b696-38789d353854" />
+
+### Danske vs Nordea (Analysis)
+
+Excel gives the following regression equation:
+
+$$
+y = 0.7783x + 0.0422,\quad R^2 = 0.2412
+$$
+
+In this setting:
+
+- \(x\) = **Danske Return**  
+- \(y\) = **Nordea Return**
+
+In regression notation:
+
+$$
+\text{Nordea}_i = 0.0422 + 0.7783 \cdot \text{Danske}_i + \varepsilon_i
+$$
+
+where **εᵢ** is the **error term (epsilon)**.
+
+
+
+### Interpretation of the coefficients
+
+**Slope (β = 0.7783)**  
+The slope measures the **sensitivity of Nordea’s return to any change in Danske’s return**.  
+For a 1-unit change in Danske’s return, Nordea’s return is expected to change by **0.7783 units in the same direction**, on average.  
+For example, if Danske’s monthly return increases by **+1%**, the model predicts that Nordea’s return will increase by approximately **+0.78%**.
+
+**Intercept (α = 0.0422)**  
+When Danske’s return is **0%**, the model predicts Nordea’s return to be around **+4.22%**.  
+This should be interpreted cautiously because the sample contains only 12 monthly observations.
+
+**Coefficient of determination (R² = 0.2412)**  
+About **24% of the variance** in Nordea’s returns is explained by Danske’s returns.  
+This indicates a **weak to moderate** linear relationship.  
+The remaining **~76%** of the variation is not captured by this simple linear model and is absorbed in the error term εᵢ.
+
+In a simple linear regression (one explanatory variable X), the coefficient of determination R² is always between **0 and 1**:
+
+- **R² = 1** → the model explains **100% of the variability** of Y (all points lie exactly on the regression line).  
+- **R² = 0** → the model explains **none** of the variability of Y (the regression line does no better than using the constant mean of Y).
+
+In a simple linear regression, R² is also equal to the squared correlation between X and Y:
+
+$$
+R^2 = \rho_{X,Y}^2
+$$
+
+where ρ₍X,Y₎ is the linear correlation coefficient between X and Y.  
+So R² can be viewed as a compact measure of how strong the linear link between the two stocks is.
+
+
+
+### What is epsilon (ε)?
+
+For each month i:
+
+- Yᵢ = **actual Nordea return**
+- Ŷᵢ = 0.0422 + 0.7783 · Xᵢ = **predicted Nordea return** given Danske's return
+ 
+
+The error (residual) is:
+
+$$
+\varepsilon_i = Y_i - \hat Y_i
+$$
+
+So **epsilon (εᵢ)** is the part of Nordea’s return that the linear relationship with Danske **does not explain**.
+
+- If εᵢ > 0: Nordea **over-performed** relative to what the model predicts.  
+- If εᵢ < 0: Nordea **under-performed** relative to the model.  
+- Large |εᵢ|: the point is far from the regression line → a strong **idiosyncratic move**.
+
+---
+
+### Example: 2023-09-30
+
+<img width="569" height="361" alt="image" src="https://github.com/user-attachments/assets/7029abe4-0362-4ee1-b603-42cc1697e522" />
+
+From the data:
+
+- Danske return (X ≈ 0.0663) (≈ +6.63%)
+- Nordea return (Y ≈ 0.2730) (≈ +27.30%)
+
+Predicted Nordea return:
+
+$$
+\hat Y = 0.0422 + 0.7783 \times 0.0663 \approx 0.0938
+$$
+
+Residual:
+
+$$
+\varepsilon = Y - \hat Y \approx 0.2730 - 0.0938 \approx 0.179
+$$
+
+For that month, Nordea’s return was **much higher** than what the regression would normally expect given Danske’s move. This extra performance is exactly what epsilon captures.
+
+
 
 ---
 
