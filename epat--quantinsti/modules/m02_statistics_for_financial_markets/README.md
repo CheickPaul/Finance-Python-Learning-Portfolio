@@ -591,7 +591,7 @@ where **εᵢ** is the **error term (epsilon)**.
 
 
 
-### Interpretation of the coefficients
+## <ins>7.2 Interpretation of the coefficients</ins>
 
 **Slope (β = 0.7783)**  
 The slope measures the **sensitivity of Nordea’s return to any change in Danske’s return**.  
@@ -611,6 +611,9 @@ In a simple linear regression (one explanatory variable X), the coefficient of d
 
 - **R² = 1** → the model explains **100% of the variability** of Y (all points lie exactly on the regression line).  
 - **R² = 0** → the model explains **none** of the variability of Y (the regression line does no better than using the constant mean of Y).
+
+|  The higher the R², the lower the errors ε. |
+|----------------------------------------------|
 
 In a simple linear regression, R² is also equal to the squared correlation between X and Y:
 
