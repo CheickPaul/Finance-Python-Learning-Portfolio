@@ -560,7 +560,7 @@ ositive support = the variable can take only positive values (or values strictly
 
 # <ins>7.Relationship between 2 Variables</ins>
 
-## <ins>7.1 Linear Regression</ins>
+## <ins>7.1 Linear Regression -  2 Assets</ins>
 
 If we only have the return of one stock the best estimate is the average of these return. If we have data return for another stock, then we can find out the relationship between these 2 stocks. 
 
@@ -682,7 +682,52 @@ For that month, Nordea’s return was **much higher** than what the regression w
 | 6    | R² (simple regression)  | R² = ρ²                                      | `=CORREL(X_range; Y_range)^2` or `=RSQ(Y_range; X_range)`                     |
 
 
-<img width="1012" height="479" alt="image" src="https://github.com/user-attachments/assets/416738ed-d549-4857-b3fa-7839d1cac9ed" />
+<img width="995" height="392" alt="image" src="https://github.com/user-attachments/assets/ce24e96c-3c06-4293-9f0f-51f6d4ed3dff" />
+
+
+
+## 7.3 Linear Regression – Single Asset vs Market Index (Beta & Alpha)
+
+We now consider the regression of a single stock on a broad market index:
+
+$$
+R_{\text{stock},t} = \alpha + \beta \cdot R_{\text{market},t} + \varepsilon_t
+$$
+
+- **β (beta)** measures the **sensitivity of the stock to market movements** (systematic risk).  
+  A beta greater than 1 means the stock tends to move more than the market; a beta between 0 and 1 means it moves in the same direction but with smaller amplitude.
+
+- **α (alpha)** measures the **average performance of the stock beyond what is explained by its market beta**  
+  (risk-adjusted outperformance or underperformance relative to the index).
+
+- **εₜ (epsilon)** captures the **idiosyncratic component** of returns, i.e. what is not explained by market moves.
+
+
+Trader Perspective : 
+we can also interpret the terms as follows:
+
+- **Beta (β)** captures the **systematic market risk** of the stock.  
+  It measures how sensitive the stock is to market movements (market exposure).
+
+- **Alpha (α)** captures the **average return that is not explained by the market**.  
+  It represents **risk-adjusted outperformance or underperformance** relative to what we would expect given the stock’s beta.
+
+- **Epsilon (εₜ)** is the **idiosyncratic component** of returns, specific to the stock and not driven by the market index.
+
+This is why traders and portfolio managers often talk about **“generating alpha”**:
+
+- Managing **beta** = controlling exposure to broad market moves (systematic risk).  
+- Generating **alpha** = producing returns **beyond** what can be explained by simple market exposure.
+
+In an ideal “market-neutral” strategy, the goal is to keep **β ≈ 0** (little or no market exposure) while achieving **α > 0**, i.e. earning **pure alpha** that does not depend on whether the overall market goes up or down.
+
+
+
+
+
+
+
+
 
 ---
 
