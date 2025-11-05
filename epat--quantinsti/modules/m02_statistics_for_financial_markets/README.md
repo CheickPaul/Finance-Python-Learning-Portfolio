@@ -669,7 +669,7 @@ $$
 For that month, Nordea’s return was **much higher** than what the regression would normally expect given Danske’s move. This extra performance is exactly what epsilon captures.
 
 
-## <ins>7.3  From Covariance to Beta (and Related Metrics) </ins>
+## <ins>7.3  From Covariance to Beta (and Related Metrics) - Summary Output (Excel) </ins>
 
 
 | Step | Quantity                | Formula (math)                               | Excel example (Y = Nordea, X = Danske)                                      |
@@ -682,6 +682,7 @@ For that month, Nordea’s return was **much higher** than what the regression w
 | 6    | R² (simple regression)  | R² = ρ²                                      | `=CORREL(X_range; Y_range)^2` or `=RSQ(Y_range; X_range)`                     |
 
 
+<img width="1012" height="479" alt="image" src="https://github.com/user-attachments/assets/416738ed-d549-4857-b3fa-7839d1cac9ed" />
 
 ---
 
