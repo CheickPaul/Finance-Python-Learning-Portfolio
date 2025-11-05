@@ -576,6 +576,8 @@ $$
 y = 0.7783x + 0.0422,\quad R^2 = 0.2412
 $$
 
+y = βx + α
+
 In this setting:
 
 - \(x\) = **Danske Return**  
@@ -612,14 +614,9 @@ In a simple linear regression (one explanatory variable X), the coefficient of d
 - **R² = 1** → the model explains **100% of the variability** of Y (all points lie exactly on the regression line).  
 - **R² = 0** → the model explains **none** of the variability of Y (the regression line does no better than using the constant mean of Y).
 
-|  The higher the R², the lower the errors ε. |
-|----------------------------------------------|
+| The higher the R², the lower the errors ε. <br>In a simple linear regression, R² is also equal to the squared correlation between X and Y: R² = ρ₍X,Y₎². |
+|-----------------------------------------------------------------------------------------------------------------------------------------------------------|
 
-In a simple linear regression, R² is also equal to the squared correlation between X and Y:
-
-$$
-R^2 = \rho_{X,Y}^2
-$$
 
 where ρ₍X,Y₎ is the linear correlation coefficient between X and Y.  
 So R² can be viewed as a compact measure of how strong the linear link between the two stocks is.
@@ -670,6 +667,19 @@ $$
 $$
 
 For that month, Nordea’s return was **much higher** than what the regression would normally expect given Danske’s move. This extra performance is exactly what epsilon captures.
+
+
+## <ins>7.3  From Covariance to Beta (and Related Metrics) </ins>
+
+
+| Step | Quantity                | Formula (math)                               | Excel example (Y = Nordea, X = Danske)                                      |
+|------|-------------------------|----------------------------------------------|-------------------------------------------------------------------------------|
+| 1    | Variance of X           | Var(X) = average of (X − mean(X))²           | `=VAR.S(X_range)`                                                             |
+| 2    | Variance of Y           | Var(Y) = average of (Y − mean(Y))²           | `=VAR.S(Y_range)`                                                             |
+| 3    | Covariance              | Cov(X, Y) = average of (X − mean(X))·(Y − mean(Y)) | `=COVARIANCE.S(X_range; Y_range)`                                      |
+| 4    | Beta of Y on X          | β = Cov(X, Y) / Var(X)                       | `=COVARIANCE.S(X_range; Y_range) / VAR.S(X_range)`                            |
+| 5    | Correlation             | ρ = Cov(X, Y) / (stdev(X) · stdev(Y))        | `=CORREL(X_range; Y_range)`                                                   |
+| 6    | R² (simple regression)  | R² = ρ²                                      | `=CORREL(X_range; Y_range)^2` or `=RSQ(Y_range; X_range)`                     |
 
 
 
