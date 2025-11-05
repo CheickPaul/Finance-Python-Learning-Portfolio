@@ -721,6 +721,7 @@ This is why traders and portfolio managers often talk about **“generating alph
 
 In an ideal “market-neutral” strategy, the goal is to keep **β ≈ 0** (little or no market exposure) while achieving **α > 0**, i.e. earning **pure alpha** that does not depend on whether the overall market goes up or down.
 
+# <ins>8. Hypothesis and P-value</ins>
 
 
 
