@@ -28,5 +28,5 @@
 ## Reflection
 The democratization of finance can truly help reduce inequalities, but only if individuals are willing to learn and accept discipline. Often, poverty results from a lack of discipline: living beyond one’s means, seeking short-term pleasures at the expense of long term investment.  
 
-The role of government in this area is limited. It will not directly subsidize financial advice for low-income households. Instead, families, communities, and financial education associations should take responsibility for passing on this knowledge—especially to younger generations—by encouraging reading and participation in educational programs.  
+The role of government in this area is limited. It will not directly subsidize financial advice for low income households. Instead, families, communities, and financial education associations should take responsibility for passing on this knowledge, especially to younger generations by encouraging reading and participation in educational programs.  
 
