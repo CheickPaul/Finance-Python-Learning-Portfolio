@@ -29,4 +29,4 @@ $$
 
 ## Reflection
 - This lesson reminds me that **finance = intertemporal choice**: shifting consumption between today and tomorrow.  
-- In trading or investing, every decision implicitly uses PDV — whether valuing bonds, equities, or even derivatives.  
+- In trading or investing, every decision implicitly uses PDV, whether valuing bonds, equities, or even derivatives.  
