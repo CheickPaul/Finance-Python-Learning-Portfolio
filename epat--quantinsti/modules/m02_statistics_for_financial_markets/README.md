@@ -723,6 +723,7 @@ In an ideal “market-neutral” strategy, the goal is to keep **β ≈ 0** (lit
 
 # <ins>8. Hypothesis and P-value</ins>
 
+<img width="1297" height="696" alt="image" src="https://github.com/user-attachments/assets/3c8a32c8-e1e9-44ac-b447-d9d7c3f74d9e" />
 
 
 
