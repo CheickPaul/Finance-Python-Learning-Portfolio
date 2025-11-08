@@ -1280,10 +1280,10 @@ Lets suppose we are testing the effectiveness of a medicine. We would start by m
 For our medicine, there can be 2 hypothesis :
 
 -(1) The medicine has no effect on the patient : <ins>**H0, The Null Hypothesis**</ins>
-(this first assume status quoi or no change)
+(this first assume status quo or no change)
 
 -(2) The medicine works on the patient : <ins>**H1, The Alternative Hypothesis**</ins>
- (this first assume status quoi or no change)
+ 
 
 
 The Null Hypothesis is an assertion that we **hold as true** unless we have sufficient evidence to conclude otherwise. 
