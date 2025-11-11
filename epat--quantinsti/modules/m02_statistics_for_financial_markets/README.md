@@ -725,15 +725,21 @@ In an ideal “market-neutral” strategy, the goal is to keep **β ≈ 0** (lit
 
 <img width="1297" height="696" alt="image" src="https://github.com/user-attachments/assets/3c8a32c8-e1e9-44ac-b447-d9d7c3f74d9e" />
 
-
-
-
-
-
+Errorntype I false positif
+Error type ii, False negatif
 
 ---
 
-
 <h1 align="center">SECTION 3 : Practical session Basics Statistics</h1>
 
+# <ins>1. Outline</ins>
 
+# <ins>2. Construction A portfolio Of two stocks</ins>
+
+# <ins>3. The random Walk Model Part 1 </ins>
+
+# <ins>4. The random Walk Model Part 2 </ins>
+
+# <ins>5. Monte Carlo Simulation </ins>
+
+# <ins>6. Bollinger Bands </ins>
