@@ -734,7 +734,27 @@ Error type ii, False negatif
 
 # <ins>1. Outline</ins>
 
+<img width="1325" height="184" alt="image" src="https://github.com/user-attachments/assets/a02ea00b-edc4-46fa-af17-ece33aa2f480" />
+
+
 # <ins>2. Construction A portfolio Of two stocks</ins>
+
+calculate the daily return of each company with log return.
+
+Why log return 
+
+|                                   | **Simple**                                  | **Log**                                                                                                                    |
+| --------------------------------- | ------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| **Formula**                       | rₜ = Pₜ / Pₜ₋₁ − 1                          | ℓₜ = ln(Pₜ / Pₜ₋₁) = ln(1 + rₜ)                                                                                            |
+| **Aggregate over time**           | ∏₍ₜ₌₁…T₎ (1 + rₜ)  *(product over periods)* | ∑₍ₜ₌₁…T₎ ℓₜ = ln(P_T / P₀)  *(additive over periods → easy PnL aggregation)*                                               |
+| **Cumulative return**             | R₁…T = ∏₍ₜ₌₁…T₎ (1 + rₜ) − 1                | R₁…T = exp(∑₍ₜ₌₁…T₎ ℓₜ) − 1                                                                                                |
+| **Small-move approx.**            | —                                           | ln(1 + r) ≈ r *(for small moves; intraday almost identical)*                                                               |
+| **Compounding (constant r)**      | FV = P₀·(1+r)ᵗ  ⇒  ln(FV/P₀) = t·ln(1+r)    | Per-period log return ℓ = ln(1+r) ⇒ over t periods: **t·ℓ** *(time-additive)*                                              |
+| **Compounding (variable rₜ)**     | FV = P₀·∏(1+rₜ)                             | ln(FV/P₀) = ∑ ln(1+rₜ) = ∑ ℓₜ *(sum of log returns equals log of the compounded factor)*                                   |
+| **Continuous compounding**        | —                                           | FV = P₀·e^{c·t} ⇒ **c = (1/t)·ln(FV/P₀)** *(log return per unit time = cont. compounding rate)*                            |
+| **Annualization (rule-of-thumb)** | —                                           | μ_ann ≈ 252·μ_daily(log),  σ_ann ≈ √252·σ_daily(log) *(desk convention for trading days)*                                  |
+| **Why use it (desk)**             | Intuitive % for client reporting.           | Time-additive, aligned with GBM (≈ Normal → cleaner stats/VaR), more stable averages/variances (less bias when averaging). |
+| **Typical use**                   | Investor factsheets, simple KPI.            | Research/backtesting/risk, sizing, decomposition (analytics).                                                              |
 
 # <ins>3. The random Walk Model Part 1 </ins>
 
