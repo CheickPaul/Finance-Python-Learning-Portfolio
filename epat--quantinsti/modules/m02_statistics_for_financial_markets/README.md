@@ -736,6 +736,8 @@ Error type ii, False negatif
 
 <img width="1325" height="184" alt="image" src="https://github.com/user-attachments/assets/a02ea00b-edc4-46fa-af17-ece33aa2f480" />
 
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/63a2c368-af41-462e-a721-d63c74f26a11" />
+
 
 # <ins>2. Construction A portfolio Of two stocks</ins>
 
