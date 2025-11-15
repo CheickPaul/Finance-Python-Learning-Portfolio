@@ -899,6 +899,179 @@ $$
 
 # <ins>4. The random Walk Model Part 2 </ins>
 
+## <ins>4.1 Short-horizon toy example (10 days, simple returns)</ins>
+
+We now switch from a 1-year horizon to a short-horizon example (10 days), still under a simple IID normal-return assumption.
+
+**Setup**
+
+- Initial stock price: $P_0 = 100$
+- Average daily return (drift): $\mu_{\text{day}} = 1\%$
+- Standard deviation of daily returns (volatility): $\sigma_{\text{day}} = 1\%$
+- Horizon: $T = 10$ trading days
+- Returns are IID and normally distributed (random-walk style).
+
+Using the √T rule introduced in §3.4, we obtain the 10-day distribution of returns.
+
+Mean 10-day return:
+
+$$
+\mu_{10} = T \cdot \mu_{\text{day}} = 10 \times 1\% = 10\%.
+$$
+
+Standard deviation of 10-day returns:
+
+$$
+\sigma_{10} = \sigma_{\text{day}} \sqrt{T}
+= 1\% \cdot \sqrt{10} \approx 3.2\%.
+$$
+
+So the 10-day return $R_{10}$ is modeled as:
+
+$$
+R_{10} \sim \mathcal{N}(10\%, (3.2\%)^2).
+$$
+
+We approximate the 10-day price as:
+
+$$
+P_{10} \approx P_0 \cdot (1 + R_{10}).
+$$
+
+**Risk bands for the 10-day price**
+
+| Confidence level | 10-day return band | 10-day price band (from $P_0 = 100$) | Trader view |
+|------------------|--------------------|--------------------------------------|------------|
+| 68% (≈ ±1σ) | $[6.8\%, 13.2\%]$ | $[106.8,\; 113.2]$ | ≈ 68% chance that the 10-day return is in this band ⇒ price in **[106.8, 113.2]**. |
+| 95% (≈ ±2σ) | $[3.6\%, 16.4\%]$ | $[103.6,\; 116.4]$ | ≈ 95% chance that the 10-day return is in this band ⇒ price in **[103.6, 116.4]**. |
+
+> This is a **terminal band** for $P_{10}$ (end of day 10).  
+> In the course example, this band is used to motivate how a trader can think about “overvaluation / undervaluation” relative to the random-walk model.
+
+---
+
+
+````markdown
+## <ins>4.2 Nifty example — using log-returns and $\exp(r)$</ins>
+
+We now look at the Nifty index example, where the Excel sheet uses:
+
+```text
+Pt = Po * EXP(r)
+````
+
+and works with **log-returns** (continuous returns).
+
+**Setup**
+
+* Index price today: $P_0 = 18,065$
+* Average daily log-return (drift): $\mu_{\text{day}} \approx 0.05%$
+* Standard deviation of daily log-returns (volatility): $\sigma_{\text{day}} \approx 1.09%$
+* Horizon: 10 days
+* Log-returns are assumed IID normal (random-walk style on log-prices).
+
+We first derive the 10-day log-return.
+
+Mean 10-day log-return (as implemented in Excel):
+
+$$
+\mu_{10} \approx 0.4%
+\quad
+\text{(Excel: }(\mu_{\text{day}} - \tfrac12 \sigma_{\text{day}}^2) \times 10\text{)}.
+$$
+
+Standard deviation of 10-day log-returns:
+
+$$
+\sigma_{10} = \sigma_{\text{day}} \sqrt{10} \approx 3.4%.
+$$
+
+We model the 10-day log-return $r_{10}$ as:
+
+$$
+r_{10} \sim \mathcal{N}(\mu_{10}, \sigma_{10}^2).
+$$
+
+A 95% band for $r_{10}$ is approximately:
+
+$$
+r_{10} \in [, \mu_{10} - 2\sigma_{10},; \mu_{10} + 2\sigma_{10} ,]
+\approx [-6.5%, 7.3%].
+$$
+
+In the Excel sheet, these bounds are stored in cells like `A37` (lower) and `A38` (upper).
+
+**From log-return band to price band**
+
+By definition of the log-return:
+
+$$
+r_{10} = \ln!\left(\frac{P_{10}}{P_0}\right)
+\quad \Rightarrow \quad
+P_{10} = P_0 , e^{r_{10}}.
+$$
+
+Therefore, the corresponding 95% band for the 10-day price is:
+
+Lower bound:
+
+$$
+P_{10}^{\text{low}} = P_0 , e^{-6.5%}
+\approx 18,065 \times e^{-0.065} \approx 16,930.
+$$
+
+Upper bound:
+
+$$
+P_{10}^{\text{high}} = P_0 , e^{7.3%}
+\approx 18,065 \times e^{0.073} \approx 19,430.
+$$
+
+Excel implementation:
+
+```text
+Lower 10-day price ≈ B28 * EXP(A37)   // A37 = -0.065 (lower log-return)
+Upper 10-day price ≈ B28 * EXP(A38)   // A38 =  0.073 (upper log-return)
+```
+
+**Why `EXP(r)` appears in the sheet**
+
+Here, $r$ is a **log-return**, not a simple percent return.
+
+By definition:
+
+$$
+r = \ln!\left(\frac{P_T}{P_0}\right)
+\quad \Rightarrow \quad
+P_T = P_0 \cdot e^{r}.
+$$
+
+Using `EXP(r)`:
+
+* keeps prices **strictly positive** (log-normal model),
+* makes multi-period log-returns **additive** (very convenient for Gaussian / GBM-style models),
+* matches the continuous-compounding framework used in many option-pricing and risk-management models.
+
+> Trader vocab: in many models we assume **log-returns** are normal, then recover prices via
+> $P_T = P_0 \cdot \exp(r)$. For small moves, $\exp(r) \approx 1 + R$, but `EXP(r)` is the consistent choice when working in log-return space.
+
+---
+
+### Drift formulas (log-returns, GBM, median price)
+
+| # | Quantity                               | Formula (math)                                                      | Interpretation (trader view)                                                                                                                                                                                               |
+| - | -------------------------------------- | ------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1 | **Log-return per period**              | $r_t = \ln!\left(\dfrac{P_t}{P_{t-1}}\right)$                       | Continuous return; additive over time. Natural space to model risk under a log-normal / GBM assumption.                                                                                                                    |
+| 2 | **GBM on price**                       | $\dfrac{dP_t}{P_t} = \mu,dt + \sigma,dW_t$                          | Price follows a geometric Brownian motion with drift $\mu$ (risk premium) and volatility $\sigma$.                                                                                                                         |
+| 3 | **GBM on log-price (log-drift)**       | $d\ln P_t = \left(\mu - \tfrac12\sigma^2\right)dt + \sigma,dW_t$    | Drift of $\ln P_t$ is $\mu - \tfrac12\sigma^2$ → this is the **expected log-return per unit of time** used in the Nifty Excel formula.                                                                                     |
+| 4 | **Expected log-return over $T$**       | $\mathbb{E}[r_T] = (\mu - \tfrac12\sigma^2)T$                       | Log-returns add over time; for a $T$-day horizon, drift of log-return is scaled by $T$.                                                                                                                                    |
+| 5 | **Median (“typical”) price under GBM** | $\text{median}(P_T) = P_0 \exp!\big((\mu - \tfrac12\sigma^2)T\big)$ | The **median path** of the price uses the log-drift $(\mu - \tfrac12\sigma^2)$; this is what you effectively target when you plug a drift like $(\mu_{\text{day}} - \tfrac12\sigma_{\text{day}}^2)\times T$ into `EXP(r)`. |
+
+```
+::contentReference[oaicite:0]{index=0}
+```
+
+
 # <ins>5. Monte Carlo Simulation </ins>
 
 # <ins>6. Bollinger Bands </ins> 
