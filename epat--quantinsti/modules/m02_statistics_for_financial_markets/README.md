@@ -797,7 +797,7 @@ i.e. Gaussian (bell-shaped) with zero mean and constant variance. This normal as
 
 Even if the next tick is unpredictable (no directional edge), estimating the risk climate volatility and tail risk is extremely valuable. It drives position sizing, leverage, stop-loss calibration, Value-at-Risk, and volatility-based strategies. In practice, many professional desks do not try to forecast where the price will go, but rather how much it can move and how bad it can get under normal and stressed conditions.
 
-## ### Example : CABC (SICABLE Côte d’Ivoire) under a normal-return assumption
+##  3.2 Example : CABC (SICABLE Côte d’Ivoire) under a normal-return assumption
 
  We assume the **annual return** of the stock is **IID and normally distributed**:
 
@@ -811,6 +811,91 @@ The price next year is modeled as:
 $$
 P_1 = P_0 \times (1 + R_{\text{year}}).
 $$
+
+Using the **68–95–99.7 rule** for the normal distribution, we can translate return intervals into **price intervals** (risk bands) around today’s price.
+
+| Confidence level | Return band (annual) | Implied price band next year (from $P_0 = 2100$) | Interpretation (trader view) |
+|------------------|----------------------|-----------------------------------------------|--------------------------------|
+| 68% (≈ ±1σ) | $\mu \pm \sigma \approx 5.1\% \pm 7.3\%$ → **[−2.2%, 12.4%]** | $2100 \times (1 - 0.022) \approx 2054$  <br> $2100 \times (1 + 0.124) \approx 2360$ | ≈ **68% probability** that next year’s return is between **−2.2%** and **+12.4%**, i.e. price between **≈ 2054** and **≈ 2360**. This is the “1σ risk band” around the expected return. |
+| 95% (≈ ±2σ) | $\mu \pm 2\sigma \approx 5.1\% \pm 14.6\%$ → **[−9.5%, 19.7%]** | $2100 \times (1 - 0.095) \approx 1901$ <br> $2100 \times (1 + 0.197) \approx 2514$ | ≈ **95% probability** that next year’s return is between **−9.5%** and **+19.7%**, i.e. price between **≈ 1901** and **≈ 2514**. Typical band used for “risk limits” (large but not extreme moves). |
+| 99.7% (≈ ±3σ) | $\mu \pm 3\sigma \approx 5.1\% \pm 21.9\%$ → **[−16.8%, 27.0%]** | $2100 \times (1 - 0.168) \approx 1747$ <br> $2100 \times (1 + 0.27) \approx 2667$ | ≈ **99.7% probability** that next year’s return is between **−16.8%** and **+27.0%**, i.e. price between **≈ 1747** and **≈ 2667**. This is a **“3σ stress band”** (extreme but still inside the normal model). |
+
+> These bands are derived under the **normal-return assumption**. Real markets often show **fat tails** (more extreme moves than the normal model), so tail risk (extrême downside risk) can be larger than what the 99.7% rule suggests.
+
+## 3.3 Misusing the 95% Risk Band: Why It’s Not a Buy Signal by Itself
+
+Under the normal-return assumption, the 95% band suggests that next year’s **terminal price** is likely to lie between 1901 and 2514.
+> An idea would be: “if the price trades below 1901 during the year, I will consider buying.”
+> However, this is dangerous for two reasons:
+>
+> * the 95% interval is about the **end-of-year price**, not about the **path** (the probability of hitting 1901 at some point is much higher),
+> * a move below 1901 may indicate either a **rare drawdown** under the model or a **regime shift** (the model parameters μ, σ are no longer valid).
+>   Any “buy-the-dip” decision below the 95% band should therefore be combined with **fundamental analysis** and **explicit risk management** (position sizing, stop-loss), not used as an automatic entry rule.
+
+
+## 3.4 Example :From daily volatility to annual volatility (√T rule)
+
+**Given**
+
+- Std dev of 1-day returns (daily volatility): $\sigma_{\text{day}} = 1\%$
+- Trading days per year: $T = 252$
+- Assumption: daily returns are **IID** (independent, identically distributed), random-walk style.
+
+We want the **annualized standard deviation** of returns.
+
+**Step 1,  From daily std dev to daily variance**
+
+Daily variance:
+
+$$
+\text{Var}_{\text{day}} = \sigma_{\text{day}}^2 = (0.01)^2 = 0.0001.
+$$
+
+**Step 2 , Add variances over 252 days**
+
+Under IID returns, **variances add**:
+
+$$
+\text{Var}_{\text{252 days}} = 252 \times \text{Var}_{\text{day}}
+= 252 \times 0.0001 = 0.0252.
+$$
+
+**Step 3 — Annualized standard deviation**
+
+Annualized volatility is the square root of the annual variance:
+
+$$
+\sigma_{\text{annual}} = \sqrt{\text{Var}_{\text{252 days}}}
+= \sqrt{0.0252} \approx 0.1587 \;\; \Rightarrow \;\; 15.87\%.
+$$
+
+So, starting from **1% daily vol**, the **annualized vol** (252 trading days) is **≈ 15.87%**.
+
+
+
+**General √T rule (volatility scaling)**
+
+Objective: *If I know the std dev of returns for 1 time period, how much can returns vary over T periods?*
+
+- Std dev of 1 period: $\sigma$
+- Variance of 1 period: $\sigma^2$
+
+Over $T$ periods (IID assumption):
+
+$$
+\text{Var}_T = \sigma^2 + \sigma^2 + \dots + \sigma^2 \; (\text{T times})
+= T \sigma^2.
+$$
+
+Std dev over $T$ periods:
+
+$$
+\sigma_T = \sqrt{\text{Var}_T} = \sqrt{T \sigma^2} = \sigma \sqrt{T}.
+$$
+
+> **Trader vocab:**  
+> Volatility over $T$ periods = volatility of 1 period × $\sqrt{T}$  
+> (e.g. daily vol → annual vol, or annual vol → daily vol), under an IID / random-walk assumption.
 
 # <ins>4. The random Walk Model Part 2 </ins>
 
