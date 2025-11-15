@@ -757,11 +757,64 @@ Why log return
 | **Annualization (rule-of-thumb)** | —                                           | μ_ann ≈ 252·μ_daily(log),  σ_ann ≈ √252·σ_daily(log) *(desk convention for trading days)*                                  |
 | **Why use it (desk)**             | Intuitive % for client reporting.           | Time-additive, aligned with GBM (≈ Normal → cleaner stats/VaR), more stable averages/variances (less bias when averaging). |
 | **Typical use**                   | Investor factsheets, simple KPI.            | Research/backtesting/risk, sizing, decomposition (analytics).                                                              |
+Calculate each step until Return of Pfs and STD dev of Pfs
 
+---
 # <ins>3. The random Walk Model Part 1 </ins>
+
+## 3.1 </ins> Random walk & “risk climate” </ins>
+
+- Under a (simple) **random walk** assumption, today’s price equals yesterday’s price plus a new **innovation** (shock) that is **unpredictable from all past information**:
+
+$$
+P_t = P_{t-1} + \varepsilon_t, \quad \mathbb{E}[\varepsilon_t \mid \mathcal{F}_{t-1}] = 0.
+$$
+
+This means we **cannot forecast the next tick direction** in a statistically reliable way (no directional edge from past prices alone).  
+However, we can still **estimate the distribution of shocks**. Mainly their **volatility** (spread of returns) and **tail risk** (probability of extreme moves).  
+
+
+- In the basic specification, the shocks are often assumed to be i.i.d. normal,
+
+$$
+\varepsilon_t \sim \mathcal{N}(0,\sigma^2),
+$$
+
+i.e. Gaussian (bell-shaped) with zero mean and constant variance. This normal assumption makes the model analytically convenient, even though real markets typically show fatter tails and volatility clustering.
+
+
+
+
+- In practice, many trading and risk decisions are not about predicting *where* the price will go, but about **how much it can move and how bad it can get**. The table below summarizes how this “risk climate” is used.
+
+| # | Area / use case | What “risk climate” info is used | Practical decisions | Key trader vocabulary |
+|---|------------------|----------------------------------|----------------------|------------------------|
+| 1 | Risk management & position sizing | - Volatility (spread of returns)  <br> - Tail / queue risk (probability of extreme moves) | - **Position sizing**: higher vol ⇒ smaller size to keep risk per trade roughly constant. <br> - Set **stop-loss / take-profit** levels: e.g. SL ≈ −1.5×ATR, TP ≈ +2×ATR (ATR = Average True Range, volatility proxy). <br> - Control **leverage** to avoid over-leveraging in high-vol regimes. | - Volatility (vol) <br> - Tail / queue risk <br> - Position sizing <br> - Leverage <br> - ATR (Average True Range) |
+| 2 | VaR, risk limits, drawdown control | - Return distribution (shape of returns) <br> - Volatility level <br> - Extreme-move probabilities | - Compute **VaR (Value-at-Risk)**: max expected loss for a given horizon & confidence (e.g. 99% daily VaR). <br> - Set **risk limits** by desk / strategy (max capital at risk). <br> - Anticipate typical **drawdowns** and stress scenarios. | - VaR (Value-at-Risk) <br> - Risk limits <br> - Drawdown <br> - Stress scenarios |
+| 3 | Systematic trading & volatility regime | - Volatility regime (high / low vol environment) <br> - Intraday volatility profile <br> - Spread and liquidity conditions | - **Volatility targeting**: adjust exposure to keep portfolio vol roughly stable. <br> - Decide **when to trade**: low vol ⇒ avoid overtrading for tiny moves; high vol ⇒ widen stops, reduce size, or pause fragile systems. <br> - Tune **execution algos** (VWAP, TWAP, POV) to reduce impact cost. | - Volatility targeting <br> - Volatility regime <br> - Execution algos (VWAP, TWAP, POV) <br> - Impact cost <br> - Spread, liquidity |
+| 4 | Options & derivatives | - Implied volatility (vol priced in options) <br> - Skew / smile (asymmetry of implied vol) <br> - Tail risk & kurtosis (fat tails) | - Trade **volatility** directly: long/short vol, calendars, straddles, etc. <br> - **Hedge** portfolios with options calibrated to the right vol and tail risk. <br> - Focus less on underlying direction and more on the **distribution shape** (vol, skew, kurtosis). | - Implied vol <br> - Volatility trading <br> - Skew / smile <br> - Straddles, calendar spreads <br> - Hedging |
+
+
+Even if the next tick is unpredictable (no directional edge), estimating the risk climate volatility and tail risk is extremely valuable. It drives position sizing, leverage, stop-loss calibration, Value-at-Risk, and volatility-based strategies. In practice, many professional desks do not try to forecast where the price will go, but rather how much it can move and how bad it can get under normal and stressed conditions.
+
+## ### Example : CABC (SICABLE Côte d’Ivoire) under a normal-return assumption
+
+ We assume the **annual return** of the stock is **IID and normally distributed**:
+
+- Current price: $P_0 = 2100$
+- Mean annual return (expected return): $\mu = 5.1\%$
+- Annual volatility (standard deviation of returns): $\sigma = 7.3\%$
+- Model: $R_{\text{year}} \sim \mathcal{N}(\mu, \sigma^2)$
+
+The price next year is modeled as:
+
+$$
+P_1 = P_0 \times (1 + R_{\text{year}}).
+$$
 
 # <ins>4. The random Walk Model Part 2 </ins>
 
 # <ins>5. Monte Carlo Simulation </ins>
 
-# <ins>6. Bollinger Bands </ins>
+# <ins>6. Bollinger Bands </ins> 
+
