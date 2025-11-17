@@ -1067,9 +1067,59 @@ Using `EXP(r)`:
 | 4 | **Expected log-return over $T$**       | $\mathbb{E}[r_T] = (\mu - \tfrac12\sigma^2)T$                       | Log-returns add over time; for a $T$-day horizon, drift of log-return is scaled by $T$.                                                                                                                                    |
 | 5 | **Median (“typical”) price under GBM** | $\text{median}(P_T) = P_0 \exp!\big((\mu - \tfrac12\sigma^2)T\big)$ | The **median path** of the price uses the log-drift $(\mu - \tfrac12\sigma^2)$; this is what you effectively target when you plug a drift like $(\mu_{\text{day}} - \tfrac12\sigma_{\text{day}}^2)\times T$ into `EXP(r)`. |
 
-```
-::contentReference[oaicite:0]{index=0}
-```
+
+## <ins>4.2  Geometric Mean — Why We Use It</ins>
+
+
+| Concept | Explanation | Market intuition | Formula (Unicode) |
+|--------|-------------|------------------|--------------------|
+| **Geometric Mean (GM)** | Average return that respects compounding. | “What constant return per period gives the same total performance as the actual sequence?” | 𝐺𝐌 = ( (1+𝐑₁)·(1+𝐑₂)·…·(1+𝐑ₙ) )^(1⁄n) − 1 |
+| **Log-return version** | GM = exp(mean of log-returns) − 1 | Traders prefer log-returns because they add over time. | 𝐺𝐌 = exp( (1⁄n)·Σ ln(1+𝐑ₜ) ) − 1 |
+| **Effect of volatility** | Volatility reduces geometric mean (volatility drag). | “Same average return, but more volatility = lower growth.” | 𝐺𝐌 ≤ Arithmetic Mean |
+| **Best use-case** | Long-term performance, CAGR, comparing portfolios or strategies. | “How fast does the portfolio really grow?” | CAGR = GM |
+
+
+Example — Why Geometric Mean Matters (Unicode)
+
+Suppose a stock has:
+
+- Year 1 : **+20%**
+- Year 2 : **−20%**
+
+#### Arithmetic mean (simple average)
+
+(20% − 20%) ⁄ 2 = **0%**
+
+→ Suggests *no gain, no loss*, but this is false.
+
+#### Geometric mean (real compounded growth)
+
+Step 1 — Multiply the factors:  
+1.20 × 0.80 = **0.96**
+
+Step 2 — Take the square root (because 2 years):  
+√0.96 ≈ **0.9799**
+
+Step 3 — Convert back to a return:  
+0.9799 − 1 ≈ **−0.0202** (≈ −2.02% par an)
+
+#### Interpretation (trader view)
+
+- Arithmetic return says: **0%**  
+- Geometric return says: **−2% par an**  
+- Real portfolio value:  
+  - Start: 100  
+  - After +20% → 120  
+  - After −20% → **96**
+
+➡️ Tu termines avec **96**, pas 100 → perte réelle due au **volatility drag**.
+
+---
+
+### 📌 Unicode one-liner (pour résumer dans ton README)
+
+**Geometric mean = real compounded growth. Arithmetic mean ignores compounding.  
+More volatility → lower geometric mean (volatility drag).**
 
 
 # <ins>5. Monte Carlo Simulation </ins>
