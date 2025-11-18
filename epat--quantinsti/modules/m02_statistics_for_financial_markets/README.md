@@ -725,8 +725,21 @@ In an ideal “market-neutral” strategy, the goal is to keep **β ≈ 0** (lit
 
 <img width="1297" height="696" alt="image" src="https://github.com/user-attachments/assets/3c8a32c8-e1e9-44ac-b447-d9d7c3f74d9e" />
 
-Errorntype I false positif
-Error type ii, False negatif
+Error type I false positif
+Error type II, False negatif
+
+**Final Result Using the Rule `p < α` / `p > α`**
+
+| Coefficient     | p-value  | Comparison | Decision           | Conclusion       |
+|-----------------|----------|------------|--------------------|------------------|
+| β = 0.8557      | 0%       | p < α      | Reject H₀          | significant      |
+| α ≈ 0           | 74.71%   | p > α      | Fail to reject H₀  | not significant  |
+
+**Simple Rule**
+
+- If **p < α** → the coefficient is statistically different from zero → we keep it.  
+- If **p > α** → the coefficient is not statistically different from zero → we treat it as zero.
+
 
 ---
 
