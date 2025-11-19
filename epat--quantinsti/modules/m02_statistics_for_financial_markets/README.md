@@ -1455,15 +1455,15 @@ $$
 
 ### **6. Visual Illustration**
 
-<img width="1024" height="1024" alt="image" src="https://github.com/user-attachments/assets/b79196d7-dca7-4be1-9bf8-e964d1eceba9" />
+<img width="1024" height="1024" alt="image" src="https://github.com/user-attachments/assets/d41c4742-9438-48f8-ace2-7507f4bd84a9" />
 
 
 This figure shows:
 
 - the **drift path** (center),
-- the **±1σ band** (light yellow),
-- the **±2σ band** (orange),
-- the **±3σ band** (red, outer region).
+- the **±1σ band** ,
+- the **±2σ band**),
+- the **±3σ band** .
 
 Uncertainty expands over time according to:
 
