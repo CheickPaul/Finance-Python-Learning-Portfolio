@@ -1128,6 +1128,44 @@ Step 3 — Convert back to a return:
 **Geometric mean = real compounded growth. Arithmetic mean ignores compounding.  
 More volatility → lower geometric mean (volatility drag).**
 
+Geometric mean is always less than arithmetic mean ! 
+
+## <ins>4.3 Drift (The Simple Average Direction of Returns)</ins>
+
+The **drift** is the *average tendency* of a price over time.
+
+> **Drift = the part of the price movement that has a direction (trend).  
+> Volatility = the part that is random (noise).**
+
+Indeed, the price mouvement has 2 components: 
+
+(1) Drift ( trend component)
+- Drift **> 0** → price tends to rise on average  
+- Drift **< 0** → price tends to fall on average  
+- Drift **≈ 0** → no trend → random walk
+
+Drift is the slow force that pushes the price in one direction.
+
+(2) Volatility (random component)
+
+This is the unpredictable part : the shock around the drift, itcreates up and downs from day to day. it does not tell the direction but only the magnitude of uncertainty
+
+> ------------------------------------------------------------  
+>                     **Drift & Volatility**  
+>  
+>   **Drift tells you where the price tends to go on average**  
+>   **Volatility tells you how violently it moves while getting there**  
+> ------------------------------------------------------------
+
+
+**Drift when working with log-returns**
+
+In log-normal models (GBM), the drift of log-returns is:
+
+**driftₗₒg = avg_return − (std_dev²) ⁄ 2**
+
+This version adjusts for volatility and reflects the **typical growth rate** (not the mean price, but the median path).
+
 
 # <ins>5. Monte Carlo Simulation </ins>
 
