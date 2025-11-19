@@ -1170,7 +1170,7 @@ This version adjusts for volatility and reflects the **typical growth rate** (no
 
 # <ins>5. Monte Carlo Simulation </ins>
 
-## <ins>5.1 Monte Carlo Simulation — Modeling Future Price Paths</ins>
+## <ins>5.1 Modeling Future Price Paths</ins>
 
 Monte Carlo simulation is a method used to generate **many possible future price paths** for an asset based on historical statistics.  
 It relies on the idea that the price evolves according to:
@@ -1183,7 +1183,7 @@ This formula comes from the log-normal price model (also used in GBM).
 
 
 
-**Random shock — the volatility component**: 
+**Random shock ( the volatility component)**: 
 The unpredictable part of price movements, coming from a distribution (usually normal):
 
 $$
