@@ -1099,13 +1099,13 @@ Suppose a stock has:
 - Year 1 : **+20%**
 - Year 2 : **−20%**
 
-#### Arithmetic mean (simple average)
+**Arithmetic mean (simple average)**
 
 (20% − 20%) ⁄ 2 = **0%**
 
 → Suggests *no gain, no loss*, but this is false.
 
-#### Geometric mean (real compounded growth)
+**Geometric mean (real compounded growth)**
 
 Step 1 — Multiply the factors:  
 1.20 × 0.80 = **0.96**
@@ -1116,7 +1116,7 @@ Step 2 — Take the square root (because 2 years):
 Step 3 — Convert back to a return:  
 0.9799 − 1 ≈ **−0.0202** (≈ −2.02% par an)
 
-#### Interpretation (trader view)
+**Interpretation**
 
 - Arithmetic return says: **0%**  
 - Geometric return says: **−2% par an**  
@@ -1124,12 +1124,6 @@ Step 3 — Convert back to a return:
   - Start: 100  
   - After +20% → 120  
   - After −20% → **96**
-
-➡️ Tu termines avec **96**, pas 100 → perte réelle due au **volatility drag**.
-
----
-
-### 📌 Unicode one-liner (pour résumer dans ton README)
 
 **Geometric mean = real compounded growth. Arithmetic mean ignores compounding.  
 More volatility → lower geometric mean (volatility drag).**
