@@ -1132,7 +1132,8 @@ Geometric mean is always less than arithmetic mean !
 
 ## <ins>4.3 Drift (The Simple Average Direction of Returns)</ins>
 
-The **drift** is the *average tendency* of a price over time.
+The **drift** is the *average tendency* of a price over time. Drift is estimated from historical average returns.
+
 
 > **Drift = the part of the price movement that has a direction (trend).  
 > Volatility = the part that is random (noise).**
@@ -1158,7 +1159,7 @@ This is the unpredictable part : the shock around the drift, itcreates up and do
 > ------------------------------------------------------------
 
 
-**Drift when working with log-returns**
+**Drift when working with log-returns** :
 
 In log-normal models (GBM), the drift of log-returns is:
 
@@ -1168,6 +1169,66 @@ This version adjusts for volatility and reflects the **typical growth rate** (no
 
 
 # <ins>5. Monte Carlo Simulation </ins>
+
+## <ins>5.1 Monte Carlo Simulation — Modeling Future Price Paths</ins>
+
+Monte Carlo simulation is a method used to generate **many possible future price paths** for an asset based on historical statistics.  
+It relies on the idea that the price evolves according to:
+
+$$
+P_{t+1} = P_t \times e^{(\text{drift} + \text{random shock})}.
+$$
+
+This formula comes from the log-normal price model (also used in GBM).
+
+
+
+**Random shock — the volatility component**: 
+The unpredictable part of price movements, coming from a distribution (usually normal):
+
+$$
+\text{shock} \sim \mathcal{N}(0, \sigma^2).
+$$
+
+Volatility tells you how **large** these shocks are.
+
+
+ **Trend component : Why do we use the exponential ?** 
+
+We use:
+
+$$
+P_{t+1} = P_t \cdot e^{r_t}
+$$
+
+because:
+
+1. It guarantees the price stays **positive**  
+2. Log-returns **add over time**  
+3. It matches real market behaviour (prices often follow a log-normal distribution)
+
+Where the simulated log-return is:
+
+$$
+r_t = \text{drift} + \text{random shock}.
+$$
+
+
+## <ins>5.2 Input to run a Monte Carlo simulation</ins>
+
+Using historical returns, we need to compute:
+
+- **Average return (drift)**  
+- **Standard deviation (volatility)**  
+- **Variance**  
+- **Distribution of shocks**
+
+These serve as the **inputs** to generate thousands of possible price paths.
+
+## <ins>5.3  Interpretation</ins>
+
+
+
 
 # <ins>6. Bollinger Bands </ins> 
 
