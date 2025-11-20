@@ -1171,6 +1171,17 @@ In log-normal models (GBM), the drift of log-returns is:
 
 This version adjusts for volatility and reflects the **typical growth rate** (not the mean price, but the median path).
 
+### Arithmetic Mean vs Geometric Mean vs Drift (GBM)</ins>
+
+| Concept | Formula  | Meaning | Market intuition |
+|--------|--------------------|---------|------------------|
+| **Arithmetic Mean (AM)** | 𝐴𝐌 = (𝐑₁ + 𝐑₂ + … + 𝐑ₙ) / 𝐧 | Simple average of returns | Overstates growth when volatility is high |
+| **Geometric Mean (GM)** | 𝐺𝐌 = ((1+𝐑₁)·(1+𝐑₂)…(1+𝐑ₙ))^(1/𝐧) − 1 | Compounded growth rate | True long-term growth (CAGR) |
+| **GM via logs** | 𝐺𝐌 = exp( (1/𝐧) Σ ln(1+𝐑ₜ) ) − 1 | Equivalent definition | Preferred by quants (log-returns add) |
+| **GBM Drift (effective drift)** | 𝐷𝐫𝐢𝐟𝐭 = 𝐦𝐮 − (𝟏/𝟐)·𝐬𝐢𝐠𝐦𝐚² | Growth rate in a GBM model | Corrected mean return after volatility drag |
+| **Volatility Drag** | — | Vol reduces long-term growth | “More vol = lower compounded growth” |
+
+
 
 # <ins>5. Monte Carlo Simulation </ins>
 
