@@ -1492,6 +1492,6 @@ These bands allow traders, quants, and risk managers to identify:
 - and **the boundary of extreme events**.
 
 
-
+Excel Formula :  Final simulated price = Initial price* exp [(Norm.INV (Rand();mean;Std Dev)]
 # <ins>6. Bollinger Bands </ins> 
 
