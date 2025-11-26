@@ -1494,5 +1494,29 @@ These bands allow traders, quants, and risk managers to identify:
 
 Excel Formula :  Final simulated price = Initial price * exp [(Norm.INV (Rand();mean;Std Dev)]
 
+<img width="1798" height="547" alt="image" src="https://github.com/user-attachments/assets/9bebd626-fe7d-4f04-adc3-ac1d584e5026" />
+
+**Interpretation – Percentiles and confidence levels**
+
+Assuming (approximately) Normal returns, the **95% central confidence interval** for the final stock price corresponds to the **2.5th and 97.5th percentiles** of the simulated price distribution (≈ μ ± 2·σ on returns).  
+Similarly, the **99.7% central interval** corresponds to the **0.15th and 99.85th percentiles** (≈ μ ± 3·σ).  
+
+In other words, the percentile bounds taken from the Monte Carlo simulation are the **empirical versions** of the theoretical Normal ranges (2σ and 3σ bands), showing the price ranges where the stock is expected to lie with 95% and 99.7% confidence.
+
+**Interpretation - VaR 5% vs Expected Shortfall 5% (ES 5%)**
+
+- **VaR 5% (Value at Risk)**  
+  VaR at 5% is a **threshold level** (price or loss) such that:
+  - There is only **5% probability** that the loss will be **worse than this level** (tail event).
+  - Equivalently: we have **95% confidence** that the loss will **not exceed** this level.  
+  → VaR is a **cut-off point** in the loss distribution (risk threshold).
+
+- **Expected Shortfall 5% (ES 5%, also called CVaR)**  
+  ES at 5% is the **average loss in the case price falls below the treshold level Var 5% (the worst 5% of scenarios)**:
+  - Conditional on being in the **5% tail**, ES 5% measures **how much we lose on average**.
+  → ES is a **tail loss measure** (average loss beyond VaR), not just a single threshold.
+
+
+
 # <ins>6. Bollinger Bands </ins> 
 
