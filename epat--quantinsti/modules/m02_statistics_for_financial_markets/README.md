@@ -1492,6 +1492,7 @@ These bands allow traders, quants, and risk managers to identify:
 - and **the boundary of extreme events**.
 
 
+**Application**
 Excel Formula :  Final simulated price = Initial price * exp [(Norm.INV (Rand();mean;Std Dev)]
 
 <img width="1798" height="547" alt="image" src="https://github.com/user-attachments/assets/9bebd626-fe7d-4f04-adc3-ac1d584e5026" />
@@ -1516,7 +1517,10 @@ In other words, the percentile bounds taken from the Monte Carlo simulation are 
   - Conditional on being in the **5% tail**, ES 5% measures **how much we lose on average**.
   → ES is a **tail loss measure** (average loss beyond VaR), not just a single threshold.
 
-
+**Central Cluster at day 10**
+Central 68% price cluster (Day 10)
+We take the 16th and 84th percentiles of the 1,000 simulated prices on Day 10.
+This gives the main central cluster (≈ μ ± 1σ), where about 68% of the simulated paths lie.
 
 # <ins>6. Bollinger Bands </ins> 
 
