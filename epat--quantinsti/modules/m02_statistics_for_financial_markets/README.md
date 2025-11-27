@@ -1524,3 +1524,6 @@ This gives the main central cluster (≈ μ ± 1σ), where about 68% of the simu
 
 # <ins>6. Bollinger Bands </ins> 
 
+<img width="939" height="619" alt="image" src="https://github.com/user-attachments/assets/df878102-917d-48b5-ae31-10360d885d85" />
+
+There is 95 chanche that the price will lie between the 2 lines of the band 
