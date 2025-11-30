@@ -51,3 +51,8 @@ Install Python locally and run codes for trading experiments
  **Variable** is a **name** that points to a value stored in memory
  exemple : price = 105.5. In python, price is a variable pointing to 105.5
 
+  **Object** could be everything : number, strings, list, function etc. An object has a **type** (int for "integer", float for " floating point number or decimal number", str for "string or sequence characters" and list "for exemple list of float, list of int, list of str")  and a **value**
+  example : 
+ ```python
+  price = 105.50   # 105.50 is a float object in memory
+  symbol = "AAPL"  # "AAPL" is a string object in memory
