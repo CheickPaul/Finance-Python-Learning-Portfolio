@@ -5,16 +5,49 @@ Purpose: The notes belows are include in my repository " Finance-Python-Learning
  # TABLE OF CONTENTS
 
 
-# SECTION 1 : Intro, how python is used in trading desk 
-# SECTION 2 : Variables & Packages, Store data in variables and usebasic libraries (math, spicy) for numeral work
-# SECTION 3 : Time Value of Money, compute present value and future value of cash flows in Python
-# SECTION 4 - Data Structure :Use lists, tuples and dictionaries to organise market data
-# SECTION 5 - Market Data and Charts : Import price series and plot line charts and candlestick charts
-# SECTION 6 - Functions : write function to automate repetitive trading calculations
-# SECTION 7 - NumPy : Use NumPy arrays for fast vectorised calculations ( returns, volatility,etc)
-# SECTION 8  - Pandas : Use DataFrames to manipulate time series ( resample, join, rolling stats)
-# SECTION 9 - Controls and condition :  Use if, for, while to code simple trading rules and signal
-# Section 10 - Environment Setup : Install Python locally and run codes for trading experiments
+### SECTION 1 - Intro :
+ how python is used in trading desk 
+### SECTION 2 - Variables & Packages :
+Store data in variables and usebasic libraries (math, spicy) for numeral work
+### SECTION 3 - Time Value of Money :
+ compute present value and future value of cash flows in Python
+### SECTION 4 - Data Structure :
+Use lists, tuples and dictionaries to organise market data
+### SECTION 5 - Market Data and Charts :
+Import price series and plot line charts and candlestick charts
+### SECTION 6 - Functions : 
+write function to automate repetitive trading calculations
+### SECTION 7 - NumPy :
+Use NumPy arrays for fast vectorised calculations ( returns, volatility,etc)
+### SECTION 8  - Pandas :
+Use DataFrames to manipulate time series ( resample, join, rolling stats)
+### SECTION 9 - Controls and condition : 
+Use if, for, while to code simple trading rules and signal
+### Section 10 - Environment Setup :
+Install Python locally and run codes for trading experiments
+
+---
+
+## Section 1. <ins>Intro</ins>
 
 
+**Key ideas:**
+- **Algorithmic trading** is about codifying a trader’s behaviour into a set of rules that can be executed automatically on the exchange (order execution logic).
+- **Quant trading** is about trading strategies built on **statistics and modelling** (math-backed trading models).
+- **Algo trading a subset of quant trading**; **automated trading** is when the algo places orders on behalf of the human without manual clicks.
+- A typical day on an algo desk mixes **operations (reports)**, **research to improve live strategies**, and **development of new strategies**.
+- **Why Python?**  
+  -(1) We use it because is a rich ecosystem of **libraries** for data, stats, ML and infrastructure (we do not need to reinvent the wheel).  
+  -(2) The new Machine Learning packages are released in Python first, then ported to R/others.  
+  -(3) Python code is **production-ready**: you can deploy it, unlike Excel sheets.  
+  -(4) There is a huge **community support** → any error or question, someone has already faced it.
+  -(5) Compared to older tools (C, MATLAB, R, etc.), Python is easier to learn, faster to prototype with, and better suited to **data science / quant trading**.
+-(6)To start, we learn the basics (syntax, variables, if-conditions, loops, functions) and apply them to **small trading projects.
+
+---
+
+## Section 2. <ins>Variables, object references and operator</ins>
+
+ **Variable** is a **name** that points to a value stored in memory
+ exemple : price = 105.5. In python, price is a variable pointing to 105.5
 
