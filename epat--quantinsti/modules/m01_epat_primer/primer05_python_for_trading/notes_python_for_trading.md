@@ -51,8 +51,21 @@ Install Python locally and run codes for trading experiments
  **Variable** is a **name** that points to a value stored in memory
  exemple : price = 105.5. In python, price is a variable pointing to 105.5
 
-  **Object** could be everything : number, strings, list, function etc. An object has a **type** (int for "integer", float for " floating point number or decimal number", str for "string or sequence characters" and list "for exemple list of float, list of int, list of str")  and a **value**
+  **Object** could be everything : number, strings, list, function etc. An object has a **type** (int for "integer", float for " floating point number or decimal number", str for "string or sequence characters" and list "for exemple list of float, list of int, list of str"),a **value**, and a **location in memory**
   example : 
  ```python
   price = 105.50   # 105.50 is a float object in memory
   symbol = "AAPL"  # "AAPL" is a string object in memory
+```
+
+**Object reference**: A variable does not store the value directly, it store a **reference** to an an object in memory. 
+
+Example:
+  ```python
+  prices = [100, 101, 102]  # list object in memory
+  ref = prices              # 'ref' is another reference to the *same* object
+  ref.append(103)
+  print(prices)             # [100, 101, 102, 103]
+
+Both prices and ref point to the same list object, so modifying one also changes the other.
+```
