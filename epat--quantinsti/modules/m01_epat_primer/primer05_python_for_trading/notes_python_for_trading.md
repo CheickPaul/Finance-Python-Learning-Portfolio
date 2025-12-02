@@ -46,7 +46,9 @@ Install Python locally and run codes for trading experiments
 
 ---
 
-## Section 2. <ins>Variables, object references and operator</ins>
+## Section 2.
+
+### <ins>Variables, object references and operator</ins>
 
  **Variable** is a **name** that points to a value stored in memory
  exemple : price = 105.5. In python, price is a variable pointing to 105.5
@@ -69,3 +71,21 @@ Example:
 
 Both prices and ref point to the same list object, so modifying one also changes the other.
 ```
+### <ins>The Use of Jupiter</ins>
+Jupiter is a core tool. it´s an interactive document that mixes **English explantion** and **Python code**:
+
+<img width="618" height="724" alt="image" src="https://github.com/user-attachments/assets/8949ec43-5b10-4770-ab12-e9bcc7156111" />
+
+<img width="477" height="740" alt="image" src="https://github.com/user-attachments/assets/e641321f-5b63-4b0f-b19f-96add738cd3b" />
+
+<img width="414" height="666" alt="image" src="https://github.com/user-attachments/assets/b7c6412b-de57-4f96-866e-987fe953678c" />
+
+<img width="460" height="744" alt="image" src="https://github.com/user-attachments/assets/5d9afd4c-3afc-4658-8121-0fec63851663" />
+
+<img width="469" height="760" alt="image" src="https://github.com/user-attachments/assets/bf98e281-ef36-428e-80ec-4d8ac0bda08d" />
+
+""" XXXXXXX """ represents the chain of characters (string)  & # is the real comment 
+
+
+
+
