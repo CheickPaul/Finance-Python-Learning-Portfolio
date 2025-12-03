@@ -153,40 +153,328 @@ example :
 | Monthly compounding (example)          | 𝐹𝑉 = 𝑃𝑉 × (1 + 𝑟∕12)^(12⋅𝑡)                           | We compound every month.                               |
 | Continuous compounding | 𝐹𝑉 = 𝑃𝑉 × 𝑒^(𝑟⋅𝑡)                                     | We use the continuous limit (theoretical, in pricing). |
 
-### <ins>Funding a future obligation & Funding a retirement plan</ins>
+### <ins>Funding a future obligation </ins>
 
-```mermaid
-sequenceDiagram
-    participant Liability as Future Obligation\n(2,500 USD cash flows)
-    participant Discount as Discounting Block\n(PV at ref date)
-    participant Saving as Saving Plan\n(today)
-    participant Account as Investment Account
+#### 1) Basic data
 
-    Note over Liability: We know the future cash flows:\n2,500 USD per year for 5 years\nstarting in year 5.
+- Future obligation (liability): 𝐹𝑉ₗ at horizon 𝑇  
+- Expected return on the saving plan: 𝑟 per period  
 
-    Liability ->> Discount: 1. We input cash-flow schedule + rate r.
-    Discount -->> Liability: 2. We compute PV_liability at end of year 4.
-    Discount ->> Saving: 3. We treat this PV_liability as a target FV from today.
-    Saving ->> Saving: 4. We solve for the annual saving C_save.
-    Saving ->> Account: 5. We invest C_save each year at rate r.
-    Account -->> Liability: 6. At year 5–9, the fund pays 2,500 USD per year\nand is fully depleted at the end.
-```
+Annual example:  
+- 𝐹𝑉ₗ = 10 000 €  
+- 𝑇 = 5 years  
+- 𝑟 = 5 % = 0.05  
 
-```mermaid
-timeline
-    title Future obligation – cash-flow view
-    0 : We start saving (C_save each year, invested at r)
-    1 : Saving payment C_save
-    2 : Saving payment C_save
-    3 : Saving payment C_save
-    4 : Last saving → Fund reaches FV_target = PV_liability
-    5 : Pay 2,500 (liability year 1)
-    6 : Pay 2,500 (liability year 2)
-    7 : Pay 2,500 (liability year 3)
-    8 : Pay 2,500 (liability year 4)
-    9 : Pay 2,500 (liability year 5) → fund goes to 0
-```
 
+
+#### 2) Step 1 – Discount the future obligation (Present Value)
+
+We “price” the future obligation like a zero-coupon bond: we compute its present value 𝑃𝑉.
+
+Discounting formula:
+
+- 𝑃𝑉 = 𝐹𝑉ₗ ÷ (1 + 𝑟)ᵀ  
+
+With the numbers:
+
+- (1 + 0.05)⁵ ≈ 1.2763  
+- 𝑃𝑉 ≈ 10 000 ÷ 1.2763 ≈ 7 835.26  
+
+Market interpretation:  
+If we invest about 7 835.26 € today at 5 % per year, we obtain 10 000 € in 5 years.  
+This is the cost today of the future liability.
+
+
+
+#### 3) Step 2 – Two ways to fund the liability
+
+##### Case A – Single lump sum today
+
+We invest the present value 𝑃𝑉 today:
+
+- Amount to invest now: ≈ 7 835.26 €  
+- No intermediate contributions
+
+This is the simplest solution: a lump sum that compounds until maturity.
+
+
+##### Case B – Saving plan (annuity of contributions)
+
+We prefer to make regular contributions 𝐶 at the end of each year for 𝑇 years.  
+This is a saving annuity (series of equal payments invested at rate 𝑟).
+
+Future value of an annuity:
+
+- 𝐹𝑉 = 𝐶 × ((1 + 𝑟)ᵀ − 1) ÷ 𝑟  
+
+We want the future value of the saving plan to match the liability:
+
+- 𝐹𝑉 = 𝐹𝑉ₗ  
+
+So we solve for 𝐶:
+
+- 𝐶 = 𝐹𝑉ₗ ÷ ( ((1 + 𝑟)ᵀ − 1) ÷ 𝑟 )  
+
+With the numbers (𝑟 = 0.05, 𝑇 = 5):
+
+- Accumulation factor of the annuity:  
+  ((1 + 0.05)⁵ − 1) ÷ 0.05 ≈ 5.5256  
+- Yearly contribution:  
+  𝐶 ≈ 10 000 ÷ 5.5256 ≈ 1 809.75 €  
+
+Interpretation:  
+If we contribute about 1 809.75 € at the end of each year for 5 years,  
+and the capital earns 5 % per year,  
+our saving plan reaches 10 000 € at year 5 and we can pay the future obligation.
+
+
+
+#### 4) Mindset: asset–liability matching (ALM)
+
+1. We start from the liability (future obligation):  
+   𝐹𝑉ₗ at horizon 𝑇.  
+2. We discount it to find the present value:  
+   𝑃𝑉 = 𝐹𝑉ₗ ÷ (1 + 𝑟)ᵀ.  
+3. We choose the funding strategy on the asset side:  
+   - either a lump sum today: we invest 𝑃𝑉 now,  
+   - or a saving plan (annuity): we solve for 𝐶 using  
+     𝐶 = 𝐹𝑉ₗ ÷ ( ((1 + 𝑟)ᵀ − 1) ÷ 𝑟 ).  
+
+This is the core idea of asset–liability management:  
+we start from future cash flows (liabilities) and design the asset cash flows that fund them.
+
+
+
+
+### Variant 2 – Monthly example (monthly compounding)
+
+We keep the same logic, but now contributions and compounding are monthly.
+
+#### 1) Basic data (monthly)
+
+- Future obligation (liability): 𝐹𝑉ₗ = 5 000 €  
+- Horizon: 𝑇 = 3 years  
+- Annual nominal rate: 𝑟ₐ = 4 % = 0.04  
+- Compounding and contributions: monthly  
+
+We define:
+
+- Monthly rate: 𝑟ₘ = 𝑟ₐ ÷ 12  
+- Total number of months: 𝑛 = 12 × 𝑇  
+
+Numerically:
+
+- 𝑟ₘ = 0.04 ÷ 12 ≈ 0.003333…  
+- 𝑛 = 12 × 3 = 36 months  
+
+
+#### 2) Monthly discounting of the obligation (Present Value)
+
+We treat the liability like a zero-coupon with monthly compounding:
+
+- 𝑃𝑉 = 𝐹𝑉ₗ ÷ (1 + 𝑟ₘ)ⁿ  
+
+Here:
+
+- (1 + 0.003333…)³⁶ ≈ 1.1275  
+- 𝑃𝑉 ≈ 5 000 ÷ 1.1275 ≈ 4 433.5 € (approximate)  
+
+Market interpretation:  
+If we invest about 4 433.5 € today at 4 % per year with monthly compounding,  
+we obtain 5 000 € in 3 years.
+
+
+#### 3) Monthly saving plan to fund the liability
+
+We prefer to make monthly contributions 𝐶ₘ at the end of each month for 𝑛 months.
+
+Future value of a monthly annuity:
+
+- 𝐹𝑉 = 𝐶ₘ × ((1 + 𝑟ₘ)ⁿ − 1) ÷ 𝑟ₘ  
+
+To fund the liability:
+
+- 𝐹𝑉 = 𝐹𝑉ₗ  
+
+So:
+
+- 𝐶ₘ = 𝐹𝑉ₗ ÷ ( ((1 + 𝑟ₘ)ⁿ − 1) ÷ 𝑟ₘ )  
+
+With the numbers:
+
+- (1 + 0.003333…)³⁶ ≈ 1.1275  
+- ((1 + 0.003333…)³⁶ − 1) ÷ 0.003333… ≈ 38.247 (monthly accumulation factor)  
+- 𝐶ₘ ≈ 5 000 ÷ 38.247 ≈ 130.7 € (approximate)  
+
+Interpretation:  
+If we contribute about 131 € at the end of each month for 36 months,  
+and the capital earns 4 % per year with monthly compounding,  
+the saving plan reaches 5 000 € at maturity and we can honour the future obligation.
+
+
+### Annual vs monthly: quick comparison (market vocabulary)
+
+| Dimension                | Annual                              | Monthly                                  |
+|-------------------------|--------------------------------------|------------------------------------------|
+| Horizon                 | 𝑇 years                             | 𝑛 months (= 12 × 𝑇)                     |
+| Rate per period         | 𝑟 (per year)                        | 𝑟ₘ = 𝑟ₐ ÷ 12                            |
+| Zero-coupon PV          | 𝑃𝑉 = 𝐹𝑉 ÷ (1 + 𝑟)ᵀ                | 𝑃𝑉 = 𝐹𝑉 ÷ (1 + 𝑟ₘ)ⁿ                     |
+| Annuity future value    | 𝐹𝑉 = 𝐶 × ((1 + 𝑟)ᵀ − 1) ÷ 𝑟        | 𝐹𝑉 = 𝐶ₘ × ((1 + 𝑟ₘ)ⁿ − 1) ÷ 𝑟ₘ         |
+| Unknown to solve for    | 𝑃𝑉 or 𝐶                            | 𝑃𝑉 or 𝐶ₘ                                 |
+
+ALM mindset (monthly version):  
+We start from 𝐹𝑉ₗ (future obligation), choose a market rate and a compounding frequency (monthly),  
+then we solve either for the initial lump sum 𝑃𝑉, or for the periodic contribution 𝐶ₘ.
+
+
+
+### <ins> Funding a retirement plan</ins>
+
+#### 1) Define the retirement target
+
+We first translate the retirement objective into clear cash flows:
+
+- Current age and retirement age → working horizon 𝑇ʷᵒʳᵏ (years until retirement)  
+- Target retirement income per year: 𝑊 (for example, 30 000 € per year)  
+- Planned length of retirement: 𝑁 years (for example, 25 years)  
+- Expected portfolio return **during retirement**: 𝑟ʳᵉᵗ (real return after inflation, if we think in real terms)  
+
+Example (retirement objective):
+
+- We want 𝑊 = 30 000 € per year in retirement  
+- For 𝑁 = 25 years  
+- With an expected real return in retirement 𝑟ʳᵉᵗ = 3 % = 0.03  
+
+
+---
+
+#### 2) Step 1 – Price the retirement income as an annuity at retirement date
+
+At retirement, the stream of withdrawals 𝑊 during 𝑁 years is a **retirement annuity** (series of future cash flows).  
+We compute its **present value at retirement date**, noted 𝑃𝑉ʀ (PV at retirement).
+
+Present value of an annuity (at retirement):
+
+- 𝑃𝑉ʀ = 𝑊 × ( 1 − (1 + 𝑟ʳᵉᵗ)^(−𝑁) ) ÷ 𝑟ʳᵉᵗ  
+
+With the example:
+
+- 𝑊 = 30 000  
+- 𝑁 = 25  
+- 𝑟ʳᵉᵗ = 0.03  
+
+We get approximately:
+
+- 𝑃𝑉ʀ ≈ 522 394 €  
+
+Interpretation (market language):
+
+- 𝑃𝑉ʀ is the **capital required at retirement** to finance the desired withdrawals.  
+- If we arrive at retirement with about 522 394 € and we earn 3 % per year, then withdrawing 30 000 € per year for 25 years is feasible.
+
+
+---
+
+#### 3) Step 2 – Bring the cost of retirement back to today
+
+Now we move from the **retirement date** back to **today**.
+
+We assume an expected return **during working years** 𝑅ᵃᶜᶜ (accumulation return, for example 5 % per year),  
+and a working horizon of 𝑇ʷᵒʳᵏ years until retirement.
+
+We discount 𝑃𝑉ʀ back to today:
+
+- 𝑃𝑉₀ = 𝑃𝑉ʀ ÷ (1 + 𝑅ᵃᶜᶜ)^(𝑇ʷᵒʳᵏ)  
+
+Example:
+
+- 𝑃𝑉ʀ ≈ 522 394  
+- 𝑅ᵃᶜᶜ = 5 % = 0.05  
+- 𝑇ʷᵒʳᵏ = 25 years  
+
+Then:
+
+- 𝑃𝑉₀ ≈ 522 394 ÷ (1.05)²⁵ ≈ 154 265 € (approximate)  
+
+Interpretation:
+
+- 𝑃𝑉₀ is the **lump sum today** that would be enough to fund the entire retirement plan,  
+  if we could invest it immediately and leave it invested until retirement.
+
+
+---
+
+#### 4) Step 3 – Solve for a saving plan during working years
+
+In practice we usually do not have 𝑃𝑉₀ available today.  
+Instead, we build a **saving plan** (regular contributions during working years).
+
+We assume:
+
+- Annual contribution during working years: 𝐶ʷᵒʳᵏ (we want to find this)  
+- Working horizon: 𝑇ʷᵒʳᵏ years  
+- Expected accumulation return: 𝑅ᵃᶜᶜ  
+
+Future value of an annual saving annuity at retirement:
+
+- 𝐹𝑉ʷᵒʳᵏ = 𝐶ʷᵒʳᵏ × ( (1 + 𝑅ᵃᶜᶜ)^(𝑇ʷᵒʳᵏ) − 1 ) ÷ 𝑅ᵃᶜᶜ  
+
+We want this future value to equal the capital needed at retirement:
+
+- 𝐹𝑉ʷᵒʳᵏ = 𝑃𝑉ʀ  
+
+So we solve for the annual contribution 𝐶ʷᵒʳᵏ:
+
+- 𝐶ʷᵒʳᵏ = 𝑃𝑉ʀ ÷ ( ( (1 + 𝑅ᵃᶜᶜ)^(𝑇ʷᵒʳᵏ) − 1 ) ÷ 𝑅ᵃᶜᶜ )  
+
+With the numbers:
+
+- 𝑃𝑉ʀ ≈ 522 394  
+- 𝑅ᵃᶜᶜ = 0.05  
+- 𝑇ʷᵒʳᵏ = 25  
+
+Accumulation factor of the working-phase annuity:
+
+- ( (1 + 0.05)²⁵ − 1 ) ÷ 0.05 ≈ 47.73  
+
+Annual contribution:
+
+- 𝐶ʷᵒʳᵏ ≈ 522 394 ÷ 47.73 ≈ 10 945 € per year  
+
+If we want the monthly equivalent in a rough way, we can divide by 12:
+
+- ≈ 10 945 ÷ 12 ≈ 912 € per month  
+
+Interpretation:
+
+If we contribute around 10 945 € per year (about 912 € per month) during 25 years,  
+and our portfolio earns 5 % per year on average,  
+we arrive at retirement with about 522 394 €, which is enough to pay 30 000 € per year for 25 years at 3 % return in retirement.
+
+
+---
+
+#### 5) ALM mindset for retirement planning
+
+We can summarise the logic as an asset–liability management (ALM) framework:
+
+1. We **start from the liability** in retirement:  
+   target income 𝑊, number of years 𝑁, retirement return 𝑟ʳᵉᵗ.  
+2. We **price** this retirement income as an annuity at the retirement date:  
+   𝑃𝑉ʀ = 𝑊 × ( 1 − (1 + 𝑟ʳᵉᵗ)^(−𝑁) ) ÷ 𝑟ʳᵉᵗ.  
+3. We **discount** 𝑃𝑉ʀ back to today using an accumulation return 𝑅ᵃᶜᶜ and horizon 𝑇ʷᵒʳᵏ:  
+   𝑃𝑉₀ = 𝑃𝑉ʀ ÷ (1 + 𝑅ᵃᶜᶜ)^(𝑇ʷᵒʳᵏ).  
+4. We **design the saving plan** (asset side) that funds this liability:  
+   either a lump sum today 𝑃𝑉₀, or a stream of contributions 𝐶ʷᵒʳᵏ solving  
+   𝐹𝑉ʷᵒʳᵏ = 𝑃𝑉ʀ.  
+
+In other words, we treat the retirement income as a **liability stream** and we build an **asset strategy** (saving plan + expected returns) that matches it.
+
+
+
+
+
+<ins>Summary</ins>
 
 | Quantity / Term          | Formula (Unicode)                                                                                   | Comment (how we use it)                                          |
 |--------------------------|------------------------------------------------------------------------------------------------------|------------------------------------------------------------------|
@@ -201,4 +489,10 @@ timeline
 | Continuous compounding   | 𝐅𝐕 = 𝐏𝐕 × 𝑒⁽ʳ⋅ᵗ⁾                                                                                | We grow money with continuous compounding.                       |
 | Discount factor (discrete)| 𝐃(𝐭) = 1 ∕ (1 + 𝐫 ∕ 𝐧)⁽ⁿ⋅ᵗ⁾                                                                      | We discount any cash flow at time 𝐭 with discrete compounding.   |
 | Discount factor (cont.)  | 𝐃(𝐭) = 𝑒⁻⁽ʳ⋅ᵗ⁾                                                                                   | We discount with a continuous rate (pricing intuit
+
+--- 
+
+##Section 3.
+
+### <ins> lists</ins>
 
