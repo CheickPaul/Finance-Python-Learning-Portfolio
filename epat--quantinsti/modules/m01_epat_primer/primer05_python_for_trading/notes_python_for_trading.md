@@ -172,6 +172,21 @@ sequenceDiagram
     Account -->> Liability: 6. At year 5–9, the fund pays 2,500 USD per year\nand is fully depleted at the end.
 ```
 
+```mermaid
+timeline
+    title Future obligation – cash-flow view
+    0 : We start saving (C_save each year, invested at r)
+    1 : Saving payment C_save
+    2 : Saving payment C_save
+    3 : Saving payment C_save
+    4 : Last saving → Fund reaches FV_target = PV_liability
+    5 : Pay 2,500 (liability year 1)
+    6 : Pay 2,500 (liability year 2)
+    7 : Pay 2,500 (liability year 3)
+    8 : Pay 2,500 (liability year 4)
+    9 : Pay 2,500 (liability year 5) → fund goes to 0
+```
+
 
 | Quantity / Term          | Formula (Unicode)                                                                                   | Comment (how we use it)                                          |
 |--------------------------|------------------------------------------------------------------------------------------------------|------------------------------------------------------------------|
