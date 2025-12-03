@@ -153,3 +153,37 @@ example :
 | Monthly compounding (example)          | 𝐹𝑉 = 𝑃𝑉 × (1 + 𝑟∕12)^(12⋅𝑡)                           | We compound every month.                               |
 | Continuous compounding | 𝐹𝑉 = 𝑃𝑉 × 𝑒^(𝑟⋅𝑡)                                     | We use the continuous limit (theoretical, in pricing). |
 
+### <ins>Funding a future obligation & Funding a retirement plan</ins>
+
+```mermaid
+sequenceDiagram
+    participant Liability as Future Obligation\n(2,500 USD cash flows)
+    participant Discount as Discounting Block\n(PV at ref date)
+    participant Saving as Saving Plan\n(today)
+    participant Account as Investment Account
+
+    Note over Liability: We know the future cash flows:\n2,500 USD per year for 5 years\nstarting in year 5.
+
+    Liability ->> Discount: 1. We input cash-flow schedule + rate r.
+    Discount -->> Liability: 2. We compute PV_liability at end of year 4.
+    Discount ->> Saving: 3. We treat this PV_liability as a target FV from today.
+    Saving ->> Saving: 4. We solve for the annual saving C_save.
+    Saving ->> Account: 5. We invest C_save each year at rate r.
+    Account -->> Liability: 6. At year 5–9, the fund pays 2,500 USD per year\nand is fully depleted at the end.
+```
+
+
+| Quantity / Term          | Formula (Unicode)                                                                                   | Comment (how we use it)                                          |
+|--------------------------|------------------------------------------------------------------------------------------------------|------------------------------------------------------------------|
+| Future value (lump sum)  | 𝐅𝐕 = 𝐏𝐕 × (1 + 𝐫 ∕ 𝐧)⁽ⁿ⋅ᵗ⁾                                                                        | We grow one initial amount to the future.                        |
+| Present value (lump sum) | 𝐏𝐕 = 𝐅𝐕 ∕ (1 + 𝐫 ∕ 𝐧)⁽ⁿ⋅ᵗ⁾                                                                        | We discount one future amount back to today.                     |
+| FV – simple annual       | 𝐅𝐕 = 𝐏𝐕 × (1 + 𝐫)ⁿ                                                                                | Special case with 𝐧 = 1 (once per year).                         |
+| PV of annuity (ordinary) | 𝐏𝐕 = 𝐂 × [1 − (1 + 𝐫 ∕ 𝐧)⁻⁽ⁿ⋅ᵗ⁾] ∕ (𝐫 ∕ 𝐧)                                                       | We price a stream of payments at **end** of each period.         |
+| PV of annuity (due)      | 𝐏𝐕_dᵤₑ = 𝐏𝐕 × (1 + 𝐫 ∕ 𝐧)                                                                         | Same annuity, but payments at **beginning** of each period.      |
+| FV of saving annuity     | 𝐅𝐕 = 𝐂 × [((1 + 𝐫 ∕ 𝐧)⁽ⁿ⋅ᵗ⁾ − 1) ∕ (𝐫 ∕ 𝐧)]                                                       | We grow regular savings (saving plan) to a future date.          |
+| Required saving payment  | 𝐂ₛₐᵥₑ = 𝐅𝐕ₜₐᵣgₑₜ × (𝐫 ∕ 𝐧) ∕ [(1 + 𝐫 ∕ 𝐧)⁽ⁿ⋅ᵗ⁾ − 1]                                           | We solve for the yearly/monthly saving to hit a target 𝐅𝐕.       |
+| Payment from a given PV  | 𝐂 = 𝐏𝐕 × (𝐫 ∕ 𝐧) ∕ [1 − (1 + 𝐫 ∕ 𝐧)⁻⁽ⁿ⋅ᵗ⁾]                                                        | We solve for the periodic withdrawal compatible with a fund 𝐏𝐕. |
+| Continuous compounding   | 𝐅𝐕 = 𝐏𝐕 × 𝑒⁽ʳ⋅ᵗ⁾                                                                                | We grow money with continuous compounding.                       |
+| Discount factor (discrete)| 𝐃(𝐭) = 1 ∕ (1 + 𝐫 ∕ 𝐧)⁽ⁿ⋅ᵗ⁾                                                                      | We discount any cash flow at time 𝐭 with discrete compounding.   |
+| Discount factor (cont.)  | 𝐃(𝐭) = 𝑒⁻⁽ʳ⋅ᵗ⁾                                                                                   | We discount with a continuous rate (pricing intuit
+
