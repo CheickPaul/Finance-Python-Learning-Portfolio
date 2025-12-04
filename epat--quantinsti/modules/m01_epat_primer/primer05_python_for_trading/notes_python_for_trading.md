@@ -562,3 +562,6 @@ The list cand be grew or shrinked during execution
 
 ### <ins> Stacks, Queues, Graphe & Trees</ins>
 
+- List as stacks : A stack is a collection of objects which worsk as **LIFO** (Last In, First out). In the LIFO principle, the operation of adding object is called a push operation and the operation that consists of removing is called a pop. We respectively use the function lst.append(number to add), lst.pop() for the last object and lst.pop(index) by removing depending of the index
+
+- List as queues : A queue is a collection of object which works as **FIFO** (First in, First out)
