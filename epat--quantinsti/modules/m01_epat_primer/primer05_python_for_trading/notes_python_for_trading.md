@@ -495,4 +495,69 @@ In other words, we treat the retirement income as a **liability stream** and we 
 ##Section 3.
 
 ### <ins> lists</ins>
+ A list is an ordered, mutable sequence of object.
+The syntax of a list is a bracket + comma to separate elements
+e.g.   prices = [100, 101.5, 99.8] ;  tickers = ["AAPL", "MSFT", "GOOG"] ;   mixed   = [1, 2.5, "EURUSD", True]
+
+In python, we use the list to store series of values : prices, returns, trades etc
+
+#### Core properties
+
+**1. Ordered**
+   Ordered means each object has a specific position called an index
+   .e.g : assets = ["BOND", "STOCK", "OPTION"]
+   index 0 -> "Bond"
+   index 1 -> "STOCK"
+   index 2 -> "OPTION"
+
+   OR
+
+
+´´´
+  assets[0]   # "BOND"
+  assets[1]   # "STOCK"
+  assets[2]   # "OPTION"
+  assets[-1]  # "OPTION" (last)
+  ``
+
+
+**2. Mutable**
+By mutable we mean we can change, add or remvove elements
+
+lst = [10, 20, 30]
+lst[1] = 99      # [10, 99, 30]
+
+
+**3. Can contain any object**
+Integers, floats, strings, other lists, even custom objects
+e.g. : mixed = [1, 2.5, "AAPL", False]
+
+**4. Nestable (list of list)**
+Useful for tables, matrices, portfolios.
+
+e.g.: matrix = [[1, 2], [3, 4]] ; portfolio = [ ["AAPL", 100], ["MSFT", 50], ]
+
+**5. Dynamic size** 
+The list cand be grew or shrinked during execution
+
+#### Core Operations we need to memorize 
+### Core list operations to know by heart
+
+| Operation           | Syntax / Example                          | Explanation                                                                  |
+|------------------------------------|-------------------------------------------|-------------------------------------------------------------------------------------------|
+| Create a list                      | `lst = [10, 20, 30]`                      | We build a sequence of values (like a small time series of prices).                      |
+| Length (number of elements)        | `len(lst)`                                | Returns how many elements are in the list (size of the series).                          |
+| Access by index                    | `lst[0]`, `lst[1]`, `lst[-1]`            | Read element at a given position: 0 = first, -1 = last (like day 1, day 2, last day).    |
+| Change an element                  | `lst[1] = 99`                             | Overwrite a value at a given position (update a price, a quantity, etc.).                |
+| Append at the end                  | `lst.append(40)`                          | Add a new element at the end (like adding the latest price or last trade).               |
+| Insert at a given position         | `lst.insert(1, 15)`                       | Insert a value at index 1, shifting the others to the right.                             |
+| Remove last element (pop LIFO)     | `x = lst.pop()`                           | Remove and return the last element (stack / LIFO: last in, first out).                   |
+| Remove element at index (pop i)    | `x = lst.pop(1)`                          | Remove and return the element at index 1.                                                |
+| Remove by value                    | `lst.remove(15)`                          | Remove the first occurrence of the value 15 (if it exists).                              |
+| Slice: from a to b (sub-window)    | `lst[a:b]`                                | Sub-list from index a to b−1 (b excluded). Like taking a date range in a time series.    |
+| Slice: from a to end               | `lst[a:]`                                 | All elements from index a to the end (e.g. all prices after a given date).               |
+| Slice: from start to b             | `lst[:b]`                                 | All elements from the start up to b−1 (e.g. first b observations).                       |
+| Slice: last n elements             | `lst[-n:]`                                | Last n elements (e.g. last 20 trading days).                                             |
+| Copy a list (shallow copy)         | `copy_lst = lst[:]`                       | Simple way to duplicate a list (so changes on one do not affect the other).              |
+
 
