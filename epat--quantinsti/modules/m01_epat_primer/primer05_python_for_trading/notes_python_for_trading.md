@@ -560,4 +560,5 @@ The list cand be grew or shrinked during execution
 | Slice: last n elements             | `lst[-n:]`                                | Last n elements (e.g. last 20 trading days).                                             |
 | Copy a list (shallow copy)         | `copy_lst = lst[:]`                       | Simple way to duplicate a list (so changes on one do not affect the other).              |
 
+### <ins> Stacks, Queues, Graphe & Trees</ins>
 
