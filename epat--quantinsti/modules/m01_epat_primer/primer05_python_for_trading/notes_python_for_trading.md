@@ -703,3 +703,110 @@ prices = {
 | Membership test        | `20 in t`                       | Check if a value is inside the tuple.          |
 | Tuple unpacking        | `a, b, c = t`                   | Assign each element to a variable.             |
 | Use as dictionary key  | `d[(“AAPL”, “NASDAQ”)] = 190.5` | Tuples can be keys because they are immutable. |
+
+
+<ins> Sets </ins>
+
+A set is an unordered collection with unique elements. We can store a heterogeneous collection of elements (ints, floats, strings,…).
+A set cannot contain duplicates → each value appears at most once.
+A set is mutable → we can add or remove elements after creation.
+
+We usually use a set when we want:
+
+to keep unique values (no duplicates),
+
+to do set operations (union, intersection, difference) between datasets.
+
+Sets are enclosed in curly braces {...} or created with the set() function.
+Elements are separated by commas.
+
+Example :
+
+```
+# ⚠ {} is an empty dict, not a set
+empty_dict = {}
+type(empty_dict)          # dict
+
+# Proper empty set
+empty_set = set()
+type(empty_set)           # set
+
+# Basic sets
+names = {'Neo', 'Morphius', 'Trinity', 'Agent Smith', 'Oracle'}
+type(names)               # set
+
+# Duplicates are removed automatically
+names = {'Neo', 'Morphius', 'Trinity', 'Agent Smith',
+         'Agent Smith', 'Agent Smith', 'Oracle'}
+print(names)
+# {'Morphius', 'Trinity', 'Neo', 'Agent Smith', 'Oracle'}
+
+# Using set() on an iterable (string here)
+x_set = set('THEMATRIX')
+print(x_set)
+# {'R', 'I', 'E', 'T', 'M', 'X', 'H', 'A'}
+
+y_set = set('THETERMINATOR')
+print(y_set)
+# {'R', 'O', 'I', 'E', 'N', 'T', 'M', 'H', 'A'}
+```
+
+#### Core properties
+
+Sets are unordered (no index like lists), unique (no duplicates), and mutable (we can add/remove items).
+No indexing: we do not use s[0] or slicing.
+Membership is fast: x in my_set is very efficient.
+Typical use cases:
+clean a dataset to get unique tickers / IDs,
+compare two datasets (common items, only in A, only in B),
+implement logical filters via set operations.
+
+#### Set Operation 
+
+We assume : 
+x_set = set('ABCDE')   # {'B', 'C', 'E', 'D', 'A'}
+y_set = set('CDEFG')   # {'C', 'E', 'D', 'G', 'F'}
+
+| Operation (what we do)        | Syntax / Example                    | Explanation                                         |
+| ----------------------------- | ----------------------------------- | --------------------------------------------------- |
+| Create empty set              | `s = set()`                         | Proper way to create an empty set.                  |
+| Create literal set            | `s = {'A', 'B', 'C'}`               | Collection of unique elements.                      |
+| Create from iterable          | `s = set('ABCDE')`                  | Build a set from list/string/etc.                   |
+| Length                        | `len(s)`                            | Number of elements in the set.                      |
+| Membership test               | `'A' in x_set`                      | Check if an element is in the set.                  |
+| Add one element               | `x_set.add('H')`                    | Add a single item to the set.                       |
+| Discard element (safe remove) | `x_set.discard('H')`                | Remove if present, do nothing if not.               |
+| Remove element (strict)       | `x_set.remove('A')`                 | Remove element; raises error if not present.        |
+| Pop arbitrary element         | `elem = x_set.pop()`                | Remove and return an arbitrary element.             |
+| Copy                          | `copy_x = x_set.copy()`             | Shallow copy of the set.                            |
+| Clear all elements            | `x_set.clear()`                     | Empty the set (`set()` afterwards).                 |
+| Union (A ∪ B)                 | `x_set.union(y_set)`                | New set with elements in **A or B** (or both).      |
+| Union (operator)              | `x_set \| y_set`                    | Same as `union()`.                                  |
+| Intersection (A ∩ B)          | `x_set.intersection(y_set)`         | New set with elements **common** to both.           |
+| Intersection (operator)       | `x_set & y_set`                     | Same as `intersection()`.                           |
+| Difference (A − B)            | `x_set.difference(y_set)`           | Elements in `x_set` but **not** in `y_set`.         |
+| Difference (operator)         | `x_set - y_set`                     | Same as `difference()`.                             |
+| Symmetric difference (A △ B)  | `x_set.symmetric_difference(y_set)` | Elements in A or B, but not both.                   |
+| In-place difference update    | `x_set.difference_update(y_set)`    | Remove from `x_set` all elements also in `y_set`.   |
+| Disjoint test                 | `x_set.isdisjoint(y_set)`           | `True` if sets have **no element in common**.       |
+| Subset test (B ⊆ A)           | `y_set.issubset(x_set)`             | `True` if all elements of `y_set` are in `x_set`.   |
+| Superset test (A ⊇ B)         | `x_set.issuperset(y_set)`           | `True` if `x_set` contains all elements of `y_set`. |
+
+### Global summary – Core data structures & usages
+
+| Structure            | Definition (what it is)                                                                 | Typical syntax (Python)                                                                 | Ordered?                         | Mutable?                        | Duplicates allowed?                      | Indexed by                | Typical use / notes                                                                                          |
+|----------------------|-----------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------|----------------------------------|---------------------------------|------------------------------------------|---------------------------|--------------------------------------------------------------------------------------------------------------|
+| **List**             | Ordered sequence of objects (general container).                                       | `lst = [10, 20, 30]`                                                                    | Yes (keeps insertion order)      | Yes (we can change/add/remove) | Yes                                      | Integer index (`lst[i]`) | Time series (prices, returns), lists of trades, generic containers.                                          |
+| **List as stack**    | List used as **LIFO** stack (Last In, First Out).                                      | `stack = []`<br>`stack.append(x)`<br>`x = stack.pop()`                                  | Yes (top = end of list)         | Yes                             | Yes                                      | Top via `stack[-1]`      | Call stacks, temporary buffers, undo history, evaluation of expressions.                                     |
+| **List as queue**    | List used as **FIFO** queue (First In, First Out).                                     | `queue = []`<br>`queue.append(x)`<br>`x = queue.pop(0)`                                 | Yes                              | Yes                             | Yes                                      | Front via index `0`      | Simple queues, but inefficient for large N (shifts elements on `pop(0)`).                                    |
+| **Deque (queue)**    | Double-ended queue, efficient for FIFO/LIFO.                                           | `from collections import deque`<br>`q = deque([...])`<br>`q.append(x)` / `q.popleft()`  | Logical order (left→right)       | Yes                             | Yes                                      | Front/back (no index use) | Real queues (FIFO) for events/messages, logs, task scheduling.                                               |
+| **Graph**            | Network of nodes (vertices) connected by edges.                                        | `g = {'A': ['B','C'], 'B': ['A','C','D'], ...}`                                         | Depends on implementation        | Yes (dict + lists)             | Yes (but usually unique neighbors)       | By node key              | Adjacency lists: networks, routes, counterparty graphs, state transitions.                                   |
+| **Tree**             | Hierarchical structure (root → branches → leaves).                                     | `class Tree: ...`<br>`tree = Tree("Root", left, right)`                                | Hierarchical, not linear index   | Yes (via objects)              | Yes                                      | Attributes (`node.left`) | Game trees, scenario trees, decision trees, parsing, search.                                                 |
+| **Dictionary (dict)**| Mapping **key → value**.                                                                | `d = {"AAPL": 190.5, "MSFT": 340.2}`                                                    | Insertion order kept (Py3.7+)    | Yes (we can add/change keys)   | Keys must be unique                       | By key (`d["AAPL"]`)     | Lookup tables: ticker → price, account → PnL, ISIN → bond info, parameters, config.                          |
+| **Tuple**            | Immutable ordered sequence (like a read-only list).                                    | `t = (10, 20, 30)`<br>`single = (10,)`                                                  | Yes                              | **No** (cannot modify)         | Yes                                      | Integer index (`t[i]`)   | Fixed records `(ticker, qty)`, return multiple values, keys for dicts.                                       |
+| **Set**              | Unordered collection of **unique** elements.                                           | `s = {"AAPL", "MSFT"}`<br>`s = set([1, 2, 2, 3])`                                       | No (conceptually unordered)      | Yes (can add/remove)           | **No** (duplicates removed automatically) | Not indexed              | Unique tickers/IDs, membership tests (`x in s`), set operations (union/intersection/difference) on datasets. |
+| **Empty dict**       | Dictionary with no entries.                                                             | `empty_dict = {}`                                                                       | –                                | Yes                             | –                                        | –                         | Start a mapping and fill it later.                                                                            |
+| **Empty set**        | Set with no elements.                                                                   | `empty_set = set()`                                                                     | –                                | Yes                             | –                                        | –                         | Start a unique-collection container; important: `{}` is **dict**, not set.                                   |
+
+---
+## SECTION 5 : Market Data and Charts
