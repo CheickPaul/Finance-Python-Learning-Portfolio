@@ -627,23 +627,28 @@ we can change, add, remove elements without changing the identity of the dict.
 - Lists cannot be keys (because lists are mutable).
 
 
-#### Core dictionary operations to know by heart
+#### Core dictionary operations 
 
-| Operation (what we do)                       | Syntax / Example                                          | Explanation (market-style)                                                                 |
-|---------------------------------------------|-----------------------------------------------------------|---------------------------------------------------------------------------------------------|
-| Create a dictionary                          | `d = {"AAPL": 190.5, "MSFT": 340.2}`                     | Map **keys → values** (e.g. ticker → last price).                                           |
-| Empty dictionary                             | `d = {}`                                                  | Start with no data, then add keys later.                                                    |
-| Access value by key                          | `d["AAPL"]`                                               | Lookup: we use the **key** (ticker) to get the value (price).                              |
-| Add a new key/value                         | `d["GOOG"] = 2800.0`                                      | If key does not exist, we **create** it.                                                   |
-| Update an existing key                      | `d["AAPL"] = 195.0`                                       | If key exists, we **overwrite** the old value.                                             |
-| Check if key exists                         | `"AAPL" in d`                                             | Returns `True` if the key is present (like checking if a ticker is in our mapping).        |
-| Remove and return value (`pop`)            | `price = d.pop("MSFT")`                                   | Deletes the key and returns its value (like closing a position and reading its PnL).       |
-| Delete key (no return)                      | `del d["AAPL"]`                                           | Removes key/value from the dictionary, no value returned.                                  |
-| Get all keys                                | `d.keys()`                                                | View all keys (e.g. list of tickers or account IDs).                                       |
-| Get all values                              | `d.values()`                                              | View all values (e.g. list of prices, PnL, exposures).                                     |
-| Get key–value pairs                         | `d.items()`                                               | Returns pairs `(key, value)` → useful for looping (e.g. ticker and its price together).    |
-| Safe lookup with default (`get`)           | `d.get("TSLA", 0.0)`                                      | Returns value if key exists, otherwise returns default (here `0.0`) instead of error.      |
-| Number of entries                           | `len(d)`                                                  | Count how many key/value pairs (e.g. how many tickers/accounts we track).                  |
+
+| Operation                       | Syntax / Example                                          | Explanation                                                                                  |
+|--------------------------------------------------|-----------------------------------------------------------|------------------------------------------------------------------------------------------------------------|
+| Create a dictionary                              | `d = {"AAPL": 190.5, "MSFT": 340.2}`                     | Map **keys → values** (e.g. ticker → last price).                                                          |
+| Empty dictionary                                 | `d = {}`                                                  | Start with no data, then add keys later.                                                                   |
+| Access value by key                              | `d["AAPL"]`                                               | Lookup: we use the **key** (ticker) to get the value (price).                                             |
+| Add a new key/value                              | `d["GOOG"] = 2800.0`                                      | If key does not exist, we **create** it.                                                                   |
+| Update an existing key                           | `d["AAPL"] = 195.0`                                       | If key exists, we **overwrite** the old value.                                                             |
+| Check if key exists                              | `"AAPL" in d`                                             | Returns `True` if the key is present (like checking if a ticker is in our mapping).                        |
+| Remove and return value (`pop`)                  | `price = d.pop("MSFT")`                                   | Deletes the key and returns its value (like closing a position and reading its PnL).                       |
+| Delete key (no return)                           | `del d["AAPL"]`                                           | Removes key/value from the dictionary, no value returned.                                                  |
+| Get all keys                                     | `d.keys()`                                                | View all keys (e.g. list of tickers or account IDs).                                                       |
+| Get all values                                   | `d.values()`                                              | View all values (e.g. list of prices, PnL, exposures).                                                     |
+| Get key–value pairs                              | `d.items()`                                               | Returns pairs `(key, value)` → useful for looping (ticker and its price together).                         |
+| Safe lookup with default (`get`)                 | `d.get("TSLA", 0.0)`                                      | Returns value if key exists, otherwise returns default (here `0.0`) instead of raising an error.          |
+| Number of entries                                | `len(d)`                                                  | Count how many key/value pairs (e.g. how many tickers/accounts we track).                                 |
+| Sorted list of keys                              | `sorted(d)` or `sorted(d.keys())`                        | Returns a **new list** of keys sorted (e.g. tickers sorted alphabetically). Dictionary itself not changed. |
+| Sorted list of values                            | `sorted(d.values())`                                      | Returns a **new list** of values sorted (e.g. prices or PnL sorted from lowest to highest).               |
+| Sorted by key–value pairs (e.g. sort by value)   | `sorted(d.items(), key=lambda x: x[1])`                  | Returns a **sorted list of (key, value)** pairs, e.g. accounts sorted by PnL, exposures, or risk.         |
+
 
 
 
