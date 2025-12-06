@@ -562,6 +562,89 @@ The list cand be grew or shrinked during execution
 
 ### <ins> Stacks, Queues, Graphe & Trees</ins>
 
-- List as stacks : A stack is a collection of objects which worsk as **LIFO** (Last In, First out). In the LIFO principle, the operation of adding object is called a push operation and the operation that consists of removing is called a pop. We respectively use the function lst.append(number to add), lst.pop() for the last object and lst.pop(index) by removing depending of the index
+- List as stacks : A stack is a collection of objects which worsk as **LIFO** (Last In, First out). In the LIFO principle, the operation of adding object is called a push operation and the operation that consists of removing is called a pop. We respectively use the function lst.append(number to add), lst.pop() for removing the last object and lst.pop(index) by removing depending of the index
 
-- List as queues : A queue is a collection of object which works as **FIFO** (First in, First out)
+- List as queues  : A queue is a collection of object which works as **FIFO** (First in, First out). A deque allows fast appends and pops from both ends (append, appendleft, pop, popleft) which is more efficient than a plain list for queues.
+
+  ```
+  from collections import deque
+
+# Initial queue: Roger arrives first, Novak arrives last
+my_queue = deque(["Roger Federer", "Rafael Nadal", "Novak Djokovic"])
+
+# Two more people join the queue
+my_queue.append("Andre Agassi")
+my_queue.append("Pete Sampras")
+# deque(['Roger Federer', 'Rafael Nadal', 'Novak Djokovic', 'Andre Agassi', 'Pete Sampras'])
+
+# First In, First Out: we remove from the left
+first = my_queue.popleft()   # 'Roger Federer'
+second = my_queue.popleft()  # 'Rafael Nadal'
+
+# Now the queue starts with Novak
+# deque(['Novak Djokovic', 'Andre Agassi', 'Pete Sampras'])
+
+### <ins> Dictionary</ins>
+A dictionary is a data structure used for mapping. it connects a key to a value. like a phone directorie that connect a name to a phone number. Regarding the wyntax. dict is enclosed in brace brackets {}. Key–value pairs separated by commas, key and value separated by :.
+
+Example:
+
+```python
+prices = {
+    "AAPL": 190.5,
+    "MSFT": 340.2,
+    "EURUSD": 1.0850
+}
+In thi example, "AAPL", "MSFT", "EURUSD" are keys and 190.5, 340.2, 1.0850 are values. to get the value we use the key as described below :
+prices["AAPL"]   # 190.5
+```
+
+#### Core properties
+
+**1. Indexed by keys, not by position**
+
+The dictionary is indexed by the key and not by the position suc as a list (0,1,2,...)
+my_list = [100, 200, 300]
+my_list[0]       # 100
+
+my_dict = {"AAPL": 190.5, "MSFT": 340.2}
+my_dict["AAPL"]  # 190.5
+
+
+**2. Unordered (conceptually)**
+The dictionary is not indexed by the position so we do not rely on an ordered sequence of elements. Then, a dictionary is conceptualy unordered
+
+**3. Keys are unique**
+we cannot have 2 indentical keys with different values. If we reassign, the value is overwritten
+d = {"AAPL": 100}
+d["AAPL"] = 105   # now "AAPL" -> 105
+
+**4. dictionaries are mutable**
+we can change, add, remove elements without changing the identity of the dict.
+
+**5. Keys must be immutable**
+- Typical key types: str, int, float, tuple…
+- Lists cannot be keys (because lists are mutable).
+
+
+#### Core dictionary operations to know by heart
+
+| Operation (what we do)                       | Syntax / Example                                          | Explanation (market-style)                                                                 |
+|---------------------------------------------|-----------------------------------------------------------|---------------------------------------------------------------------------------------------|
+| Create a dictionary                          | `d = {"AAPL": 190.5, "MSFT": 340.2}`                     | Map **keys → values** (e.g. ticker → last price).                                           |
+| Empty dictionary                             | `d = {}`                                                  | Start with no data, then add keys later.                                                    |
+| Access value by key                          | `d["AAPL"]`                                               | Lookup: we use the **key** (ticker) to get the value (price).                              |
+| Add a new key/value                         | `d["GOOG"] = 2800.0`                                      | If key does not exist, we **create** it.                                                   |
+| Update an existing key                      | `d["AAPL"] = 195.0`                                       | If key exists, we **overwrite** the old value.                                             |
+| Check if key exists                         | `"AAPL" in d`                                             | Returns `True` if the key is present (like checking if a ticker is in our mapping).        |
+| Remove and return value (`pop`)            | `price = d.pop("MSFT")`                                   | Deletes the key and returns its value (like closing a position and reading its PnL).       |
+| Delete key (no return)                      | `del d["AAPL"]`                                           | Removes key/value from the dictionary, no value returned.                                  |
+| Get all keys                                | `d.keys()`                                                | View all keys (e.g. list of tickers or account IDs).                                       |
+| Get all values                              | `d.values()`                                              | View all values (e.g. list of prices, PnL, exposures).                                     |
+| Get key–value pairs                         | `d.items()`                                               | Returns pairs `(key, value)` → useful for looping (e.g. ticker and its price together).    |
+| Safe lookup with default (`get`)           | `d.get("TSLA", 0.0)`                                      | Returns value if key exists, otherwise returns default (here `0.0`) instead of error.      |
+| Number of entries                           | `len(d)`                                                  | Count how many key/value pairs (e.g. how many tickers/accounts we track).                  |
+
+
+
+
