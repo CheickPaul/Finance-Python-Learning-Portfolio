@@ -810,3 +810,97 @@ y_set = set('CDEFG')   # {'C', 'E', 'D', 'G', 'F'}
 
 ---
 ## SECTION 5 : Market Data and Charts
+
+### <ins> Time Series Data </ins>
+
+A **time series** is a series of observations of a variable **indexed in time order**.
+
+- We observe a variable (price, volume, PnL, rate…) at **different points in time**.
+- Each observation = **value + timestamp**.
+- Observations are usually recorded at **specific and regular intervals** (1s, 1 min, 1 day…).
+
+In finance, almost everything important (prices, volumes, indicators) is stored as **time series data**.
+
+---
+
+#### Core definition
+
+> **Time series data** = a collection of observations of a variable ordered in time  
+> (e.g. daily closing price of AAPL, 1-minute LTP of a future, hourly FX rate).
+
+Examples:
+- Daily closing price of AAPL for 1 year.
+- 5-min OHLCV bars of ES futures.
+- 1-second Last Traded Price (LTP) stream on a crypto.
+
+---
+
+#### OHLCV time series
+
+One of the most important formats for short-term trading is the **OHLCV** time series:
+
+- **O** = Open (opening price of the bar/day)  
+- **H** = High (highest price within the bar/day)  
+- **L** = Low (lowest price within the bar/day)  
+- **C** = Close (closing price of the bar/day)  
+- **V** = Volume (traded quantity during the bar/day)
+
+These are usually stored as **bars** over a chosen horizon (granularity):
+- Daily OHLCV  
+- 1-hour OHLCV  
+- 5-minute OHLCV, etc.
+
+OHLCV time series allow us to:
+- analyse and forecast price movements,
+- build indicators,
+- plot candlestick charts,
+- backtest trading strategies.
+
+---
+
+### LTP time series (Last Traded Price)
+
+For intraday / high-frequency:
+
+- We can work with **LTP (Last Traded Price)** time series.
+- LTP can be recorded, for example:
+  - every **1 second**
+  - every **1 minute**
+  - every **tick** (every trade)
+
+This is useful when:
+- we do **intraday trading**,  
+- we train **machine learning** models on high-frequency data.
+
+---
+
+#### Granularity (time resolution)
+
+**Granularity** = length of the time interval between observations.
+
+Examples of granularity:
+- 1 second LTP
+- 1 minute OHLC
+- 5 minute OHLC
+- 1 hour OHLC
+- 1 day OHLCV
+
+Choosing the **right granularity** is crucial:
+
+- For **intraday ML model** → very low granularity (e.g. 1-second LTP) is often used to train the algorithm.
+- For **Japanese candlestick / chart-based trading** → 1-minute or 5-minute OHLC data is more suitable.
+
+Rule of thumb:
+- Higher granularity (1 day) → smoother view, less noise, less detail.  
+- Lower granularity (1s, ticks) → more detail, more noise, heavier data.
+
+---
+#### Other data structures (beyond simple time series)
+
+| Data type        | Time dimension?          | Entities (what we observe)         | Variables (what we measure)              | Example (markets)                                                                 |
+|------------------|--------------------------|-------------------------------------|------------------------------------------|-----------------------------------------------------------------------------------|
+| Time series      | Yes (multiple dates)     | 1 entity                            | 1 or several variables                   | Daily OHLCV of **AAPL** over 1 year.                                             |
+| Cross-sectional  | Single timestamp         | Many entities at one point in time  | 1 or several variables                   | OHLC of **AAPL, MSFT, TSLA** at **11:30am** today.                               |
+| Longitudinal     | Yes (over time)          | 1 entity                            | Several characteristics of that entity   | 1-week **OHLC** time series for **Infosys**.                                     |
+| Panel            | Yes (over time)          | Many entities                       | Usually 1 main characteristic per entity | Daily **closing price** of **AAPL, MSFT, TSLA** over **1 year** (panel of stocks). |
+
