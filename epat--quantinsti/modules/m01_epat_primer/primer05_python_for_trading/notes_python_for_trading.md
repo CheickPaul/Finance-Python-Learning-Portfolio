@@ -560,6 +560,8 @@ The list cand be grew or shrinked during execution
 | Slice: last n elements             | `lst[-n:]`                                | Last n elements (e.g. last 20 trading days).                                             |
 | Copy a list (shallow copy)         | `copy_lst = lst[:]`                       | Simple way to duplicate a list (so changes on one do not affect the other).              |
 
+---
+
 ### <ins> Stacks, Queues, Graphe & Trees</ins>
 
 - List as stacks : A stack is a collection of objects which worsk as **LIFO** (Last In, First out). In the LIFO principle, the operation of adding object is called a push operation and the operation that consists of removing is called a pop. We respectively use the function lst.append(number to add), lst.pop() for removing the last object and lst.pop(index) by removing depending of the index
@@ -583,6 +585,8 @@ second = my_queue.popleft()  # 'Rafael Nadal'
 
 # Now the queue starts with Novak
 # deque(['Novak Djokovic', 'Andre Agassi', 'Pete Sampras'])
+
+---
 
 ### <ins> Dictionary</ins>
 A dictionary is a data structure used for mapping. it connects a key to a value. like a phone directorie that connect a name to a phone number. Regarding the wyntax. dict is enclosed in brace brackets {}. Key–value pairs separated by commas, key and value separated by :.
@@ -649,7 +653,53 @@ we can change, add, remove elements without changing the identity of the dict.
 | Sorted list of values                            | `sorted(d.values())`                                      | Returns a **new list** of values sorted (e.g. prices or PnL sorted from lowest to highest).               |
 | Sorted by key–value pairs (e.g. sort by value)   | `sorted(d.items(), key=lambda x: x[1])`                  | Returns a **sorted list of (key, value)** pairs, e.g. accounts sorted by PnL, exposures, or risk.         |
 
+---
 
 
 
+### <ins> Tuples and sets </ins>
 
+A tuple is like a list but immutable.
+- we can store a hetereogenous sequence of elements ( ints float,...)
+- We cannot append, edit, or remove elements once the tuple is created.
+- We usually use tuple when we want data that should **not change** ( protection against accidental modification),
+- we want to use data as a **key in dictionnary**
+
+Tuples are enclosed in **parentheses** `(...)`, elements are separated by commas.
+
+example :
+
+```
+python
+empty_tuple = ()
+single_tuple = (10,)                # note the comma
+coords = (52.5, 13.4)
+mixed = ( "AAPL", 100, 190.5 )
+nested = ( ("EURUSD", 1.085), ("GBPUSD", 1.27) )
+
+```
+
+#### Core properties
+
+Tuples are **immutable** ( we cannot cahnge or add items), **ordered** ( we access by index like list)  and **can be used as dictionary keys** ( exampe belows)
+```
+prices = {
+    ("AAPL", "NASDAQ"): 190.5,
+    ("MSFT", "NASDAQ"): 340.2
+}
+```
+
+#### Tuple operations
+
+| Operation (what we do) | Syntax / Example                | Explanation                                    |
+| ---------------------- | ------------------------------- | ---------------------------------------------- |
+| Create a tuple         | `t = (10, 20, 30)`              | Fixed, ordered collection of elements.         |
+| Single-element tuple   | `t = (10,)`                     | Comma is required, otherwise it’s just `10`.   |
+| Length                 | `len(t)`                        | Number of elements in the tuple.               |
+| Access by index        | `t[0]`, `t[1]`, `t[-1]`         | Same as lists: 0 = first, -1 = last.           |
+| Slicing (sub-tuple)    | `t[a:b]`                        | From index `a` to `b-1` (like for lists).      |
+| Concatenation          | `t1 + t2`                       | Combine two tuples into a new one.             |
+| Repetition             | `t * 3`                         | Repeat the tuple 3 times.                      |
+| Membership test        | `20 in t`                       | Check if a value is inside the tuple.          |
+| Tuple unpacking        | `a, b, c = t`                   | Assign each element to a variable.             |
+| Use as dictionary key  | `d[(“AAPL”, “NASDAQ”)] = 190.5` | Tuples can be keys because they are immutable. |
