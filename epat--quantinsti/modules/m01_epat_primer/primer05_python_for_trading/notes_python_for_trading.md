@@ -904,3 +904,5 @@ Rule of thumb:
 | Longitudinal     | Yes (over time)          | 1 entity                            | Several characteristics of that entity   | 1-week **OHLC** time series for **Infosys**.                                     |
 | Panel            | Yes (over time)          | Many entities                       | Usually 1 main characteristic per entity | Daily **closing price** of **AAPL, MSFT, TSLA** over **1 year** (panel of stocks). |
 
+
+### <ins> Import Time series data</ins>
