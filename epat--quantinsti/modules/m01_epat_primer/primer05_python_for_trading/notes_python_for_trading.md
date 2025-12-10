@@ -906,3 +906,405 @@ Rule of thumb:
 
 
 ### <ins> Import Time series data</ins>
+
+
+#### 1) DataFrame – the core container
+
+A **DataFrame** is the main pandas object we use for time series:
+
+- 2D table (like an Excel sheet) with **rows** and **columns**.
+- Labeled axes:
+  - `axis=0` → rows (index, often dates in time series)
+  - `axis=1` → columns (variables: Open, High, Low, Close, Volume, etc.)
+- Rows and columns are **indexed**, so we can locate any value.
+- Size is **mutable** (we can add/drop rows/columns).
+- Each column can have its **own data type** (string, int, float, datetime,…).
+
+Example (concept):
+- `employee_id` (string)  
+- `name` (string)  
+- `salary` (int)  
+
+In finance, OHLCV time series from the web are almost always loaded into a **DataFrame**.
+
+Before using it:
+
+```python
+import pandas as pd
+```
+
+##### Importing OHLC time series from yahoo finance
+```
+from pandas_datareader import data as pdr
+
+# Download historical OHLCV data for a ticker (e.g. AAPL)
+df = pdr.get_data_yahoo('AAPL',  start='2020-01-01',  end='2020-12-31')             # ticker
+  "
+     'AAPL'               # ticker
+    start='2020-01-01',  # start date
+    end='2020-12-31'     # end date
+"
+
+
+# Look at the first 5 rows
+df.head()
+```
+##### Importing time series from a local CSV
+
+```
+import pandas as pd
+
+# Read a CSV file with time series data
+infy = pd.read_csv("path/to/your/infy.csv")
+
+# Show first 5 rows
+infy.head()
+```
+
+Typical CSV columns:
+
+Date, Open, High, Low, Close, Volume, etc.
+
+In practice, we often:
+
+infy['Date'] = pd.to_datetime(infy['Date'])   # convert to datetime
+infy = infy.set_index('Date')                # set Date as index for tim
+
+##### Big picture (for trading / quant workflows)
+
+1)Import data
+
+- from web (pandas_datareader, APIs, etc.)
+
+- or from local files (pd.read_csv, pd.read_parquet, etc.)
+
+2) Store everything in a DataFrame
+
+- rows = dates (time index)
+
+- columns = prices, volumes, indicators, signals
+
+3) Run analytics / models
+
+- compute returns, moving averages, volatility, indicators
+
+- backtest trading strategies
+
+- feed ML models with time series features
+  
+DataFrame = our standard grid to structure market data before any quant/risk/trading logic.
+
+#### Converting 'Date' and setting it as time index
+
+#### Converting 'Date', setting time index & inspecting the DataFrame
+
+| Line of code                                   | What it does (technical)                                                              | Why we use it (time series / trading use-case)                                                                          | How to use it in practice                                                                                 |
+|-----------------------------------------------|----------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------|
+| `infy['Date'] = pd.to_datetime(infy['Date'])` | Converts the **'Date' column** from string/object → `datetime64` (proper date/time).  | We need a real **datetime type** to use time-series tools (date filtering, resampling, rolling windows, etc.).         | Run this right after `pd.read_csv(...)` if `'Date'` is read as text.                                      |
+| `infy = infy.set_index('Date')`               | Sets the **'Date'** column as the **index** (time axis, `axis=0`) of the DataFrame.   | This turns the table into a **time-indexed DataFrame**, ideal for pricing series, backtests, and signal computation.   | Run this after converting to datetime. Then you can do `infy['2020-01']`, `infy.loc['2020-01-01':...]`, etc. |
+| `infy.head()`                                 | Shows the **first 5 rows** of the DataFrame (by default).                             | Quick **sanity check**: columns, types, first dates, first prices/volumes look coherent before any analytics.          | Use right after import/cleaning to validate that your time series looks correct.                          |
+| `infy.tail()`                                 | Shows the **last 5 rows** of the DataFrame (by default).                              | Check the **end of the series**: last date available, recent prices, possible gaps (important for backtest horizon).   | Use to confirm the latest available date and the quality of the “tail” of the series.                     |
+
+
+### <ins>How to Plot Market Data with Matplotlib</ins>
+
+We assume we already imported an OHLC time series into a pandas DataFrame (e.g. **Infosys** data in `infy`).
+
+Typical steps:
+1. **Import price data** into a DataFrame (`pd.read_csv(...)`).
+2. **Select the series** we want to plot (e.g. close price).
+3. **Use Matplotlib (`pyplot`)** to create and customise the plot.
+
+---
+
+#### 1) Loading the data (Infosys example)
+
+```python
+import pandas as pd
+
+# Read CSV file stored on the local machine
+infy = pd.read_csv('infy_dv.csv')
+
+# (Optional good practice for time series)
+infy['Date'] = pd.to_datetime(infy['Date'])
+infy = infy.set_index('Date')
+
+# Extract the Close price time series
+infy_close = infy['Close']
+
+Here:
+infy = DataFrame with OHLCV time series for Infosys.
+infy_close = closing price time series (market data we want to plot).
+
+#### 2) Basic plot with Matplotlib
+
+import matplotlib.pyplot as plt
+
+ In a Jupyter / IPython notebook:
+%matplotlib inline   # makes plots show inside the notebook
+plt.plot(infy_close)
+plt.show()
+plt.plot(infy_close) → plots the close price vs index (dates on X-axis, prices on Y-axis).
+
+plt.show() → actually displays the graph.
+
+By default:
+
+X-axis = time (dates),
+
+Y-axis = close price.
+
+#### 3) Customising the plot (size, colors, labels, grid)
+plt.figure(figsize=(14, 5))          # 1) control the size of the figure
+
+plt.plot(infy_close, 'b')            # 2) blue line for the close price ('b' = blue)
+plt.plot(infy_close, 'ro')           # 3) red circle markers for each data point ('r' = red, 'o' = circle)
+
+plt.grid(True)                       # 4) add grid lines (helps visual reading)
+
+plt.title('Infosys Close Price Representation')  # 5) chart title
+plt.xlabel('Trading Days')           # 6) X-axis label (time axis)
+plt.ylabel('Infosys Close Price')    # 7) Y-axis label (price axis)
+
+plt.show()                           # 8) display the plot
+
+- plt.figure(figsize=(14,5))
+
+Set the figure size → here width = 14, height = 5 (in inches).
+
+Larger size helps reading dates and price moves.
+
+- plt.plot(infy_close, 'b')
+
+Plot a blue line ('b') for the time series.
+
+plt.plot(infy_close, 'ro')
+
+Plot red circle markers on each data point ('r' = red, 'o' = marker style “circle”).
+
+This combination is a classic “line + markers” style: line shows the trend, markers show discrete observations.
+
+- plt.grid(True)
+
+Add a grid to help interpret levels (support/resistance zones, gaps, etc.).
+
+plt.title(...) / plt.xlabel(...) / plt.ylabel(...)
+
+Name the chart and axes → important for risk reporting and strategy dashboards.
+
+- plt.show()
+
+Actually renders the plot (especially needed outside notebooks).
+
+
+<ins>Key plotting commands recap</ins>
+
+| Command / line                        | Meaning (technical)                                 | Market use (intuition)                                             |
+| ------------------------------------- | --------------------------------------------------- | ------------------------------------------------------------------ |
+| `import matplotlib.pyplot as plt`     | Import Matplotlib plotting module with alias `plt`. | Main tool to create charts of prices, returns, signals.            |
+| `%matplotlib inline`                  | Show plots **inside** a Jupyter notebook.           | Keep all risk/price charts visible in the same analysis notebook.  |
+| `plt.figure(figsize=(14, 5))`         | Create a new figure with custom size.               | Make charts wider for better readability of dates and price moves. |
+| `plt.plot(infy_close)`                | Plot the close price as a line.                     | Visualise the price time series (trend, shocks, volatility).       |
+| `plt.plot(infy_close, 'b')`           | Plot as a **blue line**.                            | Color coding (blue for price, others for signals, etc.).           |
+| `plt.plot(infy_close, 'ro')`          | Plot **red circle markers** at each data point.     | Emphasize discrete observations (daily closes).                    |
+| `plt.grid(True)`                      | Add a grid to the plot.                             | Easier to read levels (support/resistance, price zones).           |
+| `plt.title('Infosys Close Price...')` | Set the chart title.                                | Label the figure (ticker + metric) for reporting/communication.    |
+| `plt.xlabel('Trading Days')`          | Label the X-axis.                                   | Clarify that horizontal axis is time (trading days).               |
+| `plt.ylabel('Infosys Close Price')`   | Label the Y-axis.                                   | Clarify the vertical axis (price in INR, USD, etc.).               |
+| `plt.show()`                          | Render and display the plot.                        | Final step to actually see your market data chart.                 |
+
+### <ins> 3D plotting – Volatility surface (optional) </ins>
+
+This notebook shows how to plot a **3D surface** in Python, using a toy example of an **implied volatility surface** σ(K, T) as a function of **strike** and **time to maturity**.
+
+In real markets, these kinds of plots are used to visualise:
+- the **smile/skew** of implied volatility vs strike,
+- the **term structure** of implied volatility vs maturity.
+
+
+---
+
+#### 1) Random data creation with NumPy
+
+```python
+import numpy as np
+
+# 1D grids: strike and time
+strike_price = np.linspace(100, 150, 25)   # Strike values between 100 and 150
+time = np.linspace(0.5, 2.5, 25)           # Time to maturity between 0.5 and 2.5 years
+
+# Create a 2D grid from the 1D arrays (rectangular grid)
+strike_price, time = np.meshgrid(strike_price, time)
+
+# Generate fake implied volatilities
+implied_volatility = (strike_price - 100) ** 2 / (100 * strike_price) / time
+
+#### 2) 3D plotting with Matplotlib
+import matplotlib.pyplot as plt
+
+" Import the 3D toolkit"
+from mpl_toolkits.mplot3d import Axes3D
+
+fig = plt.figure(figsize=(9, 6))
+
+# Enable 3D axes
+axis = fig.add_subplot(111, projection='3d')
+
+# Plot the surface
+surface = axis.plot_surface(
+    strike_price,
+    time,
+    implied_volatility,
+    rstride=1,
+    cstride=1,
+    cmap=plt.cm.coolwarm,
+    linewidth=0.5,
+    antialiased=False
+)
+
+ `axis.plot_surface(strike_price, time, implied_volatility, ...)`:
+
+- `strike_price` (X-axis): 2D grid of strikes
+- `time` (Y-axis): 2D grid of times-to-maturity
+- `implied_volatility` (Z-axis): vol values on this (K, T) grid
+- other arguments (`rstride`, `cstride`, `cmap`, etc.) control only the **visual style** of the surface.
+
+# Colorbar (mapping colors to volatility values)
+fig.colorbar(surface, shrink=0.5, aspect=5)
+
+plt.show()
+
+#### 3) Quant / trading intuition
+Even if the code details are optional, the concept is very relevant in derivatives:
+
+We think of implied volatility as a surface: σ(K, T).
+
+For each strike K and maturity T, the market gives us an option price → from which we extract an implied vol.
+Plotting this as a 3D surface helps us:
+
+understand the smile/skew (how vol changes with moneyness),
+
+understand the term structure (how vol changes with maturity),
+
+visually check for anomalies or weird shapes that might indicate model issues or data problems.
+
+#### 4) Data preparation for candlestick plotting
+
+We usually start from an OHLCV DataFrame, e.g. `infy`:
+
+```python
+import pandas as pd
+
+infy = pd.read_csv('infy_dv.csv', parse_dates=['Date'])
+infy = infy.set_index('Date')
+
+"we have to make sure columns are named like this (or adapt to your plotting function):
+ 'Open', 'High', 'Low', 'Close', 'Volume'"
+infy.head()
+```
+
+#### 5) Candlestick plotting with mplfinance
+import mplfinance as mpf
+
+ Basic candlestick chart :
+ 
+mpf.plot(
+    infy,
+    type='candle',          # candlestick chart
+    style='charles',        # visual style (many presets available)
+    volume=True,            # add volume subplot
+    title='Infosys – Daily Candlestick Chart',
+    ylabel='Price',
+    ylabel_lower='Volume'
+)
+
+here :
+type='candle'
+→ candlestick representation (OHLC). Other options: 'line', 'ohlc', etc.
+
+style='charles' (or ‘classic’, ‘yahoo’, etc.)
+→ predefined chart themes (colors, grid, background).
+
+volume=True
+→ add a separate volume panel below price.
+
+title, ylabel, ylabel_lower
+→ labels for chart and axes.
+
+---
+# SECTION 6 : FUNCTIONS 
+
+### <ins>What Are Functions?</ins>
+
+A **function** in Python is a **block of organised code** that performs **one specific task**.
+
+- It **takes inputs** (arguments),
+- **does some processing**,
+- **returns an output** (optionally),
+- and can be called **many times** in the program.
+
+From a trading / quant perspective, a function is like a **reusable building block**:
+- pricing routine,
+- risk metric (vol, VaR),
+- indicator calculator (moving average, Bollinger Bands, etc.).
+
+---
+
+#### Why do we use functions?
+
+- **Modularity**: we break a big script into clear logical blocks.
+- **Reusability**: once a function is defined, we can reuse it on any dataset.
+- **Readability**: code is easier to understand and maintain.
+- **Less repetition (DRY)**: “Don’t Repeat Yourself” → avoid copying the same code 10 times.
+
+In Python we already used many functions without noticing:
+
+- `my_list.pop()` → removes and returns an element from the list.
+- `pd.read_csv()` → loads CSV data into a DataFrame.
+- `plt.plot()` and `plt.show()` → plotting functions.
+- These are **library functions** provided by Python and external packages.
+
+---
+
+### Built-in vs User-defined functions
+
+#### 1) Built-in / library functions
+
+Examples:
+
+```python
+my_list.pop()          # list method
+pd.read_csv("file.csv")  # pandas function
+plt.plot(x, y)         # matplotlib function
+plt.show()
+
+### Some essentials functions 
+
+| Function / Method          | Belongs to / Type          | Main inputs (arguments)                                      | Output / Effect                                            | Typical quant / trading use                              |
+|----------------------------|----------------------------|--------------------------------------------------------------|-----------------------------------------------------------|----------------------------------------------------------|
+| `my_list.pop()`           | `list` method (built-in)   | Optional: `index` (if omitted, pops last element)           | Removes and **returns** an element from the list          | Manage stacks/queues of trades, events, tasks           |
+| `pd.read_csv()`           | `pandas` function          | File path (e.g. `'infy_data.csv'`), plus options            | Returns a **DataFrame** with tabular data                 | Import OHLCV, returns, factor data, signals             |
+| `plt.plot()`              | `matplotlib.pyplot`        | X, Y data (can be series, arrays, etc.)                     | Adds a line (or points) to the current figure             | Price charts, PnL curves, equity curves, indicators     |
+| `plt.show()`              | `matplotlib.pyplot`        | (no mandatory arguments)                                     | Renders and displays the figure                           | Visualise charts for analysis / reporting               |
+| `rolling.mean()`          | pandas **rolling object**  | `window` size (e.g. 20), optional parameters                | Rolling **moving average** (Series/DataFrame)             | Compute SMA, moving averages for indicators             |
+| `rolling.std()`           | pandas **rolling object**  | `window` size, optional parameters                          | Rolling **standard deviation**                            | Volatility estimate, part of Bollinger Bands            |
+| `bollinger_bands()`       | **User-defined function**  | DataFrame with `'Close'`, window `n`, `num_std`             | SMA, upper band, lower band (typically 3 Series)          | Custom Bollinger Band indicator for any instrument      |
+
+
+### Lambda, map() and filter() – summary
+
+| Tool / Function            | Syntax pattern                                           | What it does (simple)                                                                      | Typical use in trading / data                                                                 |
+|----------------------------|----------------------------------------------------------|--------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|
+| `lambda` (anonymous func)  | `lambda args: expression`                               | Creates a **small function without a name**, used “inline” for simple operations.         | Quick transforms on prices, returns, indicators without defining a full `def` function.       |
+| Simple lambda (sum)        | `sum = lambda x, y: x + y`                              | Returns the sum of `x` and `y`.                                                            | Fast calc: combine two series element-wise (e.g. bid+ask spreads, weights+allocations).       |
+| Simple lambda (product)    | `product = lambda x, y: x * y`                          | Returns the product of `x` and `y`.                                                        | Scaling positions, PnL contributions = price * quantity.                                      |
+| Lambda with 3 args         | `my_operation = lambda x, y, z: x + y - z`              | Example of multiple arguments in a lambda.                                                 | Custom quick formula, e.g. gross – costs – fees.                                              |
+| `map()` with lambda        | `map(lambda x: f(x), list_1)`                           | Applies the lambda to **every element** in a sequence (list, etc.).                       | Apply a transformation to every price/return, e.g. log-return, scaling, rounding.             |
+| `map()` with multiple seq. | `map(lambda x, y: x + y, list_1, list_2)`               | Applies the lambda to elements **in parallel** from several lists of same length.         | Combine 2–3 aligned series: e.g. equity curve + cash flow, or weights * returns.              |
+| Example (2 lists)          | `list(map(lambda x, y: x + y, list_1, list_2))`         | Returns a new list where each element = `x + y`.                                           | Vector-like operations without NumPy (but in quant we usually move to NumPy/pandas later).    |
+| `filter()` with lambda     | `filter(lambda x: condition, list_1)`                   | Keeps only elements where the lambda **returns True**.                                     | Filter returns / prices / signals based on a rule (e.g. keep only > 0 returns).               |
+| Example: numeric filter    | `list(filter(lambda x: x > 8, fib))`                    | Returns all elements of `fib` strictly greater than 8.                                     | Keep only large moves, tail events, or returns above a threshold.                             |
+| Example: signal filter     | `list(filter(lambda x: x == 'Buy', signals))`           | Keeps only `"Buy"` entries from the `signals` list.                                        | Extract only **Buy** signals from a strategy signal list for counting or analysis.            |
+
+---
+# SECTION 7 : Numpy
