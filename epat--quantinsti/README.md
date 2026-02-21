@@ -7,7 +7,7 @@
 
 **Status**: In Progress 🟦  
 
-**Cohort**: Oct 2025 · **Duration**: ~6 months  
+**Cohort**: Oct 2025 ·  
 
 [ View Certificate (PDF)](./certificates/epat_certificate.pdf) *(to be added)*  
 
