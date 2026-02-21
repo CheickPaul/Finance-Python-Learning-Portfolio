@@ -7,11 +7,13 @@
 
 [ View certificate](./financial_markets.pdf)
 
-## Purpose
-I made this folder to centralise my notes by module and lesson.  
-The objective is to document my journey, facilitate future revisions, and quickly retrieve key information that will be useful for my studies, projects, and professional career.
+## Overview
 
-*Note: These notes were originally taken progressively during the course in separate drafts and have been centralized on GitHub for long term reference.*
+This repository centralizes structured notes from the *Financial Markets* course.
+
+The objective is to consolidate key concepts in risk management, asset pricing, behavioral finance, and financial institutions, and to maintain a long-term reference framework for academic and professional development.
+
+Notes were originally taken progressively throughout the course and have been reorganized here for clarity and continuity.
 
 
 ## Modules
@@ -38,4 +40,4 @@ The objective is to document my journey, facilitate future revisions, and quickl
   
   ---
 
-***I completed this course with structured notes and personal reflections for every lesson, which are available in this repository for reference.***
+***Selected notes and structured summaries are available within each module folder.***
