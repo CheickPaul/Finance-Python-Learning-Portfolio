@@ -8,7 +8,7 @@ The objective is to connect market theory with practical implementation using Py
 
 ## Objective
 
-Bridge financial concepts — macroeconomics, fixed income, derivatives, and portfolio construction — with structured analytical applications.
+Bridge financial concepts to macroeconomics, fixed income, derivatives, and portfolio construction  with structured analytical applications.
 
 Each module focuses on conceptual clarity before implementation.
 
