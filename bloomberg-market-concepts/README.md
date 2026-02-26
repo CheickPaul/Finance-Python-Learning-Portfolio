@@ -1,6 +1,5 @@
 # Bloomberg Market Concepts (BMC)
 
-# YBloomberg Market Concepts (BMC)
 
 **Institution**: Bloomberg   
 **Platform**: Bloomberg Education  
