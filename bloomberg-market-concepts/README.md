@@ -9,12 +9,11 @@
 
 ## Overview
 
-This repository centralizes structured notes from the *Financial Markets* course.
+This folder centralizes my structured notes from the *Bloomberg Market Concepts (BMC)* program.
 
-The objective is to consolidate key concepts in risk management, asset pricing, behavioral finance, and financial institutions, and to maintain a long-term reference framework for academic and professional development.
+The objective is to consolidate core foundations across economic indicators, currencies (FX), fixed income, equities, and Bloomberg Terminal basics, and to maintain a long-term reference framework for academic and professional development.
 
-Notes were originally taken progressively throughout the course and have been reorganized here for clarity and continuity.
-
+Selected notes are progressively summarized and reorganized for clarity and continuity.
 
 ## Modules
 - [Module 1: Economic Indicators](module_1_economic_indicators/README.md)  
