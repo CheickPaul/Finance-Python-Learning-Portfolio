@@ -15,6 +15,11 @@ The objective is to consolidate core foundations across economic indicators, cur
 
 Selected notes are progressively summarized and reorganized for clarity and continuity.
 
+##Disclaimer 
+These notes are my personal learning summaries, supplemented by additional personal research and practice. To avoid sharing proprietary course material datasets, and diagrams have been independently created or sourced elsewhere. The definitions and explanations below reflect my understanding at the time of writing and should not be taken as gospel. Please do your own research and verification. I reserve the right to revise and update this document as my learning progresses and to correct any errors I discover.
+
+Purpose: The notes belows are include in my repository " Finance-Python-Learning-Portfolio". The purpose is to document my learning journey and centralizes my personal notes for future revision. It is non-commercial and respect Intellectual Property; the aim is transparency in learning, not redistribution of course materials.
+
 ## Modules
 - [Module 1: Economic Indicators](module_1_economic_indicators/README.md)  
   Key macro indicators (inflation, growth, labor), how markets react, and what investors monitor.
