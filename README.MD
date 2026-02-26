@@ -34,7 +34,7 @@ This repository evolves progressively as modules are completed and documented. F
 
 ---
 
-**Quick access:**- [Bloomberg — Market Concepts (BMC)](./bloomberg-market-concepts/) … [ Financial Markets folder](./Yale-financial-markets/) · … [ Copenhagen Business School — Investments: Financial Markets, Options & Derivatives folder](./cbs-summer--financial-markets-options-derivatives/) · … [EPAT® - Executive Programme in Algorithmic Trading folder](./epat--quantinsti/) 
+**Quick access:**- [Bloomberg Market Concepts (BMC)](./bloomberg-market-concepts/) … [ Financial Markets folder](./Yale-financial-markets/) · … [ Copenhagen Business School — Investments: Financial Markets, Options & Derivatives folder](./cbs-summer--financial-markets-options-derivatives/) · … [EPAT® - Executive Programme in Algorithmic Trading folder](./epat--quantinsti/) 
 
 ---
 
