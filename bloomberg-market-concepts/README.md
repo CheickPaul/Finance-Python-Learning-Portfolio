@@ -31,6 +31,7 @@ Notes were originally taken progressively throughout the course and have been re
 
 - [Module 5: Terminal Basics](module_5_terminal_basics/README.md)  
   Core Bloomberg Terminal navigation, key functions, and market monitoring basics.
+  
   ---
 
 ***Selected notes and structured summaries are available within each module folder.***
