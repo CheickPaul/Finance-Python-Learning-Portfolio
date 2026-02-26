@@ -15,7 +15,7 @@ The objective is to consolidate core foundations across economic indicators, cur
 
 Selected notes are progressively summarized and reorganized for clarity and continuity.
 
-##Disclaimer 
+## Disclaimer 
 
 These notes are my personal learning summaries, supplemented by additional personal research and practice. To avoid sharing proprietary course material datasets, and diagrams have been independently created or sourced elsewhere. The definitions and explanations below reflect my understanding at the time of writing and should not be taken as gospel. Please do your own research and verification. I reserve the right to revise and update this document as my learning progresses and to correct any errors I discover.
 
