@@ -21,23 +21,25 @@ These notes are my personal learning summaries, supplemented by additional perso
 Purpose: The notes below are included in my repository "Finance-Python-Learning-Portfolio". The purpose is to document my learning journey and centralize my personal notes for future revision. It is non-commercial and respects Intellectual Property; the aim is transparency in learning, not redistribution of course materials.
 
 ## Modules
-[Module 1: Welcome & Chapter 1 — Role of the Programmer](module 1 role of programmer/README.md)
-Recognize the role of a programmer in translating human needs into computational solutions. Describe the high-level process of writing, running, and debugging a simple program to automate tasks. Illustrate the core parts and hardware of a computer (input, processing, memory, output). Recall the origins and guiding philosophy of Python.
 
-[Module 2: Setup — Install & Tools](module_2_setup_installation/README.md)  
+
+- [Module 1: Welcome & Chapter 1 — Role of the Programmer](module%201%20role%20of%20programmer/README.md)  
+  Recognize the role of a programmer in translating human needs into computational solutions. Describe the high-level process of writing, running, and debugging a simple program to automate tasks. Illustrate the core parts and hardware of a computer (input, processing, memory, output). Recall the origins and guiding philosophy of Python.
+
+- [Module 2: Setup — Install & Tools](module_2_setup_installation/README.md)  
 Install Python on your computer. Choose a text editor. Run Python code in the Python playground.
 
-[Module 3: First Steps — Prompt, Scripts & Patterns](module_3_prompt_scripts_patterns/README.md)  
+- [Module 3: First Steps — Prompt, Scripts & Patterns](module_3_prompt_scripts_patterns/README.md)  
 Launch the interactive Python prompt (>>>) and “talk” to Python. Explain variables and assignments. Recognize Python’s reserved words. Correct errors through debugging. Write longer code in a .py script with a text editor. Recognize basic programming patterns: sequential steps, conditionals, repetitive, and store and reuse.
 
-[Module 4: Values, Types & Expressions](module_4_values_types_expressions/README.md)  
+- [Module 4: Values, Types & Expressions](module_4_values_types_expressions/README.md)  
 Describe values and basic data types. Use variables and assignment statements. Apply effective naming conventions for variables. Recognize common operators and the basic order of operations. Correct errors through debugging. Write comments in Python.
 
-[Module 5: Conditional Execution](module_5_conditionals/README.md)  
+- [Module 5: Conditional Execution](module_5_conditionals/README.md)  
 Articulate the purpose of conditional execution. Identify and write one-way, two-way, and multi-way decisions in Python. Use nested conditionals. Apply correct indentation rules in Python.
 
-[Module 6: Functions](module_6_functions/README.md)  
+- [Module 6: Functions](module_6_functions/README.md)  
 Articulate the purpose of functions in programs. Differentiate between built-in functions and user-defined functions. Define and call simple functions in Python. Use arguments and parameters in functions.
 
-[Module 7: Loops](module_7_loops/README.md)  
+- [Module 7: Loops](module_7_loops/README.md)  
 Articulate the purpose of loops in programs. Differentiate between definite loops and infinite loops. Apply common loop patterns in Python.
