@@ -21,7 +21,7 @@ These notes are my personal learning summaries, supplemented by additional perso
 Purpose: The notes below are included in my repository "Finance-Python-Learning-Portfolio". The purpose is to document my learning journey and centralize my personal notes for future revision. It is non-commercial and respects Intellectual Property; the aim is transparency in learning, not redistribution of course materials.
 
 ## Modules
-[Module 1: Welcome & Chapter 1 — Role of the Programmer](module_1_role_of_programmer/README.md)  
+[Module 1: Welcome & Chapter 1 — Role of the Programmer](module 1 role of programmer/README.md)
 Recognize the role of a programmer in translating human needs into computational solutions. Describe the high-level process of writing, running, and debugging a simple program to automate tasks. Illustrate the core parts and hardware of a computer (input, processing, memory, output). Recall the origins and guiding philosophy of Python.
 
 [Module 2: Setup — Install & Tools](module_2_setup_installation/README.md)  
