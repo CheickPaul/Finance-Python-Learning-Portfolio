@@ -1,6 +1,6 @@
-# Module 1 — Role of the Programmer
+# Module 1 - Role of the Programmer (Personal Notes)
 
-## Why We Program (Personal Notes)
+## Why We Program 
 
 - In this video, I understood that the goal of the course is to help me go from a **technology user** to a **technology creator**.
 - A computer is not really “smart” by itself. It only follows **instructions step by step**. When it is on, it is like it is waiting for the next instruction.
@@ -10,7 +10,7 @@
 - The example about counting words was important: it is boring for people, but computers are very good at it. With a few lines of Python, I can make the computer do this work for me.
 
 
-## Hardware Architecture (Personal Notes)
+## Hardware Architecture 
 
 - In this video, I learned the basic computer “block diagram” so I can understand the main terms used in the course: **CPU**, **main memory**, **secondary memory**, and **input/output devices**.
 
@@ -34,7 +34,7 @@
 - A common beginner challenge in Python is **indentation**, because it is part of Python syntax and defines code blocks.
 - **CPU executes**, **RAM stores (temporary)**, **Storage saves files (permanent)**, and **Fetch** is the step that retrieves instructions from memory.
 
-## Python as a Language (Personal Notes)
+## Python as a Language 
 
 - In this course, we learned why Python is a great first programming language: it is designed to be **easy to learn**, **fun**, but also **powerful** and useful.
 - Even though Python uses a snake theme, it was not named after a snake. Python was named after **Monty Python’s Flying Circus**, because Guido van Rossum wanted the language to feel playful and enjoyable.
