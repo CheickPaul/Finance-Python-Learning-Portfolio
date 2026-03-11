@@ -64,3 +64,86 @@ The program displays:
 - use **`cd`** to change folders
 - use **`dir`** to see files
 - run a Python script with **`python programme.py`**
+
+  ---
+
+  # Reading a Text File Line by Line in Python
+
+This Python program opens a text file, reads it line by line, prints each line, and counts how many lines the file contains.
+
+## Code
+
+"fh = open('romeo.txt', 'r')"
+
+"count = 0"
+
+"for line in fh:"
+"    print(line.strip())"
+"    count = count + 1"
+
+"print(count, 'Lines')"
+
+## Explanation
+
+### "fh = open('romeo.txt', 'r')"
+This line opens the file named **'romeo.txt'** in read mode.
+
+- **"open(...)"** is used to open a file
+- **"'romeo.txt'"** is the file name
+- **"'r'"** means **read**
+- **"fh"** stands for **file handle**, which is a variable used to work with the opened file
+
+### "count = 0"
+This creates a variable called **"count"** and sets it to **0**.
+
+Its role is to count how many lines are in the file.
+
+### "for line in fh:"
+This loop reads the file **one line at a time**.
+
+At each iteration, the variable **"line"** contains one line from the file.
+
+### "print(line.strip())"
+This prints the current line.
+
+- **"strip()"** removes extra spaces and the newline character at the beginning and end of the line
+- this avoids blank lines when printing
+
+### "count = count + 1"
+Each time a line is read, the counter increases by **1**.
+
+### "print(count, 'Lines')"
+At the end, the program prints the total number of lines in the file.
+
+## What this program does
+
+- opens a text file
+- reads the file line by line
+- prints each line
+- counts the number of lines
+- displays the total at the end
+
+## Example
+
+If **'romeo.txt'** contains:
+
+"But soft what light"  
+"through yonder window breaks"  
+"It is the east"  
+"and Juliet is the sun"
+
+The output will be:
+
+"But soft what light"  
+"through yonder window breaks"  
+"It is the east"  
+"and Juliet is the sun"  
+"4 Lines"
+
+## What I learn from this program
+
+- how to open a file in Python
+- how to read a file line by line
+- how to use a **"for"** loop with a file
+- how to count lines with a variable
+- how to clean line output with **"strip()"**
