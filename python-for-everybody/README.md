@@ -26,8 +26,8 @@ Purpose: The notes below are included in my repository "Finance-Python-Learning-
 - [Module 1: Welcome & Chapter 1 — Role of the Programmer](module%201%20role%20of%20programmer/README.md)  
   Recognize the role of a programmer in translating human needs into computational solutions. Describe the high-level process of writing, running, and debugging a simple program to automate tasks. Illustrate the core parts and hardware of a computer (input, processing, memory, output). Recall the origins and guiding philosophy of Python.
 
-- [Module 2 - Setup and Tools](#module-2---setup-and-tools)
-
+- [Module 2 - Setup and Tools](./module-2-setup-installation/)
+  
   Install Python on your computer. Choose a text editor. Run Python code in the Python playground.
 
 - [Module 3: First Steps — Prompt, Scripts & Patterns](module_3_prompt_scripts_patterns/README.md)  
