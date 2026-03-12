@@ -13,7 +13,7 @@ This repository centralizes structured notes from the *Financial Markets* course
 
 The objective is to consolidate key concepts in risk management, asset pricing, behavioral finance, and financial institutions, and to maintain a long-term reference framework for academic and professional development.
 
-Notes were originally taken progressively throughout the course and have been reorganized here for clarity and continuity.
+Notes were originally taken progressively throughout the course and have been reorganized here for clarity and continuity. > Notes currently start from Module 3. Modules 1 and 2 are not currently available.
 
 ## Disclaimer 
 
