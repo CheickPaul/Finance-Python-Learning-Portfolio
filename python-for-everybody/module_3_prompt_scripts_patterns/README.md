@@ -152,10 +152,13 @@ This lesson explains how Python programs are built using basic programming patte
 
 "print(x)"
 
-"x = 5"
+"x = 15"
 
 "if x < 10:"
 "    print('smaller')"
+
+"if 10 <= x <= 20:"
+"    print('average')"
 
 "if x > 20:"
 "    print('bigger')"
@@ -210,8 +213,8 @@ Python prints:
 
 "4"
 
-### "x = 5"
-This line creates a variable called **"x"** and stores the value **5** in it.
+### "x = 15"
+This line creates a variable called **"x"** and stores the value **15** in it.
 
 This new value is used for the conditional examples below.
 
@@ -225,14 +228,31 @@ Is **"x"** less than **10**?
 - if the answer is **True**, Python runs the indented line below
 - if the answer is **False**, Python skips it
 
-Since **"x"** is **5**, the condition is true.
+Since **"x"** is **15**, the condition is false.
 
 ### "    print('smaller')"
-This line runs because the condition **"x < 10"** is true.
+This line does not run, because the condition **"x < 10"** is false.
+
+Python skips this line.
+
+### "if 10 <= x <= 20:"
+This line starts another conditional statement.
+
+Python asks this question:
+
+Is **"x"** between **10** and **20**?
+
+- if the answer is **True**, Python runs the indented line below
+- if the answer is **False**, Python skips it
+
+Since **"x"** is **15**, the condition is true.
+
+### "    print('average')"
+This line runs because the condition **"10 <= x <= 20"** is true.
 
 Python prints:
 
-"smaller"
+"average"
 
 ### "if x > 20:"
 This line starts another conditional statement.
@@ -244,7 +264,7 @@ Is **"x"** greater than **20**?
 - if the answer is **True**, Python runs the indented line below
 - if the answer is **False**, Python skips it
 
-Since **"x"** is **5**, the condition is false.
+Since **"x"** is **15**, the condition is false.
 
 ### "    print('bigger')"
 This line does not run, because the condition **"x > 20"** is false.
@@ -335,10 +355,13 @@ A conditional lets Python make a decision.
 
 Example:
 
-"x = 5"
+"x = 15"
 
 "if x < 10:"
 "    print('smaller')"
+
+"if 10 <= x <= 20:"
+"    print('average')"
 
 "if x > 20:"
 "    print('bigger')"
@@ -432,16 +455,18 @@ These patterns work together to solve a problem.
 
 This code:
 
-"x = 5"  
+"x = 15"  
 "if x < 10:"  
 "    print('smaller')"  
+"if 10 <= x <= 20:"  
+"    print('average')"  
 "if x > 20:"  
 "    print('bigger')"  
 "print('done')"
 
 Produces:
 
-"smaller"  
+"average"  
 "done"
 
 This code:
@@ -465,6 +490,8 @@ Produces:
 
 - how to write code in sequence
 - how to use **if** for decisions
+- how to test multiple conditions
+- how to display **"average"** when a value is between **10** and **20**
 - how to use **while** to repeat instructions
 - why indentation is important in Python
 - how loops work step by step
