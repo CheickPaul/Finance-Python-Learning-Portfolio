@@ -1,4 +1,4 @@
-# First Python Script and Basic Instructions in Python
+# L1 : First Python Script and Basic Instructions in Python
 
 This lesson explains how Python starts, how to give it instructions, how variables work, and why writing code in a script file is better than typing too much in interactive mode.
 
@@ -138,7 +138,7 @@ Produces:
   
 ---
 
-# Writing Paragraphs of Code in Python
+# L2: Writing Paragraphs of Code in Python
 
 This lesson explains how Python programs are built using basic programming patterns such as sequence, conditionals, loops, and storing values. These patterns are combined to create longer and more useful programs.
 
