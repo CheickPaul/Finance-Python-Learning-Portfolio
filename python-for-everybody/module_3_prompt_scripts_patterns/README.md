@@ -463,52 +463,6 @@ These patterns work together to solve a problem.
 - what an infinite loop is
 - how different code structures can be combined
 
-## Example
-
-This code:
-
-"x = 15"  
-
-"if x < 10:"  
-
-"    print('smaller')"  
-
-"if 10 <= x <= 20:"  
-
-"    print('average')"  
-
-"if x > 20:"  
-
-"    print('bigger')"  
-
-"print('done')"
-
-Produces:
-
-"average"  
-"done"
-
-This code:
-
-"n = 5"  
-
-"while n > 0:"  
-
-"    print(n)"  
-
-"    n = n - 1"  
-
-"print('Blastoff!')"
-
-Produces:
-
-"5"  
-"4"  
-"3"  
-"2"  
-"1"  
-"Blastoff!"
-
 ## What I learn from this lesson
 
 - how to write code in sequence
@@ -525,13 +479,15 @@ Produces:
 
 This application combines a **while loop** and **conditional statements** in the same block.
 
+
+
 ## Code
 
 ## Why indentation placement matters
 
 In this application, indentation controls the logic of the program.
 
-All these lines must stay inside the **while** block:
+All these lines must stay inside the **while** block
 
 
 
