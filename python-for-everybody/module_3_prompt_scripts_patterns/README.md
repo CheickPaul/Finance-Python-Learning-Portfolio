@@ -462,6 +462,7 @@ These patterns work together to solve a problem.
 - how loops stop when a condition becomes false
 - what an infinite loop is
 - how different code structures can be combined
+- To say “good-bye” to Python in interactive mode, we use quit().
 
 ## What I learn from this lesson
 
@@ -475,7 +476,7 @@ These patterns work together to solve a problem.
 - how to avoid infinite loops
 - how programs are built by combining simple patterns
 
-## Application (creenshot)
+## Application (Nestling)
 
 This application combines a **while loop** and **conditional statements** in the same block.
 
