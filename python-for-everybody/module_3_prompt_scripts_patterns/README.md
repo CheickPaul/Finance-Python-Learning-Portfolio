@@ -137,7 +137,6 @@ Produces:
 - why using a **.py** script is useful
   
 ---
-
 # L2: Writing Paragraphs of Code in Python
 
 This lesson explains how Python programs are built using basic programming patterns such as sequence, conditionals, loops, and storing values. These patterns are combined to create longer and more useful programs.
@@ -341,8 +340,11 @@ A sequence means Python runs instructions **one after another**, in order.
 Example:
 
 "x = 2"  
+
 "print(x)"  
+
 "x = x + 2"  
+
 "print(x)"
 
 Python starts at the first line, then moves to the next, and continues until the program ends.
@@ -358,12 +360,15 @@ Example:
 "x = 15"
 
 "if x < 10:"
+
 "    print('smaller')"
 
 "if 10 <= x <= 20:"
+
 "    print('average')"
 
 "if x > 20:"
+
 "    print('bigger')"
 
 "print('done')"
@@ -379,7 +384,9 @@ Example:
 "n = 5"
 
 "while n > 0:"
+
 "    print(n)"
+
 "    n = n - 1"
 
 "print('Blastoff!')"
@@ -395,6 +402,10 @@ Examples:
 - the indented line after **"if"** belongs to the conditional block
 - the indented lines after **"while"** belong to the loop block
 
+Indentation is not only used with **while**. It is used with all Python blocks such as **if**, **else**, **for**, **while**, and **def**.
+
+In Python, indentation defines the block of code that belongs to a structure.
+
 Indentation is very important in Python.
 
 ## Infinite Loops
@@ -404,6 +415,7 @@ A loop can become an **infinite loop** if the condition never becomes false.
 Example:
 
 "while n > 0:"
+
 "    print(n)"
 
 This would repeat forever if **"n"** never changes.
@@ -456,12 +468,19 @@ These patterns work together to solve a problem.
 This code:
 
 "x = 15"  
+
 "if x < 10:"  
+
 "    print('smaller')"  
+
 "if 10 <= x <= 20:"  
+
 "    print('average')"  
+
 "if x > 20:"  
+
 "    print('bigger')"  
+
 "print('done')"
 
 Produces:
@@ -472,9 +491,13 @@ Produces:
 This code:
 
 "n = 5"  
+
 "while n > 0:"  
+
 "    print(n)"  
+
 "    n = n - 1"  
+
 "print('Blastoff!')"
 
 Produces:
@@ -497,3 +520,20 @@ Produces:
 - how loops work step by step
 - how to avoid infinite loops
 - how programs are built by combining simple patterns
+
+## Application
+
+This application combines a **while loop** and **conditional statements** in the same block.
+
+## Code
+
+## Why indentation placement matters
+
+In this application, indentation controls the logic of the program.
+
+All these lines must stay inside the **while** block:
+
+
+
+
+
