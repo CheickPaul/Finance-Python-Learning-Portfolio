@@ -475,13 +475,14 @@ These patterns work together to solve a problem.
 - how to avoid infinite loops
 - how programs are built by combining simple patterns
 
-## Application
+## Application (creenshot)
 
 This application combines a **while loop** and **conditional statements** in the same block.
 
 
 
-## Code
+<img width="900" alt="VS Code screenshot" src="https://github.com/user-attachments/assets/ef78f72f-e975-430b-b53b-64088f31b3cc" />
+
 
 ## Why indentation placement matters
 
