@@ -704,7 +704,7 @@ The space comes from the comma inside **"print()"**.
 
   ---
 
-  # Module 4 - Lesson 6: Writing Comments in Python - First IPO Program
+  # Lesson 4: Writing Comments in Python - First IPO Program
 
 In this lesson, we combine many ideas from the previous lessons and write a complete Python program. Before building the program, we first learn about **comments** and why they are useful. Then we use the **IPO model**: **Input, Processing, Output**.
 
