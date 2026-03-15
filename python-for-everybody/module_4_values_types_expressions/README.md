@@ -701,3 +701,230 @@ The space comes from the comma inside **"print()"**.
 - how to convert values with **"int()"** and **"float()"**
 - that **input()** returns text as a string
 - that values from the keyboard often need conversion before calculation
+
+  ---
+
+  # Module 4 - Lesson 6: Writing Comments in Python - First IPO Program
+
+In this lesson, we combine many ideas from the previous lessons and write a complete Python program. Before building the program, we first learn about **comments** and why they are useful. Then we use the **IPO model**: **Input, Processing, Output**.
+
+This is the first small Python program that really does something from beginning to end.
+
+## Writing Comments in Python
+
+A **comment** is text written in a Python program that is ignored by Python.
+
+Comments are written with the **"#"** symbol.
+
+Example:
+
+"# this is a comment"
+
+Python does not run comments. They are only there for humans reading the code.
+
+## Why comments are useful
+
+Comments help explain what the code is doing.
+
+They are useful because:
+
+- they help you remember your own code later
+- they help explain more complex parts of a program
+- they make code easier to read
+- they can be used to temporarily disable a line of code
+
+A very important idea in programming is that comments are often a gift to your **future self**.
+
+When you come back to your code after a day, a week, or a month, comments can help you understand what you were trying to do.
+
+## Good comments
+
+A good comment explains something that is not immediately obvious.
+
+For example, if a group of lines is doing one clear task, a comment can introduce that task.
+
+Example:
+
+"# get the name of the file and open it"
+
+This helps the reader understand the purpose of the next lines.
+
+## Bad comments
+
+A bad comment says something obvious that everyone can already see.
+
+Example:
+
+"x = 1   # put 1 in x"
+
+This comment is not useful because the line already clearly says that.
+
+So comments should not repeat the code. They should explain the idea behind the code.
+
+## Comments can disable code
+
+Sometimes programmers use comments to temporarily turn off a line of code.
+
+Example:
+
+"# print('debug info')"
+
+This is useful when testing or debugging a program, because the code is still there if you want to use it again later.
+
+## Code with comments
+
+Here is a simple example showing comments in a program:
+
+"# get the name of the file and open it"
+
+"# count the word frequency"
+
+"# print the results"
+
+These comments act like short explanations for different parts of the code.
+
+## The IPO model
+
+A common programming pattern is:
+
+- **Input**
+- **Processing**
+- **Output**
+
+This is often called the **IPO model**.
+
+### Input
+The program gets data from somewhere.
+
+This could come from:
+
+- the keyboard
+- a file
+- a database
+- a web service
+
+### Processing
+The program works with the data.
+
+This usually means:
+
+- calculating something
+- changing the data
+- combining values
+- solving a problem
+
+### Output
+The program shows the result.
+
+This might be:
+
+- printed on the screen
+- written to a file
+- sent somewhere else
+
+This lesson introduces a very small program that uses all three parts.
+
+## First IPO Program
+
+The goal of this program is to convert a European elevator floor number into the equivalent United States floor number.
+
+In many places in Europe:
+
+- the ground floor is floor **0**
+
+In the United States:
+
+- the ground floor is floor **1**
+
+So to convert a European floor to a United States floor, we add **1**.
+
+## Code
+
+"# convert elevator floors"
+
+"inp = input('European floor? ')"
+
+"usf = int(inp) + 1"
+
+"print('US floor', usf)"
+
+## Explanation
+
+### "# convert elevator floors"
+
+This is a comment.
+
+It explains what the program is about.
+
+Python ignores this line.
+
+### "inp = input('European floor? ')"
+
+This is the **input** part.
+
+Python prints:
+
+"'European floor? '"
+
+Then it waits for the user to type something.
+
+If the user types:
+
+"'0'"
+
+then that value is stored in **"inp"**.
+
+Important: the result of **"input()"** is always a **string**.
+
+So **"inp"** contains the string **"'0'"**, not the integer **0**.
+
+### "usf = int(inp) + 1"
+
+This is the **processing** part.
+
+First, Python converts **"inp"** from a string to an integer using **"int()"**.
+
+The name **"usf"** is a mnemonic variable name meaning **United States floor**.
+
+### "print('US floor', usf)"
+
+This is the **output** part.
+
+The comma in **"print()"** automatically adds a space between the text and the number.
+
+
+## Why this program is important
+
+This program is simple, but it uses many ideas learned so far:
+
+- comments
+- variables
+- input
+- type conversion
+- arithmetic
+- output
+- mnemonic variable names
+
+It is the first full Python program with a beginning, a middle, and an end.
+
+## What this lesson does
+
+- explains how to write **comments** in Python
+- shows why comments are useful for humans
+- explains the **IPO model**
+- introduces the first complete Python program
+- shows how to get input from the user
+- shows how to process the input with **"int()"** and **"+ 1"**
+- shows how to print the result
+
+## What I learn from this lesson
+
+- that comments begin with **"#"**
+- that comments are ignored by Python
+- that comments help explain code for humans
+- that useful comments explain ideas, not obvious lines
+- that many programs follow the **Input, Processing, Output** pattern
+- how to read input with **"input()"**
+- how to convert input from string to integer with **"int()"**
+- how to print results with **"print()"**
+- how to write my first small complete Python program
